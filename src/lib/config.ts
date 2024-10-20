@@ -1,3 +1,6 @@
+import React from 'react';
+import { TwitterIcon, FacebookIcon } from '@/components/icons'; // Adjust the import path as needed
+
 export const siteConfig = {
   name: "Alife",
   description: "Your Life, Your Way",
@@ -15,8 +18,8 @@ export const siteConfig = {
   ],
   // Optional: Add this if you want social media icons
   socials: [
-    { icon: <TwitterIcon />, href: "https://twitter.com/alife" },
-    { icon: <FacebookIcon />, href: "https://facebook.com/alife" },
+    { icon: React.createElement(TwitterIcon), href: "https://twitter.com/alife" },
+    { icon: React.createElement(FacebookIcon), href: "https://facebook.com/alife" },
     // ... other social media links
   ],
 };
