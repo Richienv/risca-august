@@ -1,3 +1,4 @@
+import React from 'react';
 import { Icons } from "@/components/icons";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
@@ -22,7 +23,7 @@ export const siteConfig = {
       trigger: "Features",
       content: {
         main: {
-          icon: <Icons.logo className="h-6 w-6" />,
+          icon: React.createElement(Icons.logo, { className: "h-6 w-6" }),
           title: "AI-Powered Automation",
           description: "Streamline your workflow with intelligent automation.",
           href: "#",
@@ -145,55 +146,23 @@ export const siteConfig = {
   faqs: [
     {
       question: "What is acme.ai?",
-      answer: (
-        <span>
-          acme.ai is a platform that helps you build and manage your AI-powered
-          applications. It provides tools and services to streamline the
-          development and deployment of AI solutions.
-        </span>
-      ),
+      answer: "acme.ai is a platform that helps you build and manage your AI-powered applications. It provides tools and services to streamline the development and deployment of AI solutions.",
     },
     {
       question: "How can I get started with acme.ai?",
-      answer: (
-        <span>
-          You can get started with acme.ai by signing up for an account on our
-          website, creating a new project, and following our quick-start guide.
-          We also offer tutorials and documentation to help you along the way.
-        </span>
-      ),
+      answer: "You can get started with acme.ai by signing up for an account on our website, creating a new project, and following our quick-start guide. We also offer tutorials and documentation to help you along the way.",
     },
     {
       question: "What types of AI models does acme.ai support?",
-      answer: (
-        <span>
-          acme.ai supports a wide range of AI models, including but not limited
-          to natural language processing, computer vision, and predictive
-          analytics. We continuously update our platform to support the latest
-          AI technologies.
-        </span>
-      ),
+      answer: "acme.ai supports a wide range of AI models, including but not limited to natural language processing, computer vision, and predictive analytics. We continuously update our platform to support the latest AI technologies.",
     },
     {
       question: "Is acme.ai suitable for beginners in AI development?",
-      answer: (
-        <span>
-          Yes, acme.ai is designed to be user-friendly for both beginners and
-          experienced developers. We offer intuitive interfaces, pre-built
-          templates, and extensive learning resources to help users of all skill
-          levels create AI-powered applications.
-        </span>
-      ),
+      answer: "Yes, acme.ai is designed to be user-friendly for both beginners and experienced developers. We offer intuitive interfaces, pre-built templates, and extensive learning resources to help users of all skill levels create AI-powered applications.",
     },
     {
       question: "What kind of support does acme.ai provide?",
-      answer: (
-        <span>
-          acme.ai provides comprehensive support including documentation, video
-          tutorials, a community forum, and dedicated customer support. We also
-          offer premium support plans for enterprises with more complex needs.
-        </span>
-      ),
+      answer: "acme.ai provides comprehensive support including documentation, video tutorials, a community forum, and dedicated customer support. We also offer premium support plans for enterprises with more complex needs.",
     },
   ],
   footer: [
@@ -231,17 +200,17 @@ export const siteConfig = {
         {
           href: "#",
           text: "Twitter",
-          icon: <FaTwitter />,
+          icon: React.createElement(FaTwitter),
         },
         {
           href: "#",
           text: "Instagram",
-          icon: <RiInstagramFill />,
+          icon: React.createElement(RiInstagramFill),
         },
         {
           href: "#",
           text: "Youtube",
-          icon: <FaYoutube />,
+          icon: React.createElement(FaYoutube),
         },
       ],
     },
