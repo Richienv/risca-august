@@ -13,6 +13,8 @@ export async function GET(req: NextRequest) {
   ).then((res) => res.arrayBuffer());
   const fontData = await font;
 
+  const baseUrl = (siteConfig as any).url || ''; // Use type assertion and provide a fallback
+
   return new ImageResponse(
     (
       <div
@@ -25,7 +27,7 @@ export async function GET(req: NextRequest) {
           justifyContent: "center",
           backgroundColor: "#fff",
           // set background image if needed
-          backgroundImage: `url(${siteConfig.url}/og.png)`,
+          backgroundImage: baseUrl ? `url(${baseUrl}/og.png)` : undefined,
           fontSize: 32,
           fontWeight: 600,
         }}
@@ -76,7 +78,7 @@ export async function GET(req: NextRequest) {
         </div>
 
         <img
-          src={`${siteConfig.url}/dashboard.png`}
+          src={baseUrl ? `${baseUrl}/dashboard.png` : '/dashboard.png'}
           width={900}
           style={{
             position: "relative",
