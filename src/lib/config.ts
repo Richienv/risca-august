@@ -1,10 +1,71 @@
 import React from 'react';
-import { TwitterIcon, FacebookIcon } from '@/components/icons'; // Adjust the import path as needed
+import { Icons } from "@/components/icons"; // Adjust this import as needed
+
+type HeaderItem = {
+  trigger?: string;
+  href?: string;
+  label: string;
+  content?: {
+    main?: {
+      icon: React.ReactNode;
+      title: string;
+      description: string;
+      href: string;
+    };
+    items: Array<{
+      href: string;
+      title: string;
+      description: string;
+    }>;
+  };
+};
 
 export const siteConfig = {
   name: "Alife",
   description: "Your Life, Your Way",
-  // ... other properties
+  url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+  header: [
+    {
+      trigger: "Features",
+      href: "/features",
+      label: "Features",
+      content: {
+        main: {
+          icon: React.createElement(Icons.logo, { className: "h-6 w-6" }),
+          title: "AI-Powered Automation",
+          description: "Streamline your workflow with intelligent automation.",
+          href: "#",
+        },
+        items: [
+          {
+            href: "#",
+            title: "Task Automation",
+            description: "Automate repetitive tasks and save time.",
+          },
+          // ... other items
+        ],
+      },
+    },
+    {
+      trigger: "Solutions",
+      href: "/solutions",
+      label: "Solutions",
+      content: {
+        items: [
+          {
+            title: "For Small Businesses",
+            href: "#",
+            description: "Tailored automation solutions for growing companies.",
+          },
+          // ... other items
+        ],
+      },
+    },
+    {
+      href: "/blog",
+      label: "Blog",
+    },
+  ] as HeaderItem[],
   footer: [
     {
       title: "Company",
@@ -16,10 +77,11 @@ export const siteConfig = {
     },
     // ... other footer sections
   ],
-  // Optional: Add this if you want social media icons
   socials: [
-    { icon: React.createElement(TwitterIcon), href: "https://twitter.com/alife" },
-    { icon: React.createElement(FacebookIcon), href: "https://facebook.com/alife" },
+    { icon: React.createElement(Icons.twitter), href: "https://twitter.com/alife" },
+    { icon: React.createElement(Icons.facebook), href: "https://facebook.com/alife" },
     // ... other social media links
   ],
 };
+
+export type SiteConfig = typeof siteConfig;
