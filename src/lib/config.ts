@@ -79,7 +79,7 @@ export const siteConfig = {
   ],
   socials: [
     { icon: React.createElement(Icons.twitter), href: "https://twitter.com/alife" },
-    { icon: React.createElement(Icons.facebook), href: "https://facebook.com/alife" },
+    { icon: React.createElement(Icons.github), href: "https://github.com/alife" },
     // ... other social media links
   ],
   email: "info@alife.com",
