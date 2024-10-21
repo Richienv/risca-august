@@ -82,6 +82,7 @@ export const siteConfig = {
     { icon: React.createElement(Icons.facebook), href: "https://facebook.com/alife" },
     // ... other social media links
   ],
+  email: "info@alife.com",
 };
 
 export type SiteConfig = typeof siteConfig;
