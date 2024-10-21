@@ -24,6 +24,7 @@ export const siteConfig = {
   name: "Alife",
   description: "Your Life, Your Way",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+  keywords: ["Alife", "AI", "Automation", "Workflow"],
   header: [
     {
       trigger: "Features",
