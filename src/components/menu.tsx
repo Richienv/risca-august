@@ -26,13 +26,14 @@ export default function NavigationMenuDemo() {
                 <NavigationMenuTrigger>{item.trigger}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul
-                    className={`grid gap-3 p-6 ${
-                      item.content.main
+                    className={cn(
+                      "grid gap-3 p-6",
+                      item.content?.main
                         ? "md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"
                         : "w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]"
-                    }`}
+                    )}
                   >
-                    {item.content.main && (
+                    {item.content?.main && (
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
@@ -50,7 +51,7 @@ export default function NavigationMenuDemo() {
                         </NavigationMenuLink>
                       </li>
                     )}
-                    {item.content.items.map((subItem, subIndex) => (
+                    {item.content?.items.map((subItem, subIndex) => (
                       <ListItem
                         key={subIndex}
                         href={subItem.href}
