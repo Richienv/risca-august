@@ -90,6 +90,8 @@ export type FeaturesProps = {
   ltr?: boolean;
   linePosition?: "left" | "right" | "top" | "bottom";
   data: FeaturesDataProps[];
+  customTitleClassName?: string;
+  customContentClassName?: string;
 };
 
 export default function Features({
@@ -97,6 +99,8 @@ export default function Features({
   ltr = false,
   linePosition = "left",
   data = [],
+  customTitleClassName,
+  customContentClassName,
 }: FeaturesProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
   const carouselRef = useRef<HTMLUListElement>(null);
@@ -322,8 +326,8 @@ export default function Features({
                       }}
                     ></div>
                   </div>
-                  <h2 className="text-xl font-bold">{item.title}</h2>
-                  <p className="mx-0 max-w-sm text-balance text-sm">
+                  <h2 className={customTitleClassName || "text-xl font-bold"}>{item.title}</h2>
+                  <p className={customContentClassName || "mx-0 max-w-sm text-balance text-sm"}>
                     {item.content}
                   </p>
                 </div>
