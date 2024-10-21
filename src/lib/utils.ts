@@ -86,4 +86,3 @@ export function formatDate(date: string) {
     const yearsAgo = Math.floor(daysAgo / 365);
     return `${fullDate} (${yearsAgo}y ago)`;
   }
-}
