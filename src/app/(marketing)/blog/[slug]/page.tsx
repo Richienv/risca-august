@@ -31,7 +31,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `${siteConfig.url}/blog/${post.slug}`,
+      url: `/blog/${post.slug}`,
       images: [
         {
           url: image,
@@ -71,10 +71,8 @@ export default async function Blog({
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${siteConfig.url}${post.metadata.image}`
-              : `${siteConfig.url}/blog/${post.slug}/opengraph-image`,
-            url: `${siteConfig.url}/blog/${post.slug}`,
+            image: post.metadata.image || `/blog/${post.slug}/opengraph-image`,
+            url: `/blog/${post.slug}`,
             author: {
               "@type": "Person",
               name: siteConfig.name,
