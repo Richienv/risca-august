@@ -32,8 +32,7 @@ export default function drawerDemo() {
           </div>
           <nav>
             <ul className="mt-7 text-left">
-              {siteConfig.header
-                .filter(item => item.label !== "Solutions") // Remove "Solutions" from the list
+              {siteConfig.header?.filter(item => item.label !== "Solutions")
                 .map((item, index) => (
                   <li key={index} className="my-3">
                     {item.trigger ? (
