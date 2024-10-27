@@ -1,72 +1,29 @@
-import React from 'react';
-import { Icons } from "@/components/icons"; // Adjust this import as needed
+import { FaTwitter, FaFacebook } from "react-icons/fa";
 
-type HeaderItem = {
-  trigger?: string;
-  href?: string;
-  label: string;
-  content?: {
-    main?: {
-      icon: React.ReactNode;
-      title: string;
-      description: string;
-      href: string;
-    };
-    items: Array<{
-      href: string;
-      title: string;
-      description: string;
-    }>;
+interface SiteConfig {
+  name: string;
+  description: string;
+  url: string;
+  keywords: string[];
+  header: any[];
+  footer: any[];
+  socials: any[];
+  links: {
+    email: string;
   };
-};
+}
 
-export const siteConfig = {
+export const siteConfig: SiteConfig = {
   name: "Alife",
   description: "Your Life, Your Way",
-  url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-  keywords: ["Alife", "AI", "Automation", "Workflow"],
+  url: "https://alifebyvision.com",
+  keywords: ["life", "lifestyle", "personal development", "wellness"],
   header: [
-    {
-      trigger: "Features",
-      href: "/features",
-      label: "Features",
-      content: {
-        main: {
-          icon: React.createElement(Icons.logo, { className: "h-6 w-6" }),
-          title: "AI-Powered Automation",
-          description: "Streamline your workflow with intelligent automation.",
-          href: "#",
-        },
-        items: [
-          {
-            href: "#",
-            title: "Task Automation",
-            description: "Automate repetitive tasks and save time.",
-          },
-          // ... other items
-        ],
-      },
-    },
-    {
-      trigger: "Solutions",
-      href: "/solutions",
-      label: "Solutions",
-      content: {
-        items: [
-          {
-            title: "For Small Businesses",
-            href: "#",
-            description: "Tailored automation solutions for growing companies.",
-          },
-          // ... other items
-        ],
-      },
-    },
-    {
-      href: "/blog",
-      label: "Blog",
-    },
-  ] as HeaderItem[],
+    // Add your header items here
+    // Example:
+    // { label: 'Home', href: '/' },
+    // { trigger: 'Products', content: { /* ... */ } },
+  ],
   footer: [
     {
       title: "Company",
@@ -79,11 +36,11 @@ export const siteConfig = {
     // ... other footer sections
   ],
   socials: [
-    { icon: React.createElement(Icons.twitter), href: "https://twitter.com/alife" },
-    { icon: React.createElement(Icons.github), href: "https://github.com/alife" },
+    { icon: FaTwitter, href: "https://twitter.com/alife" },
+    { icon: FaFacebook, href: "https://facebook.com/alife" },
     // ... other social media links
   ],
-  email: "info@alife.com",
+  links: {
+    email: "contact@alifebyvision.com"
+  },
 };
-
-export type SiteConfig = typeof siteConfig;
