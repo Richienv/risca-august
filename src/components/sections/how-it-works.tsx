@@ -34,7 +34,7 @@ export default function HowItWorks() {
   return (
     <>
       <BlueGradientSeparator />
-      <Section className="py-8 md:py-12 relative overflow-hidden">
+      <Section className="py-1 md:py-12 relative overflow-hidden">
         <Ripple 
           className="absolute right-[35%] md:right-[0%] top-[-100%] md:bottom-[-3%] transform translate-x-1/4 translate-y-1/4" 
           mainCircleSize={100}
