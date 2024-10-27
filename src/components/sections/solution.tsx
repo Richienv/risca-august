@@ -30,22 +30,23 @@ const transformations = [
 
 function FeatureCard({ number, title, description, imageUrl, reverse, isLast }: { number: string; title: string; description: string; imageUrl: string; reverse: boolean; isLast: boolean }) {
   return (
-    <div className={cn("flex flex-col lg:flex-row items-start w-full mb-12 lg:mb-20", reverse ? "lg:flex-row-reverse" : "")}>
-      <div className="w-full lg:w-[40%] mb-6 lg:mb-0 lg:px-4">
+    <div className={cn("flex flex-col lg:flex-row items-start w-full mb-8 lg:mb-12 relative", reverse ? "lg:flex-row-reverse" : "")}>
+      <div className="w-full lg:w-[45%] mb-4 lg:mb-0 lg:px-4 relative z-10">
         <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 bg-clip-text text-transparent">{title}</h3>
         <p className="text-xs md:text-sm text-muted-foreground">{description}</p>
       </div>
-      <div className="w-full lg:w-[20%] flex flex-row lg:flex-col items-center justify-start mb-6 lg:mb-0 lg:px-4">
-        <div className="text-3xl lg:text-4xl font-bold mr-3 lg:mr-0 lg:mb-3">{number}</div>
+      <div className="w-full lg:w-[10%] flex flex-row lg:flex-col items-center justify-start mb-4 lg:mb-0 lg:px-2 relative z-10">
+        <div className="text-2xl lg:text-3xl font-bold mr-3 lg:mr-0 lg:mb-2">{number}</div>
         <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-white to-gray-300 dark:from-gray-700 dark:to-gray-900"></div>
-        {!isLast && <div className="hidden lg:block h-12 w-px bg-gradient-to-b from-white to-gray-300 dark:from-gray-700 dark:to-gray-900"></div>}
+        {!isLast && <div className="hidden lg:block h-8 w-px bg-gradient-to-b from-white to-gray-300 dark:from-gray-700 dark:to-gray-900"></div>}
       </div>
-      <div className="w-full lg:w-[40%] lg:px-4">
+      <div className="w-full lg:w-[45%] lg:px-4 relative">
+        <div className="absolute inset-0 bg-gradient-radial from-blue-500/30 via-purple-500/20 to-red-500/30 blur-2xl opacity-50 -z-10"></div>
         <ShineBorder borderRadius={12} borderWidth={1} color={["#3b82f6", "#10b981"]}>
           <Safari
             src={imageUrl}
             url="https://alife.vision"
-            className="w-full h-48 lg:h-56 object-cover rounded-lg"
+            className="w-full h-40 lg:h-48 object-cover rounded-lg"
           />
         </ShineBorder>
       </div>
@@ -56,21 +57,12 @@ function FeatureCard({ number, title, description, imageUrl, reverse, isLast }: 
 export default function SolutionSection() {
   return (
     <div className="relative overflow-hidden w-full">
-      {/* Enhanced radial gradient background */}
-      <div className="absolute inset-0 bg-gradient-radial from-blue-600/20 via-purple-600/15 to-red-600/20" />
+      <div className="absolute inset-0 bg-gradient-radial from-blue-600/10 via-purple-600/5 to-red-600/10"></div>
       
-      {/* Additional circular gradients for more pop */}
-      <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 bg-gradient-radial from-blue-500/30 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-1/2 h-1/2 bg-gradient-radial from-red-500/30 to-transparent rounded-full blur-3xl" />
-      
-      {/* Softer side gradients with masking and subtle trimming at top/bottom */}
-      <div className="absolute left-0 top-0 bottom-0 w-64 bg-gradient-to-r from-blue-500/30 to-transparent [mask-image:linear-gradient(to_right,black,transparent)] [mask-image:radial-gradient(ellipse_at_left,black_10%,transparent_70%)]" />
-      <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-red-500/30 to-transparent [mask-image:linear-gradient(to_left,black,transparent)] [mask-image:radial-gradient(ellipse_at_right,black_10%,transparent_70%)]" />
-      
-      <div className="relative z-10 py-16 lg:py-20">
-        <div className="text-center mb-10">
+      <div className="relative z-10 py-12 lg:py-16">
+        <div className="text-center mb-8 md:mb-10">
           <motion.h2 
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4"
+            className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -78,15 +70,15 @@ export default function SolutionSection() {
           >
             Kamu masih ragu?
           </motion.h2>
-          <div className="w-20 md:w-24 h-1 mx-auto bg-gradient-to-r from-blue-400 to-blue-600 mb-3 md:mb-4"></div>
+          <div className="w-16 md:w-20 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600 mb-2 md:mb-3"></div>
           <motion.p
-            className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-xs sm:max-w-sm md:max-w-2xl mx-auto px-4 md:px-0"
+            className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xs sm:max-w-sm md:max-w-2xl mx-auto px-4 md:px-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Jangan khawatir! Alife by Vision hadir untuk memberikan solusi nyata buat kamu yang ingin keluar dari rutinitas dan membangun bisnis sendiri.
+            Kami cuman butuh komitmen dari kamu, sisanya kita akan ajarkan semua!
           </motion.p>
         </div>
         
@@ -120,9 +112,9 @@ export default function SolutionSection() {
           </div>
         </div>
         
-        <div className="text-center mt-12 lg:mt-16">
+        <div className="text-center mt-8 lg:mt-12">
           <motion.button
-            className="px-8 py-3 bg-blue-600 text-white text-base md:text-lg rounded-full font-semibold hover:bg-blue-700 transition-colors"
+            className="px-6 py-2 bg-blue-600 text-white text-sm md:text-base rounded-full font-semibold hover:bg-blue-700 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
