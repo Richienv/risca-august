@@ -36,18 +36,33 @@ const data = [
 
 export default function FeaturesSection() {
   return (
-    <>
+    <div className="relative overflow-hidden w-full">
       <BlueGradientSeparator />
-      <Section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-semibold mb-4">Fitur Unggulan Alife</h2>
-          <hr className="w-24 mx-auto border-t-2 border-primary mb-4" />
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Bergabunglah dengan Alife dan nikmati berbagai fitur yang akan mendukung pertumbuhan pribadi dan bisnis Anda.
-          </p>
+      
+      {/* Enhanced radial gradient background */}
+      <div className="absolute inset-0 bg-gradient-radial from-blue-600/30 via-purple-600/20 to-red-600/30" />
+      
+      {/* Additional circular gradients for more pop */}
+      <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 bg-gradient-radial from-blue-500/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-1/2 h-1/2 bg-gradient-radial from-red-500/40 to-transparent rounded-full blur-3xl" />
+      
+      {/* Softer side gradients with masking and subtle trimming at top/bottom */}
+      <div className="absolute left-0 top-0 bottom-0 w-64 bg-gradient-to-r from-blue-500/50 to-transparent [mask-image:linear-gradient(to_right,black,transparent)] [mask-image:radial-gradient(ellipse_at_left,black_10%,transparent_70%)]" />
+      <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-red-500/50 to-transparent [mask-image:linear-gradient(to_left,black,transparent)] [mask-image:radial-gradient(ellipse_at_right,black_10%,transparent_70%)]" />
+
+      <Section className="py-1 relative">
+        <div className="relative z-10">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">Kamu Tidak Perlu Takut, Kami Siap Membantu!</h2>
+            <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
+            <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xs sm:max-w-sm md:max-w-xl mx-auto px-4 md:px-0">
+              We'll take you by the hand and show you the ropes. Our goal is to help you become the leader you're meant to be!
+            </p>
+          </div>
+          <Features collapseDelay={5000} linePosition="bottom" data={data} />
         </div>
-        <Features collapseDelay={5000} linePosition="bottom" data={data} />
       </Section>
-    </>
+      <BlueGradientSeparator />
+    </div>
   );
 }
