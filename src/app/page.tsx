@@ -6,8 +6,9 @@ import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import HowItWorks from "@/components/sections/how-it-works";
 import Pricing from "@/components/sections/pricing";
-import Problem from "@/components/sections/problem";
-import Solution from "@/components/sections/solution";
+import ProblemSection from "@/components/sections/problem";
+import PerubahanSection from "@/components/sections/perubahan";
+import SolutionSection from "@/components/sections/solution";
 import Testimonials from "@/components/sections/testimonials";
 import TestimonialsCarousel from "@/components/sections/testimonials-carousel";
 import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
@@ -18,9 +19,10 @@ export default function Home() {
       <Header />
       <Hero />
       <BlueGradientSeparator />
-      <Problem />
+      <PerubahanSection />
+      <ProblemSection />
       <BlueGradientSeparator />
-      <Solution />
+      <SolutionSection />
       <HowItWorks />
       <TestimonialsCarousel />
       <Features />
