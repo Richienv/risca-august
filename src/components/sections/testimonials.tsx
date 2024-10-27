@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import Image from "next/image";
 
+
 export const Highlight = ({
   children,
   className,
@@ -154,16 +155,16 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <Section className="py-20 max-w-8xl">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-4">Apa Kata Mereka?</h2>
-        <hr className="w-24 mx-auto border-t-2 border-primary mb-6" />
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <Section className="py-1 md:py-1 max-w-8xl">
+      <div className="text-center mb-8 md:mb-10">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">Dari Mereka yang Berani Berubah</h2>
+        <hr className="w-16 md:w-20 mx-auto border-t-2 border-primary mb-2 md:mb-3" />
+        <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xl mx-auto px-4 md:px-0">
           Dengarkan pengalaman langsung dari anggota komunitas Alife yang telah merasakan manfaatnya.
         </p>
       </div>
-      <div className="relative mt-6 max-h-screen overflow-hidden">
-        <div className="gap-4 md:columns-3 xl:columns-3 2xl:columns-3">
+      <div className="relative mt-4 max-h-[70vh] overflow-hidden">
+        <div className="gap-2 md:columns-3 xl:columns-3 2xl:columns-3">
           {Array(3)
             .fill(0)
             .map((_, i) => (
@@ -171,9 +172,9 @@ export default function Testimonials() {
                 vertical
                 key={i}
                 className={cn({
-                  "[--duration:60s]": i === 1,
-                  "[--duration:30s]": i === 0,
-                  "[--duration:70s]": i === 2,
+                  "[--duration:50s]": i === 1,
+                  "[--duration:25s]": i === 0,
+                  "[--duration:60s]": i === 2,
                 })}
               >
                 {testimonials.map((card, idx) => (
@@ -183,18 +184,19 @@ export default function Testimonials() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{
-                      delay: Math.random() * 0.8,
-                      duration: 1.2,
+                      delay: Math.random() * 0.5,
+                      duration: 0.8,
                     }}
                   >
-                    <TestimonialCard {...card} />
+                    <TestimonialCard {...card} className="mb-2" />
                   </motion.div>
                 ))}
               </Marquee>
             ))}
         </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-background from-20%"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-background from-20%"></div>
+        
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 w-full bg-gradient-to-t from-background from-20%"></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/5 w-full bg-gradient-to-b from-background from-20%"></div>
       </div>
     </Section>
   );
