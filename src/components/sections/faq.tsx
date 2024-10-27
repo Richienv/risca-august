@@ -32,15 +32,15 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <Section className="py-20">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-4">Pertanyaan yang Sering Diajukan</h2>
-        <hr className="w-24 mx-auto border-t-2 border-primary mb-6" />
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <Section className="py-1 md:py-1">
+      <div className="text-center mb-8 md:mb-12">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">Pertanyaan yang Sering Diajukan</h2>
+        <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
+        <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-4 md:px-0">
           Temukan jawaban atas pertanyaan umum tentang Alife by Vision
         </p>
       </div>
-      <div className="mx-auto my-12 max-w-3xl">
+      <div className="mx-auto my-8 max-w-3xl">
         <Accordion
           type="single"
           collapsible
@@ -52,15 +52,23 @@ export default function FAQ() {
               value={`item-${idx}`}
               className="border rounded-lg overflow-hidden"
             >
-              <AccordionTrigger className="px-4 py-4 text-left">
+              <AccordionTrigger className="px-4 py-4 text-left text-sm md:text-base">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="px-4 pb-4">{faq.answer}</AccordionContent>
+              <AccordionContent className="px-4 pb-3 text-xs md:text-sm">
+                {faq.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </div>
-      <div className="text-center mt-12">
+      <div className="text-center mt-8">
+        <p className="text-xs md:text-sm text-muted-foreground">
+          Masih punya pertanyaan? Hubungi kami di{" "}
+          <a href={`mailto:${siteConfig.links.email}`} className="text-primary underline">
+            {siteConfig.links.email}
+          </a>
+        </p>
       </div>
     </Section>
   );
