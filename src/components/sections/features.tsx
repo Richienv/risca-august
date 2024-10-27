@@ -56,7 +56,7 @@ export default function FeaturesSection() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">Kamu Tidak Perlu Takut, Kami Siap Membantu!</h2>
             <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
             <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xs sm:max-w-sm md:max-w-xl mx-auto px-4 md:px-0">
-              We'll take you by the hand and show you the ropes. Our goal is to help you become the leader you're meant to be!
+              We will take you by the hand and show you the ropes. Our goal is to help you become the leader you are meant to be!
             </p>
           </div>
           <Features collapseDelay={5000} linePosition="bottom" data={data} />
