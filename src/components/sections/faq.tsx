@@ -61,12 +61,6 @@ export default function FAQ() {
         </Accordion>
       </div>
       <div className="text-center mt-12">
-        <p className="text-muted-foreground">
-          Masih punya pertanyaan? Hubungi kami di{" "}
-          <a href={`mailto:${siteConfig.email || 'info@alife.com'}`} className="text-primary underline">
-            {siteConfig.email || 'info@alife.com'}
-          </a>
-        </p>
       </div>
     </Section>
   );
