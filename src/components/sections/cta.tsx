@@ -28,7 +28,7 @@ export default function CtaSection() {
         <div className="bg-black rounded-xl py-11 px-6 text-center">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 text-white">Jangan Biarkan Rasa Takut Mendikte Masa Depanmu!</h2>
           <blockquote className="text-sm md:text-base lg:text-lg italic text-silver-300 mb-4 shine">
-            "The best time to plant a tree was 20 years ago. The second best time is now."
+            The best time to plant a tree was 20 years ago. The second best time is now.
           </blockquote>
         </div>
       </ShineBorder>
