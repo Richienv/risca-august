@@ -63,12 +63,6 @@ export default function FAQ() {
         </Accordion>
       </div>
       <div className="text-center mt-8">
-        <p className="text-xs md:text-sm text-muted-foreground">
-          Masih punya pertanyaan? Hubungi kami di{" "}
-          <a href={`mailto:${siteConfig.links.email}`} className="text-primary underline">
-            {siteConfig.links.email}
-          </a>
-        </p>
       </div>
     </Section>
   );
