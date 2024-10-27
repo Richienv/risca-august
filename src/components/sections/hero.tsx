@@ -11,6 +11,8 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import Particles from "@/components/ui/particles";
 import RetroGrid from "@/components/ui/retro-grid";
 import ShineBorder from "@/components/ui/shine-border";
+import AvatarCircles from "@/components/avatar-circles";
+
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -51,9 +53,9 @@ function HeroPill() {
 
 function HeroTitles() {
   return (
-    <div className="flex w-full max-w-4xl flex-col space-y-4 overflow-hidden pt-8">
+    <div className="flex w-full max-w-4xl flex-col space-y-4 overflow-hidden pt-4">
       <motion.h1
-        className="bg-gradient-to-br from-foreground from-30% to-foreground/40 bg-clip-text text-center text-4xl font-medium leading-tight tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap"
+        className="bg-gradient-to-br from-foreground from-30% to-foreground/40 bg-clip-text text-center text-3xl font-medium leading-tight tracking-tighter text-transparent sm:text-6xl md:text-7xl lg:text-8xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-[90vw] mx-auto"
         initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{
@@ -62,10 +64,10 @@ function HeroTitles() {
           delay: 0.2,
         }}
       >
-        Sukses di Usia Muda!
+        1000 Hari All-In & Dapetin Income 100 Juta.
       </motion.h1>
       <motion.p
-        className="mb-12 text-base tracking-tight text-muted-foreground md:text-lg text-balance text-center"
+        className="mb-8 text-sm tracking-tight text-muted-foreground md:text-base text-balance text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -74,7 +76,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        Your Life, Your Way. Bukan cuma kerja 9-5, di sini kamu bisa bangun bisnismu sendiri sambil membantu melindungi orang-orang terdekatmu dengan asuransi.
+        <span className="text-white">161+ Business Partner sudah berhasil dapetin <span className="font-bold underline">100 Juta passive income</span> dengan sistem yang kami punya.</span>
       </motion.p>
     </div>
   );
@@ -89,7 +91,7 @@ function HeroCTA() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.8, ease }}
       >
-        <Link href="/join" className="w-full sm:w-auto">
+        <Link href="/contact" className="w-full sm:w-auto">
           <RainbowButton className="w-full sm:w-auto">
             Join Our Community
           </RainbowButton>
@@ -115,17 +117,17 @@ function HeroImage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.2, duration: 1, ease }}
     >
-      <div className="relative w-full max-w-5xl mt-16">
+      <div className="relative w-full max-w-4xl mt-8">
         {/* Blue glow effect on top */}
         <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-full h-40 bg-blue-500 opacity-30 blur-[100px] rounded-full"></div>
         
         <ShineBorder 
-          borderRadius={16} 
+          borderRadius={8} 
           borderWidth={1} 
-          color={["#3b82f6", "#10b981"]} 
+          color={["#C0C0C0", "#FFFFFF"]} 
           className="relative z-10 w-full"
         >
-          <div className="rounded-[calc(1.5rem-1px)] bg-background overflow-hidden w-full pt-[56.25%] relative">
+          <div className="rounded-[calc(0.5rem-1px)] bg-background overflow-hidden w-full pt-[56.25%] relative">
             <iframe
               src="https://www.youtube.com/embed/LO4LQ6aaGUk?si=qD74pu3ZHe4sPr4P&autoplay=1&mute=1&start=30"
               title="Alife by Vision Video"
@@ -146,17 +148,22 @@ function HeroImage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.6, duration: 0.8, ease }}
       >
-        <Link href="/join" className="w-full">
+        <Link href="/contact" className="w-full">
           <RainbowButton className="w-full">
             Join Our Community
           </RainbowButton>
         </Link>
+        <div className="mt-6 flex flex-col items-center justify-center">
+          <p className="text-xs text-muted-foreground mb-4 text-center">
+            Bisnis dengan blueprint yang jelas, transparan, dan dapat diimplementasikan
+          </p>
+        </div>
       </motion.div>
     </motion.div>
   );
 }
 
-export default function Hero2() {
+export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden w-full">
       <div className="absolute inset-0 -z-10 w-full h-full">
@@ -164,11 +171,11 @@ export default function Hero2() {
       </div>
       <Particles
         className="absolute inset-0 -z-10"
-        quantity={300}  // Increased from 200 to 300
+        quantity={300}
         staticity={20}
         color="#8b5cf6"
       />
-      <div className="relative py-20 sm:py-24 md:py-28 w-full">
+      <div className="relative py-8 sm:py-12 md:py-16 w-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex w-full flex-col items-center justify-start">
             <HeroPill />
