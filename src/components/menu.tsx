@@ -15,23 +15,41 @@ import {
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
+interface HeaderItem {
+  trigger?: string;
+  href?: string;
+  label?: string;
+  content?: {
+    main?: {
+      href: string;
+      icon: React.ReactNode;
+      title: string;
+      description: string;
+    };
+    items: Array<{
+      href: string;
+      title: string;
+      description: string;
+    }>;
+  };
+}
+
 export default function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        {siteConfig.header.map((item, index) => (
+        {siteConfig.header.map((item: HeaderItem, index: number) => (
           <NavigationMenuItem key={index}>
             {item.trigger ? (
               <>
                 <NavigationMenuTrigger>{item.trigger}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul
-                    className={cn(
-                      "grid gap-3 p-6",
+                    className={`grid gap-3 p-6 ${
                       item.content?.main
                         ? "md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"
                         : "w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]"
-                    )}
+                    }`}
                   >
                     {item.content?.main && (
                       <li className="row-span-3">
@@ -67,7 +85,7 @@ export default function NavigationMenuDemo() {
             ) : (
               <Link
                 href={item.href || ""}
-                target="_arya"
+                target="_blank"
                 legacyBehavior
                 passHref
               >
