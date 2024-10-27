@@ -53,9 +53,9 @@ function HeroPill() {
 
 function HeroTitles() {
   return (
-    <div className="flex w-full max-w-4xl flex-col space-y-4 overflow-hidden pt-4">
+    <div className="flex w-full max-w-5xl flex-col space-y-4 overflow-hidden pt-4">
       <motion.h1
-        className="bg-gradient-to-br from-foreground from-30% to-foreground/40 bg-clip-text text-center text-3xl font-medium leading-tight tracking-tighter text-transparent sm:text-6xl md:text-7xl lg:text-8xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-[90vw] mx-auto"
+        className="bg-gradient-to-br from-foreground from-30% to-foreground/40 bg-clip-text text-center text-3xl font-medium leading-tight tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto"
         initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{
