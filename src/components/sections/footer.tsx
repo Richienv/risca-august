@@ -14,12 +14,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.description}
           </span>
           <div className="flex space-x-6">
-            <span className="text-sm text-muted-foreground">
-              Privacy Policy
-            </span>
-            <span className="text-sm text-muted-foreground">
-              Terms of Service
-            </span>
+           
           </div>
         </div>
       </div>
