@@ -39,7 +39,7 @@ export default function WhatIsAlifeSection() {
       
       <div className="relative z-10 py-12">
         <div className="text-center mb-12">
-          <h2 className="text-xl md:text-xl font-semibold mb-4">Kenapa bisnis ini?</h2>
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4">Kenapa bisnis ini?</h2>
           <div className="w-40 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600 mb-6"></div>
         </div>
         
