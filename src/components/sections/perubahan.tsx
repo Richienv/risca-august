@@ -3,87 +3,146 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { GradientSeparator } from "@/components/gradient-separator";
 import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 const alifeBenefits = [
   {
-    image: "/dashboard.png",
-    title: "",
-    description: "Perkembangan income yang cepat. Apapun kata mereka di luar sana, dimana lagi kamu bisa grow income kamu dengan pesat (bebas pajak) tanpa harus ngambil resiko modal?",
+    image: "/mdit.jpeg",
+    title: "Community Event 1",
   },
   {
-    title: "",
-    description: "Selamatkan waktu kamu. Berkembang bersama orang-orang yang mau berkembang. You are the people who you surround with dan kita will prioritize your personal growth.",
-    image: "/dashboard.png",
+    image: "/lunch.jpeg",
+    title: "Community Event 2",
   },
   {
-    title: "",
-    description: "Make this business your own. If you're willing to put in the work, you will achieve your goals and your dreams.",
-    image: "/dashboard.png",
+    image: "/event.jpeg",
+    title: "Community Event 3",
+  },
+  {
+    image: "/welcome.jpeg",
+    title: "Community Event 4",
+  },
+  {
+    image: "/baloon.jpeg",
+    title: "Community Event 4",
   },
 ];
 
 export default function WhatIsAlifeSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
+  const visibleCount = 3;
+
+  const handlePreviousGrid = () => {
+    setStartIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNextGrid = () => {
+    setStartIndex((prev) => 
+      Math.min(prev + 1, alifeBenefits.length - visibleCount)
+    );
+  };
+
+  const visibleBenefits = alifeBenefits.slice(startIndex, startIndex + visibleCount);
+
   return (
     <div className="relative overflow-hidden w-full">
-      {/* Enhanced radial gradient background */}
-      <div className="absolute inset-0 bg-gradient-radial from-blue-600/20 via-purple-600/15 to-red-600/20" />
-      
-      {/* Additional circular gradients for more pop */}
-      <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 bg-gradient-radial from-blue-500/30 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-1/2 h-1/2 bg-gradient-radial from-red-500/30 to-transparent rounded-full blur-3xl" />
-      
-      {/* Softer side gradients with masking and subtle trimming at top/bottom */}
-      <div className="absolute left-0 top-0 bottom-0 w-64 bg-gradient-to-r from-blue-500/20 to-transparent [mask-image:linear-gradient(to_right,black,transparent)] [mask-image:radial-gradient(ellipse_at_left,black_10%,transparent_70%)]" />
-      <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-red-500/20 to-transparent [mask-image:linear-gradient(to_left,black,transparent)] [mask-image:radial-gradient(ellipse_at_right,black_10%,transparent_70%)]" />
-      
-      <div className="relative z-10 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4">Kenapa bisnis ini?</h2>
-          <div className="w-40 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600 mb-6"></div>
+      <div className="relative z-10 py-8">
+        <div className="text-center mb-8">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4">
+            We welcome you, to join our community!
+          </h2>
+          <div className="w-40 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600"></div>
         </div>
         
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <BentoGrid className="grid-cols-1 md:grid-cols-2 gap-6">
-            <BentoGridItem
-              title={alifeBenefits[0].title}
-              description={alifeBenefits[0].description}
-              header={
-                <div className="relative w-full h-full aspect-[2/1]">
-                  <Image
-                    src={alifeBenefits[0].image}
-                    alt="Alife Overview"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-xl"
-                  />
-                </div>
-              }
-              className="md:col-span-2 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-xl overflow-hidden"
-            />
-            {alifeBenefits.slice(1, 3).map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                header={
-                  <div className="relative w-full h-full aspect-square">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          {/* Featured Image Display */}
+          <div className="relative">
+            <div className="aspect-[16/9] w-full relative overflow-hidden rounded-xl">
+              <Image
+                src={alifeBenefits[currentIndex].image}
+                alt={alifeBenefits[currentIndex].title}
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-500 ease-in-out"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-white">
+                  {alifeBenefits[currentIndex].title}
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Gradient Separator */}
+          <div className="relative py-4">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            </div>
+          </div>
+
+          {/* Bottom Grid with Navigation */}
+          <div className="relative">
+            {/* Thumbnails Container */}
+            <div className="overflow-x-auto scrollbar-hide -mx-4 px-4">
+              <div className="flex gap-2 sm:gap-4">
+                {visibleBenefits.map((item, index) => (
+                  <div
+                    key={startIndex + index}
+                    className={`relative flex-shrink-0 w-[calc(33.333%-0.5rem)] min-w-[180px] sm:min-w-[220px] aspect-[4/3] 
+                      cursor-pointer overflow-hidden rounded-lg transition-all
+                      ${currentIndex === startIndex + index ? 'ring-2 ring-blue-500' : 'opacity-80 hover:opacity-100'}`}
+                    onClick={() => setCurrentIndex(startIndex + index)}
+                  >
                     <Image
                       src={item.image}
-                      alt={item.title || ''}
+                      alt={item.title}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-xl"
+                      className="transition-transform duration-300 hover:scale-105"
                     />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 sm:p-3">
+                      <h4 className="text-xs sm:text-sm font-medium text-white">
+                        {item.title}
+                      </h4>
+                    </div>
                   </div>
-                }
-                className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-xl overflow-hidden"
-              />
-            ))}
-          </BentoGrid>
-          
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between pointer-events-none">
+              <button
+                onClick={handlePreviousGrid}
+                className={`p-1.5 sm:p-2 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 
+                  transition-colors pointer-events-auto transform -translate-x-1/2
+                  ${startIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'opacity-100'}`}
+                disabled={startIndex === 0}
+                aria-label="Previous images"
+              >
+                <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+              </button>
+              <button
+                onClick={handleNextGrid}
+                className={`p-1.5 sm:p-2 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 
+                  transition-colors pointer-events-auto transform translate-x-1/2
+                  ${startIndex >= alifeBenefits.length - visibleCount ? 'opacity-50 cursor-not-allowed' : 'opacity-100'}`}
+                disabled={startIndex >= alifeBenefits.length - visibleCount}
+                aria-label="Next images"
+              >
+                <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+              </button>
+            </div>
+          </div>
+
           <motion.p 
-            className="text-sm md:text-md max-w-3xl mx-auto mt-12 lg:mt-20 text-center font-sans leading-relaxed"
+            className="text-sm sm:text-md max-w-3xl mx-auto mt-8 sm:mt-12 text-center font-sans leading-relaxed"
             style={{
               background: "linear-gradient(to right, #ffffff, #e0e0e0)",
               WebkitBackgroundClip: "text",
@@ -94,7 +153,7 @@ export default function WhatIsAlifeSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Kami membuka kesempatan untuk kalian yang ingin meraih kebebasan dan pertumbuhan finansial Kalau kamu ambisius tapi masih ragu untuk memulai, this is your moment! Kamu tahu kamu bisa lebih, tapi kurang pengalaman? Jangan khawatir, I got you!
+            Kami membuka kesempatan untuk kalian yang ingin meraih kebebasan dan pertumbuhan finansial Kalau kamu ambisius tapi masih ragu untuk memulai, this is your moment!
           </motion.p>
           <BlueGradientSeparator />
         </div>
