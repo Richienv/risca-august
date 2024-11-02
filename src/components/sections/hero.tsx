@@ -129,7 +129,7 @@ function HeroImage() {
         >
           <div className="rounded-[calc(0.5rem-1px)] bg-background overflow-hidden w-full pt-[56.25%] relative">
             <iframe
-              src="https://youtu.be/Zy8219Uf28Q"
+              src="https://youtu.be/Zy8219Uf28Q?si=locupVLysZLmjgsM"
               title="Alife by Vision Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
