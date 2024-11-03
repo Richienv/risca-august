@@ -102,7 +102,7 @@ export default function WhatIsAlifeSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <BlueGradientSeparator />
-            Bergabunglah dengan success team kami untuk unleash your true potential! Kami akan membimbing kamu membangun personal brand dan bisnis yang sustainable. Ratusan orang sudah berhasil, now it's your turn to shine! Don't miss out on this life-changing opportunity - kamu pasti bisa achieve the same success as us! 🚀
+            Bergabunglah dengan success team kami untuk unleash your true potential! Kami akan membimbing kamu membangun personal brand dan bisnis yang sustainable. Ratusan orang sudah berhasil, now its your turn to shine! Dont miss out on this life-changing opportunity - kamu pasti bisa achieve the same success as us! 🚀
           </motion.p>
           <BlueGradientSeparator />
         </div>
