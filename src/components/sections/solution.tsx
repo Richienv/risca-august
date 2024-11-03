@@ -2,54 +2,91 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Safari from "@/components/safari";
-import ShineBorder from "@/components/ui/shine-border";
+import Image from "next/image";
 
 const transformations = [
   {
-    title: "Gak Perlu Pengalaman, Kita Ajarkan Semua!",
-    description: "Kamu gak perlu background atau pengalaman bisnis, karena kita akan bimbing kamu step-by-step. From zero to hero, kamu akan punya mentor yang siap membantu kamu kapan pun kamu butuh!",
-    image: "/perubahan1.png",
+    title: "Kita Ajarkan Semua Skills & Techniques For Success!",
+    description: "Kamu akan mendapatkan akses eksklusif ke jaringan kami, yang terdiri dari lebih dari 1000+ anggota yang sudah berhasil dan siap membantu kamu dalam setiap langkah bisnis!",
+    image: "/belajar.png",
   },
   {
-    title: "Bekerja Dari Mana Saja, Bebas Waktu!",
-    description: "Mau kerja dari rumah atau dari pantai? No problem! Kamu bisa atur waktu sesuai kebutuhan kamu. You are the boss of your own schedule. Kebebasan ini yang bikin banyak orang ngerasa lebih bahagia dan hidup mereka berubah 180 derajat!",
-    image: "/perubahan2.png",
+    title: "Exclusive Access to Our Network & Millionaire Mentors",
+    description: "Kamu akan mendapatkan akses eksklusif ke jaringan kami, yang terdiri dari lebih dari 1000+ anggota yang sudah berhasil dan siap membantu kamu dalam setiap langkah bisnis!",
+    image: "/link.png",
   },
   {
-    title: "Sistem yang Terbukti Sukses!",
+    title: "We Create Blueprint For Success! You Just Follow Need to Do!",
     description: "Kamu gak perlu takut gagal karena bisnis ini sudah punya sistem yang terbukti sukses. Banyak yang sudah berhasil dan sekarang gilirannya kamu! This system works, yang penting kamu mau coba dan konsisten.",
-    image: "/perubahan3.png",
+    image: "/blueprint.png",
   },
   {
-    title: "Tidak Ada Resiko, 100% Aman Dicoba!",
+    title: "No Risk, But So Much To Gain!",
     description: "Bisnis ini benar-benar minim resiko. Nothing to lose, everything to gain! Kamu cuma perlu berani coba, dan kamu akan lihat sendiri perubahan besar yang bisa terjadi dalam hidup kamu.",
-    image: "/perubahan1.png",
+    image: "/gain.png",
   },
 ];
 
-function FeatureCard({ number, title, description, imageUrl, reverse, isLast }: { number: string; title: string; description: string; imageUrl: string; reverse: boolean; isLast: boolean }) {
+function FeatureCard({ 
+  number, 
+  title, 
+  description, 
+  imageUrl, 
+  isLast 
+}: { 
+  number: string; 
+  title: string; 
+  description: string; 
+  imageUrl: string; 
+  isLast: boolean; 
+}) {
   return (
-    <div className={cn("flex flex-col lg:flex-row items-start w-full mb-8 lg:mb-12 relative", reverse ? "lg:flex-row-reverse" : "")}>
-      <div className="w-full lg:w-[45%] mb-4 lg:mb-0 lg:px-4 relative z-10">
-        <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-2 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 bg-clip-text text-transparent">{title}</h3>
-        <p className="text-xs md:text-sm text-muted-foreground">{description}</p>
+    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-16 lg:mb-24 relative">
+      {/* Image on the left - Updated with minimal silver-black gradient border */}
+      <div className="w-full lg:w-2/5">
+        <div className="relative aspect-[4/3] w-full p-[2px] rounded-lg bg-gradient-to-br from-gray-400 via-gray-600 to-gray-800">
+          <div className="relative h-full w-full overflow-hidden rounded-lg">
+            <Image
+              src={imageUrl}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              className="transition-transform duration-300 hover:scale-105 grayscale contrast-125 brightness-90"
+            />
+          </div>
+        </div>
       </div>
-      <div className="w-full lg:w-[10%] flex flex-row lg:flex-col items-center justify-start mb-4 lg:mb-0 lg:px-2 relative z-10">
-        <div className="text-2xl lg:text-3xl font-bold mr-3 lg:mr-0 lg:mb-2">{number}</div>
-        <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-white to-gray-300 dark:from-gray-700 dark:to-gray-900"></div>
-        {!isLast && <div className="hidden lg:block h-8 w-px bg-gradient-to-b from-white to-gray-300 dark:from-gray-700 dark:to-gray-900"></div>}
+
+      {/* Vertical dashed line */}
+      <div className="hidden lg:block w-px h-full absolute left-[40%] top-0">
+        <div className="w-px h-full bg-gradient-to-b from-transparent via-gray-500/20 to-transparent 
+          [mask-image:linear-gradient(to_bottom,transparent_0%,black_25%,black_75%,transparent_100%)] 
+          [mask-size:1px_8px] [mask-repeat:repeat]">
+        </div>
       </div>
-      <div className="w-full lg:w-[45%] lg:px-4 relative">
-        <div className="absolute inset-0 bg-gradient-radial from-blue-500/30 via-purple-500/20 to-red-500/30 blur-2xl opacity-50 -z-10"></div>
-        <ShineBorder borderRadius={12} borderWidth={1} color={["#3b82f6", "#10b981"]}>
-          <Safari
-            src={imageUrl}
-            url="https://alife.vision"
-            className="w-full h-40 lg:h-48 object-cover rounded-lg"
-          />
-        </ShineBorder>
+
+      {/* Content on the right */}
+      <div className="w-full lg:w-3/5 text-left px-4 lg:px-8">
+        <div className="flex items-center gap-4 mb-4">
+          <span className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            {number}
+          </span>
+          <div className="h-px lg:h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-500 opacity-50"></div>
+        </div>
+        <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          {title}
+        </h3>
+        <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
+          {description}
+        </p>
       </div>
+
+      {/* Bottom line for non-last items */}
+      {!isLast && (
+        <div className="w-full h-px absolute -bottom-8 lg:-bottom-12 left-0">
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-500/20 to-transparent"></div>
+        </div>
+      )}
     </div>
   );
 }
@@ -57,12 +94,14 @@ function FeatureCard({ number, title, description, imageUrl, reverse, isLast }: 
 export default function SolutionSection() {
   return (
     <div className="relative overflow-hidden w-full">
-      <div className="absolute inset-0 bg-gradient-radial from-blue-600/10 via-purple-600/5 to-red-600/10"></div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-radial from-blue-600/10 via-purple-600/5 to-pink-600/10"></div>
       
-      <div className="relative z-10 py-12 lg:py-16">
-        <div className="text-center mb-8 md:mb-10">
+      <div className="relative z-10 py-16 lg:py-24">
+        {/* Section Header */}
+        <div className="text-center mb-16 lg:mb-24 px-4">
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3"
+            className="text-2xl lg:text-2xl xl:text-3xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -70,9 +109,9 @@ export default function SolutionSection() {
           >
             Kamu masih ragu?
           </motion.h2>
-          <div className="w-16 md:w-20 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600 mb-2 md:mb-3"></div>
+          <div className="w-24 lg:w-32 h-0.5 mx-auto bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6"></div>
           <motion.p
-            className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xs sm:max-w-sm md:max-w-2xl mx-auto px-4 md:px-0"
+            className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -82,39 +121,34 @@ export default function SolutionSection() {
           </motion.p>
         </div>
         
+        {/* Features Grid */}
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="lg:flex lg:flex-col lg:items-stretch">
-            {transformations.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="lg:flex lg:items-stretch"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 20,
-                  delay: index * 0.1,
-                }}
-                viewport={{ once: true }}
-              >
-                <FeatureCard 
-                  number={(index + 1).toString().padStart(2, '0')} 
-                  title={feature.title} 
-                  description={feature.description} 
-                  imageUrl={feature.image} 
-                  reverse={index % 2 !== 0} 
-                  isLast={index === transformations.length - 1} 
-                />
-              </motion.div>
-            ))}
-          </div>
+          {transformations.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true }}
+            >
+              <FeatureCard 
+                number={(index + 1).toString().padStart(2, '0')} 
+                title={feature.title} 
+                description={feature.description} 
+                imageUrl={feature.image} 
+                isLast={index === transformations.length - 1} 
+              />
+            </motion.div>
+          ))}
         </div>
         
-        <div className="text-center mt-8 lg:mt-12">
+        {/* CTA Button */}
+        <div className="text-center mt-8 lg:mt-16">
           <motion.button
-            className="px-6 py-2 bg-blue-600 text-white text-sm md:text-base rounded-full font-semibold hover:bg-blue-700 transition-colors"
+            className="px-8 py-3 text-lg lg:text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
