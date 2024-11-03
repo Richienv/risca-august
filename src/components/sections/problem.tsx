@@ -1,36 +1,23 @@
 "use client";
 
-import { useState } from "react";
 import BlurFade from "@/components/magicui/blur-fade";
 import { BorderBeam } from "@/components/magicui/border-beam";
-import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rani",
-    role: "Entrepreneur Muda",
-    videoUrl: "https://www.youtube.com/embed/JlWA3kvJq9o?si=721YUmg07OppdYY5",
+    name: "Debora Simon",
+    role: "2 Years Joined",
+    videoUrl: "https://www.youtube.com/embed/6V4ZMtOLzYM",
   },
   {
-    name: "Budi",
-    role: "Digital Marketer",
-    videoUrl: "https://www.youtube.com/embed/JlWA3kvJq9o?si=721YUmg07OppdYY5",
+    name: "Hesti",
+    role: "2 Years Joined",
+    videoUrl: "https://www.youtube.com/embed/mZPU0wsh5sg",
   },
   {
-    name: "Anita",
-    role: "Content Creator",
-    videoUrl: "https://www.youtube.com/embed/JlWA3kvJq9o?si=721YUmg07OppdYY5",
-  },
-  {
-    name: "Dian",
-    role: "Freelance Designer",
-    videoUrl: "https://www.youtube.com/embed/JlWA3kvJq9o?si=721YUmg07OppdYY5",
-  },
-  {
-    name: "Eko",
-    role: "Tech Startup Founder",
-    videoUrl: "https://www.youtube.com/embed/JlWA3kvJq9o?si=721YUmg07OppdYY5",
+    name: "Sheila Tang",
+    role: "3 Years Joined",
+    videoUrl: "https://www.youtube.com/embed/wAvOCkNjUts",
   },
 ];
 
@@ -59,16 +46,6 @@ function TestimonialCard({ name, role, videoUrl }: { name: string; role: string;
 }
 
 export default function TestimonialSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
     <div className="relative overflow-hidden w-full">
       {/* Enhanced radial gradient background */}
@@ -90,31 +67,17 @@ export default function TestimonialSection() {
             Jangan percaya kita, lihat sendiri aja testimoni mereka yang bisa banyak membantu orang dari hasil cuan group
           </p>
         </div>
-        <div className="relative max-w-7xl mx-auto px-4">
+        
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[0, 1, 2].map((offset) => {
-              const index = (currentIndex + offset) % testimonials.length;
-              return (
-                <BlurFade key={index} delay={0.2 * offset} inView>
-                  <div className="aspect-[16/10]">
-                    <TestimonialCard {...testimonials[index]} />
-                  </div>
-                </BlurFade>
-              );
-            })}
+            {testimonials.map((testimonial, index) => (
+              <BlurFade key={index} delay={0.2 * index} inView>
+                <div className="aspect-[16/10]">
+                  <TestimonialCard {...testimonial} />
+                </div>
+              </BlurFade>
+            ))}
           </div>
-          <button 
-            onClick={prevSlide} 
-            className="absolute top-1/2 -left-4 md:-left-16 transform -translate-y-1/2 bg-background/80 p-2 md:p-3 rounded-full shadow-lg"
-          >
-            <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
-          </button>
-          <button 
-            onClick={nextSlide} 
-            className="absolute top-1/2 -right-4 md:-right-16 transform -translate-y-1/2 bg-background/80 p-2 md:p-3 rounded-full shadow-lg"
-          >
-            <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
-          </button>
         </div>
       </div>
     </div>
