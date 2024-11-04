@@ -29,7 +29,7 @@ function HeroPill() {
           style={{ "--shimmer-width": "100px" } as React.CSSProperties}
           className="mx-auto max-w-md text-neutral-600/80 dark:text-neutral-400/80 animate-shimmer bg-clip-text bg-[length:var(--shimmer-width)_100%] bg-no-repeat [background-position:0_0] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] bg-gradient-to-r from-neutral-100 via-neutral-900/80 via-50% to-neutral-100 dark:from-neutral-900 dark:via-neutral-100/80 dark:to-neutral-900 inline-flex items-center justify-center"
         >
-          <span>✨ Introducing Alife by Vision</span>
+          <span>Bisnis Yang Terbukti Mencetak Income Milyaran</span>
         </p>
         <svg
           width="15"
@@ -55,7 +55,7 @@ function HeroTitles() {
   return (
     <div className="flex w-full max-w-5xl flex-col space-y-4 overflow-hidden pt-4">
       <motion.h1
-        className="bg-gradient-to-br from-foreground from-30% to-foreground/40 bg-clip-text text-center text-3xl font-medium leading-tight tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto"
+        className="bg-gradient-to-br from-foreground from-30% to-foreground/40 bg-clip-text text-center text-4xl font-medium leading-tight tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto"
         initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{
@@ -64,7 +64,7 @@ function HeroTitles() {
           delay: 0.2,
         }}
       >
-        1000 Hari All-In & Dapetin Income 100 Juta.
+        Kumpulan Anak-Anak Muda  High Achievers Income Milyaran
       </motion.h1>
       <motion.p
         className="mb-8 text-sm tracking-tight text-muted-foreground md:text-base text-balance text-center"
@@ -76,7 +76,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        <span className="text-white">161+ Business Partner sudah berhasil dapetin <span className="font-bold underline">100 Juta passive income</span> dengan sistem yang kami punya.</span>
+        <span className="text-white">Kosongkan Gelas Kamu dan Belajar Bareng Kami <span className="font-bold underline">dan Boost Income Kamu Jadi 3 Digit</span> dengan sistem yang kami punya.</span>
       </motion.p>
     </div>
   );
