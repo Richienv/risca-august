@@ -6,6 +6,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({
+  metadataBase: new URL('https://marthateja.com'),
   title: "Join Martha Insurance Business Community",
   description: "Join our thriving insurance business community. Learn, grow, and succeed together with Martha's mentorship and support network.",
   openGraph: {
@@ -15,14 +16,33 @@ export const metadata: Metadata = constructMetadata({
     siteName: 'Martha Insurance Business Community',
     images: [
       {
-        url: '/thumb.png', // Put your preview image in public folder
+        url: '/thumb.png',
         width: 1200,
         height: 630,
         alt: 'Martha Insurance Business Community',
+        type: 'image/png',
+      },
+      {
+        url: '/thumb-square.png',
+        width: 600,
+        height: 600,
+        alt: 'Martha Insurance Business Community',
+        type: 'image/png',
       },
     ],
     locale: 'id_ID',
     type: 'website',
+  },
+  other: {
+    'og:image:secure_url': 'https://marthateja.com/thumb.png',
+    'og:image:type': 'image/png',
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:locale': 'id_ID',
+    'og:site_name': 'Martha Insurance Business Community',
+    'og:title': 'Join Martha Insurance Business Community',
+    'og:description': 'Join our thriving insurance business community. Learn, grow, and succeed together with Martha\'s mentorship and support network.',
+    'og:url': 'https://marthateja.com?v=1',
   },
   twitter: {
     card: 'summary_large_image',
