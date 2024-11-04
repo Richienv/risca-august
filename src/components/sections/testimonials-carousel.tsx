@@ -17,7 +17,7 @@ import { useRef } from "react";
 const bonuses = [
   {
     title: "Give Reward to Your Small Wins",
-    description: "We'll give you a reward for every small win you achieve.",
+    description: "We will give you a reward for every small win you achieve.",
     image: "/reward.png",
   },
   {
@@ -71,7 +71,7 @@ export default function BonusCarousel() {
             </h2>
             <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-2" />
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-sm sm:max-w-lg md:max-w-3xl mx-auto">
-              Bisnis is not a solo journey, it's a journey to success together!
+              Bisnis is not a solo journey, it is a journey to success together!
             </p>
           </div>
           <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] overflow-visible">
