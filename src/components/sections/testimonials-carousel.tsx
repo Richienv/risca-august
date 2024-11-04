@@ -67,11 +67,11 @@ export default function BonusCarousel() {
         <div className="relative z-10 w-full overflow-visible">
           <div className="text-center mb-4 md:mb-6">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">
-              Kita akan sangat menghargai semua effort kamu
+             Join Komunitas Yang Pengen Sukses Bareng! Bukan Sukses Sendiri!
             </h2>
             <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-2" />
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-sm sm:max-w-lg md:max-w-3xl mx-auto">
-              Semakin giat kamu untuk belajar dan berusaha, semakin besar penghasilan yang bisa kamu capai.
+              Bisnis is not a solo journey, it's a journey to success together!
             </p>
           </div>
           <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] overflow-visible">
