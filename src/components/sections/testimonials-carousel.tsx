@@ -8,44 +8,49 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import ShineBorder from "@/components/ui/shine-border";
-import Safari from "@/components/safari";
+import Image from "next/image";
 import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
 import { GradientBlur } from "@/components/ui/gradient-blur";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 const bonuses = [
   {
-    title: "Exclusive Podcast",
-    description: "Dengerin cerita dari entrepreneurs sukses langsung dari mereka!",
-    image: "/perubahan1.png",
+    title: "Give Reward to Your Small Wins",
+    description: "We'll give you a reward for every small win you achieve.",
+    image: "/reward.png",
   },
   {
     title: "Free Exclusive Trip",
-    description: "Enjoy perjalanan gratis bersama komunitas asik.",
-    image: "/perubahan2.png",
+    description: "Achieve your goal with us and get a free trip to Europe, Japan, Turkey and more!",
+    image: "/tripss.png",
   },
   {
-    title: "Personal Development Classes",
+    title: "Exclusive Mentorship",
     description: "Upgrade skill bisnismu dengan mentorship terbaik.",
-    image: "/perubahan3.png",
+    image: "/mentor.png",
   },
   {
     title: "Broad Network",
     description: "Bertemu dengan para pebisnis muda di seluruh Indonesia.",
-    image: "/perubahan1.png",
+    image: "/bright.png",
   },
   {
-    title: "Private Events",
-    description: "Nikmati event-event seru yang eksklusif hanya untuk members.",
-    image: "/perubahan2.png",
+    title: "Supportive Community",
+    description: "Dapatkan dukungan dari komunitas yang mendukung to unlock your potential.",
+    image: "/komunitas.png",
   },
 ];
 
 export default function BonusCarousel() {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
   return (
     <>
       <BlueGradientSeparator />
-      <Section className="py-8 md:py-12 relative overflow-hidden">
+      <Section className="py-4 md:py-8 relative overflow-visible">
         <GradientBlur 
           className="top-[10%] left-[10%]" 
           size="medium" 
@@ -59,50 +64,62 @@ export default function BonusCarousel() {
           intensity="high" 
         />
         
-        <div className="relative z-10">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">Kerja Keras Kamu Akan Sangat di Apresiasi.</h2>
-            <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-xs sm:max-w-sm md:max-w-2xl mx-auto px-4 md:px-0">
-              Your effort, your reward. Semakin giat kamu bekerja, semakin besar penghasilan yang bisa kamu capai.
+        <div className="relative z-10 w-full overflow-visible">
+          <div className="text-center mb-4 md:mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2">
+              Kita akan sangat menghargai semua effort kamu
+            </h2>
+            <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-2" />
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-sm sm:max-w-lg md:max-w-3xl mx-auto">
+              Semakin giat kamu untuk belajar dan berusaha, semakin besar penghasilan yang bisa kamu capai.
             </p>
           </div>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-xs sm:max-w-sm md:max-w-3xl lg:max-w-5xl mx-auto"
-          >
-            <CarouselContent className="-ml-1 md:-ml-2">
-              {bonuses.map((bonus, index) => (
-                <CarouselItem key={index} className="pl-1 md:pl-2 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="flex flex-col">
-                    <ShineBorder 
-                      borderRadius={12} 
-                      borderWidth={1} 
-                      color={["#ffffff", "#e0e0e0"]}
-                      className="mb-2"
-                    >
-                      <Safari
+          <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] overflow-visible">
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+
+              className="w-full overflow-visible"
+            >
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
+                <CarouselPrevious className="relative translate-x-0 bg-background/80 hover:bg-background/90" />
+              </div>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                <CarouselNext className="relative translate-x-0 bg-background/80 hover:bg-background/90" />
+              </div>
+              
+              <CarouselContent className="overflow-visible">
+                {bonuses.map((bonus, index) => (
+                  <CarouselItem 
+                    key={index} 
+                    className="basis-[50%] sm:basis-[40%] md:basis-[40%] lg:basis-[30%] xl:basis-[30%] 2xl:basis-[20%] transition-opacity duration-300 data-[active=false]:opacity-50 px-1"
+                  >
+                    <div className="relative aspect-[9/16] w-full overflow-hidden rounded-xl group">
+                      <Image
                         src={bonus.image}
-                        url="https://alife.vision"
-                        className="w-full h-48 lg:h-56 object-cover rounded-lg"
+                        alt={bonus.title}
+                        layout="fill"
+                        objectFit="cover"
+                        className="transition-transform duration-500 group-hover:scale-105"
                       />
-                    </ShineBorder>
-                    <div>
-                      <h4 className="text-base md:text-lg font-semibold mb-1">{bonus.title}</h4>
-                      <p className="text-xs md:text-sm text-muted-foreground">{bonus.description}</p>
+                      
+                      {/* Content */}
+                      <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6 text-white">
+                        <h4 className="text-lg md:text-2xl font-bold mb-2 leading-tight">
+                          {bonus.title}
+                        </h4>
+                        <p className="text-xs md:text-base text-white/90 leading-relaxed">
+                          {bonus.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4 md:mt-8 space-x-2 md:space-x-4">
-              <CarouselPrevious />
-              <CarouselNext />
-            </div>
-          </Carousel>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </Section>
     </>
