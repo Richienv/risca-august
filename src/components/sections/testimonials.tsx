@@ -68,9 +68,14 @@ export const TestimonialCard = ({
       <Image
         width={40}
         height={40}
-        src={img || ""}
+        src={img || "/placeholder-avatar.jpg"}
         alt={name}
         className="h-10 w-10 rounded-full ring-1 ring-border ring-offset-4"
+        priority={false}
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.src = "/placeholder-avatar.jpg";
+        }}
       />
 
       <div>
@@ -83,71 +88,98 @@ export const TestimonialCard = ({
 
 const testimonials = [
   {
-    name: "Rani Wijaya",
-    role: "Entrepreneur Muda",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Jojo",
+    role: "2 Years Joined",
+    img: "/jojo.jpg",
     description: (
       <p>
-        Bergabung dengan Alife adalah keputusan terbaik untuk karir saya.
+        Awalnya aku memilih kamu sebagai leader karena kamu yang pertama kali mengenalkan aku ke peluang ini, dan kita sudah lama saling kenal. 
         <Highlight>
-          Komunitas yang supportif dan peluang networking luar biasa!
-        </Highlight>{" "}
-        Saya belajar banyak dan bisnis saya berkembang pesat.
+          Gaya mentoring kamu juga keren – sabar, bisa menyesuaikan dengan tempo belajar aku yang kadang agak lemot
+        </Highlight>
+        . Bisa beli Apartemen, mobil baru, umroh pake uang sendiri, bisa dari mana aja dan lewat bisnis ini bisa support hobi naik gunung kapanpun.
       </p>
     ),
   },
   {
-    name: "Budi Santoso",
-    role: "Digital Marketer",
-    img: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Devina Hartono",
+    role: "Alife Partner",
+    img: "/devina.jpg",
     description: (
       <p>
-        Alife bukan hanya tentang asuransi, tapi juga pengembangan diri.
-        <Highlight>Event-event eksklusifnya sangat bermanfaat</Highlight> untuk
-        meningkatkan skill dan memperluas jaringan bisnis saya.
+        <Highlight>
+          Sebelum di Alife, saya adalah orang yang tidak punya ambisi dan selalu labeled myself as an introvert
+        </Highlight>
+        . Bersyukur banget join di Alife sehingga saya tau kemampuan2 saya yang sebelumnya tidak terpikirkan. Mulai dari punya dreams dan tujuan hidup, skill2 baru seperti leadership & public speaking.
       </p>
     ),
   },
   {
-    name: "Siti Nurhaliza",
-    role: "Financial Advisor",
-    img: "https://randomuser.me/api/portraits/women/67.jpg",
+    name: "Sharon Gunawan",
+    role: "Alife Partner",
+    img: "/sharon.jpg",
     description: (
       <p>
-        Mentorship di Alife luar biasa membantu.
+        Martha orang nya very knowledgable dan ga pelit ilmu. 
         <Highlight>
-          Saya mendapat bimbingan langsung dari para expert di industri
-        </Highlight>{" "}
-        yang membantu saya mengembangkan karir dengan cepat.
+          Watching Martha as a leader, i can see how she always takes care of her team dan memberi mereka sense of responsibility
+        </Highlight>
+        . Di Alife gw belajar membangun relasi dengan orang, belajar menjadi orang yg lebih baik: belajar ramah, menyapa, care sama orang lain.
       </p>
     ),
   },
   {
-    name: "Arief Pratama",
-    role: "Tech Startup Founder",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Jessica Suwarsono",
+    role: "Alife Partner",
+    img: "/jessica.jpg",
     description: (
       <p>
-        Alife memberikan platform yang sempurna untuk para entrepreneur muda.
         <Highlight>
-          Kolaborasi dan peluang bisnis yang tercipta di sini sangat berharga
-        </Highlight>{" "}
-        bagi perkembangan startup saya.
+          Sebagai seorang eks-corporate aku benar2 merasakan perubahan hidup sejak join Alife
+        </Highlight>
+        . Income yang aku dapat selama 4 tahun jalanin bisnis Alife sudah mencapai dua kali lipat dari gaji terakhirku di korporat. Yang ketiga komunitas Alife yang seru dan punya visi yang sama.
       </p>
     ),
   },
   {
-    name: "Dewi Lestari",
-    role: "Content Creator",
-    img: "https://randomuser.me/api/portraits/women/89.jpg",
+    name: "Shanelle",
+    role: "Alife Partner",
+    img: "/shanelle.jpg",
     description: (
       <p>
-        Sebagai content creator, networking adalah segalanya. Alife membuka
-        pintu ke
+        Play hard, work HARDER. 
         <Highlight>
-          berbagai kolaborasi menarik dan proyek-proyek kreatif
-        </Highlight>{" "}
-        yang memperluas audiens saya.
+          Yang paling berasa adalah lingkungannya yang super high-achiever
+        </Highlight>
+        . Jadi ada trigger untuk bisa keluar dari zona nyaman, dream big, and achieve more. Bonus mentoring dari manusia-manusia hebat. Bye bye mediocre life!
+      </p>
+    ),
+  },
+  {
+    name: "Trisna",
+    role: "Alife Partner",
+    img: "/trisna.jpg",
+    description: (
+      <p>
+        Martha aset ilmu! Gercep sama team, mindset yang terbuka. 
+        <Highlight>
+          Perubahan sejak Alife BANYAK! Tapi yang paling ak sadari, MIMPI. Ak jadi berani untuk bermimpi lagi
+        </Highlight>
+        . Ternyata mimpi pun bisa di realisasikan.. karna Alife. 🫶
+      </p>
+    ),
+  },
+  {
+    name: "Joceline",
+    role: "2 Years Joined",
+    img: "/joceline.jpg",
+    description: (
+      <p>
+        Atha sebagai salah satu partner yg senior selalu kasih insights2 tentang menjalani bisnis. 
+        <Highlight>
+          Grateful bgt bisa join di bisnis Alife. Selain dapat teman2 positive, percepatan income di bisnis ini sangat nyata
+        </Highlight>
+        . Dulu aku orangnya pemalu banget tapi karena punya teman banyak di Alife aku jadi bisa lebih percaya diri.
       </p>
     ),
   },
