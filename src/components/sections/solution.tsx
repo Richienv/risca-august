@@ -7,18 +7,18 @@ import Image from "next/image";
 const transformations = [
   {
     title: "Kita Ajarkan Semua Skills & Techniques For Success!",
-    description: "Kamu akan mendapatkan akses eksklusif ke jaringan kami, yang terdiri dari lebih dari 1000+ anggota yang sudah berhasil dan siap membantu kamu dalam setiap langkah bisnis!",
+    description: "Kamu akan mendapatkan akses eksklusif ke kelas training ktia, yang tediri dari lebih dari 1000+ anggota dan saya siap membantu kamu dalam setiap langkah bisnis!",
     image: "/belajar.png",
   },
   {
     title: "Exclusive Access to Our Network & Millionaire Mentors",
-    description: "Kamu akan mendapatkan akses eksklusif ke jaringan kami, yang terdiri dari lebih dari 1000+ anggota yang sudah berhasil dan siap membantu kamu dalam setiap langkah bisnis!",
+    description: "Kamu akan mendapatkan akses eksklusif ke komunitas kita. Eksklusif speakers, & mentors yang akan membantu pengembangan diri kamu, dan private event yang bisa bantu kamu untuk memperluas network kamu!",
     image: "/link.png",
   },
   {
     title: "We Create Blueprint For Success! You Just Follow Need to Do!",
     description: "Kamu gak perlu takut gagal karena bisnis ini sudah punya sistem yang terbukti sukses. Banyak yang sudah berhasil dan sekarang gilirannya kamu! This system works, yang penting kamu mau coba dan konsisten.",
-    image: "/blueprint.png",
+    image: "/cheers.jpeg",
   },
   {
     title: "No Risk, But So Much To Gain!",
@@ -42,7 +42,7 @@ function FeatureCard({
 }) {
   return (
     <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-16 lg:mb-24 relative">
-      {/* Image on the left - Updated with minimal silver-black gradient border */}
+      {/* Image on the left - Removed grayscale filter */}
       <div className="w-full lg:w-2/5">
         <div className="relative aspect-[4/3] w-full p-[2px] rounded-lg bg-gradient-to-br from-gray-400 via-gray-600 to-gray-800">
           <div className="relative h-full w-full overflow-hidden rounded-lg">
@@ -51,7 +51,7 @@ function FeatureCard({
               alt={title}
               layout="fill"
               objectFit="cover"
-              className="transition-transform duration-300 hover:scale-105 grayscale contrast-125 brightness-90"
+              className="transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Kamu masih ragu?
+            Kenapa pilih ikut bisnis Alife?
           </motion.h2>
           <div className="w-24 lg:w-32 h-0.5 mx-auto bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6"></div>
           <motion.p
@@ -117,7 +117,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Kami cuman butuh komitmen dari kamu, sisanya kita akan ajarkan semua!
+            Kami pengen open door untuk kamu, dan buat kamu realise what's possible with Alife!
           </motion.p>
         </div>
         
