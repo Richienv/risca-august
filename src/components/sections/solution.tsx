@@ -11,8 +11,8 @@ const transformations = [
     image: "/belajar.png",
   },
   {
-    title: "Exclusive Access to Our Network & Millionaire Mentors",
-    description: "Kamu akan mendapatkan akses eksklusif ke komunitas kita. Eksklusif speakers, & mentors yang akan membantu pengembangan diri kamu, dan private event yang bisa bantu kamu untuk memperluas network kamu!",
+    title: "More then a business. Private events, High-Value Connection and Resources",
+    description: "Kehidupan di luar bisnis ini akan super beneficial, karena kamu akan mendapatkan akses eksklusif ke komunitas kita, private event, high-value connection, dan resources yang bisa membantu kamu dalam bisnis dan hidup!",
     image: "/link.png",
   },
   {
