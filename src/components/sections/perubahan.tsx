@@ -4,24 +4,48 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const alifeBenefits = [
   {
     image: "/mdit.jpeg",
     title: "Empowerment",
+    videoUrl: "https://youtu.be/sTCqp3AOaVw",
   },
   {
-    image: "/lunch.jpeg",
+    image: "/mind.jpeg",
     title: "Connection",
+    videoUrl: "https://youtu.be/sTCqp3AOaVw",
+  },
+  {
+    image: "/concert.jpeg",
+    title: "Experience",
+    videoUrl: "https://youtu.be/nF1lLyIv0HM",
   },
   {
     image: "/event.jpeg",
     title: "Experience",
+    videoUrl: "https://youtu.be/nF1lLyIv0HM",
   },
 ];
 
 export default function WhatIsAlifeSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? alifeBenefits.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === alifeBenefits.length - 1 ? 0 : prev + 1));
+  };
+
+  // Calculate visible images (current, previous, and next)
+  const visibleImages = [
+    alifeBenefits[(currentIndex - 1 + alifeBenefits.length) % alifeBenefits.length],
+    alifeBenefits[currentIndex],
+    alifeBenefits[(currentIndex + 1) % alifeBenefits.length],
+  ];
 
   return (
     <div className="relative overflow-hidden w-full">
@@ -34,15 +58,16 @@ export default function WhatIsAlifeSection() {
         </div>
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          {/* Featured Image Display */}
+          {/* Video Display */}
           <div className="relative">
-            <div className="aspect-[16/9] w-full relative overflow-hidden rounded-xl">
-              <Image
-                src={alifeBenefits[currentIndex].image}
-                alt={alifeBenefits[currentIndex].title}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-500 ease-in-out"
+            <div className="aspect-[16/9] w-full relative overflow-hidden rounded-xl bg-background/90 backdrop-blur-sm border border-white/10 shadow-2xl">
+              <iframe
+                src={alifeBenefits[currentIndex].videoUrl.replace('youtu.be/', 'youtube.com/embed/')}
+                title={alifeBenefits[currentIndex].title}
+                frameBorder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full rounded-xl"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-white">
@@ -62,29 +87,62 @@ export default function WhatIsAlifeSection() {
             </div>
           </div>
 
-          {/* Bottom Grid - Fixed 3 items */}
+          {/* Bottom Grid with Navigation - Updated for single row sliding */}
           <div className="relative">
-            <div className="grid grid-cols-3 gap-4">
-              {alifeBenefits.map((item, index) => (
-                <div
+            {/* Navigation Buttons */}
+            <button
+              onClick={handlePrevious}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full transition-colors"
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+
+            {/* Images Carousel */}
+            <div className="overflow-hidden px-12">
+              <div className="flex gap-4 transition-transform duration-300 ease-in-out">
+                {visibleImages.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className={`relative w-1/3 aspect-[4/3] cursor-pointer overflow-hidden rounded-lg transition-all flex-shrink-0
+                      ${index === 1 ? 'ring-2 ring-blue-500' : 'opacity-80 hover:opacity-100'}`}
+                    onClick={() => setCurrentIndex((currentIndex + index - 1 + alifeBenefits.length) % alifeBenefits.length)}
+                    initial={{ opacity: 0, x: index === 0 ? -20 : index === 2 ? 20 : 0 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 hover:scale-105"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 sm:p-3">
+                      <h4 className="text-xs sm:text-sm font-medium text-white">
+                        {item.title}
+                      </h4>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Image indicators */}
+            <div className="flex justify-center gap-2 mt-4">
+              {alifeBenefits.map((_, index) => (
+                <button
                   key={index}
-                  className={`relative aspect-[4/3] cursor-pointer overflow-hidden rounded-lg transition-all
-                    ${currentIndex === index ? 'ring-2 ring-blue-500' : 'opacity-80 hover:opacity-100'}`}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentIndex ? 'bg-blue-500' : 'bg-gray-400/50'
+                  }`}
                   onClick={() => setCurrentIndex(index)}
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 sm:p-3">
-                    <h4 className="text-xs sm:text-sm font-medium text-white">
-                      {item.title}
-                    </h4>
-                  </div>
-                </div>
+                />
               ))}
             </div>
           </div>
