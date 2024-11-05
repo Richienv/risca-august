@@ -28,7 +28,7 @@ const data = [
     id: 4,
     title: "Kelas Pengembangan Diri dari Speaker Ternama",
     content: "Kita always invite the top speakers ternama to share pengalaman dan tips suksesnya, kamu bisa ikut kelas ini gratis menggunakan akses komunitas kami!",
-    image: "/kelas.jpg",
+    image: "/kelas.png",
     value: "Value: 25jt+ per tahun"
   },
 ];
