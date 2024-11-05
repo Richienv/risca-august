@@ -10,23 +10,23 @@ import { siteConfig } from "@/lib/config";
 const faqs = [
   {
     question: "Apa itu Alife by Vision?",
-    answer: "Alife by Vision adalah komunitas bisnis yang fokus pada pengembangan diri dan kesuksesan finansial. Kami menggabungkan peluang bisnis asuransi dengan mentorship, networking, dan event-event eksklusif untuk membantu anggota kami mencapai potensi penuh mereka."
+    answer: "Alife by Vision adalah Agensi Asuransi yang didirikan pada tahun 2019. Kami percaya pada pendekatan win-win, di mana kami memberikan saran dan solusi terbaik untuk kebutuhan finansial klien Alife, sambil memastikan Para Mitra Alife memiliki kehidupan yang sejahtera dan bermakna. Kami adalah tim agen profesional berbakat dengan berbagai keterampilan dan pengalaman. Kami mencintai apa yang kami lakukan, dan kami melakukannya dengan penuh semangat. Kami berharap dapat memperluas kemitraan kami dan memberikan asuransi kesehatan dan jiwa terbaik kepada klien kami."
   },
   {
     question: "Apakah saya perlu pengalaman di bidang asuransi?",
     answer: "Tidak, Anda tidak perlu pengalaman sebelumnya di bidang asuransi. Kami menyediakan pelatihan komprehensif dan dukungan berkelanjutan untuk membantu Anda memulai dan mengembangkan bisnis Anda."
   },
   {
-    question: "Bagaimana cara bergabung dengan Alife?",
-    answer: "Untuk bergabung, Anda cukup mengisi formulir pendaftaran di website kami. Tim kami akan menghubungi Anda dalam waktu 15 menit untuk membahas lebih lanjut dan mengundang Anda ke event pertama."
+    question: "Apa saja pelengkapan yang dibutuhkan untuk mendukung produktivitas saya selama di bisnis ini?",
+    answer: "Dua hal yang penting adalah iPad dan Laptop. Karena itu akan jadi alat utama untuk kamu dalam bisnis ini."
   },
   {
     question: "Apa keuntungan bergabung dengan Alife dibandingkan bekerja 9-5?",
     answer: "Alife menawarkan kebebasan waktu, potensi penghasilan tak terbatas, pengembangan diri, networking luas, dan peluang bisnis yang tidak Anda dapatkan dalam pekerjaan 9-5 biasa."
   },
   {
-    question: "Apakah ada biaya untuk bergabung dengan Alife?",
-    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal dengan tim kami. Kami menawarkan berbagai paket yang dapat disesuaikan dengan kebutuhan dan tujuan Anda."
+    question: "Apakah ada biaya untuk bergabung dengan komunitas bisnis Martha?",
+    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal dengan tim kami. Aku akan melihat komitmen kamu dan kemudian aku akan memberikan solusi terbaik specialuntuk kamu."
   }
 ];
 
