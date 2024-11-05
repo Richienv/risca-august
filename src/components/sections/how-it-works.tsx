@@ -10,23 +10,26 @@ const data = [
   {
     id: 1,
     title: "1. Isi Formulir Singkat",
-    content: "Fill it with your basic information. This process only takes a few minutes.",
+    content: "Isi dengan data diri kamu. Process ini quick and simple, hanya butuh beberapa minutes saja.",
     image: "/join.png",
     icon: <ClipboardEdit className="w-8 h-8 sm:w-6 sm:h-6 text-primary" />,
+    imageClassName: "aspect-square w-full h-full object-cover",
   },
   {
     id: 2,
-    title: "2. We Will Contact You Personally",
-    content: "Me and my team will read your information and contact you within 15 minutes to discuss with you.",
-    image: "/contact.png",
+    title: "2. Saya akan Hubungi Kamu Personally",
+    content: "Saya akan review informasi kamu dan contact within 15 menit untuk discuss lebih lanjut.",
+    image: "/contact.png", 
     icon: <PhoneCall className="w-8 h-8 sm:w-6 sm:h-6 text-primary" />,
+    imageClassName: "aspect-square w-full h-full object-cover",
   },
   {
     id: 3,
-    title: "3. Your First Event Invitation",
-    content: "After talking with my team, you will be invited to our first event, where you can start networking and learning.",
+    title: "3. Undangan Event Pertama Kamu",
+    content: "Setelah ngobrol dengan saya, kamu akan diundang ke first event kita, dimana kamu bisa mulai networking and learning.",
     image: "/first.png",
     icon: <Calendar className="w-8 h-8 sm:w-6 sm:h-6 text-primary" />,
+    imageClassName: "aspect-square w-full h-full object-cover",
   },
 ];
 
@@ -52,6 +55,7 @@ export default function HowItWorks() {
               data={data} 
               customTitleClassName="text-left text-xl sm:text-lg md:text-xl lg:text-2xl font-bold mb-2 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 text-transparent bg-clip-text"
               customContentClassName="text-lg sm:text-base md:text-lg text-muted-foreground"
+
             />
           </div>
         </div>
