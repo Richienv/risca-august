@@ -12,9 +12,9 @@ const data = [
   },
   {
     id: 2,
-    title: "Rewards and Networking Opportunity dari Aku Setiap Minggu!",
-    content: "Kalau kamu berhasil mencapai target kamu, Aku bakal kasih kamu reward VIP Dinner with Champions (Millionaire Dinner) & Personal Rewards up to Rp 10.000.000, and more!",
-    image: "/minggu.jpg",
+    title: "Special Eksklusif GALA Dinner with Champions di Akhir Tahun",
+    content: "Kamu akan dapat special invitation to attent the special awardee nights, karena itu akan jadi event untuk apresiasi achievement kamu danmembantu kamu untuk memperluas network kamu!",
+    image: "/event.png",
     value: "Value: 15jt+ per tahun"
   },
   {
