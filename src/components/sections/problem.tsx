@@ -14,11 +14,31 @@ const testimonial = {
 function TestimonialCard({ name, role, videoUrl }: { name: string; role: string; videoUrl: string }) {
   return (
     <div className="relative w-full">
-      {/* Card container */}
-      <div className="relative w-full overflow-hidden rounded-xl bg-background/90 backdrop-blur-sm border border-white/10">
-        <BorderBeam colorFrom="#f0f0f0" colorTo="#e0e0e0" />
+      {/* Card container with almost black metallic gradient background */}
+      <div className="relative w-full overflow-hidden rounded-xl border border-white/5 shadow-2xl"
+        style={{
+          background: `
+            linear-gradient(135deg, 
+              rgba(20, 20, 20, 0.98) 0%,
+              rgba(12, 12, 12, 0.99) 50%,
+              rgba(8, 8, 8, 1) 100%
+            )
+          `,
+          boxShadow: `
+            0 0 0 1px rgba(255, 255, 255, 0.03),
+            0 4px 6px -1px rgba(0, 0, 0, 0.3),
+            0 2px 4px -1px rgba(0, 0, 0, 0.2),
+            inset 0 1px 1px rgba(255, 255, 255, 0.03)
+          `
+        }}
+      >
+        <BorderBeam colorFrom="#333333" colorTo="#111111" />
         
-        <div className="flex flex-col w-full">
+        {/* Very subtle metallic shine effect overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/3 via-transparent to-black/40 pointer-events-none"></div>
+        
+        <div className="flex flex-col w-full backdrop-blur-sm">
           {/* Video container */}
           <div className="relative p-4">
             {/* Video iframe */}
@@ -36,13 +56,15 @@ function TestimonialCard({ name, role, videoUrl }: { name: string; role: string;
 
           {/* Text content and name below video */}
           <div className="p-6 text-center">
-            <h3 className="text-lg font-semibold mb-1">{name}</h3>
-            <p className="text-sm text-muted-foreground mb-6">{role}</p>
+          <p className="text-sm md:text-base lg:text-lg text-white/80 max-w-2xl mx-auto">
+              Jangan cuma jadi penonton, kamu juga bisa sukses bareng saya dan komunitas alide yang solid dan fun!
+            </p>
+            <br />
+            <h3 className="text-lg font-semibold mb-1 text-white/90">{name}</h3>
+            <p className="text-sm text-white/60 mb-6">{role}</p>
             
             {/* Description */}
-            <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jangan percaya kita, lihat sendiri aja testimoni mereka yang bisa banyak membantu orang dari hasil cuan group
-            </p>
+           
           </div>
         </div>
       </div>
@@ -88,7 +110,7 @@ export default function TestimonialSection() {
       <div className="relative z-10 py-16 md:py-24">
         {/* Title */}
         <div className="text-center mb-12">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">Kata Mereka Yang Sudah Sukses Dari Bisnis Alife</h2>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">Kata Kata Cici Cici Miliarder Viral!</h2>
           <div className="w-20 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600 mb-3 md:mb-4"></div>
         </div>
         
