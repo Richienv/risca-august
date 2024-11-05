@@ -117,7 +117,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Kami pengen open door untuk kamu, dan buat kamu realise what's possible with Alife!
+            Kami pengen open door untuk kamu, dan buat kamu realise what is possible with Alife!
           </motion.p>
         </div>
         
