@@ -163,7 +163,7 @@ export default function WhatIsAlifeSection() {
             Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
             <br />
             <br />
-            <span className="font-bold px-6 py-2 border border-transparent bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-lg">Sekarang Saatnya kamu bersinar! Don't miss out! Aku percaya kamu pasti bisa achieve the same success as us!</span>
+            <span className="font-bold px-6 py-2 border border-transparent bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-lg">Sekarang Saatnya kamu bersinar! Do not miss out! Aku percaya kamu pasti bisa achieve the same success as us!</span>
           </motion.p>
           <BlueGradientSeparator />
         </div>
