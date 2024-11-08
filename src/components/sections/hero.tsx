@@ -59,7 +59,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        <span className="text-white">Ngga perlu nunggu tua buat sukses! Disini kamu bisa mulai perjalanan menuju <span className="font-bold underline">Income Ratusan Juta - Miliaran Per Bulan</span></span>
+        <span className="text-white">Ngga perlu nunggu tua buat sukses! Disini kamu bisa mulai perjalanan menuju Income Ratusan Juta - Miliaran per Bulan!</span>
       </motion.p>
     </div>
   );
@@ -138,7 +138,7 @@ function HeroImage() {
         </Link>
         <div className="mt-6 flex flex-col items-center justify-center">
           <p className="text-xs text-muted-foreground mb-4 text-center">
-            Bisnis dengan blueprint yang jelas, transparan, dan dapat diimplementasikan
+          Bisnis dengan blueprint yang simple, duplicable, and sustainable, menciptakan royalti sampai 8 generasi, buat kita bisa menikmati passive income seumur hidup.
           </p>
         </div>
       </motion.div>
