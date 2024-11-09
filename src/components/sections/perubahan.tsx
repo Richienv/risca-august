@@ -169,7 +169,7 @@ export default function WhatIsAlifeSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <BlueGradientSeparator />
-            Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan Alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
+            Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team aku dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama aku dan Alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
             <br />
             <br />
             <span className="font-bold px-6 py-2 border border-transparent bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-lg">Sekarang Saatnya kamu bersinar! Dont miss out! Aku percaya kamu pasti bisa achieve the same success as us!</span>
