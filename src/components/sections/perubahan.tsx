@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const alifeBenefits = [
   {
     image: "/mdit.jpeg",
-    title: "Empowerment",
+    title: "",
     videoUrl: "https://youtu.be/sTCqp3AOaVw",
   },
   {
