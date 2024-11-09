@@ -57,10 +57,19 @@ export default function WhatIsAlifeSection() {
           <div className="w-40 h-0.5 mx-auto bg-gradient-to-r from-blue-400 to-blue-600"></div>
         </div>
         
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          {/* Video Display */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          {/* Video Display with Blue Animated Shadow */}
           <div className="relative">
-            <div className="aspect-[16/9] w-full relative overflow-hidden rounded-xl bg-background/90 backdrop-blur-sm border border-white/10 shadow-2xl">
+            {/* Animated gradient shadows */}
+            <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/30 via-blue-400/30 to-blue-300/30 rounded-xl blur-2xl animate-pulse"></div>
+            <div className="absolute -inset-3 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-xl blur-3xl animate-pulse delay-75"></div>
+            <div className="absolute -inset-3 bg-gradient-to-r from-blue-400/20 via-blue-500/20 to-blue-600/20 rounded-xl blur-2xl animate-pulse delay-150"></div>
+            
+            {/* Rotating gradient border */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded-xl opacity-30 animate-spin-slow"></div>
+            
+            {/* Video container */}
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-background/90 backdrop-blur-sm border border-white/10 shadow-2xl">
               <iframe
                 src={alifeBenefits[currentIndex].videoUrl.replace('youtu.be/', 'youtube.com/embed/')}
                 title={alifeBenefits[currentIndex].title}
@@ -163,7 +172,7 @@ export default function WhatIsAlifeSection() {
             Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan Alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
             <br />
             <br />
-            <span className="font-bold px-6 py-2 border border-transparent bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-lg">Sekarang Saatnya kamu bersinar! Do not miss out! Saya percaya kamu pasti bisa achieve the same success as us!</span>
+            <span className="font-bold px-6 py-2 border border-transparent bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-lg">Sekarang Saatnya kamu bersinar! Dont miss out! Aku percaya kamu pasti bisa achieve the same success as us!</span>
           </motion.p>
           <BlueGradientSeparator />
         </div>
