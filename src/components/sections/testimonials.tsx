@@ -183,6 +183,79 @@ const testimonials = [
       </p>
     ),
   },
+  {
+    name: "Sarchie",
+    role: "Alife Partner",
+    img: "/sarchie.jpeg",
+    description: (
+      <p>
+        <Highlight>
+          Etos kerja Martha benar-benar bagus. Dia tidak pernah setengah-setengah jika melakukan sesuatu. Kalau dia suka, dia suka. Kalau tidak suka, dia tidak melakukannya.
+        </Highlight>
+        . Dan ketika dia serius terhadap sesuatu, hasilnya juga benar-benar bagus; hasil akhirnya terlihat baik dan penuh integritas, karena saya tahu Martha adalah tipe orang yang ingin bekerja dalam apa pun yang membuat hatinya tenang. Dia juga teman yang hebat dan pendukung yang luar biasa, contoh hampir sempurna dari leader—karena hanya Tuhan yang bisa benar-benar sempurna. Intinya, Martha adalah teladan aku, salah satu tipe yang perlu benar-benar dicontoh dalam hidupnya.
+      </p>
+    ),
+  },
+  {
+    name: "Sheila Tang",
+    role: "6 Years Joined",
+    img: "/sheila.jpeg",
+    description: (
+      <p>
+        <Highlight>
+          Akselerasinya sangat cepat, dari mulai sekolahkan anak ke sekolah internasional hingga membeli aset, semuanya benar-benar dari kerja keras saya dan membantu orang lain
+        </Highlight>
+        . Sejak tahun ketiga, dengan tim yang semakin besar, kecepatan pertumbuhan menjadi jauh lebih intens. Komunitas kami sangat mendukung dan positif, kami bisa saling berbagi dan menemukan solusi bersama. Ketika tim kami berkembang dan hidup kami menjadi lebih baik, kami semua bahagia.
+      </p>
+    ),
+  },
+  {
+    name: "Hesty",
+    role: "2 Years Joined",
+    img: "/hesty.png",
+    description: (
+      <p>
+        <Highlight>
+          Baru 2 tahun gabung, pendapatan saya naik 3-4 kali dibanding saat di perusahaan
+        </Highlight>
+        . Setelah gabung di Alife, saya dapat pengetahuan dan pengembangan diri yang luar biasa. Teman-teman komunitas saling mendukung di semua aspek hidup—bukan cuma kerja. Ada jalan di sini dengan komunitas bagus dan mentor hebat.
+      </p>
+    ),
+  },
+  {
+    name: "Debora Simon",
+    role: "2 Years Joined",
+    img: "/debora.jpeg",
+    description: (
+      <p>
+        <Highlight>
+          Alife adalah komunitas yang bagus dan memiliki banyak dampak positif. Semua teman dalam satu tim tanpa banyak persaingan
+        </Highlight>
+        . Sangat kompak, persaingan sehat yang membuat kami tumbuh bersama. Jaringan pertemanan juga meningkat, dan pengetahuan serta keterampilan kami benar-benar berkembang.
+      </p>
+    ),
+  },
+];
+
+// Split testimonials into three groups
+const column1Testimonials = [
+  testimonials[0], // Jojo
+  testimonials[3], // Jessica
+  testimonials[6], // Joceline
+  testimonials[9], // Hesty
+];
+
+const column2Testimonials = [
+  testimonials[1], // Devina
+  testimonials[4], // Shanelle
+  testimonials[7], // Sarchie
+  testimonials[10], // Debora
+];
+
+const column3Testimonials = [
+  testimonials[2], // Sharon
+  testimonials[5], // Trisna
+  testimonials[8], // Sheila Tang
 ];
 
 export default function Testimonials() {
@@ -197,34 +270,68 @@ export default function Testimonials() {
       </div>
       <div className="relative mt-4 max-h-[70vh] overflow-hidden">
         <div className="gap-2 md:columns-3 xl:columns-3 2xl:columns-3">
-          {Array(3)
-            .fill(0)
-            .map((_, i) => (
-              <Marquee
-                vertical
-                key={i}
-                className={cn({
-                  "[--duration:50s]": i === 1,
-                  "[--duration:25s]": i === 0,
-                  "[--duration:60s]": i === 2,
-                })}
+          {/* First Column */}
+          <Marquee
+            vertical
+            className="group [--duration:80s]"
+          >
+            {column1Testimonials.map((card, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: Math.random() * 0.5,
+                  duration: 0.8,
+                }}
               >
-                {testimonials.map((card, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: Math.random() * 0.5,
-                      duration: 0.8,
-                    }}
-                  >
-                    <TestimonialCard {...card} className="mb-2" />
-                  </motion.div>
-                ))}
-              </Marquee>
+                <TestimonialCard {...card} className="mb-2" />
+              </motion.div>
             ))}
+          </Marquee>
+
+          {/* Second Column */}
+          <Marquee
+            vertical
+            className="group [--duration:80s]"
+          >
+            {column2Testimonials.map((card, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: Math.random() * 0.5,
+                  duration: 0.8,
+                }}
+              >
+                <TestimonialCard {...card} className="mb-2" />
+              </motion.div>
+            ))}
+          </Marquee>
+
+          {/* Third Column */}
+          <Marquee
+            vertical
+            className="group [--duration:80s]"
+          >
+            {column3Testimonials.map((card, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: Math.random() * 0.5,
+                  duration: 0.8,
+                }}
+              >
+                <TestimonialCard {...card} className="mb-2" />
+              </motion.div>
+            ))}
+          </Marquee>
         </div>
         
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 w-full bg-gradient-to-t from-background from-20%"></div>
