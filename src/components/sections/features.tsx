@@ -5,31 +5,27 @@ import Image from "next/image";
 const data = [
   {
     id: 1,
-    title: "Kontes Logam Mulia Setiap Bulan",
-    content: "Setiap deals yang kamu berhasil close, you have a chance to get Logam Mulia up to 5 gram setiap minggu!",
-    image: "/goldd.jpg",
-    value: "Value: 50jt+ per tahun"
+    title: "Kontes Logam Mulia, iPad, dan Uang Tunai Setiap Minggu",
+    content: "Setiap closing kamu akan mendapatkan kesempatan mengikuti undian-undian berhadiah tiap minggu!",
+    image: "/goldd.png",
   },
   {
     id: 2,
-    title: "Special Eksklusif GALA Dinner with Champions di Akhir Tahun",
-    content: "Kamu akan dapat special invitation to attent the special awardee nights, karena itu akan jadi event untuk apresiasi achievement kamu danmembantu kamu untuk memperluas network kamu!",
+    title: "Eksklusif Private Events & VIP Dinner with Champions",
+    content: "Kamu akan mendapatkan special invitation untuk menghadiri Special Awardee Night, event apresiasi achievement kamu yang juga membantu memperluas network kamu!",
     image: "/event.png",
-    value: "Value: 15jt+ per tahun"
   },
   {
     id: 3,
     title: "Closing With Mentors",
-    content: "Aku bakal ikut kamu to meet your potential clients so that you can close deals faster! Kamu gaperlu pusing untuk nemuin klien sendiri kamu cukup observe and learn!",
+    content: "Aku bakal ikut kamu untuk ketemu calon klien potensial supaya kamu bisa closing lebih cepat! So, kamu gaperlu takut bekerja sendirian.",
     image: "/ipad.jpg",
-    value: "Value: 50jt+ per tahun"
   },
   {
     id: 4,
-    title: "Kelas Pengembangan Diri dari Speaker Ternama",
-    content: "Kita always invite the top speakers ternama to share pengalaman dan tips suksesnya, kamu bisa ikut kelas ini gratis menggunakan akses komunitas kami!",
+    title: "Kelas Training dan Kelas Pengembangan Diri dari Speaker Ternama",
+    content: "Komunitas kita always invite the top speakers ternama to share pengalaman dan tips suksesnya, beda tim beda hasil.",
     image: "/kelas.png",
-    value: "Value: 25jt+ per tahun"
   },
 ];
 
@@ -45,7 +41,7 @@ export default function FeaturesSection() {
         <div className="relative z-10">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">
-              Bonus Value yang akan kamu dapatkan saat bekerja sama dengan kami
+              Bonus Value yang akan kamu dapatkan saat bekerja sama dengan saya
             </h2>
             <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
           </div>
@@ -65,13 +61,6 @@ export default function FeaturesSection() {
                           objectFit="cover"
                           className="transition-transform duration-300 group-hover:scale-105"
                         />
-                        <div className="absolute bottom-4 left-4">
-                          <div className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500/90 via-blue-600/90 to-blue-700/90">
-                            <span className="text-sm font-semibold text-white">
-                              {item.value}
-                            </span>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
