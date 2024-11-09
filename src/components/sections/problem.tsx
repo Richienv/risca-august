@@ -57,7 +57,7 @@ function TestimonialCard({ name, role, videoUrl }: { name: string; role: string;
           {/* Text content and name below video */}
           <div className="p-6 text-center">
           <p className="text-sm md:text-base lg:text-lg text-white/80 max-w-2xl mx-auto">
-              Jangan cuma jadi penonton, kamu juga bisa sukses bareng saya dan komunitas alide yang solid dan fun!
+              Jangan cuma jadi penonton, kamu juga bisa sukses bareng saya dan komunitas Alife yang solid dan fun!
             </p>
             <br />
             <h3 className="text-lg font-semibold mb-1 text-white/90">{name}</h3>
