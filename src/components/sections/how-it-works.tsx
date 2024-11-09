@@ -17,8 +17,8 @@ const data = [
   },
   {
     id: 2,
-    title: "2. Saya akan Hubungi Kamu Personally",
-    content: "Saya akan review informasi kamu dan contact within 15 menit untuk discuss lebih lanjut.",
+    title: "2. Aku akan Hubungi Kamu Personally",
+    content: "Aku akan review informasi kamu dan contact within 15 menit untuk discuss lebih lanjut.",
     image: "/contact.png", 
     icon: <PhoneCall className="w-8 h-8 sm:w-6 sm:h-6 text-primary" />,
     imageClassName: "aspect-square w-full h-full object-cover",
@@ -26,7 +26,7 @@ const data = [
   {
     id: 3,
     title: "3. Undangan Event Pertama Kamu",
-    content: "Setelah ngobrol dengan saya, kamu akan diundang ke first event kita, dimana kamu bisa mulai networking and learning.",
+    content: "Setelah ngobrol dengan aku, kamu akan diundang ke first event kita, dimana kamu bisa mulai networking and learning.",
     image: "/first.png",
     icon: <Calendar className="w-8 h-8 sm:w-6 sm:h-6 text-primary" />,
     imageClassName: "aspect-square w-full h-full object-cover",
