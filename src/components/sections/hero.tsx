@@ -101,8 +101,13 @@ function HeroImage() {
       transition={{ delay: 1.2, duration: 1, ease }}
     >
       <div className="relative w-full max-w-4xl mt-8">
-        {/* Blue glow effect on top */}
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-full h-40 bg-blue-500 opacity-30 blur-[100px] rounded-full"></div>
+        {/* Blue gradient effects */}
+        <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/30 via-blue-400/30 to-blue-300/30 rounded-xl blur-2xl animate-pulse"></div>
+        <div className="absolute -inset-3 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-xl blur-3xl animate-pulse delay-75"></div>
+        <div className="absolute -inset-3 bg-gradient-to-r from-blue-400/20 via-blue-500/20 to-blue-600/20 rounded-xl blur-2xl animate-pulse delay-150"></div>
+        
+        {/* Rotating gradient border */}
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded-xl opacity-30 animate-spin-slow"></div>
         
         <ShineBorder 
           borderRadius={8} 
@@ -121,9 +126,6 @@ function HeroImage() {
             ></iframe>
           </div>
         </ShineBorder>
-        
-        {/* Radial gradient blur below the video */}
-        <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-full h-80 bg-gradient-radial from-primary/30 to-transparent opacity-50 blur-[100px] rounded-full"></div>
       </div>
       <motion.div
         className="mt-8 w-full max-w-md"
