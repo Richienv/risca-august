@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/config";
 const faqs = [
   {
     question: "Apa itu Alife by Vision?",
-    answer: "Alife by Vision adalah Agensi Asuransi yang didirikan pada tahun 2019. Kami percaya pada pendekatan win-win, di mana kami memberikan saran dan solusi terbaik untuk kebutuhan finansial klien Alife, sambil memastikan Para Mitra Alife memiliki kehidupan yang sejahtera dan bermakna. Kami adalah tim agen profesional berbakat dengan berbagai keterampilan dan pengalaman. Kami mencintai apa yang kami lakukan, dan kami melakukannya dengan penuh semangat. Kami berharap dapat memperluas kemitraan kami dan memberikan asuransi kesehatan dan jiwa terbaik kepada klien kami."
+    answer: "Alife by Vision adalah Agensi Asuransi yang didirikan pada tahun 2019. Kami percaya pada pendekatan win-win, di mana kami memberikan saran dan solusi terbaik untuk kebutuhan finansial klien Alife, sambil memastikan Para Mitra Alife memiliki kehidupan yang sejahtera dan bermakna. Kami adalah tim agen profesional berbakat dengan berbagai keterampilan dan pengalaman. Kami mencintai apa yang kami lsayakan, dan kami melsayakannya dengan penuh semangat. Kami berharap dapat memperluas kemitraan kami dan memberikan asuransi kesehatan dan jiwa terbaik kepada klien kami."
   },
   {
     question: "Apakah saya perlu pengalaman di bidang asuransi?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Apakah ada biaya untuk bergabung dengan komunitas bisnis Martha?",
-    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal dengan tim kami. Aku akan melihat komitmen kamu dan kemudian aku akan memberikan solusi terbaik specialuntuk kamu."
+    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal dengan tim kami. saya akan melihat komitmen kamu dan kemudian saya akan memberikan solusi terbaik specialuntuk kamu."
   }
 ];
 
