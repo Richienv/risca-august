@@ -18,7 +18,7 @@ const data = [
   {
     id: 3,
     title: "Closing With Mentors",
-    content: "Aku bakal ikut kamu untuk ketemu calon klien potensial supaya kamu bisa closing lebih cepat! So, kamu gaperlu takut bekerja sendirian.",
+    content: "Aku bakal ikut kamu untuk ketemu calon klien potensial supaya kamu bisa closing lebih cepat! So, kamu gak perlu takut bekerja sendirian.",
     image: "/ipad.jpg",
   },
   {
