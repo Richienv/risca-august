@@ -41,7 +41,7 @@ export default function FeaturesSection() {
         <div className="relative z-10">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">
-              Bonus Value yang akan kamu dapatkan saat bekerja sama dengan saya
+              Bonus Value yang akan kamu dapatkan saat kita kerja bareng
             </h2>
             <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
           </div>
