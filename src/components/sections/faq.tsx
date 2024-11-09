@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "Apakah saya perlu pengalaman di bidang asuransi?",
-    answer: "Tidak, Kamutidak perlu pengalaman sebelumnya di bidang asuransi. Kami menyediakan pelatihan komprehensif dan dukungan berkelanjutan untuk membantu Kamumemulai dan mengembangkan bisnis Anda."
+    answer: "Tidak, kamu tidak perlu pengalaman sebelumnya di bidang asuransi. Kami menyediakan pelatihan komprehensif dan dukungan berkelanjutan untuk membantu kamu memulai dan mengembangkan bisnis Anda."
   },
   {
     question: "Apa saja pelengkapan yang dibutuhkan untuk mendukung produktivitas saya selama di bisnis ini?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Apa keuntungan bergabung dengan Alife dibandingkan bekerja 9-5?",
-    answer: "Alife menawarkan kebebasan waktu, potensi penghasilan tak terbatas, pengembangan diri, networking luas, dan peluang bisnis yang tidak Kamudapatkan dalam pekerjaan 9-5 biasa."
+    answer: "Alife menawarkan kebebasan waktu, potensi penghasilan tak terbatas, pengembangan diri, networking luas, dan peluang bisnis yang tidak kamu dapatkan dalam pekerjaan 9-5 biasa."
   },
   {
     question: "Apakah ada biaya untuk bergabung dengan komunitas bisnis Martha?",
