@@ -7,7 +7,7 @@ import Image from "next/image";
 const transformations = [
   {
     title: "Kita Ajarkan Semua Skills & Techniques For Success!",
-    description: "Kamu akan mendapatkan akses eksklusif ke kelas training kita, yang terdiri dari lebih dari 1000+ anggota dan saya siap membantu kamu dalam setiap langkah bisnis!",
+    description: "Kamu akan mendapatkan akses eksklusif ke kelas training kita, yang terdiri dari lebih dari 1000+ anggota dan aku siap membantu kamu dalam setiap langkah bisnis!",
     image: "/belajar.png",
   },
   {
