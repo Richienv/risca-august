@@ -208,13 +208,13 @@ export default function WhatIsAlifeSection() {
             {/* Quote styled section */}
             <div className="relative px-8 py-6">
               {/* Quote marks */}
-              <div className="absolute -top-4 -left-2 text-4xl text-blue-500/20 font-serif">"</div>
-              <div className="absolute -bottom-4 -right-2 text-4xl text-blue-500/20 font-serif rotate-180">"</div>
+              <div className="absolute -top-4 -left-2 text-4xl text-blue-500/20 font-serif">&ldquo;</div>
+              <div className="absolute -bottom-4 -right-2 text-4xl text-blue-500/20 font-serif rotate-180">&rdquo;</div>
               
               {/* Quote text with hero-matched styling */}
               <p className="text-sm tracking-tight md:text-base italic text-center font-light relative z-10">
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Sekarang Saatnya kamu bersinar! Do not miss out! Aku percaya kamu pasti bisa achieve the same success as us!
+                  Sekarang Saatnya kamu bersinar! Don&apos;t miss out! Aku percaya kamu pasti bisa achieve the same success as us!
                 </span>
               </p>
             </div>
