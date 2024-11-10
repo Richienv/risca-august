@@ -1,47 +1,82 @@
 "use client";
 
-import BlurFade from "@/components/magicui/blur-fade";
+import { useState } from 'react';
+import { motion } from "framer-motion";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { GradientBlur } from "@/components/ui/gradient-blur";
-import GridPattern from "@/components/ui/grid-pattern";
 
 const testimonial = {
   name: "Founder Alife",
-  role: "",
   videoUrl: "https://youtu.be/nF1lLyIv0HM",
+  quote: "Jangan percaya kita, lihat sendiri aja testimoni mereka yang bisa banyak membantu orang dari hasil cuan group mereka",
 };
 
-function TestimonialCard({ name, role, videoUrl }: { name: string; role: string; videoUrl: string }) {
+function TestimonialCard({ name, videoUrl, quote }: { 
+  name: string; 
+  videoUrl: string;
+  quote: string;
+}) {
+  const [rotateX, setRotateX] = useState(0);
+  const [rotateY, setRotateY] = useState(0);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const { clientX, clientY, currentTarget } = e;
+    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const x = clientX - left;
+    const y = clientY - top;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const rotateX = ((y - centerY) / centerY) * -10; // Reduced tilt amount
+    const rotateY = ((x - centerX) / centerX) * 10;
+    setRotateX(rotateX);
+    setRotateY(rotateY);
+  };
+
+  const handleMouseLeave = () => {
+    setRotateX(0);
+    setRotateY(0);
+  };
+
   return (
-    <div className="relative w-full">
-      {/* Card container with almost black metallic gradient background */}
-      <div className="relative w-full overflow-hidden rounded-xl border border-white/5 shadow-2xl"
+    <motion.div
+      className="relative w-full"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        perspective: '1000px',
+      }}
+    >
+      {/* Card container with metallic gradient background */}
+      <motion.div
+        className="relative w-full overflow-hidden rounded-xl border border-white/5 shadow-2xl"
         style={{
           background: `
             linear-gradient(135deg, 
               rgba(20, 20, 20, 0.98) 0%,
               rgba(12, 12, 12, 0.99) 50%,
               rgba(8, 8, 8, 1) 100%
-            )
-          `,
+            )`,
           boxShadow: `
             0 0 0 1px rgba(255, 255, 255, 0.03),
             0 4px 6px -1px rgba(0, 0, 0, 0.3),
             0 2px 4px -1px rgba(0, 0, 0, 0.2),
             inset 0 1px 1px rgba(255, 255, 255, 0.03)
-          `
+          `,
+          rotateX,
+          rotateY,
+          transition: 'transform 0.2s ease-out',
         }}
       >
         <BorderBeam colorFrom="#333333" colorTo="#111111" />
         
-        {/* Very subtle metallic shine effect overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-transparent opacity-50 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/3 via-transparent to-black/40 pointer-events-none"></div>
+        {/* Radial blur effects */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-800/30 via-purple-800/30 to-purple-900/30 rounded-xl blur-2xl animate-pulse"></div>
+        <div className="absolute -inset-4 bg-gradient-to-br from-purple-900/20 to-blue-800/20 rounded-xl blur-3xl animate-pulse delay-75"></div>
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-800/20 via-purple-900/20 to-blue-900/20 rounded-xl blur-2xl animate-pulse delay-150"></div>
         
         <div className="flex flex-col w-full backdrop-blur-sm">
-          {/* Video container */}
+          {/* Video section first */}
           <div className="relative p-4">
-            {/* Video iframe */}
             <div className="aspect-video w-full relative z-10">
               <iframe
                 src={videoUrl.replace('youtu.be/', 'youtube.com/embed/')}
@@ -54,37 +89,30 @@ function TestimonialCard({ name, role, videoUrl }: { name: string; role: string;
             </div>
           </div>
 
-          {/* Text content and name below video */}
-          <div className="p-6 text-center">
-          <p className="text-sm md:text-base lg:text-lg text-white/80 max-w-2xl mx-auto">
-              Jangan cuma jadi penonton, kamu juga bisa sukses bareng aku dan komunitas Alife yang solid dan fun!
-            </p>
-            <br />
-            <h3 className="text-lg font-semibold mb-1 text-white/90">{name}</h3>
-            <p className="text-sm text-white/60 mb-6">{role}</p>
-            
-            {/* Description */}
-           
+          {/* Quote section */}
+          <div className="relative p-6 text-center">
+            <blockquote className="relative mb-6">
+              <div className="absolute -top-4 -left-2 text-4xl text-white/20 font-serif">"</div>
+              <p className="text-lg md:text-xl italic text-white font-light relative z-10 px-4">
+                {quote}
+              </p>
+              <div className="absolute -bottom-4 -right-2 text-4xl text-white/20 font-serif rotate-180">"</div>
+            </blockquote>
+
+            {/* Name at the bottom */}
+            <div className="text-center">
+              <p className="text-sm text-white/80">{name}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
 export default function TestimonialSection() {
   return (
     <div className="relative overflow-hidden w-full">
-      {/* Grid Pattern Background */}
-      <GridPattern
-        width={40}
-        height={40}
-        x={-1}
-        y={-1}
-        strokeDasharray="8 4"
-        className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-200 dark:fill-neutral-800 dark:stroke-neutral-700 [mask-image:radial-gradient(white,transparent_85%)]"
-      />
-
       {/* Gradient Blurs */}
       <GradientBlur
         className="bottom-[10%] right-[10%]" 
@@ -116,9 +144,13 @@ export default function TestimonialSection() {
         
         {/* Video container with increased max width */}
         <div className="max-w-5xl mx-auto px-4">
-          <BlurFade delay={0.2} inView>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <TestimonialCard {...testimonial} />
-          </BlurFade>
+          </motion.div>
         </div>
       </div>
     </div>
