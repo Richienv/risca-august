@@ -8,7 +8,7 @@ import { GradientBlur } from "@/components/ui/gradient-blur";
 const testimonial = {
   name: "Founder Alife",
   videoUrl: "https://youtu.be/nF1lLyIv0HM",
-  quote: "Jangan percaya kita, lihat sendiri aja testimoni mereka yang bisa banyak membantu orang dari hasil cuan group mereka",
+  quote: "Jangan percaya omongan! Lihat sendiri aja testimony mereka yang sudah mengubah hidupnya.",
 };
 
 function TestimonialCard({ name, videoUrl, quote }: { 
