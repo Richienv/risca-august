@@ -191,7 +191,8 @@ export function ContactForm() {
           className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         >
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-2 text-white">5 Menit Bisa Ubah 7 Tahun Hidupmu!</h2>
+            <h2 className="text-2xl font-bold text-center mb-2 text-white">Waktu Singkat, Hasil Hebat: Ubah Hidupmu dalam 5 Menit!
+</h2>
             <div className="w-24 h-1 mx-auto bg-gradient-to-r from-blue-400 to-red-400 mb-8"></div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
