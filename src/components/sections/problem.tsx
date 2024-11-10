@@ -92,11 +92,11 @@ function TestimonialCard({ name, videoUrl, quote }: {
           {/* Quote section */}
           <div className="relative p-6 text-center">
             <blockquote className="relative mb-6">
-              <div className="absolute -top-4 -left-2 text-4xl text-white/20 font-serif">"</div>
+              <div className='absolute -top-4 -left-2 text-4xl text-white/20 font-serif'>&ldquo;</div>
               <p className="text-lg md:text-xl italic text-white font-light relative z-10 px-4">
                 {quote}
               </p>
-              <div className="absolute -bottom-4 -right-2 text-4xl text-white/20 font-serif rotate-180">"</div>
+              <div className='absolute -bottom-4 -right-2 text-4xl text-white/20 font-serif rotate-180'>&rdquo;</div>
             </blockquote>
 
             {/* Name at the bottom */}
