@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useScroll, useTransform } from "framer-motion";
 
 const alifeBenefits = [
   {
@@ -31,6 +32,18 @@ const alifeBenefits = [
 
 export default function WhatIsAlifeSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRef = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: videoRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Transform values for 3D effect
+  const rotateX = useTransform(scrollYProgress, [0, 0.5], [15, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
+  const z = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? alifeBenefits.length - 1 : prev - 1));
@@ -48,7 +61,7 @@ export default function WhatIsAlifeSection() {
   ];
 
   return (
-    <div className="relative overflow-hidden w-full">
+    <div className="relative overflow-hidden w-full perspective-1000">
       <div className="relative z-10 py-8">
         <div className="text-center mb-8">
           <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4">
@@ -58,8 +71,36 @@ export default function WhatIsAlifeSection() {
         </div>
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          {/* Video Display with Blue Animated Shadow */}
-          <div className="relative">
+          {/* Video Display with 3D Animation */}
+          <motion.div 
+            ref={videoRef}
+            className="relative"
+            style={{ 
+              perspective: 1000,
+              opacity,
+              scale,
+              rotateX,
+              z,
+              transformStyle: "preserve-3d",
+            }}
+            initial={{ 
+              opacity: 0.3,
+              rotateX: 15,
+              z: -100,
+              scale: 0.9
+            }}
+            animate={{ 
+              opacity: 1,
+              rotateX: 0,
+              z: 0,
+              scale: 1
+            }}
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 100
+            }}
+          >
             {/* Animated gradient shadows */}
             <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/30 via-blue-400/30 to-blue-300/30 rounded-xl blur-2xl animate-pulse"></div>
             <div className="absolute -inset-3 bg-gradient-to-br from-blue-600/20 to-blue-400/20 rounded-xl blur-3xl animate-pulse delay-75"></div>
@@ -84,7 +125,7 @@ export default function WhatIsAlifeSection() {
                 </h3>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Gradient Separator */}
           <div className="relative py-4">
