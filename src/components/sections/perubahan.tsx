@@ -198,9 +198,11 @@ export default function WhatIsAlifeSection() {
           </div>
 
           <motion.div className="relative mt-8 w-full max-w-3xl mx-auto">
-            {/* First paragraph with normal styling */}
-            <p className="text-md md:text-md text-center font-sans leading-relaxed text-white/80 mb-8">
-              Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
+            {/* First paragraph with hero-matched styling */}
+            <p className="mb-8 text-sm tracking-tight text-muted-foreground md:text-base text-balance text-center">
+              <span className="text-white">
+                Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
+              </span>
             </p>
 
             {/* Quote styled section */}
@@ -209,8 +211,8 @@ export default function WhatIsAlifeSection() {
               <div className="absolute -top-4 -left-2 text-4xl text-blue-500/20 font-serif">"</div>
               <div className="absolute -bottom-4 -right-2 text-4xl text-blue-500/20 font-serif rotate-180">"</div>
               
-              {/* Quote text */}
-              <p className="text-lg md:text-xl italic text-center font-light relative z-10">
+              {/* Quote text with hero-matched styling */}
+              <p className="text-sm tracking-tight md:text-base italic text-center font-light relative z-10">
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Sekarang Saatnya kamu bersinar! Do not miss out! Aku percaya kamu pasti bisa achieve the same success as us!
                 </span>
