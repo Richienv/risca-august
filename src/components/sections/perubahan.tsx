@@ -156,24 +156,38 @@ export default function WhatIsAlifeSection() {
             </div>
           </div>
 
-          <motion.p 
-            className="text-md md:text-md max-w-3xl mx-auto mt-8 sm:mt-12 text-center font-sans leading-relaxed"
-            style={{
-              background: "linear-gradient(to right, #ffffff, #e0e0e0)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <BlueGradientSeparator />
-            Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team aku dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama aku dan Alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
-            <br />
-            <br />
-            <span className="font-bold px-6 py-2 border border-transparent bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-lg">Sekarang Saatnya kamu bersinar! Dont miss out! Aku percaya kamu pasti bisa achieve the same success as us!</span>
-          </motion.p>
+          <motion.div className="relative mt-8 w-full max-w-3xl mx-auto">
+            {/* First paragraph with normal styling */}
+            <p className="text-md md:text-md text-center font-sans leading-relaxed text-white/80 mb-8">
+              Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
+            </p>
+
+            {/* Quote styled section */}
+            <div className="relative px-8 py-6">
+              {/* Quote marks */}
+              <div className="absolute -top-4 -left-2 text-4xl text-blue-500/20 font-serif">"</div>
+              <div className="absolute -bottom-4 -right-2 text-4xl text-blue-500/20 font-serif rotate-180">"</div>
+              
+              {/* Quote text */}
+              <p className="text-lg md:text-xl italic text-center font-light relative z-10">
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Sekarang Saatnya kamu bersinar! Don't miss out! Aku percaya kamu pasti bisa achieve the same success as us!
+                </span>
+              </p>
+            </div>
+
+            {/* Bottom gradient effects */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none">
+              {/* Dark blue/purple gradients */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-transparent blur-3xl"></div>
+              
+              {/* Animated pulse effects */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-800/10 via-purple-800/10 to-blue-800/10 rounded-xl blur-2xl animate-pulse"></div>
+              <div className="absolute -inset-4 bg-gradient-to-br from-purple-900/10 to-blue-800/10 rounded-xl blur-3xl animate-pulse delay-75"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-800/10 via-purple-900/10 to-blue-800/10 rounded-xl blur-2xl animate-pulse delay-150"></div>
+            </div>
+          </motion.div>
           <BlueGradientSeparator />
         </div>
       </div>
