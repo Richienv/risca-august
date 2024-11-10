@@ -163,7 +163,7 @@ export default function WhatIsAlifeSection() {
             
             <p className="relative z-10 mb-8 text-sm tracking-tight text-muted-foreground md:text-base text-balance text-center">
               <span className="text-white">
-                Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team saya dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan Alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
+                Bukan sekedar kerja, tapi panggilan hidup! bergabunglah dengan team aku dan kerja di tempat yang bikin kamu passionate, bareng komunitas yang vibesnya sama. Bersama saya dan Alife kamu akan dibimbing untuk membangun personal brand dan bisnis yang sustainable.
               </span>
             </p>
 
