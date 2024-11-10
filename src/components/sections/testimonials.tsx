@@ -262,18 +262,48 @@ export default function Testimonials() {
   return (
     <Section className="py-1 md:py-1 max-w-8xl">
       <div className="text-center mb-8 md:mb-10">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">Dari Mereka yang Berani Berubah</h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">
+          Dari Mereka yang Berani Berubah
+        </h2>
         <hr className="w-16 md:w-20 mx-auto border-t-2 border-primary mb-2 md:mb-3" />
         <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xl mx-auto px-4 md:px-0">
           Dengarkan pengalaman langsung dari anggota komunitas Alife yang telah merasakan manfaatnya.
         </p>
       </div>
-      <div className="relative mt-4 max-h-[70vh] overflow-hidden">
-        <div className="gap-2 md:columns-3 xl:columns-3 2xl:columns-3">
+      
+      {/* Mobile View - Single Column Scroll */}
+      <div className="md:hidden relative mt-4 max-h-[80vh] overflow-hidden">
+        <Marquee
+          vertical
+          className="group [--duration:40s]" // Increased speed for mobile
+        >
+          {testimonials.map((card, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: Math.random() * 0.3,
+                duration: 0.5,
+              }}
+            >
+              <TestimonialCard {...card} className="mb-2 mx-2" />
+            </motion.div>
+          ))}
+        </Marquee>
+        
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 w-full bg-gradient-to-t from-background from-20%"></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/5 w-full bg-gradient-to-b from-background from-20%"></div>
+      </div>
+
+      {/* Desktop View - Three Columns */}
+      <div className="hidden md:block relative mt-4 max-h-[70vh] overflow-hidden">
+        <div className="gap-2 columns-3">
           {/* First Column */}
           <Marquee
             vertical
-            className="group [--duration:80s]"
+            className="group [--duration:50s]" // Increased speed for desktop
           >
             {column1Testimonials.map((card, idx) => (
               <motion.div
@@ -282,8 +312,8 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  delay: Math.random() * 0.5,
-                  duration: 0.8,
+                  delay: Math.random() * 0.3,
+                  duration: 0.5,
                 }}
               >
                 <TestimonialCard {...card} className="mb-2" />
@@ -294,7 +324,7 @@ export default function Testimonials() {
           {/* Second Column */}
           <Marquee
             vertical
-            className="group [--duration:80s]"
+            className="group [--duration:45s]" // Slightly different speed for visual interest
           >
             {column2Testimonials.map((card, idx) => (
               <motion.div
@@ -303,8 +333,8 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  delay: Math.random() * 0.5,
-                  duration: 0.8,
+                  delay: Math.random() * 0.3,
+                  duration: 0.5,
                 }}
               >
                 <TestimonialCard {...card} className="mb-2" />
@@ -315,7 +345,7 @@ export default function Testimonials() {
           {/* Third Column */}
           <Marquee
             vertical
-            className="group [--duration:80s]"
+            className="group [--duration:55s]" // Slightly different speed for visual interest
           >
             {column3Testimonials.map((card, idx) => (
               <motion.div
@@ -324,8 +354,8 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  delay: Math.random() * 0.5,
-                  duration: 0.8,
+                  delay: Math.random() * 0.3,
+                  duration: 0.5,
                 }}
               >
                 <TestimonialCard {...card} className="mb-2" />
