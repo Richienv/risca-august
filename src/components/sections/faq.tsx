@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Apakah ada biaya untuk bergabung dengan komunitas bisnis Martha?",
-    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal dengan tim kami. aku akan melihat komitmen kamu dan kemudian aku akan memberikan solusi terbaik specialuntuk kamu."
+    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal kita. aku akan melihat komitmen kamu dan kemudian aku akan memberikan solusi terbaik special untuk kamu."
   }
 ];
 
