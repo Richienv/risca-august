@@ -20,7 +20,13 @@ export type Post = {
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
   let match = frontmatterRegex.exec(fileContent);
-  let frontMatterBlock = match![1];
+  
+  if (!match) {
+    // If no frontmatter found, return empty metadata and original content
+    return { data: {} as Post, content: fileContent };
+  }
+  
+  let frontMatterBlock = match[1];
   let content = fileContent.replace(frontmatterRegex, "").trim();
   let frontMatterLines = frontMatterBlock.trim().split("\n");
   let metadata: Partial<Post> = {};

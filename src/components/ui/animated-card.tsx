@@ -190,7 +190,7 @@ export const TestimonialCard = ({
     >
       <div className="space-y-4">
         <p className="text-muted-foreground italic leading-relaxed">
-          "          &ldquo;{content}&rdquo;"
+          "          &ldquo;                    &ldquo;{content}&rdquo;&rdquo;"
         </p>
         
         <div className="flex items-center gap-3">
