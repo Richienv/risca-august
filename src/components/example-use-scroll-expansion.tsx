@@ -1,10 +1,36 @@
-"use client";
+"use client"
 
 import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
-// ShuffleGrid Component
+export const ShuffleHero = () => {
+  return (
+    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+      <div>
+        <span className="block mb-4 text-xs md:text-sm text-primary font-medium">
+          Better every day
+        </span>
+        <h3 className="text-4xl md:text-6xl font-semibold text-foreground">
+          Let's change it up a bit
+        </h3>
+        <p className="text-base md:text-lg text-muted-foreground my-4 md:my-6">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
+          error repellat voluptatibus ad.
+        </p>
+        <button className={cn(
+          "bg-primary text-primary-foreground font-medium py-2 px-4 rounded-md",
+          "transition-all hover:bg-primary/90 active:scale-95",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        )}>
+          Find a class
+        </button>
+      </div>
+      <ShuffleGrid />
+    </section>
+  );
+};
+
 const shuffle = (array: (typeof squareData)[0][]) => {
   let currentIndex = array.length,
     randomIndex;
@@ -69,7 +95,7 @@ const squareData = [
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMijA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
   },
   {
     id: 13,
@@ -95,7 +121,7 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full rounded-md overflow-hidden bg-muted aura-border hover:aura-glow transition-all duration-300"
+      className="w-full h-full rounded-md overflow-hidden bg-muted"
       style={{
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "cover",
@@ -121,83 +147,13 @@ const ShuffleGrid = () => {
 
   const shuffleSquares = () => {
     setSquares(generateSquares());
+
     timeoutRef.current = setTimeout(shuffleSquares, 3000);
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-2">
+    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
       {squares.map((sq) => sq)}
     </div>
   );
 };
-
-export default function PerubahanSection() {
-  const sectionRef = useRef(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const rotateX = useTransform(scrollYProgress, [0, 0.5], [15, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 1]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
-  const z = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
-
-  return (
-    <div className="relative overflow-hidden w-full min-h-screen">
-      {/* Background effects */}
-      <div className="absolute inset-0 gradient-aura-subtle"></div>
-      
-      <div className="relative z-10 min-h-screen flex flex-col justify-center py-16 md:py-24">
-        <div className="text-center mb-12">
-          <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-4">
-            Saatnya Berubah
-          </h2>
-          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-8"></div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground">
-            Perubahan
-          </h1>
-        </div>
-        
-        <section className="w-full px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto flex-1">
-          <motion.div
-            ref={sectionRef}
-            style={{ 
-              perspective: 1000,
-              opacity,
-              scale,
-              rotateX,
-              z,
-              transformStyle: "preserve-3d",
-            }}
-            initial={{ opacity: 0.3, rotateX: 15, z: -100, scale: 0.9 }}
-            animate={{ opacity: 1, rotateX: 0, z: 0, scale: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-          >
-            <span className="block mb-4 text-xs md:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80">
-              Saatnya Berubah
-            </span>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground mb-6">
-              Kelilingi Dirimu dengan Kesuksesan
-            </h3>
-            <p className="text-base md:text-lg font-light text-muted-foreground leading-relaxed my-4 md:my-6">
-              Inilah saatnya untuk mengelilingi dirimu dengan kesuksesan seperti mereka yang sudah percaya, mencoba, dan berhasil di bawah ini.
-            </p>
-            <p className="text-sm md:text-base font-light text-foreground/80 leading-relaxed mb-8">
-              Bergabunglah dengan komunitas yang telah membuktikan bahwa impian bisa menjadi kenyataan. Lihat bagaimana mereka mengubah hidup mereka dan raih kesuksesan yang sama.
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            <ShuffleGrid />
-          </motion.div>
-        </section>
-      </div>
-    </div>
-  );
-}

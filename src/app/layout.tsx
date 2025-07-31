@@ -6,49 +6,49 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({
-  metadataBase: new URL('https://marthateja.com'),
-  title: "Join Martha Insurance Business Community",
-  description: "Join our thriving insurance business community. Learn, grow, and succeed together with Martha's mentorship and support network.",
+  metadataBase: new URL('https://templatepro.com'),
+  title: "Template Pro - Premium Business Templates & Solutions",
+  description: "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
   openGraph: {
-    title: "Join Martha Insurance Business Community",
-    description: "Join our thriving insurance business community. Learn, grow, and succeed together with Martha's mentorship and support network.",
-    url: 'https://marthateja.com',
-    siteName: 'Martha Insurance Business Community',
+    title: "Template Pro - Premium Business Templates & Solutions",
+    description: "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
+    url: 'https://templatepro.com',
+    siteName: 'Template Pro',
     images: [
       {
         url: '/thumb.png',
         width: 1200,
         height: 630,
-        alt: 'Martha Insurance Business Community',
+        alt: 'Template Pro - Premium Business Templates',
         type: 'image/png',
       },
       {
         url: '/thumb-square.png',
         width: 600,
         height: 600,
-        alt: 'Martha Insurance Business Community',
+        alt: 'Template Pro - Premium Business Templates',
         type: 'image/png',
       },
     ],
-    locale: 'id_ID',
+    locale: 'en_US',
     type: 'website',
   },
   other: {
-    'og:image:secure_url': 'https://marthateja.com/thumb.png',
+    'og:image:secure_url': 'https://templatepro.com/thumb.png',
     'og:image:type': 'image/png',
     'og:image:width': '1200',
     'og:image:height': '630',
-    'og:locale': 'id_ID',
-    'og:site_name': 'Martha Insurance Business Community',
-    'og:title': 'Join Martha Insurance Business Community',
-    'og:description': 'Join our thriving insurance business community. Learn, grow, and succeed together with Martha\'s mentorship and support network.',
-    'og:url': 'https://marthateja.com?v=1',
+    'og:locale': 'en_US',
+    'og:site_name': 'Template Pro',
+    'og:title': 'Template Pro - Premium Business Templates & Solutions',
+    'og:description': 'Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.',
+    'og:url': 'https://templatepro.com?v=1',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Join Martha Insurance Business Community",
-    description: "Join our thriving insurance business community. Learn, grow, and succeed together with Martha's mentorship and support network.",
-    images: ['/thumb.png'], // Same image as OpenGraph
+    title: "Template Pro - Premium Business Templates & Solutions",
+    description: "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
+    images: ['/thumb.png'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -56,16 +56,16 @@ export const metadata: Metadata = constructMetadata({
     apple: '/apple-touch-icon.png',
   },
   keywords: [
-    'insurance business',
-    'Martha insurance',
-    'business community',
-    'insurance mentorship',
-    'financial freedom',
-    'business opportunity'
+    'business templates',
+    'premium templates',
+    'professional solutions',
+    'corporate design',
+    'business tools',
+    'template pro'
   ],
-  authors: [{ name: 'Martha' }],
-  creator: 'Martha',
-  publisher: 'Martha Insurance Business Community',
+  authors: [{ name: 'Template Pro Team' }],
+  creator: 'Template Pro',
+  publisher: 'Template Pro',
   formatDetection: {
     email: false,
     address: false,
@@ -112,14 +112,15 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Martha Insurance Business Community",
-              "description": "Join our thriving insurance business community. Learn, grow, and succeed together with Martha's mentorship and support network.",
-              "url": "https://your-domain.com",
-              "logo": "https://your-domain.com/logo.png",
+              "name": "Template Pro",
+              "description": "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
+              "url": "https://templatepro.com",
+              "logo": "https://templatepro.com/logo.png",
               "sameAs": [
-                "https://www.facebook.com/your-page",
-                "https://www.instagram.com/your-profile",
-                // Add other social media links
+                "https://www.twitter.com/templatepro",
+                "https://www.facebook.com/templatepro",
+                "https://www.instagram.com/templatepro",
+                "https://www.linkedin.com/company/templatepro"
               ]
             })
           }}

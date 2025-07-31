@@ -1,372 +1,267 @@
 "use client";
 
-import Marquee from "@/components/magicui/marquee";
-import Section from "@/components/section";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import { Star } from "lucide-react";
-import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
+import { Card, CardContent } from '@/components/card-2';
+import { Marquee } from '@/components/3d-testimonial';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={cn(
-        "bg-primary/20 p-1 py-0.5 font-bold text-primary dark:bg-primary/20 dark:text-primary",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
-};
-
-export interface TestimonialCardProps {
-  name: string;
-  role: string;
-  img?: string;
-  description: React.ReactNode;
-  className?: string;
-  [key: string]: any;
-}
-
-export const TestimonialCard = ({
-  description,
-  name,
-  img,
-  role,
-  className,
-  ...props
-}: TestimonialCardProps) => (
-  <div
-    className={cn(
-      "mb-4 flex w-full cursor-pointer break-inside-avoid flex-col items-center justify-between gap-6 rounded-xl p-4",
-      "border border-neutral-200 bg-white",
-      "dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-      className
-    )}
-    {...props}
-  >
-    <div className="select-none text-sm font-normal text-neutral-700 dark:text-neutral-400">
-      {description}
-      <div className="flex flex-row py-1">
-        <Star className="size-4 text-yellow-500 fill-yellow-500" />
-        <Star className="size-4 text-yellow-500 fill-yellow-500" />
-        <Star className="size-4 text-yellow-500 fill-yellow-500" />
-        <Star className="size-4 text-yellow-500 fill-yellow-500" />
-        <Star className="size-4 text-yellow-500 fill-yellow-500" />
-      </div>
-    </div>
-
-    <div className="flex w-full select-none items-center justify-start gap-5">
-      <Image
-        width={40}
-        height={40}
-        src={img || "/placeholder-avatar.jpg"}
-        alt={name}
-        className="h-10 w-10 rounded-full ring-1 ring-border ring-offset-4"
-        priority={false}
-        onError={(e) => {
-          const target = e.target as HTMLImageElement;
-          target.src = "/placeholder-avatar.jpg";
-        }}
-      />
-
-      <div>
-        <p className="font-medium text-neutral-500">{name}</p>
-        <p className="text-xs font-normal text-neutral-400">{role}</p>
-      </div>
-    </div>
-  </div>
-);
+gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
     name: "Jojo",
-    role: "2 Years Joined",
-    img: "/jojo.jpg",
-    description: (
-      <p>
-        Awalnya aku memilih kamu sebagai leader karena kamu yang pertama kali mengenalkan aku ke peluang ini, dan kita sudah lama saling kenal. 
-        <Highlight>
-          Gaya mentoring kamu juga keren – sabar, bisa menyesuaikan dengan tempo belajar aku yang kadang agak lemot
-        </Highlight>
-        . Bisa beli Apartemen, mobil baru, umroh pake uang sendiri, bisa dari mana aja dan lewat bisnis ini bisa support hobi naik gunung kapanpun.
-      </p>
-    ),
+    username: "@jojo",
+    body: "Awalnya aku memilih Riscasebagai mentor karena dia yang pertama kali mengenalkan aku ke peluang ini. Gaya mentoring-nya luar biasa – sabar, bisa menyesuaikan dengan tempo belajar aku yang kadang lambat. Sekarang bisa beli apartemen, mobil baru, bahkan umroh pakai uang sendiri.",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Devina Hartono",
-    role: "Alife Partner",
-    img: "/devina.jpg",
-    description: (
-      <p>
-        <Highlight>
-          Sebelum di Alife, saya adalah orang yang tidak punya ambisi dan selalu labeled myself as an introvert
-        </Highlight>
-        . Bersyukur banget join di Alife sehingga saya tau kemampuan2 saya yang sebelumnya tidak terpikirkan. Mulai dari punya dreams dan tujuan hidup, skill2 baru seperti leadership & public speaking.
-      </p>
-    ),
+    username: "@devina",
+    body: "Sebelum bergabung dengan Risca, saya adalah orang yang tidak punya ambisi besar dan selalu menganggap diri introvert. Bersyukur sekali bisa join di Risca, sehingga saya tahu kemampuan-kemampuan yang sebelumnya tidak pernah terpikirkan. Sekarang punya mimpi dan tujuan hidup yang jelas.",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Sharon Gunawan",
-    role: "Alife Partner",
-    img: "/sharon.jpg",
-    description: (
-      <p>
-        Martha orang nya very knowledgable dan ga pelit ilmu. 
-        <Highlight>
-          Watching Martha as a leader, i can see how she always takes care of her team dan memberi mereka sense of responsibility
-        </Highlight>
-        . Di Alife gw belajar membangun relasi dengan orang, belajar menjadi orang yg lebih baik: belajar ramah, menyapa, care sama orang lain.
-      </p>
-    ),
+    username: "@sharon",
+    body: "Riscaorangnya sangat berpengetahuan luas dan tidak pelit berbagi ilmu. Melihat Riscasebagai pemimpin, saya bisa lihat bagaimana dia selalu merawat timnya dan memberi mereka rasa tanggung jawab. Di Risca, saya belajar membangun relasi yang bermakna dengan orang lain.",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
-    name: "Jessica Suwarsono",
-    role: "Alife Partner",
-    img: "/jessica.jpg",
-    description: (
-      <p>
-        <Highlight>
-          Sebagai seorang eks-corporate aku benar2 merasakan perubahan hidup sejak join Alife
-        </Highlight>
-        . Income yang aku dapat selama 4 tahun jalanin bisnis Alife sudah mencapai dua kali lipat dari gaji terakhirku di korporat. Yang ketiga komunitas Alife yang seru dan punya visi yang sama.
-      </p>
-    ),
+    name: "Jessica Suwarsono", 
+    username: "@jessica",
+    body: "Sebagai mantan karyawan korporat, saya benar-benar merasakan perubahan hidup sejak bergabung dengan Risca. Penghasilan yang saya dapatkan selama 4 tahun menjalankan bisnis Risca sudah mencapai dua kali lipat dari gaji terakhir saya di perusahaan.",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Shanelle",
-    role: "Alife Partner",
-    img: "/shanelle.jpg",
-    description: (
-      <p>
-        Play hard, work HARDER. 
-        <Highlight>
-          Yang paling berasa adalah lingkungannya yang super high-achiever
-        </Highlight>
-        . Jadi ada trigger untuk bisa keluar dari zona nyaman, dream big, and achieve more. Bonus mentoring dari manusia-manusia hebat. Bye bye mediocre life!
-      </p>
-    ),
+    username: "@shanelle", 
+    body: "Bermain keras, bekerja LEBIH KERAS. Yang paling terasa adalah lingkungannya yang penuh dengan high-achiever. Jadi ada trigger untuk keluar dari zona nyaman, bermimpi besar, dan mencapai lebih banyak lagi. Bonus mentoring dari orang-orang hebat.",
+    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Trisna",
-    role: "Alife Partner",
-    img: "/trisna.jpg",
-    description: (
-      <p>
-        Martha aset ilmu! Gercep sama team, mindset yang terbuka. 
-        <Highlight>
-          Perubahan sejak Alife BANYAK! Tapi yang paling ak sadari, MIMPI. Ak jadi berani untuk bermimpi lagi
-        </Highlight>
-        . Ternyata mimpi pun bisa di realisasikan.. karna Alife. 🫶
-      </p>
-    ),
+    username: "@trisna",
+    body: "Riscaadalah gudang ilmu! Gesit bersama tim, mindset yang terbuka. Perubahan sejak bergabung dengan Risca BANYAK SEKALI! Tapi yang paling saya sadari adalah MIMPI. Saya jadi berani untuk bermimpi lagi. Ternyata mimpi bisa direalisasikan berkat Risca.",
+    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Joceline",
-    role: "2 Years Joined",
-    img: "/joceline.jpg",
-    description: (
-      <p>
-        Atha sebagai salah satu partner yg senior selalu kasih insights2 tentang menjalani bisnis. 
-        <Highlight>
-          Grateful bgt bisa join di bisnis Alife. Selain dapat teman2 positive, percepatan income di bisnis ini sangat nyata
-        </Highlight>
-        . Dulu aku orangnya pemalu banget tapi karena punya teman banyak di Alife aku jadi bisa lebih percaya diri.
-      </p>
-    ),
+    username: "@joceline",
+    body: "Riscasebagai salah satu partner senior selalu memberikan wawasan tentang menjalankan bisnis. Sangat bersyukur bisa bergabung di bisnis Risca. Selain mendapat teman-teman positif, percepatan income di bisnis ini benar-benar nyata dan terasa.",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Sarchie",
-    role: "Alife Partner",
-    img: "/sarchie.jpeg",
-    description: (
-      <p>
-        <Highlight>
-          Etos kerja Martha benar-benar bagus. Dia tidak pernah setengah-setengah jika melakukan sesuatu. Kalau dia suka, dia suka. Kalau tidak suka, dia tidak melakukannya.
-        </Highlight>
-        . Dan ketika dia serius terhadap sesuatu, hasilnya juga benar-benar bagus; hasil akhirnya terlihat baik dan penuh integritas, karena saya tahu Martha adalah tipe orang yang ingin bekerja dalam apa pun yang membuat hatinya tenang. Dia juga teman yang hebat dan pendukung yang luar biasa, contoh hampir sempurna dari leader—karena hanya Tuhan yang bisa benar-benar sempurna. Intinya, Martha adalah teladan aku, salah satu tipe yang perlu benar-benar dicontoh dalam hidupnya.
-      </p>
-    ),
+    username: "@sarchie",
+    body: "Etos kerja Riscabenar-benar luar biasa. Dia tidak pernah setengah-setengah dalam melakukan sesuatu. Ketika dia serius terhadap sesuatu, hasilnya selalu memuaskan - penuh integritas dan kualitas tinggi.",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
   {
     name: "Sheila Tang",
-    role: "6 Years Joined",
-    img: "/sheila.jpeg",
-    description: (
-      <p>
-        <Highlight>
-          Akselerasinya sangat cepat, dari mulai sekolahkan anak ke sekolah internasional hingga membeli aset, semuanya benar-benar dari kerja keras saya dan membantu orang lain
-        </Highlight>
-        . Sejak tahun ketiga, dengan tim yang semakin besar, kecepatan pertumbuhan menjadi jauh lebih intens. Komunitas kami sangat mendukung dan positif, kami bisa saling berbagi dan menemukan solusi bersama. Ketika tim kami berkembang dan hidup kami menjadi lebih baik, kami semua bahagia.
-      </p>
-    ),
-  },
-  {
-    name: "Hesty",
-    role: "2 Years Joined",
-    img: "/hesty.png",
-    description: (
-      <p>
-        <Highlight>
-          Baru 2 tahun gabung, pendapatan saya naik 3-4 kali dibanding saat di perusahaan
-        </Highlight>
-        . Setelah gabung di Alife, saya dapat pengetahuan dan pengembangan diri yang luar biasa. Teman-teman komunitas saling mendukung di semua aspek hidup—bukan cuma kerja. Ada jalan di sini dengan komunitas bagus dan mentor hebat.
-      </p>
-    ),
-  },
-  {
-    name: "Debora Simon",
-    role: "2 Years Joined",
-    img: "/debora.jpeg",
-    description: (
-      <p>
-        <Highlight>
-          Alife adalah komunitas yang bagus dan memiliki banyak dampak positif. Semua teman dalam satu tim tanpa banyak persaingan
-        </Highlight>
-        . Sangat kompak, persaingan sehat yang membuat kami tumbuh bersama. Jaringan pertemanan juga meningkat, dan pengetahuan serta keterampilan kami benar-benar berkembang.
-      </p>
-    ),
+    username: "@sheila",
+    body: "Akselerasinya sangat cepat, mulai dari menyekolahkan anak ke sekolah internasional hingga membeli aset properti. Semuanya hasil dari kerja keras dan membantu orang lain. Sejak tahun ketiga, tim semakin besar dan berkembang pesat.",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
   },
 ];
 
-// Split testimonials into three groups
-const column1Testimonials = [
-  testimonials[0], // Jojo
-  testimonials[3], // Jessica
-  testimonials[6], // Joceline
-  testimonials[9], // Hesty
-];
+function TestimonialCard({ img, name, username, body, country }: (typeof testimonials)[number]) {
+  const cardRef = useRef<HTMLDivElement>(null);
 
-const column2Testimonials = [
-  testimonials[1], // Devina
-  testimonials[4], // Shanelle
-  testimonials[7], // Sarchie
-  testimonials[10], // Debora
-];
+  useEffect(() => {
+    if (cardRef.current) {
+      gsap.fromTo(cardRef.current, 
+        { 
+          opacity: 0, 
+          y: 50,
+          scale: 0.9,
+          rotateX: 10
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotateX: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
 
-const column3Testimonials = [
-  testimonials[2], // Sharon
-  testimonials[5], // Trisna
-  testimonials[8], // Sheila Tang
-];
+      const handleMouseEnter = () => {
+        gsap.to(cardRef.current, {
+          scale: 1.05,
+          rotateY: 5,
+          z: 50,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      };
 
-export default function Testimonials() {
+      const handleMouseLeave = () => {
+        gsap.to(cardRef.current, {
+          scale: 1,
+          rotateY: 0,
+          z: 0,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      };
+
+      cardRef.current.addEventListener('mouseenter', handleMouseEnter);
+      cardRef.current.addEventListener('mouseleave', handleMouseLeave);
+
+      return () => {
+        if (cardRef.current) {
+          cardRef.current.removeEventListener('mouseenter', handleMouseEnter);
+          cardRef.current.removeEventListener('mouseleave', handleMouseLeave);
+        }
+      };
+    }
+  }, []);
+
   return (
-    <Section className="py-1 md:py-1 max-w-8xl">
-      <div className="text-center mb-8 md:mb-10">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">
-          Dari Mereka yang Berani Berubah
+    <Card ref={cardRef} className="w-50 testimonial-card transform-gpu">
+      <CardContent>
+        <div className="flex items-center gap-2.5">
+          <Avatar className="size-9">
+            <AvatarImage src={img} alt={name} />
+            <AvatarFallback>{name[0]}</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col">
+            <figcaption className="text-sm font-medium text-foreground flex items-center gap-1">
+              {name} <span className="text-xs">{country}</span>
+            </figcaption>
+            <p className="text-xs font-medium text-muted-foreground">{username}</p>
+          </div>
+        </div>
+        <blockquote className="mt-3 text-sm text-secondary-foreground">{body}</blockquote>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default function TestimonialsSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 60%",
+        end: "bottom 40%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    tl.fromTo(titleRef.current, 
+      { opacity: 0, y: 30 }, 
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
+    )
+    .fromTo(subtitleRef.current, 
+      { opacity: 0, y: 20 }, 
+      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 
+      "-=0.4"
+    )
+    .fromTo(containerRef.current, 
+      { opacity: 0, scale: 0.95 }, 
+      { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }, 
+      "-=0.3"
+    );
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
+  return (
+    <div ref={sectionRef} className="py-16 md:py-32 bg-gradient-to-br from-red-950 via-black to-red-900 relative overflow-hidden">
+      {/* Red grid pattern background - matching digital-seranity.tsx */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <pattern id="testimonialsGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#testimonialsGridRed)" />
+      </svg>
+      
+      <div className="text-center mb-12 relative z-10">
+        <h2 ref={titleRef} className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
+          Testimoni Klien
         </h2>
-        <hr className="w-16 md:w-20 mx-auto border-t-2 border-primary mb-2 md:mb-3" />
-        <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-xl mx-auto px-4 md:px-0">
-          Dengarkan pengalaman langsung dari anggota komunitas Alife yang telah merasakan manfaatnya.
+        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
+          Testimoni
+          <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
+            Klien
+          </span>
+        </h1>
+        <p ref={subtitleRef} className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+          Dengarkan langsung dari klien-klien kami yang telah merasakan transformasi hidup bersama Riscadan Risca.
         </p>
       </div>
       
-      {/* Mobile View - Single Column Scroll */}
-      <div className="md:hidden relative mt-4 max-h-[80vh] overflow-hidden">
-        <Marquee
-          vertical
-          className="group [--duration:40s]" // Increased speed for mobile
-        >
-          {testimonials.map((card, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: Math.random() * 0.3,
-                duration: 0.5,
-              }}
-            >
-              <TestimonialCard {...card} className="mb-2 mx-2" />
-            </motion.div>
-          ))}
-        </Marquee>
-        
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 w-full bg-gradient-to-t from-background from-20%"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/5 w-full bg-gradient-to-b from-background from-20%"></div>
-      </div>
-
-      {/* Desktop View - Three Columns */}
-      <div className="hidden md:block relative mt-4 max-h-[70vh] overflow-hidden">
-        <div className="gap-2 columns-3">
-          {/* First Column */}
-          <Marquee
-            vertical
-            className="group [--duration:50s]" // Increased speed for desktop
+      <div className="flex items-center justify-center relative z-10">
+        <div ref={containerRef} className="border border-red-500/20 rounded-lg relative flex h-[600px] w-full max-w-[1200px] flex-row items-center justify-center overflow-hidden gap-1.5 [perspective:300px] shadow-2xl bg-black/20 backdrop-blur-sm">
+          <div
+            className="flex flex-row items-center gap-4"
+            style={{
+              transform:
+                'translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)',
+            }}
           >
-            {column1Testimonials.map((card, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: Math.random() * 0.3,
-                  duration: 0.5,
-                }}
-              >
-                <TestimonialCard {...card} className="mb-2" />
-              </motion.div>
-            ))}
-          </Marquee>
-
-          {/* Second Column */}
-          <Marquee
-            vertical
-            className="group [--duration:45s]" // Slightly different speed for visual interest
-          >
-            {column2Testimonials.map((card, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: Math.random() * 0.3,
-                  duration: 0.5,
-                }}
-              >
-                <TestimonialCard {...card} className="mb-2" />
-              </motion.div>
-            ))}
-          </Marquee>
-
-          {/* Third Column */}
-          <Marquee
-            vertical
-            className="group [--duration:55s]" // Slightly different speed for visual interest
-          >
-            {column3Testimonials.map((card, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: Math.random() * 0.3,
-                  duration: 0.5,
-                }}
-              >
-                <TestimonialCard {...card} className="mb-2" />
-              </motion.div>
-            ))}
-          </Marquee>
+            {/* Vertical Marquee (downwards) */}
+            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+              {testimonials.map((review) => (
+                <TestimonialCard key={review.username} {...review} />
+              ))}
+            </Marquee>
+            {/* Vertical Marquee (upwards) */}
+            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
+              {testimonials.map((review) => (
+                <TestimonialCard key={review.username} {...review} />
+              ))}
+            </Marquee>
+            {/* Vertical Marquee (downwards) */}
+            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+              {testimonials.map((review) => (
+                <TestimonialCard key={review.username} {...review} />
+              ))}
+            </Marquee>
+            {/* Vertical Marquee (upwards) */}
+            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
+              {testimonials.map((review) => (
+                <TestimonialCard key={review.username} {...review} />
+              ))}
+            </Marquee>
+          </div>
+          
+          {/* Gradient overlays for vertical marquee */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-red-950"></div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-red-950"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-red-950"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-red-950"></div>
         </div>
-        
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 w-full bg-gradient-to-t from-background from-20%"></div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/5 w-full bg-gradient-to-b from-background from-20%"></div>
       </div>
-    </Section>
+    </div>
   );
 }

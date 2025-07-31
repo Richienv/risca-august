@@ -1,51 +1,14 @@
-import { Card, CardContent } from '@/components/card-8'
+import { Card, CardContent } from '@/components/ui/card'
 import { Shield, Users } from 'lucide-react'
 
-export default function BonusCarousel() {
+export function Features() {
     return (
-        <section className="bg-gradient-to-br from-red-950 via-black to-red-900 py-16 md:py-32 relative overflow-hidden">
-            {/* Red grid pattern background - matching digital-seranity.tsx */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs>
-                    <pattern id="testimonialGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#testimonialGridRed)" />
-            </svg>
-            
-            <div className="mx-auto max-w-full px-6 relative z-10">
+        <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
+            <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
                 <div className="relative">
-                    {/* Heading Section - matching digital-seranity.tsx typography */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                            Keuntungan Bergabung
-                        </h2>
-                        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-                            Tim Sukses Risca
-                        </h1>
-                        <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-                            Raih kesuksesan bersama komunitas yang mendukung pertumbuhan dan potensi terbaikmu
-                        </p>
-                    </div>
-                    
                     <div className="relative z-10 grid grid-cols-6 gap-3">
-                        <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 bg-black border-red-500/20 hover:border-red-500/30 transition-all duration-300 group">
-                            {/* Corner accent elements - matching digital-seranity.tsx */}
-                            <div className="absolute top-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <div className="absolute top-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <div className="absolute bottom-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <div className="absolute bottom-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <CardContent className="relative m-auto size-fit pt-6 z-10">
+                        <Card className="relative col-span-full flex overflow-hidden lg:col-span-2">
+                            <CardContent className="relative m-auto size-fit pt-6">
                                 <div className="relative flex h-24 w-56 items-center">
                                     <svg className="text-muted absolute inset-0 size-full" viewBox="0 0 254 104" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -53,10 +16,9 @@ export default function BonusCarousel() {
                                             fill="currentColor"
                                         />
                                     </svg>
-                                    <span className="mx-auto block w-fit text-5xl font-extralight text-red-500">100%</span>
+                                    <span className="mx-auto block w-fit text-5xl font-semibold">100%</span>
                                 </div>
-                                <h2 className="mt-6 text-center text-2xl font-extralight leading-tight tracking-tight text-white">Dukungan Penuh</h2>
-                                <p className="text-center text-sm font-light leading-relaxed text-white/70 mt-2">Mendapat bimbingan dan dukungan 100% dari mentor berpengalaman</p>
+                                <h2 className="mt-6 text-center text-3xl font-semibold">Customizable</h2>
                             </CardContent>
                         </Card>
                         <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
@@ -87,8 +49,8 @@ export default function BonusCarousel() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white text-gray-800">Sistem Terpercaya</h2>
-                                    <p className="text-gray-600 dark:text-gray-300">Bergabung dengan sistem bisnis yang sudah terbukti menghasilkan income stabil dan berkelanjutan.</p>
+                                    <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">Secure by default</h2>
+                                    <p className="text-foreground">Provident fugit and vero voluptate. magnam magni doloribus dolores voluptates a sapiente nisi.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -134,8 +96,8 @@ export default function BonusCarousel() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-14 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Pertumbuhan Cepat</h2>
-                                    <p className="text-gray-600 dark:text-gray-300">Raih target income impianmu dengan sistem yang telah teruji memberikan hasil optimal.</p>
+                                    <h2 className="text-lg font-medium transition">Faster than light</h2>
+                                    <p className="text-foreground">Provident fugit vero voluptate. magnam magni doloribus dolores voluptates inventore nisi.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -146,8 +108,8 @@ export default function BonusCarousel() {
                                         <Shield className="m-auto size-5" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Keamanan Finansial</h2>
-                                        <p className="text-gray-600 dark:text-gray-300">Lindungi masa depan keuanganmu dengan strategi investasi yang aman dan menguntungkan.</p>
+                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Faster than light</h2>
+                                        <p className="text-foreground">Provident fugit vero voluptate. Voluptates a sapiente inventore nisi.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -186,14 +148,14 @@ export default function BonusCarousel() {
                                         <Users className="m-auto size-6" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Komunitas Solid</h2>
-                                        <p className="text-gray-600 dark:text-gray-300">Bergabung dengan jaringan profesional yang saling mendukung untuk mencapai kesuksesan bersama.</p>
+                                        <h2 className="text-lg font-medium transition">Keep your loved ones safe</h2>
+                                        <p className="text-foreground">Voluptate. magnam magni doloribus dolores voluptates a sapiente inventore nisi.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
                                     <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary text-white">Mentor</span>
+                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">Likeur</span>
                                             <div className="ring-background size-7 ring-4">
                                                 <img className="size-full rounded-full" src="https://avatars.githubusercontent.com/u/102558960?v=4" alt="" />
                                             </div>
@@ -202,10 +164,10 @@ export default function BonusCarousel() {
                                             <div className="ring-background size-8 ring-4">
                                                 <img className="size-full rounded-full" src="https://avatars.githubusercontent.com/u/47919550?v=4" alt="" />
                                             </div>
-                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-green-500 text-white">Member</span>
+                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">M. Irung</span>
                                         </div>
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-blue-500 text-white">Leader</span>
+                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">B. Ng</span>
                                             <div className="ring-background size-7 ring-4">
                                                 <img className="size-full rounded-full" src="https://avatars.githubusercontent.com/u/31113941?v=4" alt="" />
                                             </div>

@@ -56,7 +56,12 @@ const config = {
   			'color-2': 'hsl(var(--color-2))',
   			'color-3': 'hsl(var(--color-3))',
   			'color-4': 'hsl(var(--color-4))',
-  			'color-5': 'hsl(var(--color-5))'
+  			'color-5': 'hsl(var(--color-5))',
+  			'aura-glow': 'hsl(var(--aura-glow))',
+  			'aura-light': 'hsl(var(--aura-light))',
+  			'gradient-start': 'hsl(var(--gradient-start))',
+  			'gradient-mid': 'hsl(var(--gradient-mid))',
+  			'gradient-end': 'hsl(var(--gradient-end))'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -72,7 +77,11 @@ const config = {
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			shine: 'shine var(--duration) infinite linear',
-  			grid: 'grid 15s linear infinite'
+  			grid: 'grid 15s linear infinite',
+  			'aura-pulse': 'aura-pulse 2s ease-in-out infinite alternate',
+  			'shimmer': 'shimmer 2s infinite',
+  			'float': 'float 3s ease-in-out infinite',
+  			'glow-rotate': 'glow-rotate 4s linear infinite'
   		},
   		keyframes: {
   			marquee: {
@@ -146,6 +155,26 @@ const config = {
   				'100%': {
   					transform: 'translateY(0)'
   				}
+  			},
+  			'aura-pulse': {
+  				'0%': {
+  					boxShadow: '0 0 20px hsla(var(--aura-glow), 0.3)'
+  				},
+  				'100%': {
+  					boxShadow: '0 0 40px hsla(var(--aura-glow), 0.6), 0 0 60px hsla(var(--aura-glow), 0.3)'
+  				}
+  			},
+  			'shimmer': {
+  				'0%': { left: '-100%' },
+  				'100%': { left: '100%' }
+  			},
+  			'float': {
+  				'0%, 100%': { transform: 'translateY(0px)' },
+  				'50%': { transform: 'translateY(-10px)' }
+  			},
+  			'glow-rotate': {
+  				'0%': { transform: 'rotate(0deg)' },
+  				'100%': { transform: 'rotate(360deg)' }
   			}
   		}
   	}
