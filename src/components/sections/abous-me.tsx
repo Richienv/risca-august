@@ -181,7 +181,7 @@ const AboutMeSection = () => {
               
               <div className="pt-6">
                 <span className="text-lg md:text-xl font-light text-red-300 font-mono tracking-wide">
-                  "Ini saatnya kamu menulis cerita suksesmu sendiri bersama Risca."
+                  "                  &ldquo;Ini saatnya kamu menulis cerita suksesmu sendiri bersama Risca.&rdquo;"
                 </span>
               </div>
             </div>
@@ -210,7 +210,7 @@ const AboutMeSection = () => {
           <div className="mt-16 text-center">
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
             <p className="text-lg md:text-xl font-light text-red-300 max-w-3xl mx-auto font-mono tracking-wide">
-              "Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan bersama Risca."
+              "              &ldquo;Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan bersama Risca.&rdquo;"
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
           </div>
@@ -300,7 +300,7 @@ const AboutMeSection = () => {
               
               <div className="pt-6 opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.2s' }}>
                 <span className="text-lg md:text-xl font-light text-red-300 font-mono tracking-wide">
-                  "Ini saatnya kamu menulis cerita suksesmu sendiri bersama Risca."
+                  "                  &ldquo;Ini saatnya kamu menulis cerita suksesmu sendiri bersama Risca.&rdquo;"
                 </span>
               </div>
             </div>
@@ -333,7 +333,7 @@ const AboutMeSection = () => {
           <div className="mt-16 text-center opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '4s' }}>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
             <p className="text-lg md:text-xl font-light text-red-300 max-w-3xl mx-auto font-mono tracking-wide">
-              "Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan bersama Risca."
+              "              &ldquo;Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan bersama Risca.&rdquo;"
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
           </div>

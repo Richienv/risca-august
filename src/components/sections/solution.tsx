@@ -39,46 +39,77 @@ function FeatureCard({
 }) {
   return (
     <div 
-      className="bg-black rounded-2xl p-6 lg:p-8 mb-6 lg:mb-8 border border-red-500/20 hover:border-red-500/30 transition-all duration-300 relative overflow-hidden group"
+      className="relative overflow-hidden group rounded-2xl p-6 lg:p-8 mb-6 lg:mb-8 transition-all duration-500"
       style={{
-        position: 'relative',
+        background: 'linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(0, 0, 0, 0.98) 50%, rgba(20, 5, 5, 0.95) 100%)',
+        border: '1px solid transparent',
+        backgroundImage: 'linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(0, 0, 0, 0.98) 50%, rgba(20, 5, 5, 0.95) 100%), linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.2))',
+        backgroundOrigin: 'border-box',
+        backgroundClip: 'padding-box, border-box',
       }}
     >
-      {/* Corner accent elements - matching digital-seranity.tsx */}
+      {/* Corner Gradient Overlays */}
+      <div className="absolute top-0 left-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+           style={{
+             background: 'radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
+           }}></div>
+      <div className="absolute top-0 right-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+           style={{
+             background: 'radial-gradient(circle at 100% 0%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
+           }}></div>
+      <div className="absolute bottom-0 left-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+           style={{
+             background: 'radial-gradient(circle at 0% 100%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
+           }}></div>
+      <div className="absolute bottom-0 right-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+           style={{
+             background: 'radial-gradient(circle at 100% 100%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
+           }}></div>
+      
+      {/* Enhanced Corner Glow Effect */}
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+           style={{
+             boxShadow: 'inset 0 0 50px rgba(239, 68, 68, 0.1), 0 0 30px rgba(239, 68, 68, 0.05)',
+           }}></div>
+      {/* Enhanced Corner accent elements with gradient backgrounds */}
       <div 
-        className="absolute top-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75"
+        className="absolute top-2 left-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
         style={{
+          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
           animationDelay: '0.1s',
         }}
       >
-        <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse"></div>
       </div>
       
       <div 
-        className="absolute top-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75"
+        className="absolute top-2 right-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
         style={{
+          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
           animationDelay: '0.2s',
         }}
       >
-        <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
       </div>
       
       <div 
-        className="absolute bottom-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75"
+        className="absolute bottom-2 left-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
         style={{
+          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
           animationDelay: '0.3s',
         }}
       >
-        <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
       </div>
       
       <div 
-        className="absolute bottom-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75"
+        className="absolute bottom-2 right-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
         style={{
+          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
           animationDelay: '0.4s',
         }}
       >
-        <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
       </div>
       
       <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12 relative z-10">
