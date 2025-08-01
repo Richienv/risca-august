@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
       "WebFetch(domain:blocks.mvp-subha.me)",
@@ -13,9 +14,10 @@
       "Bash(find:*)",
       "Bash(mkdir:*)",
       "Bash(ls:*)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
-  },
-  "$schema": "https://json.schemastore.org/claude-code-settings.json"
+  }
 }
