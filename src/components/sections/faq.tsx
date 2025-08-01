@@ -9,24 +9,24 @@ import { siteConfig } from "@/lib/config";
 
 const faqs = [
   {
-    question: "Apa itu Risca by Vision?",
-    answer: "Risca by Vision adalah Agensi Asuransi yang didirikan pada tahun 2019. Kami percaya pada pendekatan win-win, di mana kami memberikan saran dan solusi terbaik untuk kebutuhan finansial klien Risca, sambil memastikan Para Mitra Risca memiliki kehidupan yang sejahtera dan bermakna. Kami adalah tim agen profesional berbakat dengan berbagai keterampilan dan pengalaman. Kami mencintai apa yang kami lakukan, dan kami melakukannya dengan penuh semangat. Kami berharap dapat memperluas kemitraan kami dan memberikan asuransi kesehatan dan jiwa terbaik kepada klien kami."
+    question: "Emang bisnis ini tentang apa sih?",
+    answer: "Jadi gini, gue punya sistem hidden yang udah ngebuktiin 2000+ Gen-Z bisa dapet 10 juta dalam 5 bulan. Ini bukan asuransi biasa yang lo kenal - ini bisnis yang gue develop khusus buat Gen-Z yang mau breakout dari zona stuck. Lo bakal dapet mentoring langsung dari gue plus akses ke komunitas exclusive yang udah proven berhasil."
   },
   {
-    question: "Apakah aku perlu pengalaman di bidang asuransi?",
-    answer: "Tidak, kamu tidak perlu pengalaman sebelumnya di bidang asuransi. Kami menyediakan pelatihan komprehensif dan dukungan berkelanjutan untuk membantu kamu memulai dan mengembangkan bisnis Anda."
+    question: "Gue gak ngerti asuransi sama sekali, bisa gak?",
+    answer: "Malah bagus! Gue lebih suka ngajarin dari nol daripada benerin mindset yang udah salah. Yang penting lo punya kemauan belajar dan ambisi buat ngubah hidup. Sistemnya udah gue sederhanain banget, bahkan yang gaptek sekalipun bisa."
   },
   {
-    question: "Apa saja pelengkapan yang dibutuhkan untuk mendukung produktivitas aku selama di bisnis ini?",
-    answer: "Dua hal yang penting adalah iPad dan Laptop. Karena itu akan jadi alat utama untuk kamu dalam bisnis ini."
+    question: "Butuh modal gede gak buat mulai?  ",
+    answer: "Cuma butuh HP sama laptop doang. Sisanya gue yang provide - dari training, sistem, sampe client lead. Yang penting lo ready action dan konsisten follow sistemnya."
   },
   {
-    question: "Apa keuntungan bergabung dengan Risca dibandingkan bekerja 9-5?",
-    answer: "Risca menawarkan kebebasan waktu, potensi penghasilan tak terbatas, pengembangan diri, networking luas, dan peluang bisnis yang tidak kamu dapatkan dalam pekerjaan 9-5 biasa."
+    question: "Kenapa harus ikut lo? Bedanya apa sama kerja kantoran?",
+    answer: "Lo mau stuck selamanya sama gaji UMR atau mau freedom total? Di sini lo bisa dapet 10 juta dalam 5 bulan, kerja dari mana aja, kapan aja. Plus networking sama high-achievers, bukan temen kantor yang toxic. Gue udah buktiin sendiri dan sekarang ngajarin lo caranya."
   },
   {
-    question: "Apakah ada biaya untuk bergabung dengan komunitas bisnis Martha?",
-    answer: "Informasi mengenai biaya keanggotaan akan dibahas secara detail saat sesi konsultasi personal kita. aku akan melihat komitmen kamu dan kemudian aku akan memberikan solusi terbaik special untuk kamu."
+    question: "Berapa bayar buat join komunitas lo?",
+    answer: "Nanti gue jelasin detail waktu kita ngobrol personal. Yang jelas investasinya balik berkali-kali lipat. Tapi gue harus liat dulu seberapa serious lo sama commitment-nya. Gue gak mau buang-buang waktu sama yang setengah-setengah."
   }
 ];
 
@@ -34,10 +34,10 @@ export default function FAQ() {
   return (
     <Section className="py-1 md:py-1">
       <div className="text-center mb-8 md:mb-12">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">Pertanyaan yang Sering Diajukan</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-4">Yang Sering Lo Tanyain</h2>
         <hr className="w-20 md:w-24 mx-auto border-t-2 border-primary mb-3 md:mb-4" />
         <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-4 md:px-0">
-          Temukan jawaban atas pertanyaan umum tentang Risca by Vision
+          Jawaban lengkap buat yang masih ragu-ragu
         </p>
       </div>
       <div className="mx-auto my-8 max-w-3xl">

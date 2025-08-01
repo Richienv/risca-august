@@ -5,24 +5,24 @@ import OverlappingImages from "@/components/overlapping-images";
 
 const transformations = [
   {
-    title: "Train to Sell",
-    description: "Dapatkan pelatihan penjualan terlengkap yang akan mengubah cara kamu menjual. Dari teknik dasar hingga strategi advanced yang terbukti meningkatkan closing rate hingga 300%.",
+    title: "Jual Tanpa Ngegombal",
+    description: "Lupain teknik jual kuno yang cringe. Lo bakal dapet sistem jual yang natural dan powerfull, bikin closing rate naik 300% tanpa keliatan kayak sales norak.",
   },
   {
-    title: "Teach How to Get Client",
-    description: "Pelajari sistem mendapatkan klien yang sudah terbukti berhasil. Mulai dari prospecting, lead generation, hingga cara membangun pipeline yang konsisten menghasilkan klien baru.",
+    title: "Dapetin Client Autopilot",
+    description: "Sistem rahasia dapetin client yang jalan sendiri. Lo gak perlu lagi kejar-kejaran prospek. Mereka yang bakal dateng sendiri dan minta dilayani.",
   },
   {
-    title: "Master Client Relationship",
-    description: "Kuasai seni membangun hubungan jangka panjang dengan klien. Belajar cara meningkatkan lifetime value dan menciptakan repeat customers yang loyal.",
+    title: "Bikin Mereka Nagih",
+    description: "Rahasia bikin client ketagihan sama lo sampai mereka gak mau pindah ke yang lain. Repeat order dan referral bakal ngalir terus tanpa lo minta.",
   },
   {
-    title: "Handle Objection",
-    description: "Atasi segala bentuk penolakan dengan percaya diri. Pelajari framework yang tepat untuk mengubah setiap objection menjadi kesempatan closing yang menguntungkan.",
+    title: "Ubah 'Gak' Jadi 'Iya'",
+    description: "Framework khusus ngatasin semua alasan penolakan client. Yang tadinya bilang 'mikir dulu' bakal langsung bilang 'gimana caranya mulai?'",
   },
   {
-    title: "Financial Planning",
-    description: "Rencanakan keuangan bisnis dan personal dengan strategi yang sustainable. Belajar cara mengelola cash flow, investasi, dan mencapai financial freedom.",
+    title: "10 Juta dalam 5 Bulan",
+    description: "Sistem financial planning yang udah terbukti bikin 2000+ member komunitas dapet 10-50 juta dalam 5 bulan pertama. Ini bukan teori, ini hasil nyata.",
   },
 ];
 
@@ -147,7 +147,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Solusi Lengkap Untuk Kesuksesan Penjualan
+            Ini Dia Rahasianya
           </motion.h2>
           <motion.p
             className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-2xl"
@@ -156,7 +156,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Temukan solusi komprehensif yang dirancang khusus untuk mentransformasi kemampuan penjualan kamu dan membuka peluang bisnis yang tak terbatas.
+            Kenapa mereka bisa 10 juta dalam 5 bulan sementara lo masih stuck? Ini sistem tersembunyi yang bikin ribuan Gen-Z Indonesia berhasil financial freedom di usia muda.
           </motion.p>
         </div>
         

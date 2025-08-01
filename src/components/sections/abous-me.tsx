@@ -149,39 +149,42 @@ const AboutMeSection = () => {
 
   if (!mounted) {
     return (
-      <div className="w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
+      <div className="w-full min-h-screen bg-gradient-to-bl from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
         <div className="container mx-auto px-6 py-20 sm:px-8 md:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Column - Text */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                  Kisah Inspiratif
+                  Aku Siapa Sih?
                 </h2>
                 <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mb-6"></div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-6">
-                  Perjalanan
+                  Berani
                   <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                    Menuju Sukses
+                    Ngomong Gini?
                   </span>
                 </h1>
               </div>
               
               <div className="space-y-6 text-slate-300">
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  Hai, para pejuang mimpi,
+                  Kamu pasti mikir,
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  Saya pernah berada di posisi yang sama seperti kamu sekarang. Dari yang awalnya bergaji UMR, hingga akhirnya bisa membangun komunitas Risca dan ngebuat temen-temen aku punya penghasilan puluhan hingga ratusan juta. Journey ini bukan hanya tentang pertumbuhan finansial—ini tentang transformasi hidup yang meaningful.
+                  "Siapa sih lo yang berani ngomong bisa bantuin gue raih 10 juta dalam 5 bulan? Pasti scam lagi kan?"
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  Let me be your guide dalam sistem Risca yang sudah terbukti membantu ratusan orang achieve their dreams, sama seperti yang saya alami.
+                  Gue paham banget skeptisisme lo. Dulu gue juga gitu kok. Dari yang awalnya pegawai biasa dengan gaji pas-pasan, sampai akhirnya nemuin sistem bisnis tersembunyi di industri asuransi yang ngubah hidup gue total.
+                </p>
+                <p className="text-sm lg:text-base font-light leading-relaxed">
+                  Sekarang? Komunitas Alife udah 2000+ member, dan rata-rata mereka yang serius bisa dapet 10-50 juta dalam 5 bulan pertama. Bukan karena gue jago, tapi karena sistemnya emang proven work.
                 </p>
               </div>
               
               <div className="pt-6">
                 <span className="text-lg md:text-xl font-light text-red-300 font-mono tracking-wide">
-                  "                  &ldquo;Ini saatnya kamu menulis cerita suksesmu sendiri bersama Risca.&rdquo;"
+                  "Masih ragu? Boleh. Tapi jangan sampe nyesel pas liat temen-temen lo udah duluan berhasil."
                 </span>
               </div>
             </div>
@@ -190,7 +193,7 @@ const AboutMeSection = () => {
             <div className="relative">
               <div className="aspect-[3/4] relative rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=600&h=800&fit=crop&crop=face"
+                  src="/images/cinom-potrait.png"
                   alt="Risca Portrait"
                   fill
                   className="object-cover object-center"
@@ -210,7 +213,7 @@ const AboutMeSection = () => {
           <div className="mt-16 text-center">
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
             <p className="text-lg md:text-xl font-light text-red-300 max-w-3xl mx-auto font-mono tracking-wide">
-              "              &ldquo;Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan bersama Risca.&rdquo;"
+              "Sistem ini bukan magic. Ini tentang konsistensi, dedikasi, dan mau keluar dari comfort zone. Kalo lo siap, gue siap guide lo sampai berhasil."
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
           </div>
@@ -222,7 +225,7 @@ const AboutMeSection = () => {
   return (
     <>
       <style>{pageStyles}</style>
-      <div className="w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
+      <div className="w-full min-h-screen bg-gradient-to-bl from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
         
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
@@ -270,37 +273,40 @@ const AboutMeSection = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                  <span className="word-animate" data-delay="0">Kisah</span>
-                  <span className="word-animate" data-delay="300">Inspiratif</span>
+                  <span className="word-animate" data-delay="0">Aku</span>
+                  <span className="word-animate" data-delay="300">Siapa</span>
+                  <span className="word-animate" data-delay="600">Sih?</span>
                 </h2>
                 <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mb-6"></div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-6 text-decoration-animate">
-                  <span className="word-animate" data-delay="700">Perjalanan</span>
+                  <span className="word-animate" data-delay="700">Berani</span>
                   <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                    <span className="word-animate" data-delay="1000">Menuju</span>
-                    <span className="word-animate" data-delay="1300">Sukses</span>
+                    <span className="word-animate" data-delay="1000">Ngomong</span>
+                    <span className="word-animate" data-delay="1300">Gini?</span>
                   </span>
                 </h1>
               </div>
               
               <div className="space-y-6 text-slate-300">
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '1.6s' }}>
-                  <span className="word-animate" data-delay="1600">Hai,</span>
-                  <span className="word-animate" data-delay="1800">para</span>
-                  <span className="word-animate" data-delay="2000">pejuang</span>
-                  <span className="word-animate" data-delay="2200">mimpi,</span>
+                  <span className="word-animate" data-delay="1600">Kamu</span>
+                  <span className="word-animate" data-delay="1800">pasti</span>
+                  <span className="word-animate" data-delay="2000">mikir,</span>
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '2.4s' }}>
-                  Saya pernah berada di posisi yang sama seperti kamu sekarang. Dari yang awalnya bergaji UMR, hingga akhirnya bisa membangun komunitas Risca dengan 500+ orang successful individuals. Journey ini bukan hanya tentang pertumbuhan finansial—ini tentang transformasi hidup yang meaningful.
+                  "Siapa sih lo yang berani ngomong bisa bantuin gue raih 10 juta dalam 5 bulan? Pasti scam lagi kan?"
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '2.8s' }}>
-                  Let me be your guide dalam sistem Risca yang sudah terbukti membantu ratusan orang achieve their dreams, sama seperti yang saya alami.
+                  Gue paham banget skeptisisme lo. Dulu gue juga gitu kok. Dari yang awalnya pegawai biasa dengan gaji pas-pasan, sampai akhirnya nemuin sistem bisnis tersembunyi di industri asuransi yang ngubah hidup gue total.
+                </p>
+                <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.2s' }}>
+                  Sekarang? Komunitas Alife udah 2000+ member, dan rata-rata mereka yang serius bisa dapet 10-50 juta dalam 5 bulan pertama. Bukan karena gue jago, tapi karena sistemnya emang proven work.
                 </p>
               </div>
               
-              <div className="pt-6 opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.2s' }}>
+              <div className="pt-6 opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.6s' }}>
                 <span className="text-lg md:text-xl font-light text-red-300 font-mono tracking-wide">
-                  "                  &ldquo;Ini saatnya kamu menulis cerita suksesmu sendiri bersama Risca.&rdquo;"
+                  "Masih ragu? Boleh. Tapi jangan sampe nyesel pas liat temen-temen lo udah duluan berhasil."
                 </span>
               </div>
             </div>
@@ -309,7 +315,7 @@ const AboutMeSection = () => {
             <div className="relative opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '1.2s' }}>
               <div className="aspect-[3/4] relative rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=600&h=800&fit=crop&crop=face"
+                  src="/images/cinom-potrait.png"
                   alt="Risca Portrait"
                   fill
                   className="object-cover object-center transition-transform duration-700 hover:scale-105"
@@ -333,7 +339,7 @@ const AboutMeSection = () => {
           <div className="mt-16 text-center opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '4s' }}>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
             <p className="text-lg md:text-xl font-light text-red-300 max-w-3xl mx-auto font-mono tracking-wide">
-              "              &ldquo;Jangan sia-siakan waktumu lagi! Inilah moment untuk transform hidupmu dan create the success story yang selama ini kamu impikan bersama Risca.&rdquo;"
+              "Sistem ini bukan magic. Ini tentang konsistensi, dedikasi, dan mau keluar dari comfort zone. Kalo lo siap, gue siap guide lo sampai berhasil."
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
           </div>

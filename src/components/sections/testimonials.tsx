@@ -73,6 +73,69 @@ const testimonials = [
     img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
     country: "🇮🇩 Indonesia",
   },
+  {
+    name: "Rafi Ahmad",
+    username: "@rafi",
+    body: "Gue dulu karyawan 9-5 yang stuck banget. Income cuma 5 juta sebulan, hidup gitu-gitu aja. Setelah ikut sistem ini, dalam 4 bulan pertama udah bisa 12 juta per bulan. Sekarang bisa traveling sambil kerja, freedom banget!",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Anya Putri",
+    username: "@anyaputri",
+    body: "Dulu skeptis banget sama bisnis online. Mikir pasti scam atau MLM. Ternyata salah besar! Ini beneran sistem yang proven. Dalam 6 bulan udah bisa bayar cicilan motor sendiri dan nabung buat wedding. Game changer banget!",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Kevin Pratama",
+    username: "@kevinp",
+    body: "Fresh graduate yang bingung mau ngapain. Ngelamar kerja susah, kalau dapat gaji kecil. Ikut program ini jadi turning point hidup gue. Sekarang penghasilan udah 15 juta per bulan di umur 22 tahun!",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Sarah Maharani",
+    username: "@sarahmhrn",
+    body: "Ibu rumah tangga yang pengen bantu ekonomi keluarga tapi gak bisa ninggalin anak. Sistem ini perfect banget buat work from home. Sekarang bisa contribute 8-10 juta per bulan sambil ngurus keluarga. Suami juga support banget!",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Dimas Wijaya",
+    username: "@dimasw",
+    body: "Mahasiswa semester akhir yang butuh uang saku lebih. Awalnya cuma iseng ikut, eh ternyata serius banget hasilnya. Sekarang bisa bayar kuliah sendiri bahkan bantu ortu. Temen-temen pada iri liat lifestyle gue berubah drastis.",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Luna Sari",
+    username: "@lunasari",
+    body: "Pernah gagal di bisnis lain sampai hutang 20 juta. Desperate banget waktu itu. Sistem ini benar-benar jadi penyelamat. Dalam 8 bulan udah bisa lunasin hutang dan sekarang profit bersih 18 juta per bulan. Hidup jadi tenang lagi!",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Budi Santoso",
+    username: "@budisant",
+    body: "Umur 35 tapi masih jadi karyawan biasa. Merasa terlambat buat mulai bisnis. Ternyata gak ada kata terlambat! Sistemnya mudah diikuti even buat yang gaptek kayak gue. Sekarang side income udah 12 juta, mau resign tahun depan!",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Citra Dewi",
+    username: "@citradewi",
+    body: "Introvert parah yang susah banget networking. Sistem ini ngajarin gue cara approach orang dengan natural tanpa keliatan pushy. Confidence gue naik drastis, income juga. Dalam 5 bulan udah 14 juta per bulan. Mind blown!",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
+  {
+    name: "Fajar Nugroho",
+    username: "@fajarn",
+    body: "Karyawan pabrik yang capek fisik mental tiap hari. Gaji UMR tapi tenaga terkuras habis. Ikut program ini jadi harapan baru. Sekarang udah bisa resign dan full time di bisnis ini. Income 20 juta lebih per bulan, kerja santai dari rumah!",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇩 Indonesia",
+  },
 ];
 
 function TestimonialCard({ img, name, username, body, country }: (typeof testimonials)[number]) {
@@ -206,17 +269,17 @@ export default function TestimonialsSection() {
       
       <div className="text-center mb-12 relative z-10">
         <h2 ref={titleRef} className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-          Testimoni Klien
+          Mereka Dulu Seperti Lo
         </h2>
         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-          Testimoni
+          Sekarang Beda Banget
           <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-            Klien
+            Banget
           </span>
         </h1>
         <p ref={subtitleRef} className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-          Dengarkan langsung dari klien-klien kami yang telah merasakan transformasi hidup bersama Riscadan Risca.
+          Dari yang skeptis sampe akhirnya ngaku "gue salah banget dulu ragu". Ini cerita real dari member yang dulu mikir persis kayak lo sekarang.
         </p>
       </div>
       
@@ -248,6 +311,18 @@ export default function TestimonialsSection() {
               ))}
             </Marquee>
             {/* Vertical Marquee (upwards) */}
+            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
+              {testimonials.map((review) => (
+                <TestimonialCard key={review.username} {...review} />
+              ))}
+            </Marquee>
+            {/* Vertical Marquee (downwards) - Column 5 */}
+            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+              {testimonials.map((review) => (
+                <TestimonialCard key={review.username} {...review} />
+              ))}
+            </Marquee>
+            {/* Vertical Marquee (upwards) - Column 6 */}
             <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
               {testimonials.map((review) => (
                 <TestimonialCard key={review.username} {...review} />

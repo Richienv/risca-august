@@ -9,23 +9,44 @@ import Link from "next/link";
 const jobData = [
   {
     icon: Clock,
-    title: "Waktu Terbatas",
-    description: "Terikat jam kerja 9-5",
-    value: "8 jam/hari",
+    title: "Terikat Waktu",
+    description: "Hidup lo diatur sama bos terus",
+    value: "9-5 setiap hari",
     color: "text-gray-400"
   },
   {
     icon: Briefcase,
-    title: "Gaji Tetap",
-    description: "Income terbatas sesuai posisi",
-    value: "5-15 juta",
+    title: "Gaji Pas-pasan",
+    description: "Duit segitu-segitu doang tiap bulan",
+    value: "3-8 juta",
     color: "text-gray-400"
   },
   {
     icon: Target,
-    title: "Pertumbuhan Lambat",
-    description: "Naik jabatan butuh bertahun-tahun",
+    title: "Naik Gaji Lama Banget",
+    description: "Nunggu promosi sampe tua",
     value: "5-10%/tahun",
+    color: "text-gray-400"
+  },
+  {
+    icon: Zap,
+    title: "Burnout Terus",
+    description: "Capek mental tiap hari, weekend jadi healing",
+    value: "Stress 24/7",
+    color: "text-gray-400"
+  },
+  {
+    icon: Star,
+    title: "Gak Ada Me Time",
+    description: "Hobi? Passion? Lupa semua deh",
+    value: "0 jam bebas",
+    color: "text-gray-400"
+  },
+  {
+    icon: Users,
+    title: "Toxic Environment",
+    description: "Drama kantor, gosip, politik internal",
+    value: "Drama endless",
     color: "text-gray-400"
   },
 ];
@@ -33,23 +54,44 @@ const jobData = [
 const businessData = [
   {
     icon: Sparkles,
-    title: "Kebebasan Penuh",
-    description: "Atur waktu sesuai keinginan",
-    value: "Fleksibel 100%",
+    title: "Bebas Total",
+    description: "Lo yang atur hidup lo sendiri",
+    value: "Kapan aja lo mau",
     color: "text-red-400"
   },
   {
     icon: TrendingUp,
-    title: "Income Tak Terbatas",
-    description: "Potensi earning hingga 9 digit",
-    value: "50-500 juta+",
+    title: "10 Juta dalam 5 Bulan",
+    description: "Target yang realistis dan proven",
+    value: "10-100 juta+",
     color: "text-red-500"
   },
   {
     icon: Users,
-    title: "Growth Eksponensial",
-    description: "Berkembang dengan tim yang solid",
-    value: "300%+/tahun",
+    title: "Growth Gila-gilaan",
+    description: "Berkembang bareng komunitas solid",
+    value: "500%+/tahun",
+    color: "text-red-300"
+  },
+  {
+    icon: Star,
+    title: "Work-Life Balance Sempurna",
+    description: "Kerja sambil traveling, hobi tetep jalan",
+    value: "Freedom 100%",
+    color: "text-red-400"
+  },
+  {
+    icon: Target,
+    title: "Multiple Income Streams",
+    description: "Duit masuk dari berbagai sumber",
+    value: "5+ revenue",
+    color: "text-red-500"
+  },
+  {
+    icon: Zap,
+    title: "Energy Level Max",
+    description: "Passionate sama kerjaan, gak ada burnout",
+    value: "High energy",
     color: "text-red-300"
   },
 ];
@@ -187,7 +229,7 @@ function FloatingShape({ delay }: { delay: number }) {
         delay,
         ease: "easeInOut"
       }}
-      className="absolute w-16 h-16 bg-gradient-to-br from-yellow-400/20 to-blue-400/20 rounded-xl backdrop-blur-sm"
+      className="absolute w-16 h-16 bg-gradient-to-br from-black/20 to-black/40 rounded-xl backdrop-blur-sm"
     />
   );
 }
@@ -220,19 +262,19 @@ export default function ComparisonSection() {
               viewport={{ once: true }}
             >
               <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                Pilih Jalanmu
+                Mau Kayak Gimana?
               </h2>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-                PILIH
+                MAU STUCK SELAMANYA
                 <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                  JALANMU
+                  ATAU BREAKOUT?
                 </span>
               </h1>
               
               <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-                Bandingkan kehidupan sebagai <span className="text-gray-400 line-through">karyawan biasa</span> 
-                <br />dengan <span className="text-red-400 font-semibold">entrepreneur sukses</span>
+                Lo mau jadi yang masih <span className="text-gray-400 line-through">ngeluh soal gaji</span> 
+                <br />atau yang udah <span className="text-red-400 font-semibold">flexing 10 juta?</span>
               </p>
             </motion.div>
           </div>
@@ -250,9 +292,9 @@ export default function ComparisonSection() {
                 className="text-center lg:text-left"
               >
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-slate-300 mb-4 tracking-tight leading-tight">
-                  KARYAWAN
+                  STUCK ZONE
                 </h3>
-                <p className="text-slate-400 text-sm lg:text-base font-light leading-relaxed">Kehidupan yang terbatas dan monoton</p>
+                <p className="text-slate-400 text-sm lg:text-base font-light leading-relaxed">Hidup gitu-gitu aja terus</p>
               </motion.div>
               
               <div className="space-y-8">
@@ -280,9 +322,9 @@ export default function ComparisonSection() {
                 className="text-center lg:text-right"
               >
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-red-400 mb-4 tracking-tight leading-tight">
-                  ENTREPRENEUR
+                  FREEDOM ZONE
                 </h3>
-                <p className="text-red-300 text-sm lg:text-base font-light leading-relaxed">Kebebasan dan kesuksesan tanpa batas</p>
+                <p className="text-red-300 text-sm lg:text-base font-light leading-relaxed">Hidup bebas, duit ngalir</p>
               </motion.div>
               
               <div className="space-y-8">
@@ -312,7 +354,7 @@ export default function ComparisonSection() {
                 whileTap={{ scale: 0.95 }}
                 className="relative px-12 py-6 text-lg font-light text-white bg-gradient-to-r from-red-600 to-red-500 rounded-full overflow-hidden group"
               >
-                <span className="relative z-10 font-mono tracking-wide uppercase">MULAI TRANSFORMASI SEKARANG</span>
+                <span className="relative z-10 font-mono tracking-wide uppercase">GUE MAU KELUAR DARI STUCK ZONE</span>
                 
                 {/* Button glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -320,7 +362,7 @@ export default function ComparisonSection() {
             </Link>
             
             <p className="mt-6 text-slate-400 text-xs font-mono tracking-wide">
-              ⚡ Bergabung dengan 1000+ entrepreneur sukses
+              ⚡ 2000+ Gen-Z udah breakout, kapan lo?
             </p>
           </motion.div>
         </motion.div>

@@ -152,11 +152,11 @@ export default function PerubahanSection() {
       <div className="relative z-10 min-h-screen flex flex-col justify-center py-16 md:py-24">
         <div className="text-center mb-12">
           <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-4">
-            Saatnya Berubah
+            Mereka Dulunya Sama Seperti Kamu
           </h2>
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-8"></div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground">
-            Perubahan
+            Tapi Sekarang Beda Jauh
           </h1>
         </div>
         
@@ -176,16 +176,16 @@ export default function PerubahanSection() {
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
             <span className="block mb-4 text-xs md:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80">
-              Saatnya Berubah
+              Mereka Dulunya Sama Seperti Kamu
             </span>
             <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground mb-6">
-              Kelilingi Dirimu dengan Kesuksesan
+              Tapi Sekarang Beda Jauh
             </h3>
             <p className="text-base md:text-lg font-light text-muted-foreground leading-relaxed my-4 md:my-6">
-              Inilah saatnya untuk mengelilingi dirimu dengan kesuksesan seperti mereka yang sudah percaya, mencoba, dan berhasil di bawah ini.
+              Foto-foto di atas? Mereka semua Gen-Z seperti kamu yang dulu skeptis, ragu, dan mikir "ah pasti scam lagi". Tapi mereka nekat coba dan sekarang dalam 5 bulan udah bisa flexing 10 juta dari sistem bisnis yang gak pernah lo bayangin sebelumnya.
             </p>
             <p className="text-sm md:text-base font-light text-foreground/80 leading-relaxed mb-8">
-              Bergabunglah dengan komunitas yang telah membuktikan bahwa impian bisa menjadi kenyataan. Lihat bagaimana mereka mengubah hidup mereka dan raih kesuksesan yang sama.
+              Yang bikin beda, ini bukan jualan produk atau MLM. Ini sistem tersembunyi di industri asuransi yang udah terbukti bikin ribuan anak muda Indonesia mandiri finansial. Kamu mau jadi yang selanjutnya atau tetap nonton dari pinggir?
             </p>
           </motion.div>
           

@@ -20,7 +20,7 @@ function HeroPill() {
       whileHover={{ scale: 1.05 }}
     >
       <p className="mx-auto max-w-md text-foreground/90 shimmer px-3">
-        <span>Premium Business Templates & Solutions</span>
+        <span>Rahasia Gen-Z Capai 10 Juta dalam 5 Bulan</span>
       </p>
     </motion.div>
   );
@@ -56,7 +56,7 @@ function HeroTitles() {
             ease: 'linear'
           }}
         >
-          ELEVATE YOUR BUSINESS
+          JANGAN SAMPAI KAMU KETINGGALAN LAGI
         </motion.h1>
       </motion.div>
       <motion.p
@@ -69,7 +69,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        <span className="text-foreground/80">Transform your vision into reality with our premium business templates and professional solutions designed for modern entrepreneurs.</span>
+        <span className="text-foreground/80">Udah capek liat temen-temen kamu pada sukses sementara kamu masih di tempat yang sama? Ini bukan asuransi biasa - ini sistem bisnis tersembunyi yang udah bikin ribuan Gen-Z Indonesia raih 10 juta dalam 5 bulan.</span>
       </motion.p>
     </div>
   );
@@ -90,7 +90,7 @@ function HeroCTA() {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            Get Started Today
+            Saya Mau Coba Sekarang
           </motion.button>
         </Link>
       </motion.div>
@@ -100,7 +100,7 @@ function HeroCTA() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.0, duration: 0.8 }}
       >
-        Join thousands of successful entrepreneurs
+        Sudah 2000+ Gen-Z yang membuktikan sendiri
       </motion.p>
     </>
   );

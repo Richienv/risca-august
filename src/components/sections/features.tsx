@@ -9,72 +9,72 @@ import { Star, Trophy, Users, Zap, BookOpen, Target, Handshake, Gift, Crown } fr
 const data = [
   {
     id: 1,
-    title: "Kontes Logam Mulia, iPad, dan Uang Tunai Setiap Minggu",
-    content: "Setiap closing kamu akan mendapatkan kesempatan mengikuti undian-undian berhadiah tiap minggu!",
+    title: "Hadiah Gila Tiap Minggu",
+    content: "Setiap closing dapet kesempatan menang logam mulia, iPad, atau cash! Makin banyak closing, makin besar peluang lo jadi jutawan dadakan.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=1200&fit=crop&q=80",
     icon: Trophy,
     size: "large"
   },
   {
     id: 2,
-    title: "Eksklusif Private Events & VIP Dinner with Champions",
-    content: "Kamu akan mendapatkan special invitation untuk menghadiri Special Awardee Night, event apresiasi achievement kamu yang juga membantu memperluas network kamu!",
+    title: "Party Khusus Member Doang",
+    content: "VIP dinner, private events, dan Special Awardee Night cuma buat member sukses. Networking sambil flexing achievement lo!",
     image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=1000&fit=crop&q=80",
     icon: Star,
     size: "medium"
   },
   {
     id: 3,
-    title: "Closing With Mentors",
-    content: "Aku bakal ikut kamu untuk ketemu calon klien potensial supaya kamu bisa closing lebih cepat! So, kamu gak perlu takut bekerja sendirian.",
+    title: "Mentor Ikut Jualan Bareng Lo",
+    content: "Gue bakal ikut lo ketemu klien potensial biar closing lebih gampang. Lo gak akan pernah sendirian dalam proses ini.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=900&fit=crop&q=80",
     icon: Users,
     size: "small"
   },
   {
     id: 4,
-    title: "Kelas Training dan Kelas Pengembangan Diri dari Speaker Ternama",
-    content: "Komunitas kita always invite the top speakers ternama to share pengalaman dan tips suksesnya, beda tim beda hasil.",
+    title: "Belajar dari yang Udah Kaya",
+    content: "Training eksklusif dari top speakers dan mentor yang udah proven berhasil. Ini bukan teori doang, tapi sharing real experience.",
     image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=1200&fit=crop&q=80",
     icon: Zap,
     size: "large"
   },
   {
     id: 5,
-    title: "Mentorship Personal 1-on-1 dengan Martha",
-    content: "Dapatkan akses eksklusif untuk konsultasi personal dengan Martha setiap minggu untuk membahas strategi bisnis dan pengembangan karir kamu.",
+    title: "Dibimbing Langsung sama Bos",
+    content: "Akses eksklusif konsultasi 1-on-1 dengan Martha setiap minggu. Personal mentorship yang gak bakal lo dapet di tempat lain.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=900&fit=crop&q=80",
     icon: BookOpen,
     size: "medium"
   },
   {
     id: 6,
-    title: "Akses Lead Generation Tools & Database Premium",
-    content: "Nikmati akses penuh ke tools dan database premium untuk prospecting yang lebih efektif dan akurat dalam mencari calon klien potensial.",
+    title: "Tools Canggih Buat Cari Klien",
+    content: "Database premium dan lead generation tools yang biasanya bayar mahal, lo dapet gratis. Prospecting jadi lebih efektif dan targeted.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=1000&fit=crop&q=80",
     icon: Target,
     size: "small"
   },
   {
     id: 7,
-    title: "Partnership Opportunities dengan Brand Terkemuka",
-    content: "Kesempatan untuk berkolaborasi dengan brand-brand terkemuka dan menjadi brand ambassador untuk produk asuransi premium.",
+    title: "Kolaborasi sama Brand Gede",
+    content: "Kesempatan jadi brand ambassador dan kolaborasi sama brand-brand premium. Networking level yang beda dari yang lain.",
     image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=1200&fit=crop&q=80",
     icon: Handshake,
     size: "large"
   },
   {
     id: 8,
-    title: "Bonus & Incentive Program Berlapis",
-    content: "Sistem reward berlapis dengan bonus bulanan, quarterly incentive, dan annual achievement awards yang akan memaksimalkan earning kamu.",
+    title: "Bonus Berlapis Sampe Pusing",
+    content: "Bonus bulanan, quarterly incentive, annual awards - sistemnya berlapis sampe lo bingung mau ngapain duitnya.",
     image: "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=800&h=900&fit=crop&q=80",
     icon: Gift,
     size: "medium"
   },
   {
     id: 9,
-    title: "Elite Status & Recognition Program",
-    content: "Capai status elite dengan berbagai tingkatan recognition dan dapatkan akses ke exclusive privileges yang hanya dimiliki top performers.",
+    title: "Jadi VIP Member Eksklusif",
+    content: "Elite status dengan privilege khusus yang cuma dimiliki top performers. Recognition dan akses eksklusif yang bikin lo beda.",
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1100&fit=crop&q=80",
     icon: Crown,
     size: "small"
@@ -210,17 +210,17 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
             >
               <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                Premium Experiences
+                Ini yang Lo Dapetin
               </h2>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-                Premium
+                Gak Cuma Duit Doang
                 <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                  Experiences
+                  Tapi Juga Lifestyle
                 </span>
               </h1>
               <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-                Rasakan pengalaman eksklusif yang dirancang khusus untuk mengakselerasi kesuksesan Anda
+                Benefit gila yang gak bakal lo dapet di tempat lain. Ini yang bikin member kita beda dari yang lain.
               </p>
             </motion.div>
           </div>

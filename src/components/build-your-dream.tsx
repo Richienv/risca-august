@@ -152,30 +152,30 @@ const BuildYourDream = () => {
         <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span>Wujudkan</span>
-              <span> impianmu</span>
+              <span>Udah</span>
+              <span> siap</span>
             </h2>
             <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
           </div>
           <div className="text-center max-w-5xl mx-auto relative">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50">
               <div className="mb-4 md:mb-6">
-                <span>Wujudkan</span>
-                <span> impianmu</span>
-                <span> bersama</span>
+                <span>Jadi</span>
+                <span> yang</span>
+                <span> berhasil</span>
               </div>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
-                <span>Risca</span>
+                <span>Selanjutnya?</span>
               </div>
             </h1>
           </div>
           <div className="text-center">
             <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span>Platform</span>
-              <span> terpercaya</span>
-              <span> untuk</span>
-              <span> kesuksesan.</span>
+              <span>2000+</span>
+              <span> Gen-Z</span>
+              <span> udah</span>
+              <span> breakout.</span>
             </h2>
           </div>
         </div>
@@ -231,8 +231,8 @@ const BuildYourDream = () => {
         <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span className="word-animate" data-delay="0">Wujudkan</span>
-              <span className="word-animate" data-delay="300">impianmu</span>
+              <span className="word-animate" data-delay="0">Udah</span>
+              <span className="word-animate" data-delay="300">siap</span>
             </h2>
             <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
           </div>
@@ -241,13 +241,13 @@ const BuildYourDream = () => {
             {/* Responsive Main Heading Sizes */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 text-decoration-animate">
               <div className="mb-4 md:mb-6">
-                <span className="word-animate" data-delay="700">Wujudkan</span>
-                <span className="word-animate" data-delay="850">impianmu</span>
-                <span className="word-animate" data-delay="1000">bersama</span>
+                <span className="word-animate" data-delay="700">Jadi</span>
+                <span className="word-animate" data-delay="850">yang</span>
+                <span className="word-animate" data-delay="1000">berhasil</span>
               </div>
               {/* Responsive Secondary Heading Sizes & Added tracking-wide for letter spacing */}
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
-                <span className="word-animate" data-delay="1400">Risca</span>
+                <span className="word-animate" data-delay="1400">Selanjutnya?</span>
               </div>
             </h1>
             {/* Responsive Detail Line Offsets */}
@@ -258,10 +258,10 @@ const BuildYourDream = () => {
           <div className="text-center">
             <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span className="word-animate" data-delay="1800">Platform</span>
-              <span className="word-animate" data-delay="2000">terpercaya</span>
-              <span className="word-animate" data-delay="2200">untuk</span>
-              <span className="word-animate" data-delay="2400">kesuksesan.</span>
+              <span className="word-animate" data-delay="1800">2000+</span>
+              <span className="word-animate" data-delay="2000">Gen-Z</span>
+              <span className="word-animate" data-delay="2200">udah</span>
+              <span className="word-animate" data-delay="2400">breakout.</span>
             </h2>
             <div className="mt-6 flex justify-center space-x-4 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.8s' }}>
               <div className="w-1 h-1 bg-red-500 rounded-full opacity-40"></div>

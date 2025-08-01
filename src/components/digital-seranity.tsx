@@ -148,37 +148,38 @@ const DigitalSerenity = () => {
 
   if (!mounted) {
     return (
-      <div className="w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
+      <div className="w-full min-h-screen bg-gradient-to-bl from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
         <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span>Mau</span>
-              <span> skeptis?</span>
+              <span>Masih</span>
+              <span> ragu?</span>
             </h2>
             <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
           </div>
           <div className="text-center max-w-5xl mx-auto relative">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50">
               <div className="mb-4 md:mb-6">
-                <span>Mau</span>
-                <span> skeptis</span>
+                <span>Masih</span>
+                <span> ragu</span>
                 <span> atau</span>
               </div>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
                 <span>mau</span>
-                <span> coba</span>
-                <span> ubah</span>
-                <span> nasib?</span>
+                <span> raih</span>
+                <span> 10 juta</span>
+                <span> dalam 5 bulan?</span>
               </div>
             </h1>
           </div>
           <div className="text-center">
             <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span>Pilihan</span>
+              <span>Keputusan</span>
               <span> ada</span>
               <span> di</span>
-              <span> tanganmu.</span>
+              <span> tanganmu</span>
+              <span> sekarang.</span>
             </h2>
           </div>
         </div>
@@ -189,7 +190,7 @@ const DigitalSerenity = () => {
   return (
     <>
       <style>{pageStyles}</style>
-      <div className="w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
+      <div className="w-full min-h-screen bg-gradient-to-bl from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
         
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
@@ -234,8 +235,8 @@ const DigitalSerenity = () => {
         <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span className="word-animate" data-delay="0">Mau</span>
-              <span className="word-animate" data-delay="300">skeptis?</span>
+              <span className="word-animate" data-delay="0">Masih</span>
+              <span className="word-animate" data-delay="300">ragu?</span>
             </h2>
             <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
           </div>
@@ -244,16 +245,16 @@ const DigitalSerenity = () => {
             {/* Responsive Main Heading Sizes */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 text-decoration-animate">
               <div className="mb-4 md:mb-6">
-                <span className="word-animate" data-delay="700">Mau</span>
-                <span className="word-animate" data-delay="850">skeptis</span>
+                <span className="word-animate" data-delay="700">Masih</span>
+                <span className="word-animate" data-delay="850">ragu</span>
                 <span className="word-animate" data-delay="1000">atau</span>
               </div>
               {/* Responsive Secondary Heading Sizes & Added tracking-wide for letter spacing */}
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
                 <span className="word-animate" data-delay="1400">mau</span>
-                <span className="word-animate" data-delay="1550">coba</span>
-                <span className="word-animate" data-delay="1700">ubah</span>
-                <span className="word-animate" data-delay="1850">nasib?</span>
+                <span className="word-animate" data-delay="1550">raih</span>
+                <span className="word-animate" data-delay="1700">10 juta</span>
+                <span className="word-animate" data-delay="1850">dalam 5 bulan?</span>
               </div>
             </h1>
             {/* Responsive Detail Line Offsets */}
@@ -264,10 +265,11 @@ const DigitalSerenity = () => {
           <div className="text-center">
             <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
-              <span className="word-animate" data-delay="3000">Pilihan</span>
+              <span className="word-animate" data-delay="3000">Keputusan</span>
               <span className="word-animate" data-delay="3200">ada</span>
               <span className="word-animate" data-delay="3400">di</span>
-              <span className="word-animate" data-delay="3550">tanganmu.</span>
+              <span className="word-animate" data-delay="3550">tanganmu</span>
+              <span className="word-animate" data-delay="3700">sekarang.</span>
             </h2>
             <div className="mt-6 flex justify-center space-x-4 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '4.2s' }}>
               <div className="w-1 h-1 bg-red-500 rounded-full opacity-40"></div>

@@ -19,14 +19,14 @@ export default function BonusCarousel() {
                     {/* Heading Section - matching digital-seranity.tsx typography */}
                     <div className="text-center mb-12">
                         <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                            Keuntungan Bergabung
+                            Kenapa Mereka Berhasil?
                         </h2>
                         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-                            Tim Sukses Risca
+                            Lo Mau Jadi yang Selanjutnya?
                         </h1>
                         <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-                            Raih kesuksesan bersama komunitas yang mendukung pertumbuhan dan potensi terbaikmu
+                            Liat sendiri kenapa ribuan Gen-Z pilih sistem ini buat dapetin 10 juta dalam 5 bulan
                         </p>
                     </div>
                     
@@ -55,8 +55,8 @@ export default function BonusCarousel() {
                                     </svg>
                                     <span className="mx-auto block w-fit text-5xl font-extralight text-red-500">100%</span>
                                 </div>
-                                <h2 className="mt-6 text-center text-2xl font-extralight leading-tight tracking-tight text-white">Dukungan Penuh</h2>
-                                <p className="text-center text-sm font-light leading-relaxed text-white/70 mt-2">Mendapat bimbingan dan dukungan 100% dari mentor berpengalaman</p>
+                                <h2 className="mt-6 text-center text-2xl font-extralight leading-tight tracking-tight text-white">Gak Bakal Sendirian</h2>
+                                <p className="text-center text-sm font-light leading-relaxed text-white/70 mt-2">Lo bakal dapet support penuh dari mentor dan komunitas yang udah proven berhasil</p>
                             </CardContent>
                         </Card>
                         <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
@@ -87,8 +87,8 @@ export default function BonusCarousel() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white text-gray-800">Sistem Terpercaya</h2>
-                                    <p className="text-gray-600 dark:text-gray-300">Bergabung dengan sistem bisnis yang sudah terbukti menghasilkan income stabil dan berkelanjutan.</p>
+                                    <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white text-gray-800">2000+ Orang Udah Buktiin</h2>
+                                    <p className="text-gray-600 dark:text-gray-300">Sistem yang udah terbukti bikin ribuan Gen-Z dapet income 10-50 juta dalam 5 bulan pertama.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -134,8 +134,8 @@ export default function BonusCarousel() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-14 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Pertumbuhan Cepat</h2>
-                                    <p className="text-gray-600 dark:text-gray-300">Raih target income impianmu dengan sistem yang telah teruji memberikan hasil optimal.</p>
+                                    <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">10 Juta dalam 5 Bulan</h2>
+                                    <p className="text-gray-600 dark:text-gray-300">Target income yang realistis dan udah terbukti bisa dicapai sama member komunitas kita.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -146,8 +146,8 @@ export default function BonusCarousel() {
                                         <Shield className="m-auto size-5" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Keamanan Finansial</h2>
-                                        <p className="text-gray-600 dark:text-gray-300">Lindungi masa depan keuanganmu dengan strategi investasi yang aman dan menguntungkan.</p>
+                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Financial Freedom di Usia Muda</h2>
+                                        <p className="text-gray-600 dark:text-gray-300">Wujudin financial freedom sebelum umur 25 dengan sistem bisnis yang sustainable.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -186,8 +186,8 @@ export default function BonusCarousel() {
                                         <Users className="m-auto size-6" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Komunitas Solid</h2>
-                                        <p className="text-gray-600 dark:text-gray-300">Bergabung dengan jaringan profesional yang saling mendukung untuk mencapai kesuksesan bersama.</p>
+                                        <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Squad yang Supportive</h2>
+                                        <p className="text-gray-600 dark:text-gray-300">Komunitas Gen-Z yang solid, saling support, dan sama-sama ngejar target financial freedom.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
