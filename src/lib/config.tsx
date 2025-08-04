@@ -17,10 +17,10 @@ export const siteConfig = {
     'business opportunity'],
   links: {
     email: "ask.martha@gmail.com",
-    twitter: "https://twitter.com/magicuidesign",
+    twitter: "https://twitter.com/richienv",
     discord: "https://discord.gg/87p2vpsat5",
-    github: "https://github.com/magicuidesign/magicui",
-    instagram: "https://instagram.com/magicuidesign/",
+    github: "https://github.com/Richienv/allianz-cinom",
+    instagram: "https://instagram.com/richienv/",
   },
   header: [
     {
