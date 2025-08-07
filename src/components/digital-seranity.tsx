@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Spotlight } from '@/components/spotlight-new';
 
 interface Ripple {
   id: number;
@@ -193,6 +195,19 @@ const DigitalSerenity = () => {
       <style>{pageStyles}</style>
       <div className="w-full min-h-screen bg-gradient-to-bl from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
         
+        {/* Pink Spotlight Effects */}
+        <Spotlight 
+          gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
+          gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
+          gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+          translateY={-170}
+          width={410}
+          height={820}
+          smallWidth={150}
+          duration={15}
+          xOffset={35}
+        />
+        
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <pattern id="gridReactDarkResponsive" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -244,20 +259,26 @@ const DigitalSerenity = () => {
 
           <div className="text-center max-w-5xl mx-auto relative">
             {/* Responsive Main Heading Sizes */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 text-decoration-animate">
-              <div className="mb-4 md:mb-6">
-                <span className="word-animate" data-delay="700">Masih</span>
-                <span className="word-animate" data-delay="850">ragu</span>
-                <span className="word-animate" data-delay="1000">buat coba?</span>
-              </div>
-              {/* Responsive Secondary Heading Sizes & Added tracking-wide for letter spacing */}
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
-                <span className="word-animate" data-delay="1400">dan biarin</span>
-                <span className="word-animate" data-delay="1550">orang lain</span>
-                <span className="word-animate" data-delay="1700">sukess</span>
-                <span className="word-animate" data-delay="1850">dalam 5 bulan?</span>
-              </div>
-            </h1>
+            <motion.h1 
+              className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate"
+              style={{
+                background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+                backgroundSize: '200% 100%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+              animate={{
+                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: 'linear'
+              }}
+            >
+              MASIH RAGU BUAT COBA?
+            </motion.h1>
             {/* Responsive Detail Line Offsets */}
             <div className="absolute -left-6 sm:-left-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-red-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}></div>
             <div className="absolute -right-6 sm:-right-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-red-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.4s' }}></div>
