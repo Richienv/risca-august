@@ -125,7 +125,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-2">
+    <div className="grid grid-cols-4 grid-rows-4 h-[400px] gap-2">
       {squares.map((sq) => sq)}
     </div>
   );
@@ -145,22 +145,26 @@ export default function PerubahanSection() {
   const z = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
 
   return (
-    <div className="relative overflow-hidden w-full min-h-screen">
+    <div className="relative overflow-hidden w-full">
       {/* Background effects */}
       <div className="absolute inset-0 gradient-aura-subtle"></div>
       
-      <div className="relative z-10 min-h-screen flex flex-col justify-center py-8 md:py-12">
-        <div className="text-center mb-6">
-          <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-2">
+      <div className="relative z-10 flex flex-col justify-center py-16 md:py-20">
+        <div className="text-center mb-8">
+          <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-4">
             Mereka Dulunya Sama Seperti Kamu
           </h2>
-          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-4"></div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground">
-            Tapi Sekarang Beda Jauh
+          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-6"></div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground mb-6">
+            Tapi Sekarang
+            <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 leading-relaxed tracking-wide">
+              Beda Jauh
+            </span>
           </h1>
         </div>
+      
         
-        <section className="w-full px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto flex-1">
+        <section className="w-full px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
           <motion.div
             ref={sectionRef}
             style={{ 
@@ -175,20 +179,13 @@ export default function PerubahanSection() {
             animate={{ opacity: 1, rotateX: 0, z: 0, scale: 1 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
-            <span className="block mb-4 text-xs md:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80">
-              Mereka Dulunya Sama Seperti Kamu
-            </span>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground mb-6">
-              Tapi Sekarang Beda Jauh
-            </h3>
-            <p className="text-base md:text-lg font-light text-muted-foreground leading-relaxed my-4 md:my-6">
-              Foto-foto di atas? Mereka semua Gen-Z seperti kamu yang dulu skeptis, ragu, dan mikir "ah pasti scam lagi". Tapi mereka nekat coba dan sekarang dalam 5 bulan udah bisa flexing 10 juta dari sistem bisnis yang gak pernah lo bayangin sebelumnya.
+            <p className="text-base md:text-lg font-light text-muted-foreground leading-relaxed my-4 md:my-2">
+              Foto-foto di samping? Mereka semua Gen-Z seperti kamu yang dulu skeptis, ragu, dan mikir "ah pasti scam lagi". Tapi mereka nekat coba dan sekarang dalam 5 bulan udah bisa flexing 10 juta dari sistem bisnis yang gak pernah lo bayangin sebelumnya.
             </p>
             <p className="text-sm md:text-base font-light text-foreground/80 leading-relaxed mb-8">
               Yang bikin beda, ini bukan jualan produk atau MLM. Ini sistem tersembunyi di industri asuransi yang udah terbukti bikin ribuan anak muda Indonesia mandiri finansial. Kamu mau jadi yang selanjutnya atau tetap nonton dari pinggir?
             </p>
           </motion.div>
-          
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}

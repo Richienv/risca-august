@@ -23,7 +23,7 @@ export default function BonusCarousel() {
                         </h2>
                         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-                            Lo Mau Jadi yang Selanjutnya?
+                            Karena Dapeting uang Disini gak Ribet. 
                         </h1>
                         <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
                             Liat sendiri kenapa ribuan Gen-Z pilih sistem ini buat dapetin 10 juta dalam 5 bulan
@@ -31,7 +31,7 @@ export default function BonusCarousel() {
                     </div>
                     
                     <div className="relative z-10 grid grid-cols-6 gap-3">
-                        <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 bg-black border-red-500/20 hover:border-red-500/30 transition-all duration-300 group">
+                        <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
                             {/* Corner accent elements - matching digital-seranity.tsx */}
                             <div className="absolute top-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
                                 <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
@@ -55,44 +55,57 @@ export default function BonusCarousel() {
                                     </svg>
                                     <span className="mx-auto block w-fit text-5xl font-extralight text-red-500">100%</span>
                                 </div>
-                                <h2 className="mt-6 text-center text-2xl font-extralight leading-tight tracking-tight text-white">Gak Bakal Sendirian</h2>
-                                <p className="text-center text-sm font-light leading-relaxed text-white/70 mt-2">Lo bakal dapet support penuh dari mentor dan komunitas yang udah proven berhasil</p>
+                                <h2 className="mt-6 text-center text-2xl font-extralight leading-tight tracking-tight text-white">Kita Pakai Sistem From 0 to Hero</h2>
+                                <p className="text-center text-sm font-light leading-relaxed text-white/70 mt-2">Sistem proven yang udah dijalani ribuan orang dari berbagai background. Dari mahasiswa yang masih kuliah, fresh graduate yang bingung, sampai yang udah stuck di corporate world bertahun-tahun. Semuanya bisa berhasil karena sistemnya dirancang khusus buat orang awam yang gak punya pengalaman bisnis sebelumnya.</p>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
+                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
                             <CardContent className="pt-6">
                                 <div className="relative mx-auto flex aspect-square size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
-                                    <svg className="m-auto h-fit w-24" viewBox="0 0 212 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            className="text-zinc-400 dark:text-zinc-600"
-                                            d="M44.0209 55.3542C43.1945 54.7639 42.6916 54.0272 42.5121 53.1442C42.3327 52.2611 42.5995 51.345 43.3125 50.3958C50.632 40.3611 59.812 32.5694 70.8525 27.0208C81.8931 21.4722 93.668 18.6979 106.177 18.6979C118.691 18.6979 130.497 21.3849 141.594 26.7587C152.691 32.1326 161.958 39.8936 169.396 50.0417C170.222 51.1042 170.489 52.0486 170.196 52.875C169.904 53.7014 169.401 54.4097 168.688 55C167.979 55.5903 167.153 55.8571 166.208 55.8004C165.264 55.7437 164.438 55.2408 163.729 54.2917C157.236 45.0833 148.885 38.0307 138.675 33.1337C128.466 28.2368 117.633 25.786 106.177 25.7812C94.7257 25.7812 83.9827 28.2321 73.948 33.1337C63.9132 38.0354 55.5903 45.0881 48.9792 54.2917C48.2709 55.3542 47.4445 55.9444 46.5 56.0625C45.5556 56.1806 44.7292 55.9444 44.0209 55.3542ZM126.188 142.656C113.91 139.587 103.875 133.476 96.0834 124.325C88.2917 115.173 84.3959 103.988 84.3959 90.7708C84.3959 84.8681 86.5209 79.9097 90.7709 75.8958C95.0209 71.8819 100.156 69.875 106.177 69.875C112.198 69.875 117.333 71.8819 121.583 75.8958C125.833 79.9097 127.958 84.8681 127.958 90.7708C127.958 94.6667 129.434 97.9439 132.385 100.602C135.337 103.261 138.819 104.588 142.833 104.583C146.847 104.583 150.271 103.256 153.104 100.602C155.938 97.9486 157.354 94.6714 157.354 90.7708C157.354 77.0764 152.337 65.566 142.302 56.2396C132.267 46.9132 120.285 42.25 106.354 42.25C92.4237 42.25 80.441 46.9132 70.4063 56.2396C60.3716 65.566 55.3542 77.0174 55.3542 90.5937C55.3542 93.4271 55.621 96.9687 56.1546 101.219C56.6882 105.469 57.9562 110.427 59.9584 116.094C60.3125 117.156 60.2842 118.101 59.8734 118.927C59.4625 119.753 58.7825 120.344 57.8334 120.698C56.8889 121.052 55.9752 121.024 55.0921 120.613C54.2091 120.202 53.5881 119.522 53.2292 118.573C51.4584 113.969 50.1905 109.395 49.4255 104.853C48.6605 100.31 48.2756 95.6158 48.2709 90.7708C48.2709 75.0694 53.9682 61.9062 65.363 51.2812C76.7577 40.6562 90.3624 35.3437 106.177 35.3437C122.115 35.3437 135.809 40.6562 147.26 51.2812C158.712 61.9062 164.438 75.0694 164.438 90.7708C164.438 96.6736 162.343 101.601 158.155 105.554C153.966 109.506 148.859 111.485 142.833 111.49C136.813 111.49 131.649 109.513 127.342 105.561C123.035 101.608 120.88 96.6783 120.875 90.7708C120.875 86.875 119.43 83.5978 116.54 80.9392C113.65 78.2805 110.196 76.9536 106.177 76.9583C102.163 76.9583 98.7089 78.2876 95.8142 80.9462C92.9195 83.6049 91.4745 86.8797 91.4792 90.7708C91.4792 102.222 94.8745 111.785 101.665 119.458C108.456 127.132 117.22 132.503 127.958 135.573C129.021 135.927 129.729 136.517 130.083 137.344C130.438 138.17 130.497 139.056 130.26 140C130.024 140.826 129.552 141.535 128.844 142.125C128.135 142.715 127.25 142.892 126.188 142.656ZM67.0417 18.3437C66.0973 18.934 65.1528 19.0828 64.2084 18.79C63.2639 18.4972 62.5556 17.8762 62.0834 16.9271C61.6112 15.9826 61.4931 15.1279 61.7292 14.3629C61.9653 13.5979 62.5556 12.9179 63.5 12.3229C70.1112 8.78125 77.0174 6.06597 84.2188 4.17708C91.4202 2.28819 98.7396 1.34375 106.177 1.34375C113.733 1.34375 121.111 2.25986 128.313 4.09208C135.514 5.92431 142.479 8.54986 149.208 11.9687C150.271 12.559 150.892 13.2674 151.071 14.0937C151.251 14.9201 151.161 15.7465 150.802 16.5729C150.448 17.3993 149.858 18.0486 149.031 18.5208C148.205 18.9931 147.201 18.934 146.021 18.3437C139.764 15.1563 133.299 12.7078 126.627 10.9983C119.954 9.28889 113.138 8.43181 106.177 8.42708C99.3299 8.42708 92.6007 9.22514 85.9896 10.8212C79.3785 12.4174 73.0625 14.9249 67.0417 18.3437ZM87.9375 140.177C80.9723 132.858 75.6314 125.392 71.915 117.78C68.1987 110.167 66.3381 101.164 66.3334 90.7708C66.3334 80.0278 70.2292 70.9658 78.0209 63.585C85.8125 56.2042 95.198 52.5161 106.177 52.5208C117.156 52.5208 126.601 56.2112 134.51 63.5921C142.42 70.9729 146.375 80.0325 146.375 90.7708C146.375 91.8333 146.052 92.6904 145.405 93.3421C144.758 93.9937 143.901 94.3172 142.833 94.3125C141.889 94.3125 141.063 93.989 140.354 93.3421C139.646 92.6951 139.292 91.8381 139.292 90.7708C139.292 81.9167 136.014 74.5099 129.46 68.5504C122.906 62.591 115.145 59.6089 106.177 59.6042C97.2049 59.6042 89.503 62.5862 83.0713 68.5504C76.6396 74.5146 73.4214 81.9214 73.4167 90.7708C73.4167 100.333 75.0695 108.451 78.375 115.123C81.6806 121.796 86.5209 128.494 92.8959 135.219C93.6042 135.927 93.9584 136.753 93.9584 137.698C93.9584 138.642 93.6042 139.469 92.8959 140.177C92.1875 140.885 91.3612 141.24 90.4167 141.24C89.4723 141.24 88.6459 140.885 87.9375 140.177ZM141.417 128.135C130.91 128.135 121.789 124.594 114.054 117.51C106.319 110.427 102.454 101.514 102.458 90.7708C102.458 89.8264 102.784 89 103.436 88.2917C104.088 87.5833 104.942 87.2292 106 87.2292C107.063 87.2292 107.92 87.5833 108.571 88.2917C109.223 89 109.546 89.8264 109.542 90.7708C109.542 99.625 112.729 106.885 119.104 112.552C125.479 118.219 132.917 121.052 141.417 121.052C142.125 121.052 143.129 120.993 144.427 120.875C145.726 120.757 147.083 120.58 148.5 120.344C149.563 120.108 150.479 120.256 151.248 120.79C152.018 121.324 152.519 122.119 152.75 123.177C152.986 124.122 152.809 124.948 152.219 125.656C151.629 126.365 150.861 126.837 149.917 127.073C147.792 127.663 145.934 127.989 144.342 128.05C142.751 128.112 141.776 128.14 141.417 128.135Z"
-                                            fill="currentColor"
-                                        />
-                                        <g clipPath="url(#clip0_0_1)">
-                                            <path
-                                                d="M44.0209 55.3542C43.1945 54.7639 42.6916 54.0272 42.5121 53.1442C42.3327 52.2611 42.5995 51.345 43.3125 50.3958C50.632 40.3611 59.812 32.5694 70.8525 27.0208C81.8931 21.4722 93.668 18.6979 106.177 18.6979C118.691 18.6979 130.497 21.3849 141.594 26.7587C152.691 32.1326 161.958 39.8936 169.396 50.0417C170.222 51.1042 170.489 52.0486 170.196 52.875C169.904 53.7014 169.401 54.4097 168.688 55C167.979 55.5903 167.153 55.8571 166.208 55.8004C165.264 55.7437 164.438 55.2408 163.729 54.2917C157.236 45.0833 148.885 38.0307 138.675 33.1337C128.466 28.2368 117.633 25.786 106.177 25.7812C94.7257 25.7812 83.9827 28.2321 73.948 33.1337C63.9132 38.0354 55.5903 45.0881 48.9792 54.2917C48.2709 55.3542 47.4445 55.9444 46.5 56.0625C45.5556 56.1806 44.7292 55.9444 44.0209 55.3542ZM126.188 142.656C113.91 139.587 103.875 133.476 96.0834 124.325C88.2917 115.173 84.3959 103.988 84.3959 90.7708C84.3959 84.8681 86.5209 79.9097 90.7709 75.8958C95.0209 71.8819 100.156 69.875 106.177 69.875C112.198 69.875 117.333 71.8819 121.583 75.8958C125.833 79.9097 127.958 84.8681 127.958 90.7708C127.958 94.6667 129.434 97.9439 132.385 100.602C135.337 103.261 138.819 104.588 142.833 104.583C146.847 104.583 150.271 103.256 153.104 100.602C155.938 97.9486 157.354 94.6714 157.354 90.7708C157.354 77.0764 152.337 65.566 142.302 56.2396C132.267 46.9132 120.285 42.25 106.354 42.25C92.4237 42.25 80.441 46.9132 70.4063 56.2396C60.3716 65.566 55.3542 77.0174 55.3542 90.5937C55.3542 93.4271 55.621 96.9687 56.1546 101.219C56.6882 105.469 57.9562 110.427 59.9584 116.094C60.3125 117.156 60.2842 118.101 59.8734 118.927C59.4625 119.753 58.7825 120.344 57.8334 120.698C56.8889 121.052 55.9752 121.024 55.0921 120.613C54.2091 120.202 53.5881 119.522 53.2292 118.573C51.4584 113.969 50.1905 109.395 49.4255 104.853C48.6605 100.31 48.2756 95.6158 48.2709 90.7708C48.2709 75.0694 53.9682 61.9062 65.363 51.2812C76.7577 40.6562 90.3624 35.3437 106.177 35.3437C122.115 35.3437 135.809 40.6562 147.26 51.2812C158.712 61.9062 164.438 75.0694 164.438 90.7708C164.438 96.6736 162.343 101.601 158.155 105.554C153.966 109.506 148.859 111.485 142.833 111.49C136.813 111.49 131.649 109.513 127.342 105.561C123.035 101.608 120.88 96.6783 120.875 90.7708C120.875 86.875 119.43 83.5978 116.54 80.9392C113.65 78.2805 110.196 76.9536 106.177 76.9583C102.163 76.9583 98.7089 78.2876 95.8142 80.9462C92.9195 83.6049 91.4745 86.8797 91.4792 90.7708C91.4792 102.222 94.8745 111.785 101.665 119.458C108.456 127.132 117.22 132.503 127.958 135.573C129.021 135.927 129.729 136.517 130.083 137.344C130.438 138.17 130.497 139.056 130.26 140C130.024 140.826 129.552 141.535 128.844 142.125C128.135 142.715 127.25 142.892 126.188 142.656ZM67.0417 18.3437C66.0973 18.934 65.1528 19.0828 64.2084 18.79C63.2639 18.4972 62.5556 17.8762 62.0834 16.9271C61.6112 15.9826 61.4931 15.1279 61.7292 14.3629C61.9653 13.5979 62.5556 12.9179 63.5 12.3229C70.1112 8.78125 77.0174 6.06597 84.2188 4.17708C91.4202 2.28819 98.7396 1.34375 106.177 1.34375C113.733 1.34375 121.111 2.25986 128.313 4.09208C135.514 5.92431 142.479 8.54986 149.208 11.9687C150.271 12.559 150.892 13.2674 151.071 14.0937C151.251 14.9201 151.161 15.7465 150.802 16.5729C150.448 17.3993 149.858 18.0486 149.031 18.5208C148.205 18.9931 147.201 18.934 146.021 18.3437C139.764 15.1563 133.299 12.7078 126.627 10.9983C119.954 9.28889 113.138 8.43181 106.177 8.42708C99.3299 8.42708 92.6007 9.22514 85.9896 10.8212C79.3785 12.4174 73.0625 14.9249 67.0417 18.3437ZM87.9375 140.177C80.9723 132.858 75.6314 125.392 71.915 117.78C68.1987 110.167 66.3381 101.164 66.3334 90.7708C66.3334 80.0278 70.2292 70.9658 78.0209 63.585C85.8125 56.2042 95.198 52.5161 106.177 52.5208C117.156 52.5208 126.601 56.2112 134.51 63.5921C142.42 70.9729 146.375 80.0325 146.375 90.7708C146.375 91.8333 146.052 92.6904 145.405 93.3421C144.758 93.9937 143.901 94.3172 142.833 94.3125C141.889 94.3125 141.063 93.989 140.354 93.3421C139.646 92.6951 139.292 91.8381 139.292 90.7708C139.292 81.9167 136.014 74.5099 129.46 68.5504C122.906 62.591 115.145 59.6089 106.177 59.6042C97.2049 59.6042 89.503 62.5862 83.0713 68.5504C76.6396 74.5146 73.4214 81.9214 73.4167 90.7708C73.4167 100.333 75.0695 108.451 78.375 115.123C81.6806 121.796 86.5209 128.494 92.8959 135.219C93.6042 135.927 93.9584 136.753 93.9584 137.698C93.9584 138.642 93.6042 139.469 92.8959 140.177C92.1875 140.885 91.3612 141.24 90.4167 141.24C89.4723 141.24 88.6459 140.885 87.9375 140.177ZM141.417 128.135C130.91 128.135 121.789 124.594 114.054 117.51C106.319 110.427 102.454 101.514 102.458 90.7708C102.458 89.8264 102.784 89 103.436 88.2917C104.088 87.5833 104.942 87.2292 106 87.2292C107.063 87.2292 107.92 87.5833 108.571 88.2917C109.223 89 109.546 89.8264 109.542 90.7708C109.542 99.625 112.729 106.885 119.104 112.552C125.479 118.219 132.917 121.052 141.417 121.052C142.125 121.052 143.129 120.993 144.427 120.875C145.726 120.757 147.083 120.58 148.5 120.344C149.563 120.108 150.479 120.256 151.248 120.79C152.018 121.324 152.519 122.119 152.75 123.177C152.986 124.122 152.809 124.948 152.219 125.656C151.629 126.365 150.861 126.837 149.917 127.073C147.792 127.663 145.934 127.989 144.342 128.05C142.751 128.112 141.776 128.14 141.417 128.135Z"
-                                                fill="url(#paint0_linear_0_1)"
-                                            />
-                                        </g>
-                                        <path className="text-primary-600 dark:text-primary-500" d="M3 72H209" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
-                                        <defs>
-                                            <linearGradient id="paint0_linear_0_1" x1="106.385" y1="1.34375" x2="106" y2="72" gradientUnits="userSpaceOnUse">
-                                                <stop stopColor="white" stopOpacity="0" />
-                                                <stop className="text-primary-600 dark:text-primary-500" offset="1" stopColor="currentColor" />
-                                            </linearGradient>
-                                            <clipPath id="clip0_0_1">
-                                                <rect width="129" height="72" fill="white" transform="translate(41)" />
-                                            </clipPath>
-                                        </defs>
+                                    <svg className="m-auto h-fit w-24" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        {/* Success testimonials - multiple user icons with checkmarks */}
+                                        <circle cx="30" cy="30" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="30" cy="30" r="8" fill="white"/>
+                                        <path d="M26 30l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
+                                        
+                                        <circle cx="90" cy="30" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="90" cy="30" r="8" fill="white"/>
+                                        <path d="M86 30l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
+                                        
+                                        <circle cx="60" cy="20" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="60" cy="20" r="8" fill="white"/>
+                                        <path d="M56 20l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
+                                        
+                                        <circle cx="30" cy="90" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="30" cy="90" r="8" fill="white"/>
+                                        <path d="M26 90l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
+                                        
+                                        <circle cx="90" cy="90" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="90" cy="90" r="8" fill="white"/>
+                                        <path d="M86 90l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
+                                        
+                                        <circle cx="60" cy="100" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="60" cy="100" r="8" fill="white"/>
+                                        <path d="M56 100l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
+                                        
+                                        {/* Connection lines showing community */}
+                                        <path d="M42 30 L78 30" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
+                                        <path d="M42 90 L78 90" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
+                                        <path d="M30 42 L30 78" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
+                                        <path d="M90 42 L90 78" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
+                                        <path d="M60 32 L60 88" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
+                                        
+                                        {/* Central "2000+" text */}
+                                        <text x="60" y="65" textAnchor="middle" className="text-red-500" fill="currentColor" fontSize="14" fontWeight="600">2000+</text>
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white text-gray-800">2000+ Orang Udah Buktiin</h2>
-                                    <p className="text-gray-600 dark:text-gray-300">Sistem yang udah terbukti bikin ribuan Gen-Z dapet income 10-50 juta dalam 5 bulan pertama.</p>
+                                    <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white text-gray-800">200K+ Orang Udah Buktiin</h2>
+                                    <p className="text-gray-600 dark:text-gray-300">Track record yang gak bisa dibantah - 90% member yang konsisten berhasil mencapai target dalam 6 bulan pertama. Bukan testimoni palsu atau success story buatan, semua hasil bisa diverifikasi dan member aktif sharing journey mereka. Yang tadinya cuma bisa minta uang jajan dari ortu, sekarang udah bisa beliin ortu motor baru.</p>
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
+                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
                             <CardContent className="pt-6">
                                 <div className="pt-6 lg:px-6">
                                     <svg className="dark:text-muted-foreground w-full" viewBox="0 0 386 123" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,20 +147,20 @@ export default function BonusCarousel() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-14 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">10 Juta dalam 5 Bulan</h2>
-                                    <p className="text-gray-600 dark:text-gray-300">Target income yang realistis dan udah terbukti bisa dicapai sama member komunitas kita.</p>
+                                    <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Graphic Perkembangan Income pasti ke Atas.</h2>
+                                    <p className="text-gray-600 dark:text-gray-300">Grafik perkembangan income member menunjukkan tren consistent naik dari bulan ke bulan. Yang tadinya struggling dengan gaji UMR, sekarang penghasilannya udah exceed ekspektasi. Sistemnya dirancang untuk growth yang sustainable, bukan get-rich-quick scheme. Member senior bisa mencapai income 8-9 digit per bulan.</p>
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden lg:col-span-3">
+                        <Card className="relative col-span-full overflow-hidden lg:col-span-3 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
                             <CardContent className="grid pt-6 sm:grid-cols-2">
                                 <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
                                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                                         <Shield className="m-auto size-5" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Financial Freedom di Usia Muda</h2>
-                                        <p className="text-gray-600 dark:text-gray-300">Wujudin financial freedom sebelum umur 25 dengan sistem bisnis yang sustainable.</p>
+                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Jualan cuman 1X tapi Income tetap jalan dan bisa diturunkan ke generasi berikut lo </h2>
+                                        <p className="text-gray-600 dark:text-gray-300">Sekali lo setup sistem dengan benar, income mengalir otomatis tanpa perlu monitor 24/7. Bukan MLM yang butuh recruiting terus-terusan. Banyak senior member udah traveling berbulan-bulan tapi income tetep stabil. Yang bikin keren, sistem ini bisa lo turunkan ke keluarga sebagai legacy business untuk generasi berikutnya.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -179,15 +192,15 @@ export default function BonusCarousel() {
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden lg:col-span-3">
+                        <Card className="relative col-span-full overflow-hidden lg:col-span-3 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
                             <CardContent className="grid h-full pt-6 sm:grid-cols-2">
                                 <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
                                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                                         <Users className="m-auto size-6" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium transition text-gray-800 dark:text-white">Squad yang Supportive</h2>
-                                        <p className="text-gray-600 dark:text-gray-300">Komunitas Gen-Z yang solid, saling support, dan sama-sama ngejar target financial freedom.</p>
+                                        <h2 className="text-lg font-medium transition text-gray-800 dark:text-white"> Teman & Relasi yang Berkualitas.</h2>
+                                        <p className="text-gray-600 dark:text-gray-300">Komunitas yang genuine mau sharing knowledge dan saling support tanpa persaingan tidak sehat. Lo bakal ketemu orang-orang ambitious tapi humble yang udah proven berhasil. Networking events, mentorship sessions, sampai mastermind tersedia untuk semua member. Banyak yang join cuma pengen duit, eh malah dapet circle pertemanan terbaik dalam hidup.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">

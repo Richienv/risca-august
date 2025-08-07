@@ -10,42 +10,42 @@ const jobData = [
   {
     icon: Clock,
     title: "Terikat Waktu",
-    description: "Hidup lo diatur sama bos terus",
+    description: "Lo cuma jadi robot yang ngikutin aturan bos",
     value: "9-5 setiap hari",
     color: "text-gray-400"
   },
   {
     icon: Briefcase,
     title: "Gaji Pas-pasan",
-    description: "Duit segitu-segitu doang tiap bulan",
+    description: "Penghasilan stagnan, gak pernah naik signifikan",
     value: "3-8 juta",
     color: "text-gray-400"
   },
   {
     icon: Target,
     title: "Naik Gaji Lama Banget",
-    description: "Nunggu promosi sampe tua",
+    description: "Nunggu kenaikan gaji kayak nunggu hujan di musim kemarau",
     value: "5-10%/tahun",
     color: "text-gray-400"
   },
   {
     icon: Zap,
     title: "Burnout Terus",
-    description: "Capek mental tiap hari, weekend jadi healing",
+    description: "Mental lelah, fisik drop, tapi tetep harus masuk",
     value: "Stress 24/7",
     color: "text-gray-400"
   },
   {
     icon: Star,
     title: "Gak Ada Me Time",
-    description: "Hobi? Passion? Lupa semua deh",
+    description: "Hidup cuma kerja-tidur-kerja, passion terlupakan",
     value: "0 jam bebas",
     color: "text-gray-400"
   },
   {
     icon: Users,
     title: "Toxic Environment",
-    description: "Drama kantor, gosip, politik internal",
+    description: "Lingkungan kerja penuh intrik dan backstabbing",
     value: "Drama endless",
     color: "text-gray-400"
   },
@@ -55,42 +55,42 @@ const businessData = [
   {
     icon: Sparkles,
     title: "Bebas Total",
-    description: "Lo yang atur hidup lo sendiri",
+    description: "Bangun siang, kerja dari mana aja, nobody's boss",
     value: "Kapan aja lo mau",
     color: "text-red-400"
   },
   {
     icon: TrendingUp,
     title: "10 Juta dalam 5 Bulan",
-    description: "Target yang realistis dan proven",
+    description: "Income sustainable yang bisa lo raih dalam waktu singkat",
     value: "10-100 juta+",
     color: "text-red-500"
   },
   {
     icon: Users,
     title: "Growth Gila-gilaan",
-    description: "Berkembang bareng komunitas solid",
+    description: "Penghasilan naik exponential, bukan linear kayak karyawan",
     value: "500%+/tahun",
     color: "text-red-300"
   },
   {
     icon: Star,
     title: "Work-Life Balance Sempurna",
-    description: "Kerja sambil traveling, hobi tetep jalan",
+    description: "Kerja dari Bali, nongkrong sambil duit masuk",
     value: "Freedom 100%",
     color: "text-red-400"
   },
   {
     icon: Target,
     title: "Multiple Income Streams",
-    description: "Duit masuk dari berbagai sumber",
+    description: "Passive income dari berbagai channel bisnis",
     value: "5+ revenue",
     color: "text-red-500"
   },
   {
     icon: Zap,
     title: "Energy Level Max",
-    description: "Passionate sama kerjaan, gak ada burnout",
+    description: "Semangat maksimal karena ngerjain passion lo",
     value: "High energy",
     color: "text-red-300"
   },

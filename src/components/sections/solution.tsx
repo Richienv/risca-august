@@ -5,24 +5,40 @@ import OverlappingImages from "@/components/overlapping-images";
 
 const transformations = [
   {
-    title: "Jual Tanpa Ngegombal",
-    description: "Lupain teknik jual kuno yang cringe. Lo bakal dapet sistem jual yang natural dan powerfull, bikin closing rate naik 300% tanpa keliatan kayak sales norak.",
+    title: "Uang Datang Sendiri",
+    description: "Sistem autopilot yang bikin duit ngalir terus tanpa lo harus kerja 24/7. Cukup setup sekali, terus tinggal pantau income bertambah setiap hari. Gak perlu lagi mikirin gimana caranya dapet duit besok, karena sistemnya udah jalan sendiri bahkan waktu lo tidur. Ribuan member udah buktiin sendiri, dari yang dulu stress mikirin tagihan, sekarang santai ngeliat notifikasi transfer masuk terus.",
   },
   {
-    title: "Dapetin Client Autopilot",
-    description: "Sistem rahasia dapetin client yang jalan sendiri. Lo gak perlu lagi kejar-kejaran prospek. Mereka yang bakal dateng sendiri dan minta dilayani.",
+    title: "Ngomong Dikit, Dapet Banyak",
+    description: "Rahasia komunikasi yang bikin orang langsung tertarik tanpa lo harus jadi penjual. Natural, santai, tapi hasilnya gila-gilaan. Lupain teknik ngomong yang ribet dan cringe, ini tentang gimana lo bisa bikin orang penasaran dan mau denger lo lebih lama. Mereka yang dulu skeptis dan cuek, tiba-tiba jadi antusias dan bertanya-tanya. Lo gak perlu jadi orang yang paling pinter ngomong, cukup tau timing dan kata-kata yang tepat.",
   },
   {
-    title: "Bikin Mereka Nagih",
-    description: "Rahasia bikin client ketagihan sama lo sampai mereka gak mau pindah ke yang lain. Repeat order dan referral bakal ngalir terus tanpa lo minta.",
+    title: "Orang Ketagihan Sama Lo",
+    description: "Framework khusus bikin circle lo jadi magnet. Mereka bakal loyal, selalu balik lagi, dan dengan senang hati ngasih lo duit. Ini bukan tentang manipulasi, tapi tentang gimana lo bisa jadi seseorang yang bener-bener valuable dalam hidup mereka. Sampe mereka ngerasa rugi kalo gak ada lo di lingkaran mereka. Yang tadinya cuma kenal biasa, sekarang jadi yang paling dipercaya dan diandalin.",
   },
   {
-    title: "Ubah 'Gak' Jadi 'Iya'",
-    description: "Framework khusus ngatasin semua alasan penolakan client. Yang tadinya bilang 'mikir dulu' bakal langsung bilang 'gimana caranya mulai?'",
+    title: "Tolakan Jadi Kesempatan",
+    description: "Mindset dan teknik rahasia ngubah penolakan jadi peluang emas. Yang tadinya bilang 'nggak' bakal berubah pikiran dan minta dibantu. Setiap 'tidak' yang lo denger itu sebenarnya informasi berharga tentang apa yang mereka butuhkan. Dengan mindset yang tepat, lo bisa ngubah setiap penolakan jadi stepping stone menuju kesuksesan yang lebih besar. Member komunitas sering cerita gimana mereka akhirnya berterima kasih sama orang yang pernah nolak mereka.",
   },
   {
     title: "10 Juta dalam 5 Bulan",
-    description: "Sistem financial planning yang udah terbukti bikin 2000+ member komunitas dapet 10-50 juta dalam 5 bulan pertama. Ini bukan teori, ini hasil nyata.",
+    description: "Blueprint finansial yang udah terbukti work untuk 2000+ member komunitas. Dari nol sampai puluhan juta, tanpa modal gede atau skill khusus. Ini bukan mimpi atau motivasi kosong, ini roadmap konkret dengan step-by-step yang jelas. Lo bakal tau persis apa yang harus dilakuin di bulan pertama, kedua, sampai kelima. Bahkan ada yang lebih cepet dari 5 bulan, tapi kita kasih buffer waktu yang realistis buat lo yang mungkin masih ragu atau takut.",
+  },
+  {
+    title: "Mulai Hari Ini, Hasil Besok",
+    description: "Gak perlu nunggu berbulan-bulan buat liat hasil pertama. Member rata-rata udah ngerasain perubahan income dalam 2-3 minggu pertama. Lo cuma perlu ikutin step-by-step yang udah dikasih, tanpa perlu mikir ribet atau analisis berlebihan. Sistemnya udah disederhanakan banget, bahkan anak SMA pun bisa langsung paham dan action. Yang penting lo mau mulai hari ini, sisanya sistem yang akan guide lo sampai berhasil.",
+  },
+  {
+    title: "Gak Perlu Jago Apa-Apa",
+    description: "Lupain semua kekhawatiran tentang 'gue gak bisa ini', 'gue gak punya skill itu'. Member paling sukses malah yang dateng tanpa background apapun. Mereka cuma modal nekat dan mau dengerin instruksi. Sistemnya udah dirancang khusus buat orang awam yang gak ngerti bisnis sama sekali. Lo gak perlu jago teknologi, gak perlu pinter ngomong, bahkan gak perlu punya banyak kenalan. Semua yang lo butuhin udah disediain step-by-step.",
+  },
+  {
+    title: "Modal Cuma HP & Wifi",
+    description: "Forget semua bisnis yang butuh modal ratusan juta atau sewa tempat mahal-mahal. Lo cuma butuh HP yang udah ada di tangan dan koneksi internet. Bahkan bisa dimulai dari kamar tidur lo sendiri. Gak ada inventory, gak ada barang yang harus dibeli dulu, gak ada resiko rugi besar. Member ada yang mulai cuma modal 50ribu buat paket data, sekarang penghasilannya puluhan juta per bulan. Sesimple itu.",
+  },
+  {
+    title: "Copy-Paste Kesuksesan",
+    description: "Lo gak perlu jadi pioneer atau coba-coba sendiri. Semua template, script, dan strategi yang udah terbukti work udah disiapin tinggal copy-paste. Dari cara ngomong, cara approach, sampe cara handle objection, semua udah ada panduannya yang detailed. Lo tinggal ikutin aja, gak perlu mikir kreatif atau inovatif. Ribuan orang udah sukses pake cara yang persis sama, tinggal lo yang belum nyoba aja.",
   },
 ];
 
@@ -139,24 +155,39 @@ export default function SolutionSection() {
     <div className="relative w-full bg-black">
       <div className="relative z-10 py-20 lg:py-28">
         {/* Section Header */}
-        <div className="text-left mb-12 lg:mb-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-12 lg:mb-16 px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.h2 
-            className="text-2xl lg:text-3xl xl:text-4xl font-extralight leading-tight tracking-tight mb-4 text-white"
+            className="text-xs sm:text-sm font-mono font-light text-white/70 uppercase tracking-[0.2em] opacity-80 mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Ini Dia Rahasianya
+            Kenapa Mereka Sukses?
           </motion.h2>
+          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+          <motion.h1 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Ini Dia
+            <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/70 mt-2 leading-relaxed tracking-wide">
+              Rahasianya
+            </span>
+          </motion.h1>
           <motion.p
-            className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-2xl"
+            className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-3xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Kenapa mereka bisa 10 juta dalam 5 bulan sementara lo masih stuck? Ini sistem tersembunyi yang bikin ribuan Gen-Z Indonesia berhasil financial freedom di usia muda.
+            Kenapa mereka bisa dapet 10 juta dalam 5 bulan sementara lo masih stuck di zona nyaman? Ini sistem tersembunyi yang bikin ribuan Gen-Z Indonesia achieve financial freedom tanpa perlu jago jualan atau punya modal gede.
+            <br /><br />
+            Gak ada yang spesial dari mereka. Yang beda cuma mereka tau rahasia ini duluan, dan sekarang hidup mereka udah berubah total. Dari yang dulu cuma bisa bermimpi, sekarang mereka flexing hasil nyata setiap bulan. Lo mau tetap jadi penonton, atau siap jadi yang berikutnya?
           </motion.p>
         </div>
         
