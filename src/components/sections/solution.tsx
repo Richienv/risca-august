@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import OverlappingImages from "@/components/overlapping-images";
+import { Spotlight } from "@/components/spotlight-new";
 
 const transformations = [
   {
@@ -152,7 +153,20 @@ function FeatureCard({
 
 export default function SolutionSection() {
   return (
-    <div className="relative w-full bg-black">
+    <div className="relative w-full bg-black overflow-hidden">
+      {/* Pink Spotlight Effects */}
+      <Spotlight 
+        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
+        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
+        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+        translateY={-220}
+        width={450}
+        height={900}
+        smallWidth={180}
+        duration={14}
+        xOffset={70}
+      />
+      
       <div className="relative z-10 py-20 lg:py-28">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16 px-6 lg:px-8 max-w-7xl mx-auto">
@@ -167,16 +181,27 @@ export default function SolutionSection() {
           </motion.h2>
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-white mb-6"
+            className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6"
+            style={{
+              background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+              backgroundSize: '200% 100%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+            animate={{
+              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: 'linear'
+            }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Ini Dia
-            <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/70 mt-2 leading-relaxed tracking-wide">
-              Rahasianya
-            </span>
+            INI DIA RAHASIANYA
           </motion.h1>
           <motion.p
             className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-3xl mx-auto text-center"
