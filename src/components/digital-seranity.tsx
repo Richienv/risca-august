@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 interface Ripple {
   id: number;
@@ -247,13 +248,13 @@ const DigitalSerenity = () => {
               <div className="mb-4 md:mb-6">
                 <span className="word-animate" data-delay="700">Masih</span>
                 <span className="word-animate" data-delay="850">ragu</span>
-                <span className="word-animate" data-delay="1000">atau</span>
+                <span className="word-animate" data-delay="1000">buat coba?</span>
               </div>
               {/* Responsive Secondary Heading Sizes & Added tracking-wide for letter spacing */}
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
-                <span className="word-animate" data-delay="1400">mau</span>
-                <span className="word-animate" data-delay="1550">raih</span>
-                <span className="word-animate" data-delay="1700">10 juta</span>
+                <span className="word-animate" data-delay="1400">dan biarin</span>
+                <span className="word-animate" data-delay="1550">orang lain</span>
+                <span className="word-animate" data-delay="1700">sukess</span>
                 <span className="word-animate" data-delay="1850">dalam 5 bulan?</span>
               </div>
             </h1>
@@ -271,6 +272,16 @@ const DigitalSerenity = () => {
               <span className="word-animate" data-delay="3550">tanganmu</span>
               <span className="word-animate" data-delay="3700">sekarang.</span>
             </h2>
+            
+            {/* CTA Button */}
+            <div className="mt-8 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '4.5s' }}>
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-500 hover:to-red-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                  Saya Siap Mulai Sekarang
+                </button>
+              </Link>
+            </div>
+            
             <div className="mt-6 flex justify-center space-x-4 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '4.2s' }}>
               <div className="w-1 h-1 bg-red-500 rounded-full opacity-40"></div>
               <div className="w-1 h-1 bg-red-500 rounded-full opacity-60"></div>

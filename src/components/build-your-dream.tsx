@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 interface Ripple {
   id: number;
@@ -263,6 +264,16 @@ const BuildYourDream = () => {
               <span className="word-animate" data-delay="2200">udah</span>
               <span className="word-animate" data-delay="2400">breakout.</span>
             </h2>
+            
+            {/* CTA Button */}
+            <div className="mt-8 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}>
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-500 hover:to-red-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                  Saya Mau Jadi yang Berikutnya
+                </button>
+              </Link>
+            </div>
+            
             <div className="mt-6 flex justify-center space-x-4 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.8s' }}>
               <div className="w-1 h-1 bg-red-500 rounded-full opacity-40"></div>
               <div className="w-1 h-1 bg-red-500 rounded-full opacity-60"></div>

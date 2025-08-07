@@ -179,9 +179,16 @@ export function ContactForm() {
   };
 
   return (
-    <div className="relative overflow-hidden w-full">
-      <div className="absolute left-0 top-0 bottom-0 w-1/4 bg-gradient-to-r from-blue-500/50 to-transparent [mask-image:radial-gradient(ellipse_at_left,black_10%,transparent_70%)]" />
-      <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-gradient-to-l from-red-500/50 to-transparent [mask-image:radial-gradient(ellipse_at_right,black_10%,transparent_70%)]" />
+    <div className="relative overflow-hidden w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900">
+      {/* Red grid pattern background - matching other sections */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <pattern id="contactGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#contactGridRed)" />
+      </svg>
 
       <div className="relative z-10 w-full">
         <motion.div
@@ -191,13 +198,26 @@ export function ContactForm() {
           className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         >
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-2 text-white">Waktu Singkat, Hasil Hebat: Ubah Hidupmu dalam 5 Menit!
-</h2>
-            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-blue-400 to-red-400 mb-8"></div>
+            {/* Header Section - matching other sections */}
+            <div className="text-center mb-12">
+              <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
+                Siap Mulai Journey?
+              </h2>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
+                Isi Form Ini
+                <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
+                  Dan Mulai Raih 10 Juta
+                </span>
+              </h1>
+              <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+                5 menit isi form, lifetime financial freedom. Ribuan Gen-Z udah duluan, kapan giliran lo?
+              </p>
+            </div>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-black/20 backdrop-blur-md border border-red-500/20 rounded-2xl p-8">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white">1. Nama</label>
+                <label htmlFor="name" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">1. Nama</label>
                 <Input
                   type="text"
                   id="name"
@@ -205,12 +225,13 @@ export function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="Masukkan nama lengkap"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white">2. Email</label>
+                <label htmlFor="email" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">2. Email</label>
                 <Input
                   type="email"
                   id="email"
@@ -218,12 +239,13 @@ export function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="contoh@email.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="whatsapp" className="block text-sm font-medium text-white">3. Nomor WhatsApp</label>
+                <label htmlFor="whatsapp" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">3. Nomor WhatsApp</label>
                 <Input
                   type="tel"
                   id="whatsapp"
@@ -231,12 +253,13 @@ export function ContactForm() {
                   value={formData.whatsapp}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="08123456789"
                 />
               </div>
 
               <div>
-                <label htmlFor="age" className="block text-sm font-medium text-white">4. Umur</label>
+                <label htmlFor="age" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">4. Umur</label>
                 <Input
                   type="number"
                   id="age"
@@ -244,12 +267,13 @@ export function ContactForm() {
                   value={formData.age}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="25"
                 />
               </div>
 
               <div>
-                <label htmlFor="instagramUsername" className="block text-sm font-medium text-white">5. Real Account Instagram</label>
+                <label htmlFor="instagramUsername" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">5. Real Account Instagram</label>
                 <Input
                   type="text"
                   id="instagramUsername"
@@ -257,12 +281,13 @@ export function ContactForm() {
                   value={formData.instagramUsername}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="@username_instagram"
                 />
               </div>
 
               <div>
-                <label htmlFor="currentCity" className="block text-sm font-medium text-white">6. Kota Sekarang</label>
+                <label htmlFor="currentCity" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">6. Kota Sekarang</label>
                 <Input
                   type="text"
                   id="currentCity"
@@ -270,29 +295,30 @@ export function ContactForm() {
                   value={formData.currentCity}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="Jakarta"
                 />
               </div>
 
               <div>
-                <label htmlFor="education" className="block text-sm font-medium text-white">7. Pendidikan Terakhir</label>
+                <label htmlFor="education" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">7. Pendidikan Terakhir</label>
                 <select
                   id="education"
                   name="education"
                   value={formData.education}
                   onChange={handleChange}
                   required
-                  className="mt-1 w-full rounded-md bg-white/10 text-white placeholder-white/50 border-gray-600"
+                  className="w-full rounded-md bg-black/30 border border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light px-3 py-2"
                 >
-                  <option value="">Pilih Pendidikan</option>
+                  <option value="" className="bg-black text-slate-300">Pilih Pendidikan</option>
                   {educationOptions.map((option) => (
-                    <option key={option} value={option}>{option}</option>
+                    <option key={option} value={option} className="bg-black text-slate-300">{option}</option>
                   ))}
                 </select>
               </div>
 
               <div>
-                <label htmlFor="institution" className="block text-sm font-medium text-white">8. Institusi Pendidikan Terakhir</label>
+                <label htmlFor="institution" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">8. Institusi Pendidikan Terakhir</label>
                 <Input
                   type="text"
                   id="institution"
@@ -300,12 +326,13 @@ export function ContactForm() {
                   value={formData.institution}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="Universitas Indonesia"
                 />
               </div>
 
               <div>
-                <label htmlFor="workExperience" className="block text-sm font-medium text-white">9. Pengalaman Kerja dan Jabatan</label>
+                <label htmlFor="workExperience" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">9. Pengalaman Kerja dan Jabatan</label>
                 <Textarea
                   id="workExperience"
                   name="workExperience"
@@ -313,12 +340,13 @@ export function ContactForm() {
                   onChange={handleChange}
                   required
                   rows={3}
-                  className="mt-1 bg-white/10 text-white placeholder-white/50"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
+                  placeholder="Contoh: Staff Marketing di PT ABC (2 tahun), Fresh Graduate, dll."
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-white mb-2">
+                <label className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">
                   10. Apakah kamu/pasangan terdaftar sebagai agen di Allianz/di tempat lain?
                 </label>
                 <div className="space-y-4">
@@ -327,12 +355,12 @@ export function ContactForm() {
                     value={formData.agentStatus}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-md bg-white/10 text-white placeholder-white/50 border-gray-600"
+                    className="w-full rounded-md bg-black/30 border border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light px-3 py-2"
                   >
-                    <option value="">Pilih Status</option>
-                    <option value="Ya">Ya</option>
-                    <option value="Tidak">Tidak</option>
-                    <option value="Perusahaan Lain">Perusahaan Selain Allianz</option>
+                    <option value="" className="bg-black text-slate-300">Pilih Status</option>
+                    <option value="Ya" className="bg-black text-slate-300">Ya</option>
+                    <option value="Tidak" className="bg-black text-slate-300">Tidak</option>
+                    <option value="Perusahaan Lain" className="bg-black text-slate-300">Perusahaan Selain Allianz</option>
                   </select>
 
                   {formData.agentStatus === 'Perusahaan Lain' && (
@@ -342,14 +370,14 @@ export function ContactForm() {
                       placeholder="Sebutkan nama perusahaan"
                       value={formData.otherCompanyName}
                       onChange={handleChange}
-                      className="mt-2 bg-white/10 text-white placeholder-white/50"
+                      className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light"
                     />
                   )}
                 </div>
               </div>
 
               <div className="relative">
-                <label htmlFor="selfiePhoto" className="block text-sm font-medium text-white mb-2">
+                <label htmlFor="selfiePhoto" className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">
                   11. Attach Foto Selfie (Max 2MB)
                 </label>
                 <Input
@@ -361,25 +389,25 @@ export function ContactForm() {
                   required
                   disabled={isSubmitting}
                   placeholder="Upload foto selfie kamu disini (Max 2MB)"
-                  className="mt-1 bg-white/10 text-white placeholder-white/50 h-11 py-2 file:mr-4 file:py-2 file:px-4 
-                    file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-500 
-                    file:text-white hover:file:bg-blue-600 file:h-full file:transition-colors"
+                  className="bg-black/30 border-red-500/20 text-slate-100 placeholder-slate-400 focus:border-red-500/50 focus:ring-red-500/20 font-light h-11 py-2 file:mr-4 file:py-2 file:px-4 
+                    file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-red-500 
+                    file:text-white hover:file:bg-red-600 file:h-full file:transition-colors"
                 />
                 {isSubmitting && (
-                  <p className="text-xs text-yellow-500 mt-1">
+                  <p className="text-xs text-yellow-400 mt-1 font-light">
                     Sedang mengupload foto...
                   </p>
                 )}
                 {formData.selfiePhoto && (
                   <div className="mt-2 space-y-1">
-                    <p className="text-xs text-green-500">
+                    <p className="text-xs text-green-400 font-light">
                       ✓ Foto berhasil diupload
                     </p>
                     <a 
                       href={formData.selfiePhoto} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                      className="text-xs text-red-400 hover:text-red-300 transition-colors font-light"
                     >
                       Lihat foto yang diupload
                     </a>
@@ -389,18 +417,30 @@ export function ContactForm() {
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-blue-500 to-red-500 text-white hover:from-blue-600 hover:to-red-600 transition-all duration-300"
+                className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-500 hover:to-red-400 transition-all duration-300 font-semibold text-base py-3 h-auto hover:scale-105 shadow-lg hover:shadow-xl"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Mengirim...' : 'Kirim Form'}
+                {isSubmitting ? 'Mengirim...' : 'Kirim Form & Mulai Journey'}
               </Button>
             </form>
 
             {submitStatus === 'success' && (
-              <p className="mt-4 text-green-500 text-center">Form berhasil dikirim!</p>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-center"
+              >
+                <p className="text-green-400 font-light">✅ Form berhasil dikirim! Tim kami akan segera menghubungi lo.</p>
+              </motion.div>
             )}
             {submitStatus === 'error' && (
-              <p className="mt-4 text-red-500 text-center">Gagal mengirim form. Silakan coba lagi.</p>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-center"
+              >
+                <p className="text-red-400 font-light">❌ Gagal mengirim form. Silakan coba lagi.</p>
+              </motion.div>
             )}
           </div>
         </motion.div>

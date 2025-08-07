@@ -71,14 +71,7 @@ const data = [
     icon: Gift,
     size: "medium"
   },
-  {
-    id: 9,
-    title: "Jadi VIP Member Eksklusif",
-    content: "Elite status dengan privilege khusus yang cuma dimiliki top performers. Recognition dan akses eksklusif yang bikin lo beda.",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1100&fit=crop&q=80",
-    icon: Crown,
-    size: "small"
-  },
+
 ];
 
 function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
@@ -210,13 +203,13 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
             >
               <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                Ini yang Lo Dapetin
+                Kerja Keras = Reward Besar
               </h2>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
                 Gak Cuma Duit Doang
                 <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                  Tapi Juga Lifestyle
+                  Tapi Rewards Setimpal untuk Semua Pencapaian Kamu
                 </span>
               </h1>
               <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
