@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Star, Trophy, Users, Zap, BookOpen, Target, Handshake, Gift, Crown } from "lucide-react";
+import { Spotlight } from "@/components/spotlight-new";
 
 const data = [
   {
@@ -182,6 +183,19 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
 export default function FeaturesSection() {
   return (
     <div className="relative w-full bg-gradient-to-br from-red-950 via-black to-red-900 overflow-hidden">
+      {/* Pink Spotlight Effects */}
+      <Spotlight 
+        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
+        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
+        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+        translateY={-210}
+        width={430}
+        height={870}
+        smallWidth={190}
+        duration={11}
+        xOffset={55}
+      />
+      
       {/* Red grid pattern background - matching digital-seranity.tsx */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
@@ -206,12 +220,26 @@ export default function FeaturesSection() {
                 Kerja Keras = Reward Besar
               </h2>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-                Gak Cuma Duit Doang
-                <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                  Tapi Rewards Setimpal untuk Semua Pencapaian Kamu
-                </span>
-              </h1>
+              <motion.h1 
+                className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
+                style={{
+                  background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+                  backgroundSize: '200% 100%',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: 'linear'
+                }}
+              >
+                GAK CUMA DUIT DOANG
+              </motion.h1>
               <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
                 Benefit gila yang gak bakal lo dapet di tempat lain. Ini yang bikin member kita beda dari yang lain.
               </p>

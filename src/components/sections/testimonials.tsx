@@ -6,6 +6,8 @@ import { Marquee } from '@/components/3d-testimonial';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
+import { Spotlight } from '@/components/spotlight-new';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -256,7 +258,20 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="py-16 md:py-32 bg-gradient-to-br from-red-950 via-black to-red-900 relative overflow-hidden">
+    <div ref={sectionRef} className="relative py-16 md:py-32 bg-gradient-to-br from-red-950 via-black to-red-900 overflow-hidden">
+      {/* Pink Spotlight Effects */}
+      <Spotlight 
+        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
+        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
+        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+        translateY={-180}
+        width={390}
+        height={780}
+        smallWidth={160}
+        duration={17}
+        xOffset={30}
+      />
+      
       {/* Red grid pattern background - matching digital-seranity.tsx */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
@@ -272,12 +287,26 @@ export default function TestimonialsSection() {
           Mereka Dulu Seperti Lo
         </h2>
         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-4">
-          Sekarang Beda Banget
-          <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-            Banget
-          </span>
-        </h1>
+        <motion.h1 
+          className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
+          style={{
+            background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+            backgroundSize: '200% 100%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+          animate={{
+            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: 'linear'
+          }}
+        >
+          SEKARANG BEDA BANGET
+        </motion.h1>
         <p ref={subtitleRef} className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
           Dari yang skeptis sampe akhirnya ngaku "gue salah banget dulu ragu". Ini cerita real dari member yang dulu mikir persis kayak lo sekarang.
         </p>
