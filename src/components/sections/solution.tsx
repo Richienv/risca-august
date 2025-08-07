@@ -197,9 +197,6 @@ export default function SolutionSection() {
               repeat: Infinity,
               ease: 'linear'
             }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
           >
             INI DIA RAHASIANYA
           </motion.h1>
