@@ -128,7 +128,7 @@ const AboutMeSection = () => {
       position: fixed;
       pointer-events: none;
       border-radius: 9999px; /* rounded-full */
-      background-image: radial-gradient(circle, rgba(239, 68, 68, 0.08), rgba(220, 38, 38, 0.06), transparent 70%); /* red-500/8, red-600/6 */
+      background-image: radial-gradient(circle, rgba(236, 72, 153, 0.08), rgba(219, 39, 119, 0.06), transparent 70%); /* pink-500/8, pink-600/6 */
       transform: translate(-50%, -50%);
       will-change: left, top, opacity;
       transition: left 70ms linear, top 70ms linear, opacity 300ms ease-out;
