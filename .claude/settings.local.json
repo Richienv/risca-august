@@ -22,7 +22,8 @@
       "Bash(git fetch:*)",
       "Bash(git ls-tree:*)",
       "WebFetch(domain:api.github.com)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(true)"
     ],
     "deny": []
   }

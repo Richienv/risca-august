@@ -149,12 +149,12 @@ export default function PerubahanSection() {
       {/* Background effects */}
       <div className="absolute inset-0 gradient-aura-subtle"></div>
       
-      <div className="relative z-10 min-h-screen flex flex-col justify-center py-16 md:py-24">
-        <div className="text-center mb-12">
-          <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-4">
+      <div className="relative z-10 min-h-screen flex flex-col justify-center py-8 md:py-12">
+        <div className="text-center mb-6">
+          <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-2">
             Mereka Dulunya Sama Seperti Kamu
           </h2>
-          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-8"></div>
+          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-4"></div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground">
             Tapi Sekarang Beda Jauh
           </h1>
