@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform } from "framer-motion";
+import { Spotlight } from "@/components/spotlight-new";
 
 // ShuffleGrid Component
 const shuffle = (array: (typeof squareData)[0][]) => {
@@ -149,18 +150,45 @@ export default function PerubahanSection() {
       {/* Background effects */}
       <div className="absolute inset-0 gradient-aura-subtle"></div>
       
+      {/* Pink Spotlight Effects */}
+      <Spotlight 
+        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
+        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
+        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+        translateY={-200}
+        width={400}
+        height={800}
+        smallWidth={150}
+        duration={10}
+        xOffset={60}
+      />
+      
       <div className="relative z-10 flex flex-col justify-center py-16 md:py-20">
         <div className="text-center mb-8">
           <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-4">
             Mereka Dulunya Sama Seperti Kamu
           </h2>
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-6"></div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-foreground mb-6">
-            Tapi Sekarang
-            <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2 leading-relaxed tracking-wide">
-              Beda Jauh
-            </span>
-          </h1>
+          <motion.h1 
+            className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6"
+            style={{
+              background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+              backgroundSize: '200% 100%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+            animate={{
+              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: 'linear'
+            }}
+          >
+            TAPI SEKARANG BEDA JAUH
+          </motion.h1>
         </div>
       
         

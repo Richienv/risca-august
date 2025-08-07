@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Spotlight } from "@/components/spotlight-new";
 
 interface Ripple {
   id: number;
@@ -227,6 +229,19 @@ const AboutMeSection = () => {
       <style>{pageStyles}</style>
       <div className="w-full min-h-screen bg-gradient-to-bl from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
         
+        {/* Pink Spotlight Effects */}
+        <Spotlight 
+          gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
+          gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
+          gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+          translateY={-180}
+          width={420}
+          height={900}
+          smallWidth={160}
+          duration={12}
+          xOffset={40}
+        />
+        
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <pattern id="gridAboutResponsive" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -278,13 +293,26 @@ const AboutMeSection = () => {
                   <span className="word-animate" data-delay="600">Sih?</span>
                 </h2>
                 <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mb-6"></div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-6 text-decoration-animate">
-                  <span className="word-animate" data-delay="700">Berani</span>
-                  <span className="block font-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 mt-2 leading-relaxed tracking-wide">
-                    <span className="word-animate" data-delay="1000">Ngomong</span>
-                    <span className="word-animate" data-delay="1300">Gini?</span>
-                  </span>
-                </h1>
+                <motion.h1 
+                  className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6 text-decoration-animate"
+                  style={{
+                    background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+                    backgroundSize: '200% 100%',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'linear'
+                  }}
+                >
+                  BERANI NGOMONG GINI?
+                </motion.h1>
               </div>
               
               <div className="space-y-6 text-slate-300">
