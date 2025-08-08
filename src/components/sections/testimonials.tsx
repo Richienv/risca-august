@@ -258,7 +258,7 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative py-16 md:py-32 bg-gradient-to-br from-red-950 via-black to-red-900 overflow-hidden">
+    <div ref={sectionRef} className="relative py-16 md:py-32 bg-black overflow-hidden">
       {/* Pink Spotlight Effects */}
       <Spotlight 
         gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
@@ -272,21 +272,11 @@ export default function TestimonialsSection() {
         xOffset={30}
       />
       
-      {/* Red grid pattern background - matching digital-seranity.tsx */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <pattern id="testimonialsGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#testimonialsGridRed)" />
-      </svg>
-      
       <div className="text-center mb-12 relative z-10">
         <h2 ref={titleRef} className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
           Mereka Dulu Seperti Lo
         </h2>
-        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
         <motion.h1 
           className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
           style={{
@@ -307,13 +297,13 @@ export default function TestimonialsSection() {
         >
           SEKARANG BEDA BANGET
         </motion.h1>
-        <p ref={subtitleRef} className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+        <p ref={subtitleRef} className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-[1200px] mx-auto px-4">
           Dari yang skeptis sampe akhirnya ngaku "gue salah banget dulu ragu". Ini cerita real dari member yang dulu mikir persis kayak lo sekarang.
         </p>
       </div>
       
-      <div className="flex items-center justify-center relative z-10">
-        <div ref={containerRef} className="border border-red-500/20 rounded-lg relative flex h-[600px] w-full max-w-[1200px] flex-row items-center justify-center overflow-hidden gap-1.5 [perspective:300px] shadow-2xl bg-black/20 backdrop-blur-sm">
+      <div className="flex items-center justify-center relative z-10 px-4">
+        <div ref={containerRef} className="border border-white/10 rounded-lg relative flex h-[400px] sm:h-[500px] lg:h-[600px] w-full max-w-[calc(100vw-2rem)] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1200px] flex-row items-center justify-center overflow-hidden gap-1.5 [perspective:300px] shadow-2xl bg-black/20 backdrop-blur-sm">
           <div
             className="flex flex-row items-center gap-4"
             style={{
@@ -360,10 +350,10 @@ export default function TestimonialsSection() {
           </div>
           
           {/* Gradient overlays for vertical marquee */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-red-950"></div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-red-950"></div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-red-950"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-red-950"></div>
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-black"></div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black"></div>
         </div>
       </div>
     </div>

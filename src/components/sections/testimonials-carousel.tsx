@@ -7,7 +7,7 @@ import { Spotlight } from '@/components/spotlight-new'
 
 export default function BonusCarousel() {
     return (
-        <section className="relative bg-gradient-to-br from-red-950 via-black to-red-900 py-16 md:py-32 overflow-hidden">
+        <section className="relative bg-black py-16 md:py-32 overflow-hidden">
             {/* Pink Spotlight Effects */}
             <Spotlight 
                 gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
@@ -21,16 +21,6 @@ export default function BonusCarousel() {
                 xOffset={45}
             />
             
-            {/* Red grid pattern background - matching digital-seranity.tsx */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs>
-                    <pattern id="testimonialGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#testimonialGridRed)" />
-            </svg>
-            
             <div className="mx-auto max-w-full px-6 relative z-10">
                 <div className="relative">
                     {/* Heading Section - matching digital-seranity.tsx typography */}
@@ -38,7 +28,7 @@ export default function BonusCarousel() {
                         <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
                             Kenapa Mereka Berhasil?
                         </h2>
-                        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+                        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
                         <motion.h1 
                             className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
                             style={{
@@ -65,20 +55,7 @@ export default function BonusCarousel() {
                     </div>
                     
                     <div className="relative z-10 grid grid-cols-6 gap-3">
-                        <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
-                            {/* Corner accent elements - matching digital-seranity.tsx */}
-                            <div className="absolute top-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <div className="absolute top-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <div className="absolute bottom-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
-                            <div className="absolute bottom-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 opacity-100 transition-all duration-300 group-hover:opacity-75">
-                                <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
-                            </div>
+                        <Card className="relative col-span-full flex overflow-hidden lg:col-span-2 bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="relative m-auto size-fit pt-6 z-10">
                                 <div className="relative flex h-24 w-56 items-center">
                                     <svg className="text-muted absolute inset-0 size-full" viewBox="0 0 254 104" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,50 +64,50 @@ export default function BonusCarousel() {
                                             fill="currentColor"
                                         />
                                     </svg>
-                                    <span className="mx-auto block w-fit text-5xl font-extralight text-red-500">100%</span>
+                                    <span className="mx-auto block w-fit text-5xl font-extralight text-white/90">100%</span>
                                 </div>
                                 <h2 className="mt-6 text-center text-2xl font-extralight leading-tight tracking-tight text-white">Kita Pakai Sistem From 0 to Hero</h2>
                                 <p className="text-center text-sm font-light leading-relaxed text-white/70 mt-2">Sistem proven yang udah dijalani ribuan orang dari berbagai background. Dari mahasiswa yang masih kuliah, fresh graduate yang bingung, sampai yang udah stuck di corporate world bertahun-tahun. Semuanya bisa berhasil karena sistemnya dirancang khusus buat orang awam yang gak punya pengalaman bisnis sebelumnya.</p>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
+                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="pt-6">
                                 <div className="relative mx-auto flex aspect-square size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
                                     <svg className="m-auto h-fit w-24" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         {/* Success testimonials - multiple user icons with checkmarks */}
-                                        <circle cx="30" cy="30" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="30" cy="30" r="12" className="text-white/60" fill="currentColor" opacity="0.8"/>
                                         <circle cx="30" cy="30" r="8" fill="white"/>
                                         <path d="M26 30l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
                                         
-                                        <circle cx="90" cy="30" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="90" cy="30" r="12" className="text-white/60" fill="currentColor" opacity="0.8"/>
                                         <circle cx="90" cy="30" r="8" fill="white"/>
                                         <path d="M86 30l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
                                         
-                                        <circle cx="60" cy="20" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="60" cy="20" r="12" className="text-white/60" fill="currentColor" opacity="0.8"/>
                                         <circle cx="60" cy="20" r="8" fill="white"/>
                                         <path d="M56 20l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
                                         
-                                        <circle cx="30" cy="90" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="30" cy="90" r="12" className="text-white/60" fill="currentColor" opacity="0.8"/>
                                         <circle cx="30" cy="90" r="8" fill="white"/>
                                         <path d="M26 90l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
                                         
-                                        <circle cx="90" cy="90" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="90" cy="90" r="12" className="text-white/60" fill="currentColor" opacity="0.8"/>
                                         <circle cx="90" cy="90" r="8" fill="white"/>
                                         <path d="M86 90l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
                                         
-                                        <circle cx="60" cy="100" r="12" className="text-red-500" fill="currentColor" opacity="0.8"/>
+                                        <circle cx="60" cy="100" r="12" className="text-white/60" fill="currentColor" opacity="0.8"/>
                                         <circle cx="60" cy="100" r="8" fill="white"/>
                                         <path d="M56 100l3 3 6-6" stroke="currentColor" strokeWidth="2" fill="none" className="text-green-500"/>
                                         
                                         {/* Connection lines showing community */}
-                                        <path d="M42 30 L78 30" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
-                                        <path d="M42 90 L78 90" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
-                                        <path d="M30 42 L30 78" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
-                                        <path d="M90 42 L90 78" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
-                                        <path d="M60 32 L60 88" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-red-500"/>
+                                        <path d="M42 30 L78 30" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-white/40"/>
+                                        <path d="M42 90 L78 90" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-white/40"/>
+                                        <path d="M30 42 L30 78" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-white/40"/>
+                                        <path d="M90 42 L90 78" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-white/40"/>
+                                        <path d="M60 32 L60 88" stroke="currentColor" strokeWidth="1.5" opacity="0.3" className="text-white/40"/>
                                         
                                         {/* Central "2000+" text */}
-                                        <text x="60" y="65" textAnchor="middle" className="text-red-500" fill="currentColor" fontSize="14" fontWeight="600">2000+</text>
+                                        <text x="60" y="65" textAnchor="middle" className="text-white/90" fill="currentColor" fontSize="14" fontWeight="600">2000+</text>
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
@@ -139,7 +116,7 @@ export default function BonusCarousel() {
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
+                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2 bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="pt-6">
                                 <div className="pt-6 lg:px-6">
                                     <svg className="dark:text-muted-foreground w-full" viewBox="0 0 386 123" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +163,7 @@ export default function BonusCarousel() {
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden lg:col-span-3 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
+                        <Card className="relative col-span-full overflow-hidden lg:col-span-3 bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="grid pt-6 sm:grid-cols-2">
                                 <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
                                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
@@ -226,7 +203,7 @@ export default function BonusCarousel() {
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="relative col-span-full overflow-hidden lg:col-span-3 bg-black/20 backdrop-blur-md border-red-500/30 hover:border-red-500/50 transition-all duration-300 group hover:bg-black/30">
+                        <Card className="relative col-span-full overflow-hidden lg:col-span-3 bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="grid h-full pt-6 sm:grid-cols-2">
                                 <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
                                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">

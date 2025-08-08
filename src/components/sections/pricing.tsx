@@ -58,42 +58,42 @@ const businessData = [
     title: "Bebas Total",
     description: "Bangun siang, kerja dari mana aja, nobody's boss",
     value: "Kapan aja lo mau",
-    color: "text-red-400"
+    color: "text-white/80"
   },
   {
     icon: TrendingUp,
     title: "10 Juta dalam 5 Bulan",
     description: "Income sustainable yang bisa lo raih dalam waktu singkat",
     value: "10-100 juta+",
-    color: "text-red-500"
+    color: "text-white/90"
   },
   {
     icon: Users,
     title: "Growth Gila-gilaan",
     description: "Penghasilan naik exponential, bukan linear kayak karyawan",
     value: "500%+/tahun",
-    color: "text-red-300"
+    color: "text-white/80"
   },
   {
     icon: Star,
     title: "Work-Life Balance Sempurna",
     description: "Kerja dari Bali, nongkrong sambil duit masuk",
     value: "Freedom 100%",
-    color: "text-red-400"
+    color: "text-white/80"
   },
   {
     icon: Target,
     title: "Multiple Income Streams",
     description: "Passive income dari berbagai channel bisnis",
     value: "5+ revenue",
-    color: "text-red-500"
+    color: "text-white/90"
   },
   {
     icon: Zap,
     title: "Energy Level Max",
     description: "Semangat maksimal karena ngerjain passion lo",
     value: "High energy",
-    color: "text-red-300"
+    color: "text-white/80"
   },
 ];
 
@@ -140,7 +140,7 @@ function ComparisonCard({ data, side, index }: {
         group relative p-8 rounded-3xl backdrop-blur-md border transition-all duration-500
         ${side === 'left' 
           ? 'bg-gray-900/60 border-gray-700/50 hover:bg-gray-800/70' 
-          : 'bg-red-900/40 border-red-500/30 hover:border-red-400/50'
+          : 'bg-white/10 border-white/20 hover:border-white/30'
         }
       `}
       style={{ 
@@ -154,7 +154,7 @@ function ComparisonCard({ data, side, index }: {
         backdrop-blur-md border transition-all duration-300 group-hover:scale-110
         ${side === 'left' 
           ? 'bg-gray-800/80 border-gray-600/50' 
-          : 'bg-red-500/20 border-red-400/30'
+          : 'bg-white/20 border-white/30'
         }
       `}>
         <IconComponent className={`w-6 h-6 ${data.color}`} />
@@ -164,14 +164,14 @@ function ComparisonCard({ data, side, index }: {
       <div className="mt-4 space-y-4">
         <h3 className={`
           text-xl sm:text-2xl font-extralight tracking-tight leading-tight
-          ${side === 'left' ? 'text-slate-300' : 'text-red-300'}
+          ${side === 'left' ? 'text-slate-300' : 'text-white'}
         `}>
           {data.title}
         </h3>
         
         <p className={`
           text-xs sm:text-sm font-light leading-relaxed font-mono tracking-wide
-          ${side === 'left' ? 'text-slate-400' : 'text-red-200'}
+          ${side === 'left' ? 'text-slate-400' : 'text-white/80'}
         `}>
           {data.description}
         </p>
@@ -179,7 +179,7 @@ function ComparisonCard({ data, side, index }: {
         {/* Animated value display */}
         <div className={`
           text-2xl sm:text-3xl font-extralight tracking-wide
-          ${side === 'left' ? 'text-slate-100' : 'text-red-400'}
+          ${side === 'left' ? 'text-slate-100' : 'text-white'}
         `}>
           {data.value}
         </div>
@@ -194,7 +194,7 @@ function ComparisonCard({ data, side, index }: {
               h-full rounded-full
               ${side === 'left' 
                 ? 'bg-gradient-to-r from-gray-500 to-gray-400' 
-                : 'bg-gradient-to-r from-red-500 to-red-400'
+                : 'bg-gradient-to-r from-white/70 to-white/50'
               }
             `}
           />
@@ -206,7 +206,7 @@ function ComparisonCard({ data, side, index }: {
         absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
         ${side === 'left' 
           ? 'bg-gray-700/10' 
-          : 'bg-red-400/10'
+          : 'bg-white/5'
         }
       `} />
     </motion.div>
@@ -240,7 +240,7 @@ export default function ComparisonSection() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   return (
-    <div className="relative w-full bg-gradient-to-br from-red-950 via-black to-red-900 overflow-hidden">
+    <div className="relative w-full bg-black overflow-hidden">
       {/* Pink Spotlight Effects */}
       <Spotlight 
         gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
@@ -253,16 +253,6 @@ export default function ComparisonSection() {
         duration={9}
         xOffset={65}
       />
-      
-      {/* Red grid pattern background - matching digital-seranity.tsx */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <pattern id="pricingGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#pricingGridRed)" />
-      </svg>
       
       <Section className="py-20 md:py-32 relative">
         <motion.div style={{ y }} className="relative z-10">
@@ -278,7 +268,7 @@ export default function ComparisonSection() {
               <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
                 Mau Kayak Gimana?
               </h2>
-              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
               <motion.h1 
                 className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
                 style={{
@@ -302,7 +292,7 @@ export default function ComparisonSection() {
               
               <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
                 Lo mau jadi yang masih <span className="text-gray-400 line-through">ngeluh soal gaji</span> 
-                <br />atau yang udah <span className="text-red-400 font-semibold">flexing 10 juta?</span>
+                <br />atau yang udah <span className="text-white/90 font-semibold">flexing 10 juta?</span>
               </p>
             </motion.div>
           </div>
@@ -338,7 +328,7 @@ export default function ComparisonSection() {
             </div>
 
             {/* Dividing line */}
-            <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-px h-96 bg-gradient-to-b from-transparent via-red-400/50 to-transparent" />
+            <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-px h-96 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
 
             {/* Right side - Business */}
             <div className="space-y-8">
@@ -349,10 +339,10 @@ export default function ComparisonSection() {
                 viewport={{ once: true }}
                 className="text-center lg:text-right"
               >
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-red-400 mb-4 tracking-tight leading-tight">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-white/90 mb-4 tracking-tight leading-tight">
                   FREEDOM ZONE
                 </h3>
-                <p className="text-red-300 text-sm lg:text-base font-light leading-relaxed">Hidup bebas, duit ngalir</p>
+                <p className="text-white/70 text-sm lg:text-base font-light leading-relaxed">Hidup bebas, duit ngalir</p>
               </motion.div>
               
               <div className="space-y-8">
@@ -380,12 +370,9 @@ export default function ComparisonSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative px-12 py-6 text-lg font-light text-white bg-gradient-to-r from-red-600 to-red-500 rounded-full overflow-hidden group"
+                className="relative px-12 py-6 text-lg font-light text-black bg-white rounded-full overflow-hidden group hover:bg-gray-100 transition-colors duration-300"
               >
                 <span className="relative z-10 font-mono tracking-wide uppercase">GUE MAU KELUAR DARI STUCK ZONE</span>
-                
-                {/* Button glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.button>
             </Link>
             

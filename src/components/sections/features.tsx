@@ -133,12 +133,12 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
           <div className="flex justify-between items-start mb-6">
             {/* Number indicator */}
             <motion.div 
-              className="w-12 h-12 rounded-2xl bg-red-500/20 backdrop-blur-md border border-red-400/30 flex items-center justify-center"
+              className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: index * 0.1 + 0.2, type: "spring" }}
             >
-              <span className="text-red-300 text-lg font-mono font-bold">
+              <span className="text-white/80 text-lg font-mono font-bold">
                 {String(item.id).padStart(2, '0')}
               </span>
             </motion.div>
@@ -173,8 +173,8 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
           </div>
         </div>
 
-        {/* Hover glow effect */}
-        <div className="absolute inset-0 rounded-3xl bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Subtle hover glow effect */}
+        <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
     </motion.div>
   );
@@ -182,7 +182,7 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
 
 export default function FeaturesSection() {
   return (
-    <div className="relative w-full bg-gradient-to-br from-red-950 via-black to-red-900 overflow-hidden">
+    <div className="relative w-full bg-black overflow-hidden">
       {/* Pink Spotlight Effects */}
       <Spotlight 
         gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
@@ -195,16 +195,6 @@ export default function FeaturesSection() {
         duration={11}
         xOffset={55}
       />
-      
-      {/* Red grid pattern background - matching digital-seranity.tsx */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <pattern id="featuresGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#featuresGridRed)" />
-      </svg>
       
       <Section className="py-20 md:py-32 relative">
         <div className="relative z-10">
@@ -219,7 +209,7 @@ export default function FeaturesSection() {
               <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
                 Kerja Keras = Reward Besar
               </h2>
-              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
               <motion.h1 
                 className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
                 style={{

@@ -76,7 +76,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps Grid */}
-        <div className="space-y-12 lg:space-y-16">
+        <div className="space-y-6 sm:space-y-8 lg:space-y-16">
           {stepsData.map((step, index) => (
             <StepCard
               key={index}
@@ -104,49 +104,49 @@ interface StepCardProps {
 const StepCard = ({ icon: Icon, title, description, imageSrc, isEven }: StepCardProps) => (
   <div className="relative max-w-7xl mx-auto">
     <div className={cn(
-      "grid lg:grid-cols-2 gap-8 lg:gap-12 items-center",
+      "grid grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-6 lg:gap-12 items-center",
       !isEven && "lg:grid-flow-col-dense"
     )}>
       {/* Content Side */}
-      <div className={cn("space-y-6", !isEven && "lg:col-start-2")}>
+      <div className={cn("space-y-3 sm:space-y-4 lg:space-y-6", !isEven && "lg:col-start-2")}>
         {/* Small subtitle with icon */}
-        <div className="flex items-center gap-3 text-white/60 font-mono font-light uppercase tracking-[0.2em] opacity-80">
-          <Icon className="size-5" />
-          <span className="text-xs sm:text-sm">Langkah {title.charAt(0)}</span>
+        <div className="flex items-center gap-2 sm:gap-3 text-white/60 font-mono font-light uppercase tracking-[0.2em] opacity-80">
+          <Icon className="size-4 sm:size-5" />
+          <span className="text-xs">Langkah {title.charAt(0)}</span>
         </div>
         
-        {/* Large title */}
-        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight tracking-tight text-white">
+        {/* Large title - more compact on mobile */}
+        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extralight leading-tight tracking-tight text-white">
           {title.replace(/^\d+\.\s*/, '')}
         </h3>
         
-        {/* Description */}
-        <p className="text-base lg:text-lg font-light leading-relaxed text-white/70 max-w-xl">
+        {/* Description - more compact on mobile */}
+        <p className="text-xs sm:text-sm lg:text-base font-light leading-snug sm:leading-relaxed text-white/70">
           {description}
         </p>
       </div>
 
       {/* Image Side */}
       <div className={cn("relative", !isEven && "lg:col-start-1")}>
-        {/* Corner accent elements */}
-        <div className="absolute top-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 z-10">
-          <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        {/* Corner accent elements - smaller on mobile */}
+        <div className="absolute top-1 left-1 sm:top-2 sm:left-2 w-6 h-6 sm:w-10 sm:h-10 border border-red-500/20 bg-red-500/5 z-10">
+          <div className="absolute top-0 left-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 opacity-30 rounded-full"></div>
         </div>
         
-        <div className="absolute top-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 z-10">
-          <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute top-1 right-1 sm:top-2 sm:right-2 w-6 h-6 sm:w-10 sm:h-10 border border-red-500/20 bg-red-500/5 z-10">
+          <div className="absolute top-0 right-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 opacity-30 rounded-full"></div>
         </div>
         
-        <div className="absolute bottom-2 left-2 w-10 h-10 border border-red-500/20 bg-red-500/5 z-10">
-          <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 w-6 h-6 sm:w-10 sm:h-10 border border-red-500/20 bg-red-500/5 z-10">
+          <div className="absolute bottom-0 left-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 opacity-30 rounded-full"></div>
         </div>
         
-        <div className="absolute bottom-2 right-2 w-10 h-10 border border-red-500/20 bg-red-500/5 z-10">
-          <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+        <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-6 h-6 sm:w-10 sm:h-10 border border-red-500/20 bg-red-500/5 z-10">
+          <div className="absolute bottom-0 right-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 opacity-30 rounded-full"></div>
         </div>
 
-        {/* Image container */}
-        <div className="aspect-[4/3] rounded-lg overflow-hidden bg-white/5 border border-red-500/20">
+        {/* Image container - more compact aspect ratio on mobile */}
+        <div className="aspect-[3/2] sm:aspect-[4/3] rounded-lg overflow-hidden bg-white/5 border border-red-500/20">
           <img
             src={imageSrc}
             alt={title}
