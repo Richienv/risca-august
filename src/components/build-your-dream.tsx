@@ -289,19 +289,20 @@ const BuildYourDream = () => {
               <span className="word-animate" data-delay="2400">breakout.</span>
             </h2>
             
-            {/* CTA Button */}
-            <div className="mt-8 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}>
+            {/* CTA Button - improved styling and placement */}
+            <div className="mt-12 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}>
               <Link href="/contact">
-                <button className="bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-500 hover:to-red-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
-                  Saya Mau Jadi yang Berikutnya
+                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-4 sm:px-12 sm:py-6 rounded-full font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 text-sm sm:text-lg tracking-wide uppercase">
+                  SAYA MAU JADI YANG BERIKUTNYA
                 </button>
               </Link>
             </div>
             
-            <div className="mt-6 flex justify-center space-x-4 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.8s' }}>
-              <div className="w-1 h-1 bg-red-500 rounded-full opacity-40"></div>
-              <div className="w-1 h-1 bg-red-500 rounded-full opacity-60"></div>
-              <div className="w-1 h-1 bg-red-500 rounded-full opacity-40"></div>
+            {/* Decorative dots - repositioned */}
+            <div className="mt-8 flex justify-center space-x-3 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.6s' }}>
+              <div className="w-2 h-2 bg-pink-500 rounded-full opacity-60"></div>
+              <div className="w-2 h-2 bg-pink-500 rounded-full opacity-80"></div>
+              <div className="w-2 h-2 bg-pink-500 rounded-full opacity-60"></div>
             </div>
           </div>
         </div>

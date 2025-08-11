@@ -6,40 +6,36 @@ import { Spotlight } from "@/components/spotlight-new";
 
 const transformations = [
   {
-    title: "Uang Datang Sendiri",
-    description: "Sistem autopilot yang bikin duit ngalir terus tanpa lo harus kerja 24/7. Cukup setup sekali, terus tinggal pantau income bertambah setiap hari. Gak perlu lagi mikirin gimana caranya dapet duit besok, karena sistemnya udah jalan sendiri bahkan waktu lo tidur. Ribuan member udah buktiin sendiri, dari yang dulu stress mikirin tagihan, sekarang santai ngeliat notifikasi transfer masuk terus.",
+    title: "7 Tahun Komitmen = Income 15 Milyar/bulan.",
+    description: "You heard me right. Tangga kesuksesan yang pasti, bukan 7 tahun buat janji promosi tapi hasil yang pasti. Kerjaannya susah banget? Kamu bakal terkejut 'hah gamunkin cuman itu doang!' Sampai kamu lihat sendiri mereka yang berhasil baru bisa percaya. ",
   },
   {
-    title: "Ngomong Dikit, Dapet Banyak",
-    description: "Rahasia komunikasi yang bikin orang langsung tertarik tanpa lo harus jadi penjual. Natural, santai, tapi hasilnya gila-gilaan. Lupain teknik ngomong yang ribet dan cringe, ini tentang gimana lo bisa bikin orang penasaran dan mau denger lo lebih lama. Mereka yang dulu skeptis dan cuek, tiba-tiba jadi antusias dan bertanya-tanya. Lo gak perlu jadi orang yang paling pinter ngomong, cukup tau timing dan kata-kata yang tepat.",
+    title: "Script Selling designed by Experts.",
+    description: "Kamu bakal di ajarkan how to handle objection, the art to persuade, speak like a leader, how to build your charisma, dan masih banyak lagi. Kenapa? Kita mau sukses bareng gakaya 9-5 yang cuman mau sukses sendiri. Jadi tricks/resource akan kita share buat yang mau to improve.",
   },
   {
-    title: "Orang Ketagihan Sama Lo",
-    description: "Framework khusus bikin circle lo jadi magnet. Mereka bakal loyal, selalu balik lagi, dan dengan senang hati ngasih lo duit. Ini bukan tentang manipulasi, tapi tentang gimana lo bisa jadi seseorang yang bener-bener valuable dalam hidup mereka. Sampe mereka ngerasa rugi kalo gak ada lo di lingkaran mereka. Yang tadinya cuma kenal biasa, sekarang jadi yang paling dipercaya dan diandalin.",
+    title: "Trained With Mentors 2x Seminggu",
+    description: "Aku ngerti pasti di awal kamu takut, tapi aku janji bakal hold your hands tights buat kamu bisa adapt & improve fast. Kamu bakal jadi priority aku dan aku bakal do my best buat kamu bisa ngerasain yang aku rasain sekarang.",
   },
   {
-    title: "Tolakan Jadi Kesempatan",
-    description: "Mindset dan teknik rahasia ngubah penolakan jadi peluang emas. Yang tadinya bilang 'nggak' bakal berubah pikiran dan minta dibantu. Setiap 'tidak' yang lo denger itu sebenarnya informasi berharga tentang apa yang mereka butuhkan. Dengan mindset yang tepat, lo bisa ngubah setiap penolakan jadi stepping stone menuju kesuksesan yang lebih besar. Member komunitas sering cerita gimana mereka akhirnya berterima kasih sama orang yang pernah nolak mereka.",
+    title: "High-Value Member to Boost Networth Kamu.",
+    description: "Aku paham kamu pengen temen/partner baru yang lebih berkualitas. That's why ngga sembarang orang bisa masuk ke bisnis ini. Aku sendiri yang bakal seleksi to make sure our circle have standard of quality. With this semua member di dalam bisa kerja-sama dan create something big together.",
   },
   {
-    title: "10 Juta dalam 5 Bulan",
-    description: "Blueprint finansial yang udah terbukti work untuk 2000+ member komunitas. Dari nol sampai puluhan juta, tanpa modal gede atau skill khusus. Ini bukan mimpi atau motivasi kosong, ini roadmap konkret dengan step-by-step yang jelas. Lo bakal tau persis apa yang harus dilakuin di bulan pertama, kedua, sampai kelima. Bahkan ada yang lebih cepet dari 5 bulan, tapi kita kasih buffer waktu yang realistis buat lo yang mungkin masih ragu atau takut.",
+    title: "Freedom to Work Anywhere, Whenever.",
+    description: "Dengan training, sistem dan mentor pribadi. Kamu di beri kepercayaan untuk do your work dengan cara kamu dimana aja dan kapan aja. Kenapa? Karena bisnis ini driven by result bukan berapa jam kamu kerja seperti 9-5. ",
   },
   {
     title: "Mulai Hari Ini, Hasil Besok",
     description: "Gak perlu nunggu berbulan-bulan buat liat hasil pertama. Member rata-rata udah ngerasain perubahan income dalam 2-3 minggu pertama. Lo cuma perlu ikutin step-by-step yang udah dikasih, tanpa perlu mikir ribet atau analisis berlebihan. Sistemnya udah disederhanakan banget, bahkan anak SMA pun bisa langsung paham dan action. Yang penting lo mau mulai hari ini, sisanya sistem yang akan guide lo sampai berhasil.",
   },
   {
-    title: "Gak Perlu Jago Apa-Apa",
-    description: "Lupain semua kekhawatiran tentang 'gue gak bisa ini', 'gue gak punya skill itu'. Member paling sukses malah yang dateng tanpa background apapun. Mereka cuma modal nekat dan mau dengerin instruksi. Sistemnya udah dirancang khusus buat orang awam yang gak ngerti bisnis sama sekali. Lo gak perlu jago teknologi, gak perlu pinter ngomong, bahkan gak perlu punya banyak kenalan. Semua yang lo butuhin udah disediain step-by-step.",
-  },
-  {
-    title: "Modal Cuma HP & Wifi",
-    description: "Forget semua bisnis yang butuh modal ratusan juta atau sewa tempat mahal-mahal. Lo cuma butuh HP yang udah ada di tangan dan koneksi internet. Bahkan bisa dimulai dari kamar tidur lo sendiri. Gak ada inventory, gak ada barang yang harus dibeli dulu, gak ada resiko rugi besar. Member ada yang mulai cuma modal 50ribu buat paket data, sekarang penghasilannya puluhan juta per bulan. Sesimple itu.",
+    title: "Private  Mentorship",
+    description: "Belajar dari mereka yang udah punya hidup yang kamu mau, income milyaran mobil sport, property owner yang kerja nya cuman 2-4 jam sehari. Tanyain semua yang kamu mau dan belajar dari mereka langsung tanpa harus keluar ratusan juta atau cuman nonton dari youtube.",
   },
   {
     title: "Copy-Paste Kesuksesan",
-    description: "Lo gak perlu jadi pioneer atau coba-coba sendiri. Semua template, script, dan strategi yang udah terbukti work udah disiapin tinggal copy-paste. Dari cara ngomong, cara approach, sampe cara handle objection, semua udah ada panduannya yang detailed. Lo tinggal ikutin aja, gak perlu mikir kreatif atau inovatif. Ribuan orang udah sukses pake cara yang persis sama, tinggal lo yang belum nyoba aja.",
+    description: "Lo gak perlu jadi pioneer atau coba-coba sendiri. Dari cara ngomong, cara approach, sampe cara handle objection, semua udah ada panduannya yang detailed. Lo tinggal ikutin aja, gak perlu mikir kreatif atau inovatif.",
   },
 ];
 
@@ -177,7 +173,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Kenapa Mereka Sukses?
+            Apa Jaminan Untuk Bisa Sukses?
           </motion.h2>
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
           <motion.h1 
@@ -198,7 +194,7 @@ export default function SolutionSection() {
               ease: 'linear'
             }}
           >
-            INI DIA RAHASIANYA
+           SISTEM YANG UDAH DI-RANCANG PULUHAN TAHUN
           </motion.h1>
           <motion.p
             className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-3xl mx-auto text-center"
@@ -207,9 +203,9 @@ export default function SolutionSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Kenapa mereka bisa dapet 10 juta dalam 5 bulan sementara lo masih stuck di zona nyaman? Ini sistem tersembunyi yang bikin ribuan Gen-Z Indonesia achieve financial freedom tanpa perlu jago jualan atau punya modal gede.
+            Yes, bukan aku yang buat sistem ini. Tapi Group of Professional Business Consultant dari Salah Satu Perusahaan Terbesar di Indonesia. Perusahaan dengan omzet puluhan sampai ratusan triliun per tahun buat sistem cuman untuk kamu copy dan implementasi, masih ngga mau?
             <br /><br />
-            Gak ada yang spesial dari mereka. Yang beda cuma mereka tau rahasia ini duluan, dan sekarang hidup mereka udah berubah total. Dari yang dulu cuma bisa bermimpi, sekarang mereka flexing hasil nyata setiap bulan. Lo mau tetap jadi penonton, atau siap jadi yang berikutnya?
+            Gak ada yang spesial. Semua bisa suskses asalkan mau berusaha, sistem di bawah ini aku share dan aku harap kamu pay attention closely.
           </motion.p>
         </div>
         

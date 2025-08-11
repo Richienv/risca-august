@@ -125,85 +125,93 @@ function ComparisonCard({ data, side, index }: {
       whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
       transition={{ 
         duration: 0.8, 
-        delay: index * 0.2,
+        delay: index * 0.15,
         type: "spring",
         stiffness: 100 
       }}
       whileHover={{ 
-        scale: 1.05, 
-        rotateX: side === 'left' ? -5 : 5,
-        rotateY: side === 'left' ? 5 : -5,
+        scale: 1.02, 
+        y: -5,
         transition: { duration: 0.3 }
       }}
       viewport={{ once: true }}
       className={`
-        group relative p-8 rounded-3xl backdrop-blur-md border transition-all duration-500
+        group relative p-2 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-md border transition-all duration-500 aspect-square flex flex-col justify-between
         ${side === 'left' 
-          ? 'bg-gray-900/60 border-gray-700/50 hover:bg-gray-800/70' 
-          : 'bg-white/10 border-white/20 hover:border-white/30'
+          ? 'bg-black/60 sm:bg-gray-900/60 border-gray-800/50 sm:border-gray-700/50 hover:bg-black/70 sm:hover:bg-gray-800/70' 
+          : 'bg-black/20 sm:bg-white/10 border-gray-600/30 sm:border-white/20 hover:border-gray-400/40 sm:hover:border-white/30'
         }
       `}
-      style={{ 
-        transformStyle: "preserve-3d",
-        perspective: "1000px"
-      }}
     >
-      {/* Floating icon */}
-      <div className={`
-        absolute -top-6 left-8 w-12 h-12 rounded-2xl flex items-center justify-center
-        backdrop-blur-md border transition-all duration-300 group-hover:scale-110
-        ${side === 'left' 
-          ? 'bg-gray-800/80 border-gray-600/50' 
-          : 'bg-white/20 border-white/30'
-        }
-      `}>
-        <IconComponent className={`w-6 h-6 ${data.color}`} />
+      {/* Icon and title section */}
+      <div className="flex items-start justify-between">
+        <div className={`
+          w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center
+          backdrop-blur-md border transition-all duration-300 group-hover:scale-110
+          ${side === 'left' 
+            ? 'bg-gray-800/80 border-gray-600/50' 
+            : 'bg-white/20 border-white/30'
+          }
+        `}>
+          <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 ${data.color}`} />
+        </div>
+        
+        {/* Number badge - hidden on mobile */}
+        <div className={`
+          hidden sm:block text-xs px-2 py-1 rounded-full font-mono
+          ${side === 'left' ? 'bg-gray-700/50 text-gray-300' : 'bg-white/10 text-white/70'}
+        `}>
+          #{String(index + 1).padStart(2, '0')}
+        </div>
       </div>
 
-      {/* Card content */}
-      <div className="mt-4 space-y-4">
+      {/* Content section - minimalist on mobile */}
+      <div className="flex-1 flex flex-col justify-center space-y-1 sm:space-y-3">
         <h3 className={`
-          text-xl sm:text-2xl font-extralight tracking-tight leading-tight
+          text-xs sm:text-lg font-medium sm:font-semibold leading-tight
           ${side === 'left' ? 'text-slate-300' : 'text-white'}
         `}>
           {data.title}
         </h3>
         
+        {/* Hide description on mobile for minimalism */}
         <p className={`
-          text-xs sm:text-sm font-light leading-relaxed font-mono tracking-wide
-          ${side === 'left' ? 'text-slate-400' : 'text-white/80'}
+          hidden sm:block text-xs leading-relaxed line-clamp-3
+          ${side === 'left' ? 'text-slate-400' : 'text-white/70'}
         `}>
           {data.description}
         </p>
+      </div>
 
-        {/* Animated value display */}
+      {/* Value section - simplified on mobile */}
+      <div className="space-y-1">
         <div className={`
-          text-2xl sm:text-3xl font-extralight tracking-wide
-          ${side === 'left' ? 'text-slate-100' : 'text-white'}
+          text-xs font-mono font-bold
+          ${side === 'left' ? 'text-slate-200' : 'text-white'}
         `}>
           {data.value}
         </div>
 
-        {/* Progress bar */}
-        <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden">
+        {/* Progress bar - hidden on mobile for cleaner look */}
+        <div className="hidden sm:block w-full bg-gray-700/50 rounded-full h-1 overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: side === 'left' ? '30%' : '90%' }}
-            transition={{ duration: 1.5, delay: index * 0.3 }}
+            whileInView={{ width: side === 'left' ? '25%' : '85%' }}
+            transition={{ duration: 1, delay: index * 0.2 }}
             className={`
               h-full rounded-full
               ${side === 'left' 
                 ? 'bg-gradient-to-r from-gray-500 to-gray-400' 
-                : 'bg-gradient-to-r from-white/70 to-white/50'
+                : 'bg-gradient-to-r from-white/80 to-white/60'
               }
             `}
           />
         </div>
       </div>
 
-      {/* Glow effect */}
+      {/* Hover glow effect */}
       <div className={`
-        absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
+        absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
         ${side === 'left' 
           ? 'bg-gray-700/10' 
           : 'bg-white/5'
@@ -297,25 +305,25 @@ export default function ComparisonSection() {
             </motion.div>
           </div>
 
-          {/* Split screen comparison */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl mx-auto px-4">
+          {/* Compact grid comparison */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto px-4">
             
             {/* Left side - Job */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-center lg:text-left"
+                className="text-center lg:text-left mb-8"
               >
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-slate-300 mb-4 tracking-tight leading-tight">
+                <h3 className="text-2xl sm:text-3xl font-extralight text-slate-300 mb-2 tracking-tight leading-tight">
                   STUCK ZONE
                 </h3>
-                <p className="text-slate-400 text-sm lg:text-base font-light leading-relaxed">Hidup gitu-gitu aja terus</p>
+                <p className="text-slate-400 text-sm font-light">Hidup gitu-gitu aja terus</p>
               </motion.div>
               
-              <div className="space-y-8">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 {jobData.map((item, index) => (
                   <ComparisonCard 
                     key={index} 
@@ -327,25 +335,22 @@ export default function ComparisonSection() {
               </div>
             </div>
 
-            {/* Dividing line */}
-            <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-px h-96 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
-
             {/* Right side - Business */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-center lg:text-right"
+                className="text-center lg:text-right mb-8"
               >
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-white/90 mb-4 tracking-tight leading-tight">
+                <h3 className="text-2xl sm:text-3xl font-extralight text-white/90 mb-2 tracking-tight leading-tight">
                   FREEDOM ZONE
                 </h3>
-                <p className="text-white/70 text-sm lg:text-base font-light leading-relaxed">Hidup bebas, duit ngalir</p>
+                <p className="text-white/70 text-sm font-light">Hidup bebas, duit ngalir</p>
               </motion.div>
               
-              <div className="space-y-8">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 {businessData.map((item, index) => (
                   <ComparisonCard 
                     key={index} 
@@ -367,13 +372,9 @@ export default function ComparisonSection() {
             className="mt-20 text-center"
           >
             <Link href="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative px-12 py-6 text-lg font-light text-black bg-white rounded-full overflow-hidden group hover:bg-gray-100 transition-colors duration-300"
-              >
-                <span className="relative z-10 font-mono tracking-wide uppercase">GUE MAU KELUAR DARI STUCK ZONE</span>
-              </motion.button>
+              <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-4 sm:px-12 sm:py-6 rounded-full font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 text-sm sm:text-lg tracking-wide uppercase">
+                GUE MAU KELUAR DARI STUCK ZONE
+              </button>
             </Link>
             
             <p className="mt-6 text-slate-400 text-xs font-mono tracking-wide">

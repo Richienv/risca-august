@@ -165,12 +165,9 @@ export default function PerubahanSection() {
       
       <div className="relative z-10 flex flex-col justify-center py-16 md:py-20">
         <div className="text-center mb-8">
-          <h2 className="text-xs sm:text-sm font-mono font-light text-primary uppercase tracking-[0.2em] opacity-80 mb-4">
-            Mereka Dulunya Sama Seperti Kamu
-          </h2>
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30 mx-auto mb-6"></div>
           <motion.h1 
-            className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6"
+            className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-2"
             style={{
               background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
               backgroundSize: '200% 100%',
@@ -187,8 +184,11 @@ export default function PerubahanSection() {
               ease: 'linear'
             }}
           >
-            TAPI SEKARANG BEDA JAUH
+            WAKTU TERBAIK UNTUK MULAI
           </motion.h1>
+          <h2 className="text-xs sm:text-sm font-mono font-medium text-primary uppercase tracking-[0.2em] opacity-80 mb-4 px-4 sm:px-6 md:px-8 lg:px-10">
+           ITU SEKARANG.
+          </h2>
         </div>
       
         
@@ -208,10 +208,10 @@ export default function PerubahanSection() {
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
             <p className="text-base md:text-lg font-light text-muted-foreground leading-relaxed my-4 md:my-2">
-              Foto-foto di samping? Mereka semua Gen-Z seperti kamu yang dulu skeptis, ragu, dan mikir "ah pasti scam lagi". Tapi mereka nekat coba dan sekarang dalam 5 bulan udah bisa flexing 10 juta dari sistem bisnis yang gak pernah lo bayangin sebelumnya.
+              Foto-foto di samping? Mereka semua Gen-Z seperti kamu yang dulu skeptis, ragu, dan mikir NEGATIVE TERUS.  Kalau aku kasih kesempatan untuk mulai dari 0 dan aku kasih jaminan aku bakal full support kamu sampai sukses, kamu mau coba atau mau skeptis lagi?
             </p>
             <p className="text-sm md:text-base font-light text-foreground/80 leading-relaxed mb-8">
-              Yang bikin beda, ini bukan jualan produk atau MLM. Ini sistem tersembunyi di industri asuransi yang udah terbukti bikin ribuan anak muda Indonesia mandiri finansial. Kamu mau jadi yang selanjutnya atau tetap nonton dari pinggir?
+              Aku mau share sistem bisnis yang bisa kamu mulai dari 0. Tapi aku bisa jamin ini bukan untuk semua orang. Banyak yang ngeremehin dan banyak yang takut. Tapi, aku jamin mereka yang coba saat orang lain takut adalah orang yang pasti rasain sukses di usia muda.
             </p>
           </motion.div>
           <motion.div

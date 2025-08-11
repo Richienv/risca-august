@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { MousePointer, Phone, Users, LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Spotlight } from '@/components/spotlight-new';
+import Link from 'next/link';
 
 const stepsData = [
   {
@@ -47,9 +48,9 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-xs sm:text-sm font-mono font-light text-white/70 uppercase tracking-[0.2em] opacity-80 mb-4">
-            Gimana Caranya?
+            Waktunya Kamu Buat Coba Yang Baru.
           </h2>
-          <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
+          <div   className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
           <motion.h1 
             className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6"
             style={{
@@ -68,7 +69,7 @@ export default function HowItWorks() {
               ease: 'linear'
             }}
           >
-            CARANYA GAMPANG BANGET
+            GIMANA CARA JOIN BISNISNYA?
           </motion.h1>
           <p className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-2xl mx-auto">
             3 langkah doang, lo udah bisa mulai dapetin 10 juta. Gak ribet, gak lama, langsung action.
@@ -87,6 +88,15 @@ export default function HowItWorks() {
               isEven={index % 2 === 0}
             />
           ))}
+        </div>
+
+        {/* Single CTA Button at the end */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <Link href="/contact">
+            <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-4 sm:px-12 sm:py-6 rounded-full font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 text-sm sm:text-lg tracking-wide uppercase">
+              MULAI SEKARANG
+            </button>
+          </Link>
         </div>
       </div>
     </section>

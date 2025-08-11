@@ -13,15 +13,12 @@ const ease = [0.16, 1, 0.3, 1];
 function HeroPill() {
   return (
     <motion.div
-      className="inline-flex h-7 items-center justify-between rounded-full border border-primary/20 bg-gradient-aura-subtle backdrop-blur-sm transition-all ease-in hover:cursor-pointer hover:bg-primary/10 group gap-1 aura-border hover:aura-glow"
+      className="inline-flex h-6 items-center justify-between rounded-full border border-primary/20 bg-gradient-aura-subtle backdrop-blur-sm transition-all ease-in hover:cursor-pointer hover:bg-primary/10 group gap-1 aura-border hover:aura-glow"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease }}
       whileHover={{ scale: 1.05 }}
     >
-      <p className="mx-auto max-w-md text-foreground/90 shimmer px-3">
-        <span>Rahasia Gen-Z Capai 10 Juta dalam 5 Bulan</span>
-      </p>
     </motion.div>
   );
 }
@@ -69,7 +66,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        <span className="text-foreground/80">Udah capek liat temen-temen kamu pada sukses sementara kamu masih di tempat yang sama? Ini bukan asuransi biasa - ini sistem bisnis tersembunyi yang udah bikin ribuan Gen-Z Indonesia raih 10 juta dalam 5 bulan.</span>
+        <span className="text-foreground/80">Udah capek liat temen-temen kamu pada sukses sementara kamu masih di tempat yang sama? Sekarang udah sadar skeptis gabawa kamu kemana mana?</span>
       </motion.p>
     </div>
   );
@@ -90,7 +87,7 @@ function HeroCTA() {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            Saya Mau Coba Sekarang
+            Saya Mau Perubahan
           </motion.button>
         </Link>
       </motion.div>
@@ -155,18 +152,20 @@ function HeroVideo() {
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden w-full min-h-screen flex items-center justify-center bg-background">
-      {/* Spotlight Effects */}
-      <Spotlight 
-        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsl(var(--gradient-start) / 0.12) 0%, hsl(var(--gradient-mid) / 0.06) 50%, hsl(var(--gradient-end) / 0) 80%)`}
-        gradientSecond={`radial-gradient(50% 50% at 50% 50%, hsl(var(--gradient-start) / 0.08) 0%, hsl(var(--gradient-mid) / 0.04) 80%, transparent 100%)`}
-        gradientThird={`radial-gradient(50% 50% at 50% 50%, hsl(var(--gradient-end) / 0.06) 0%, hsl(var(--gradient-start) / 0.03) 80%, transparent 100%)`}
-        translateY={-250}
-        width={480}
-        height={1200}
-        smallWidth={200}
-        duration={8}
-        xOffset={80}
-      />
+      {/* Spotlight Effects - More subtle on mobile, positioned behind */}
+      <div className="absolute inset-0 z-0">
+        <Spotlight 
+          gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.05) 30%, rgba(236, 72, 153, 0.02) 60%, transparent 90%)`}
+          gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.06) 0%, rgba(219, 39, 119, 0.03) 50%, rgba(236, 72, 153, 0.01) 80%, transparent 100%)`}
+          gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.05) 0%, rgba(236, 72, 153, 0.02) 60%, transparent 90%)`}
+          translateY={-300}
+          width={600}
+          height={1200}
+          smallWidth={250}
+          duration={8}
+          xOffset={50}
+        />
+      </div>
       
       {/* Main Content - Centered */}
       <div className="relative z-10 w-full">

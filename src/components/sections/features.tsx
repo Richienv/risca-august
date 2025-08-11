@@ -110,10 +110,10 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
         transition: { duration: 0.3 }
       }}
     >
-      {/* Clean card without background image */}
-      <div className="relative w-full h-full rounded-3xl overflow-hidden">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent border border-white/20 rounded-3xl backdrop-blur-md">
+      {/* Card with split layout - content on left, image on right */}
+      <div className="relative w-full h-full rounded-3xl overflow-hidden bg-gradient-to-br from-white/10 via-white/5 to-transparent border border-white/20 backdrop-blur-md flex">
+        {/* Content container - left side */}
+        <div className="relative flex-1 p-8 flex flex-col justify-between bg-gradient-to-r from-black/40 via-black/20 to-transparent">
           {/* Subtle pattern overlay */}
           <div className="absolute inset-0 opacity-[0.02]">
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -125,10 +125,6 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
               <rect width="100%" height="100%" fill={`url(#cardPattern${item.id})`} />
             </svg>
           </div>
-        </div>
-
-        {/* Content container */}
-        <div className="relative h-full p-8 flex flex-col justify-between">
           {/* Header with icon and number */}
           <div className="flex justify-between items-start mb-6">
             {/* Number indicator */}
@@ -162,7 +158,7 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
             </motion.h3>
             
             <motion.p 
-              className="text-sm md:text-base text-white/80 leading-relaxed font-light"
+              className="text-sm md:text-base text-white/90 leading-relaxed font-light"
               style={{ fontFamily: 'system-ui, sans-serif' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,6 +167,18 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
               {item.content}
             </motion.p>
           </div>
+        </div>
+
+        {/* Image container - right side with gradient overlay */}
+        <div className="relative flex-1">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${item.image})`
+            }}
+          />
+          {/* Gradient overlay from left to blend with content */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
         </div>
 
         {/* Subtle hover glow effect */}
@@ -236,8 +244,8 @@ export default function FeaturesSection() {
             </motion.div>
           </div>
 
-          {/* Clean grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-4">
+          {/* Clean grid layout - 2x2 on desktop for wider cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto px-4">
             {data.map((item, index) => (
               <div key={item.id}>
                 <FeatureCard item={item} index={index} />

@@ -213,7 +213,7 @@ const DigitalSerenity = () => {
           <div className="text-center max-w-5xl mx-auto relative">
             {/* Responsive Main Heading Sizes */}
             <motion.h1 
-              className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate"
+              className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate mb-8"
               style={{
                 background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
                 backgroundSize: '200% 100%',
@@ -232,6 +232,15 @@ const DigitalSerenity = () => {
             >
               MASIH RAGU BUAT COBA?
             </motion.h1>
+            
+            {/* CTA Button - moved below title */}
+            <div className="opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.5s' }}>
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                  Saya Siap Mulai Sekarang
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">
@@ -243,15 +252,6 @@ const DigitalSerenity = () => {
               <span className="word-animate" data-delay="3550">tanganmu</span>
               <span className="word-animate" data-delay="3700">sekarang.</span>
             </h2>
-            
-            {/* CTA Button */}
-            <div className="mt-8 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '4.5s' }}>
-              <Link href="/contact">
-                <button className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
-                  Saya Siap Mulai Sekarang
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
 

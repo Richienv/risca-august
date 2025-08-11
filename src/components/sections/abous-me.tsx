@@ -158,7 +158,7 @@ const AboutMeSection = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                  Aku Siapa Sih?
+                  Masih Gapercaya?
                 </h2>
                 <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mb-6"></div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 mb-6">
@@ -171,22 +171,22 @@ const AboutMeSection = () => {
               
               <div className="space-y-6 text-slate-300">
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  Kamu pasti mikir,
+                  Aku Risca atau .
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  "Siapa sih lo yang berani ngomong bisa bantuin gue raih 10 juta dalam 5 bulan? Pasti scam lagi kan?"
+                  3 tahun lalu, aku hanyalah ibu rumah tangga pemalu, gaptek, dan tanpa latar pendidikan tinggi. Tapi aku punya mimpi: Mau kasih yang terbaik buat keluarga aku, aku pengen banggain mereka.
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  Gue paham banget skeptisisme lo. Dulu gue juga gitu kok. Dari yang awalnya pegawai biasa dengan gaji pas-pasan, sampai akhirnya nemuin sistem bisnis tersembunyi di industri asuransi yang ngubah hidup gue total.
+                  Aku pernah coba banyak usaha—jualan online, pulsa, tiket, bahkan trading—tapi selalu mentok. Sampai aku temukan sistem bisnis yang bukan cuma kasih income, tapi bawa transformasi hidup yang nyata.
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed">
-                  Sekarang? Komunitas Alife udah 2000+ member, dan rata-rata mereka yang serius bisa dapet 10-50 juta dalam 5 bulan pertama. Bukan karena gue jago, tapi karena sistemnya emang proven work.
+                  Hari ini aku membangun komunitas perempuan di berbagai kota, bantu mereka bangun bisnis sendiri, dan temukan potensi yang dulu mereka pikir nggak ada. Let me guide you — lewat sistem yang terbukti bantu banyak ibu seperti aku berubah dari "biasa" jadi "bermakna".
                 </p>
               </div>
               
               <div className="pt-6">
                 <span className="text-lg md:text-xl font-light text-red-300 font-mono tracking-wide">
-                  "Masih ragu? Boleh. Tapi jangan sampe nyesel pas liat temen-temen lo udah duluan berhasil."
+                  "Jangan biarkan sifat pemalu menahan langkahmu. Kesuksesan bukan soal siapa kamu dulu, tapi keputusanmu hari ini."
                 </span>
               </div>
             </div>
@@ -196,7 +196,7 @@ const AboutMeSection = () => {
               <div className="aspect-[3/4] relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/cinom-potrait.png"
-                  alt="Risca Portrait"
+                  alt="Risca Agustine - Community Leader and Mentor"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -215,7 +215,7 @@ const AboutMeSection = () => {
           <div className="mt-16 text-center">
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
             <p className="text-lg md:text-xl font-light text-red-300 max-w-3xl mx-auto font-mono tracking-wide">
-              "Sistem ini bukan magic. Ini tentang konsistensi, dedikasi, dan mau keluar dari comfort zone. Kalo lo siap, gue siap guide lo sampai berhasil."
+              "Sekarang giliranmu menulis cerita hidupmu sendiri."
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
           </div>
@@ -288,13 +288,13 @@ const AboutMeSection = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                  <span className="word-animate" data-delay="0">Aku</span>
-                  <span className="word-animate" data-delay="300">Siapa</span>
-                  <span className="word-animate" data-delay="600">Sih?</span>
+                  <span className="word-animate" data-delay="0">Meet</span>
+                  <span className="word-animate" data-delay="300">Risca</span>
+                  <span className="word-animate" data-delay="600">Agustine</span>
                 </h2>
                 <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mb-6"></div>
                 <motion.h1 
-                  className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6 text-decoration-animate"
+                  className="text-left text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal text-white relative mb-6 text-decoration-animate"
                   style={{
                     background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
                     backgroundSize: '200% 100%',
@@ -311,30 +311,41 @@ const AboutMeSection = () => {
                     ease: 'linear'
                   }}
                 >
-                  BERANI NGOMONG GINI?
+                  AKU SIAPA?
                 </motion.h1>
               </div>
               
               <div className="space-y-6 text-slate-300">
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '1.6s' }}>
-                  <span className="word-animate" data-delay="1600">Kamu</span>
-                  <span className="word-animate" data-delay="1800">pasti</span>
-                  <span className="word-animate" data-delay="2000">mikir,</span>
+                  <span className="word-animate" data-delay="1600">Aku</span>
+                  <span className="word-animate" data-delay="1800">Risca</span>
+                  <span className="word-animate" data-delay="2000">atau</span>
+                  <span className="word-animate" data-delay="2200">Cinom.</span>
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '2.4s' }}>
-                  "Siapa sih lo yang berani ngomong bisa bantuin gue raih 10 juta dalam 5 bulan? Pasti scam lagi kan?"
+                  3 tahun lalu, aku hanyalah ibu rumah tangga pemalu, gaptek, dan tanpa latar pendidikan tinggi. Tapi aku punya mimpi: Mau kasih yang terbaik buat keluarga, aku pengen banggain mereka.
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '2.8s' }}>
-                  Gue paham banget skeptisisme lo. Dulu gue juga gitu kok. Dari yang awalnya pegawai biasa dengan gaji pas-pasan, sampai akhirnya nemuin sistem bisnis tersembunyi di industri asuransi yang ngubah hidup gue total.
+                  Aku coba banyak usaha buat bisa sukses jualan online, pulsa, tiket, bahkan trading—tapi selalu mentok. Udah mau nyerah tapi temen aku datang out of no-where dan kenalin aku sistem bisnis yang menurut aku bener-bener to good to be true.
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.2s' }}>
-                  Sekarang? Komunitas Alife udah 2000+ member, dan rata-rata mereka yang serius bisa dapet 10-50 juta dalam 5 bulan pertama. Bukan karena gue jago, tapi karena sistemnya emang proven work.
+                  Long story short, aku kosongkan gelas dan belajar dari 0. Sekarang aku punya team besar to run business together, di dalam komunitas yang menghasilkan ratusan sampe milyaran rupiah. Yes kalau kamu ngga percaya please I invite you to see yourself.
                 </p>
               </div>
               
               <div className="pt-6 opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.6s' }}>
-                <span className="text-lg md:text-xl font-light text-red-300 font-mono tracking-wide">
-                  "Masih ragu? Boleh. Tapi jangan sampe nyesel pas liat temen-temen lo udah duluan berhasil."
+                <span 
+                  className="text-lg md:text-xl font-bold font-mono tracking-wide relative"
+                  style={{
+                    background: 'linear-gradient(90deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #92400e 75%, #fbbf24 100%)',
+                    backgroundSize: '200% 100%',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    animation: 'metallic-flow 3s linear infinite'
+                  }}
+                >
+                  "Fear is Temporary, Regret is Forever."
                 </span>
               </div>
             </div>
@@ -344,7 +355,7 @@ const AboutMeSection = () => {
               <div className="aspect-[3/4] relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/cinom-potrait.png"
-                  alt="Risca Portrait"
+                  alt="Risca Agustine - Community Leader and Mentor"
                   fill
                   className="object-cover object-center transition-transform duration-700 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -366,8 +377,18 @@ const AboutMeSection = () => {
           {/* Bottom quote */}
           <div className="mt-16 text-center opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '4s' }}>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
-            <p className="text-lg md:text-xl font-light text-red-300 max-w-3xl mx-auto font-mono tracking-wide">
-              "Sistem ini bukan magic. Ini tentang konsistensi, dedikasi, dan mau keluar dari comfort zone. Kalo lo siap, gue siap guide lo sampai berhasil."
+            <p 
+              className="text-lg md:text-xl font-bold max-w-3xl mx-auto font-mono tracking-wide"
+              style={{
+                background: 'linear-gradient(90deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #92400e 75%, #fbbf24 100%)',
+                backgroundSize: '200% 100%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                animation: 'metallic-flow 3s linear infinite'
+              }}
+            >
+              Yuk kosongin gelas, kita sukses bareng-bareng.
             </p>
             <div className="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-8"></div>
           </div>

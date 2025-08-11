@@ -84,7 +84,7 @@ export default function FAQ() {
               ease: 'linear'
             }}
           >
-            YANG SERING LO TANYAIN
+            FAQ
           </motion.h1>
           <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto px-4 md:px-0">
             Jawaban lengkap buat yang masih ragu-ragu
