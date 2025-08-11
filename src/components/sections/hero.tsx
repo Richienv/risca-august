@@ -4,11 +4,27 @@ import { motion } from "framer-motion";
 
 import { Icons } from "@/components/icons";
 import { Spotlight } from "@/components/spotlight-new";
+import { AvatarCircles } from "@/components/head-avatars";
 import Link from "next/link";
 import { Play } from "lucide-react";
 
 
 const ease = [0.16, 1, 0.3, 1];
+
+function HeroLogo() {
+  return (
+    <motion.div
+      className="absolute top-6 left-6 z-20"
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease }}
+    >
+      <div className="text-white font-bold text-2xl tracking-tight">
+        CINOM
+      </div>
+    </motion.div>
+  );
+}
 
 function HeroPill() {
   return (
@@ -56,8 +72,9 @@ function HeroTitles() {
           JANGAN SAMPAI KAMU KETINGGALAN LAGI
         </motion.h1>
       </motion.div>
+      
       <motion.p
-        className="mb-8 text-lg tracking-tight text-muted-foreground md:text-xl text-balance text-center max-w-3xl mx-auto"
+        className="mb-6 text-lg tracking-tight text-muted-foreground md:text-xl text-balance text-center max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -68,38 +85,88 @@ function HeroTitles() {
       >
         <span className="text-foreground/80">Udah capek liat temen-temen kamu pada sukses sementara kamu masih di tempat yang sama? Sekarang udah sadar skeptis gabawa kamu kemana mana?</span>
       </motion.p>
+
+      {/* CTA Button moved here - below subheading */}
+      <motion.div
+        className="flex justify-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.8, ease }}
+      >
+        <Link href="/contact">
+          <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 text-sm sm:text-lg tracking-wide">
+            Saya Mau Perubahan
+          </button>
+        </Link>
+      </motion.div>
+      
+
     </div>
   );
 }
 
-function HeroCTA() {
+function HeroTestimonial() {
   return (
-    <>
-      <motion.div
-        className="mx-auto mt-6 flex w-full max-w-2xl flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.8, ease }}
-      >
-        <Link href="/contact" className="w-full sm:w-auto">
-          <motion.button
-            className="w-full sm:w-auto bg-gradient-to-r from-gradient-start to-gradient-end text-white px-8 py-3 rounded-lg font-semibold aura-glow hover:aura-glow-intense hover:scale-110 transition-all duration-300 shimmer"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Saya Mau Perubahan
-          </motion.button>
-        </Link>
-      </motion.div>
-      <motion.p
-        className="mt-5 text-sm text-muted-foreground text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.0, duration: 0.8 }}
-      >
-        Sudah 2000+ Gen-Z yang membuktikan sendiri
-      </motion.p>
-    </>
+    <motion.div
+      className="flex flex-col items-center space-y-8 max-w-2xl mx-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2.0, duration: 0.8, ease }}
+    >
+      {/* Testimonial Quote Container */}
+      <div className="text-center px-6">
+        <blockquote className="text-lg md:text-xl text-white/90 font-light leading-relaxed italic">
+          "Gue yang dulu skeptis banget, sekarang udah ngerasain sendiri gimana rasanya dapet 15 juta dalam 4 bulan. Sistemnya beneran work dan mentornya supportive banget."
+        </blockquote>
+      </div>
+      
+      {/* Gradient Line Separator */}
+      <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+      
+      {/* Author Info Container */}
+      <div className="flex items-center space-x-4">
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+          alt="Reza Pratama"
+          className="w-12 h-12 rounded-full border-2 border-white/20"
+        />
+        <div className="text-left">
+          <div className="text-white font-medium">Reza Pratama</div>
+          <div className="text-white/60 text-sm">Member since 2023</div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function HeroAvatars() {
+  const avatarUrls = [
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face", 
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+  ];
+
+  return (
+    <motion.div
+      className="flex flex-col items-center space-y-3 mt-12"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2.4, duration: 0.8, ease }}
+    >
+      {/* Smaller Avatar Circles */}
+      <div className="transform scale-75">
+        <AvatarCircles
+          avatarUrls={avatarUrls}
+          numPeople={1995}
+          className="justify-center"
+        />
+      </div>
+      <p className="text-xs text-white/50 text-center">
+        Join 2000+ Gen-Z yang udah buktiin sendiri
+      </p>
+    </motion.div>
   );
 }
 
@@ -152,6 +219,9 @@ function HeroVideo() {
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden w-full min-h-screen flex items-center justify-center bg-background">
+      {/* Logo in top left */}
+      <HeroLogo />
+      
       {/* Spotlight Effects - More subtle on mobile, positioned behind */}
       <div className="absolute inset-0 z-0">
         <Spotlight 
@@ -170,18 +240,12 @@ export default function Hero() {
       {/* Main Content - Centered */}
       <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative flex w-full flex-col items-center justify-center space-y-8">
+          <div className="relative flex w-full flex-col items-center justify-center space-y-12">
             <HeroPill />
             <HeroTitles />
             <HeroVideo />
-            <motion.div
-              className="w-full max-w-md"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.8, duration: 0.8, ease }}
-            >
-              <HeroCTA />
-            </motion.div>
+            <HeroTestimonial />
+            <HeroAvatars />
           </div>
         </div>
       </div>
