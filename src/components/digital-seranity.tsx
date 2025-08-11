@@ -163,7 +163,7 @@ const DigitalSerenity = () => {
                 <span>mau</span>
                 <span> raih</span>
                 <span> 10 juta</span>
-                <span> dalam 5 bulan?</span>
+                <span> dalam 3 bulan?</span>
               </div>
             </h1>
           </div>

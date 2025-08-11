@@ -79,7 +79,7 @@ export default function BonusCarousel() {
                         <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <div className="absolute inset-0">
                                 <img 
-                                    src="https://images.unsplash.com/photo-1494790108755-2616b612b8b3?w=400&h=500&fit=crop&crop=face" 
+                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face"
                                     alt="Sari Wulandari"
                                     className="w-full h-full object-cover"
                                 />

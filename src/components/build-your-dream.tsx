@@ -256,7 +256,7 @@ const BuildYourDream = () => {
           <div className="text-center max-w-5xl mx-auto relative">
             {/* Responsive Main Heading Sizes */}
             <motion.h1 
-              className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate"
+              className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate mb-8"
               style={{
                 background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
                 backgroundSize: '200% 100%',
@@ -275,6 +275,15 @@ const BuildYourDream = () => {
             >
               JADI YANG BERHASIL SELANJUTNYA?
             </motion.h1>
+            
+            {/* CTA Button - moved below title */}
+            <div className="opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.5s' }}>
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                  SAYA MAU JADI YANG BERIKUTNYA
+                </button>
+              </Link>
+            </div>
             {/* Responsive Detail Line Offsets */}
             <div className="absolute -left-6 sm:-left-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-red-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}></div>
             <div className="absolute -right-6 sm:-right-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-red-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.4s' }}></div>
@@ -288,22 +297,6 @@ const BuildYourDream = () => {
               <span className="word-animate" data-delay="2200">udah</span>
               <span className="word-animate" data-delay="2400">breakout.</span>
             </h2>
-            
-            {/* CTA Button - improved styling and placement */}
-            <div className="mt-12 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}>
-              <Link href="/contact">
-                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-4 sm:px-12 sm:py-6 rounded-full font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 text-sm sm:text-lg tracking-wide uppercase">
-                  SAYA MAU JADI YANG BERIKUTNYA
-                </button>
-              </Link>
-            </div>
-            
-            {/* Decorative dots - repositioned */}
-            <div className="mt-8 flex justify-center space-x-3 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.6s' }}>
-              <div className="w-2 h-2 bg-pink-500 rounded-full opacity-60"></div>
-              <div className="w-2 h-2 bg-pink-500 rounded-full opacity-80"></div>
-              <div className="w-2 h-2 bg-pink-500 rounded-full opacity-60"></div>
-            </div>
           </div>
         </div>
 

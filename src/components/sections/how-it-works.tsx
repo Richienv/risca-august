@@ -11,7 +11,7 @@ const stepsData = [
   {
     icon: MousePointer,
     title: "1. Klik, Isi, Selesai",
-    description: "Klik tombol hero, isi form simpel dengan info lo. 2 menit doang udah selesai. Ini langkah pertama lo dapetin sistem 10 juta dalam 5 bulan yang udah bikin ribuan Gen-Z sukses.",
+    description: "Klik tombol hero, isi form simpel dengan info lo. 2 menit doang udah selesai. Ini langkah pertama lo dapetin sistem 10 juta dalam 3 bulan yang udah bikin ribuan Gen-Z sukses.",
     imageSrc: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80&fit=crop"
   },
   {

@@ -323,13 +323,14 @@ const AboutMeSection = () => {
                   <span className="word-animate" data-delay="2200">Cinom.</span>
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '2.4s' }}>
-                  3 tahun lalu, aku hanyalah ibu rumah tangga pemalu, gaptek, dan tanpa latar pendidikan tinggi. Tapi aku punya mimpi: Mau kasih yang terbaik buat keluarga, aku pengen banggain mereka.
+                3 tahun lalu, aku hanyalah ibu rumah tangga pemalu, gaptek, dan tanpa latar pendidikan tinggi. Tapi aku punya mimpi: Mau kasih yang terbaik buat keluarga, aku pengen banggain mereka.
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '2.8s' }}>
-                  Aku coba banyak usaha buat bisa sukses jualan online, pulsa, tiket, bahkan trading—tapi selalu mentok. Udah mau nyerah tapi temen aku datang out of no-where dan kenalin aku sistem bisnis yang menurut aku bener-bener to good to be true.
+                Aku coba banyak usaha buat bisa sukses jualan online, pulsa, tiket, bahkan trading—tapi selalu mentok. Udah mau nyerah tapi temen aku datang out of no-where dan kenalin aku sistem bisnis yang menurut aku bener-bener to good to be true.
                 </p>
                 <p className="text-sm lg:text-base font-light leading-relaxed opacity-0" style={{ animation: 'word-appear 0.8s ease-out forwards', animationDelay: '3.2s' }}>
-                  Long story short, aku kosongkan gelas dan belajar dari 0. Sekarang aku punya team besar to run business together, di dalam komunitas yang menghasilkan ratusan sampe milyaran rupiah. Yes kalau kamu ngga percaya please I invite you to see yourself.
+                Long story short, aku kosongkan gelas dan belajar dari 0. Sekarang aku punya team besar to run business together, di dalam komunitas yang menghasilkan ratusan sampe milyaran rupiah. Yes kalau kamu ngga percaya please I invite you to see yourself.
+
                 </p>
               </div>
               

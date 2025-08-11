@@ -69,7 +69,7 @@ function HeroTitles() {
             ease: 'linear'
           }}
         >
-          JANGAN SAMPAI KAMU KETINGGALAN LAGI
+         JANGAN SAMPAI KAMU KETINGGALAN LAGI
         </motion.h1>
       </motion.div>
       
@@ -83,7 +83,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        <span className="text-foreground/80">Udah capek liat temen-temen kamu pada sukses sementara kamu masih di tempat yang sama? Sekarang udah sadar skeptis gabawa kamu kemana mana?</span>
+        <span className="text-foreground/80">Udah capek liat temen-temen kamu pada sukses sementara kamu masih di tempat yang sama? Sekarang udah sadar skeptis gabawa kamu kemana mana?.</span>
       </motion.p>
 
       {/* CTA Button moved here - below subheading */}
@@ -116,7 +116,7 @@ function HeroTestimonial() {
       {/* Testimonial Quote Container */}
       <div className="text-center px-6">
         <blockquote className="text-lg md:text-xl text-white/90 font-light leading-relaxed italic">
-          "Gue yang dulu skeptis banget, sekarang udah ngerasain sendiri gimana rasanya dapet 15 juta dalam 4 bulan. Sistemnya beneran work dan mentornya supportive banget."
+        "Gue yang dulu skeptis banget, sekarang udah ngerasain sendiri gimana rasanya dapet 15 juta dalam 4 bulan. Sistemnya beneran work dan mentornya supportive banget."
         </blockquote>
       </div>
       
@@ -126,8 +126,8 @@ function HeroTestimonial() {
       {/* Author Info Container */}
       <div className="flex items-center space-x-4">
         <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
-          alt="Reza Pratama"
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+          alt="Sari Indah"
           className="w-12 h-12 rounded-full border-2 border-white/20"
         />
         <div className="text-left">
@@ -142,7 +142,7 @@ function HeroTestimonial() {
 function HeroAvatars() {
   const avatarUrls = [
     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face", 
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face", 
     "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
     "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
@@ -164,7 +164,7 @@ function HeroAvatars() {
         />
       </div>
       <p className="text-xs text-white/50 text-center">
-        Join 2000+ Gen-Z yang udah buktiin sendiri
+       Join 2000+ Member yang udah buktiin sendiri
       </p>
     </motion.div>
   );

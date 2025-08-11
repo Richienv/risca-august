@@ -127,7 +127,7 @@ const testimonials = [
   {
     name: "Citra Dewi",
     username: "@citradewi",
-    body: "Introvert parah yang susah banget networking. Sistem ini ngajarin gue cara approach orang dengan natural tanpa keliatan pushy. Confidence gue naik drastis, income juga. Dalam 5 bulan udah 14 juta per bulan. Mind blown!",
+    body: "Introvert parah yang susah banget networking. Sistem ini ngajarin gue cara approach orang dengan natural tanpa keliatan pushy. Confidence gue naik drastis, income juga. Dalam 3 bulan udah 14 juta per bulan. Mind blown!",
     img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
     country: "🇮🇩 Indonesia",
   },

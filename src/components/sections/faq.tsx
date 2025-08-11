@@ -13,24 +13,52 @@ import { Spotlight } from "@/components/spotlight-new";
 
 const faqs = [
   {
-    question: "Emang bisnis ini tentang apa sih?",
-    answer: "Jadi gini, gue punya sistem hidden yang udah ngebuktiin 2000+ Gen-Z bisa dapet 10 juta dalam 5 bulan. Ini bukan asuransi biasa yang lo kenal - ini bisnis yang gue develop khusus buat Gen-Z yang mau breakout dari zona stuck. Lo bakal dapet mentoring langsung dari gue plus akses ke komunitas exclusive yang udah proven berhasil."
+    question: "Bagaimana cara bergabung dengan program ini?",
+    answer: "Sangat mudah! Cukup klik tombol daftar di website, isi form dengan lengkap dan submit. Tim kami akan menghubungi kamu dalam 24 jam untuk interview singkat dan proses selanjutnya. Pastikan nomor WA yang kamu masukkan aktif ya!"
   },
   {
-    question: "Gue gak ngerti asuransi sama sekali, bisa gak?",
-    answer: "Malah bagus! Gue lebih suka ngajarin dari nol daripada benerin mindset yang udah salah. Yang penting lo punya kemauan belajar dan ambisi buat ngubah hidup. Sistemnya udah gue sederhanain banget, bahkan yang gaptek sekalipun bisa."
+    question: "Apakah ada biaya komitmen untuk bergabung?",
+    answer: "Khusus untuk 100 orang pertama yang diterima, ada biaya komitmen. Ini untuk memastikan keseriusan peserta dan mengcover biaya training intensif, software premium, dan mentoring personal. Investasi ini akan balik berlipat setelah kamu mulai earning!"
   },
   {
-    question: "Butuh modal gede gak buat mulai?  ",
-    answer: "Cuma butuh HP sama laptop doang. Sisanya gue yang provide - dari training, sistem, sampe client lead. Yang penting lo ready action dan konsisten follow sistemnya."
+    question: "Apa saja yang diperlukan untuk mulai?",
+    answer: "Yang paling penting adalah iPad untuk install software khusus yang kami berikan. Selain itu, koneksi internet stabil, semangat belajar, dan komitmen untuk mengikuti sistem. Semua materi training dan tools sudah kami sediakan lengkap."
   },
   {
-    question: "Kenapa harus ikut lo? Bedanya apa sama kerja kantoran?",
-    answer: "Lo mau stuck selamanya sama gaji UMR atau mau freedom total? Di sini lo bisa dapet 10 juta dalam 5 bulan, kerja dari mana aja, kapan aja. Plus networking sama high-achievers, bukan temen kantor yang toxic. Gue udah buktiin sendiri dan sekarang ngajarin lo caranya."
+    question: "Berapa kali training dalam seminggu?",
+    answer: "Training dilaksanakan 2x seminggu via Zoom. Setiap sesi sekitar 2 jam dengan materi yang sangat praktis dan aplikatif. Jadwal fleksibel disesuaikan dengan mayoritas peserta. Ada recording juga jadi kalau ketinggalan bisa catch up."
   },
   {
-    question: "Berapa bayar buat join komunitas lo?",
-    answer: "Nanti gue jelasin detail waktu kita ngobrol personal. Yang jelas investasinya balik berkali-kali lipat. Tapi gue harus liat dulu seberapa serious lo sama commitment-nya. Gue gak mau buang-buang waktu sama yang setengah-setengah."
+    question: "Apakah bisnis ini cocok untuk pemula tanpa pengalaman?",
+    answer: "Malah bagus! Kami lebih suka mengajar dari nol dengan mindset yang fresh. Yang penting kamu punya semangat belajar dan keinginan kuat untuk berubah. Sistem kami sudah disederhanakan dan ada mentoring langsung dari komunitas yang berpengalaman."
+  },
+  {
+    question: "Berapa lama proses training sampai bisa mulai earning?",
+    answer: "Rata-rata dalam 2-4 minggu sudah bisa mulai praktik dan earning pertama. Tergantung seberapa cepat kamu menyerap materi dan menerapkan sistem. Yang rajin training dan praktek biasanya lebih cepat break even dan mulai profit."
+  },
+  {
+    question: "Apakah ada jaminan sukses atau money back guarantee?",
+    answer: "Kami tidak bisa jamin 100% sukses karena hasil tergantung usaha masing-masing. Tapi yang pasti, sistem dan mentoring kami sudah terbukti berhasil untuk ribuan orang. Selama kamu ikuti prosesnya dengan konsisten, peluang sukses sangat besar."
+  },
+  {
+    question: "Bisakah saya tetap kerja sambil ikut program ini?",
+    answer: "Tentu saja! Bahkan direkomendasikan. Training di malam hari, dan kamu bisa praktek di waktu luang. Banyak member yang masih kerja kantoran tapi udah bisa dapetin income tambahan 5-15 juta per bulan dari program ini."
+  },
+  {
+    question: "Bagaimana sistem pembayaran dan withdrawal earnings?",
+    answer: "Semua transaksi menggunakan sistem digital yang aman dan transparan. Withdrawal bisa dilakukan kapan saja minimal 1 juta, langsung masuk ke rekening dalam 1x24 jam. Ada dashboard khusus untuk tracking semua earnings dan transaksi."
+  },
+  {
+    question: "Apakah program ini legal dan aman?",
+    answer: "100% legal! Kami adalah komunitas bisnis yang terdaftar resmi. Semua sistem sudah sesuai regulasi dan transparan. Ribuan member kami sudah merasakan manfaatnya tanpa masalah hukum apapun. Kamu bisa cek testimoni dan track record kami."
+  },
+  {
+    question: "Apa bedanya dengan program bisnis online lainnya?",
+    answer: "Perbedaan utama adalah sistem mentoring personal dan komunitas yang sangat solid. Kamu tidak sendirian! Ada support 24/7, grup diskusi aktif, dan mentor berpengalaman yang siap bantu. Plus software khusus yang tidak ada di tempat lain."
+  },
+  {
+    question: "Berapa target realistic earning per bulan untuk pemula?",
+    answer: "Untuk bulan pertama target 2-5 juta cukup realistic sambil belajar. Bulan kedua bisa naik ke 5-10 juta. Setelah 3 bulan dan sudah mahir sistemnya, 10-25 juta per bulan sangat achievable. Ada yang bahkan lebih, tergantung dedikasi dan konsistensi."
   }
 ];
 

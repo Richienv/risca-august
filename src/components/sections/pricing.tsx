@@ -62,7 +62,7 @@ const businessData = [
   },
   {
     icon: TrendingUp,
-    title: "10 Juta dalam 5 Bulan",
+    title: "10 Juta dalam 3 bulan",
     description: "Income sustainable yang bisa lo raih dalam waktu singkat",
     value: "10-100 juta+",
     color: "text-white/90"
