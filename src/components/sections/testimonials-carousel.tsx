@@ -3,10 +3,11 @@
 import { Card, CardContent } from '@/components/card-8'
 import { motion } from 'framer-motion'
 import { Spotlight } from '@/components/spotlight-new'
+import { Quote } from 'lucide-react'
 
 export default function BonusCarousel() {
     return (
-        <section className="relative bg-black py-16 md:py-32 overflow-hidden">
+        <section className="relative bg-black py-12 md:py-20 overflow-hidden">
             {/* Pink Spotlight Effects */}
             <Spotlight 
                 gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
@@ -20,10 +21,10 @@ export default function BonusCarousel() {
                 xOffset={45}
             />
             
-            <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16 relative z-10">
+            <div className="mx-auto w-full px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 2xl:px-40 relative z-10">
                 <div className="relative">
                     {/* Heading Section - focusing on real testimonials */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-12">
                         <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
                             Mereka yang Dulunya Sama Seperti Kamu
                         </h2>
@@ -46,191 +47,362 @@ export default function BonusCarousel() {
                                 ease: 'linear'
                             }}
                         >
-                            SEKARANG HIDUP MEREKA BERUBAH TOTAL
+                            Jangan Cuman Percaya Kata Saya - Buktikan, Rasakan
                         </motion.h1>
                         <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-                            Cerita nyata dari member yang berani ambil langkah dan sekarang merasakan hasilnya.
+                            Lihat mereka yang udah merubah karir mereka dari pekerja biasa jadi pengusaha yang penghasilan pasifnya puluhan ratusan hingga milyaran rupiah setiap bulannya
                         </p>
                     </div>
                     
-                    <div className="relative z-10 max-w-6xl mx-auto">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="relative z-10 w-full">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
                         {/* Card 1 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Ahmad Rizki"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Ahmad Rizki</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Fresh graduate yang dulu <span className="font-medium">nganggur 8 bulan</span> karena susah cari kerja. Sekarang dalam <span className="font-medium">6 bulan income 25 juta per bulan</span> dari sistem bisnis ini. Udah beli mobil impian dan bisa bantu orangtua.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Berkat bisnis asuransi saya bisa beli mobil untuk keluarga saya."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Fresh-grad yang dulu nganggur 8 bulan karena susah cari kerja. Sekarang dalam 6 bulan income 25 juta per bulan dari bisnis ini. eli mobil impian bisa bantu parent.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Ahmad Rizki"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Ahmad Rizki</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Fresh Graduate</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 2 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face"
-                                    alt="Sari Wulandari"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Sari Wulandari</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Ibu rumah tangga yang dulu <span className="font-medium">cuma andalin gaji suami</span> buat hidup sehari-hari. Sekarang punya <span className="font-medium">team 50+ orang dan income 35 juta per bulan</span>. Udah buka usaha sampingan dan investasi properti.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Berkat asuransi sekarang saya punya team 50+ orang dengan income 35 juta per bulan."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Ibu rumah tangga yang dulu cuma andalin gaji suami buat hidup sehari-hari. Udah buka usaha sampingan dan investasi properti.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face"
+                                            alt="Sari Wulandari"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Sari Wulandari</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Ibu Rumah Tangga</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 3 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Budi Santoso"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Budi Santoso</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Mantan karyawan bank yang <span className="font-medium">bosan kerja 9-5 dengan gaji pas-pasan</span>. Nekat resign dan ikut sistem ini. Sekarang <span className="font-medium">income 40 juta per bulan dengan kebebasan waktu</span> penuh.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Berkat bisnis asuransi saya resign dengan tenang dan income 40 juta per bulan."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Mantan karyawan bank yang bosan kerja 9-5 dengan gaji pas-pasan. Nekat resign dan ikut sistem ini dengan kebebasan waktu penuh.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Budi Santoso"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Budi Santoso</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Karyawan Bank</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 4 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Maya Indira"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Maya Indira</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Dulu <span className="font-medium">kerja shift malam di pabrik</span> dengan kondisi yang melelahkan. Sekarang <span className="font-medium">income pasif 20 juta per bulan</span> sambil kuliah S2 dan punya waktu buat keluarga.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Sekarang income pasif 20 juta per bulan sambil kuliah S2."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Dulu kerja shift malam di pabrik dengan kondisi yang melelahkan. Sekarang punya waktu buat keluarga dan bisa fokus pendidikan.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Maya Indira"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Maya Indira</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Pekerja Pabrik</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 5 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Rian Pratama"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Rian Pratama</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Dulunya <span className="font-medium">introvert dan susah networking</span>. Lewat sistem ini belajar membangun komunitas hingga <span className="font-medium">200+ member aktif dan income 30 juta per bulan</span> dari kolaborasi bisnis.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Dari introvert jadi punya komunitas 200+ member dan income 30 juta per bulan."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Dulunya introvert dan susah networking. Lewat sistem ini belajar membangun komunitas dari kolaborasi bisnis asuransi.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Rian Pratama"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Rian Pratama</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Introvert</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 6 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Putri Maharani"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Putri Maharani</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Mahasiswa yang <span className="font-medium">selalu minta uang jajan ke orangtua</span>. Sekarang justru bisa <span className="font-medium">bantu bayar kuliah sendiri plus income 15 juta per bulan</span> sambil tetap fokus belajar.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Dari minta uang jajan ke orangtua, sekarang bayar kuliah sendiri dengan income 15 juta per bulan."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Mahasiswa yang dulu selalu minta uang jajan ke orangtua. Sekarang justru bisa bantu sambil tetap fokus belajar.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Putri Maharani"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Putri Maharani</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Mahasiswa</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 7 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Dimas Prasetyo"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Dimas Prasetyo</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Driver ojek online yang <span className="font-medium">capek keliling kota demi income harian</span>. Sekarang <span className="font-medium">income 22 juta per bulan tanpa harus keluar rumah</span> dan bisa quality time sama keluarga.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Income 22 juta per bulan tanpa harus keluar rumah, quality time sama keluarga."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Driver ojek online yang dulu capek keliling kota demi income harian. Sekarang bisa fokus keluarga dengan bisnis asuransi.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Dimas Prasetyo"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Dimas Prasetyo</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Driver Ojol</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 8 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Indah Sari"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Indah Sari</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Karyawan kontrak yang <span className="font-medium">hidup dalam ketidakpastian kerja</span>. Dalam 8 bulan berhasil <span className="font-medium">build passive income 18 juta per bulan</span> dan sekarang resign dengan tenang.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Dalam 8 bulan berhasil build passive income 18 juta per bulan dan resign dengan tenang."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Karyawan kontrak yang dulu hidup dalam ketidakpastian kerja. Sekarang punya stabilitas finansial dari bisnis asuransi.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Indah Sari"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Indah Sari</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Karyawan Kontrak</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>
 
                         {/* Card 9 */}
-                        <Card className="relative col-span-1 overflow-hidden aspect-[4/5] bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <div className="absolute inset-0">
-                                <img 
-                                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face" 
-                                    alt="Arif Rahman"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            </div>
-                            <CardContent className="relative z-10 p-4 h-full flex flex-col justify-end">
-                                <div className="text-white">
-                                    <h3 className="text-lg font-semibold mb-3">Arif Rahman</h3>
-                                    <p className="text-sm text-white/90 leading-relaxed font-light">
-                                        Pemilik warung kecil yang <span className="font-medium">omzet stagnan dan kewalahan persaingan</span>. Sekarang <span className="font-medium">income 28 juta per bulan</span> dan warungnya jadi lebih ramai karena networking yang terbangun.
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
+                                {/* Quote Icon */}
+                                <div className="mb-5 sm:mb-8">
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
+                                </div>
+                                
+                                {/* Main Quote */}
+                                <div className="mb-5 sm:mb-8">
+                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
+                                        "Income 28 juta per bulan dan warung jadi lebih ramai karena networking yang terbangun."
                                     </p>
+                                </div>
+                                
+                                {/* Story */}
+                                <div className="text-white mb-5 sm:mb-8">
+                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
+                                        Pemilik warung kecil yang dulu omzet stagnan dan kewalahan persaingan. Sekarang berkembang pesat dengan komunitas asuransi.
+                                    </p>
+                                </div>
+                                
+                                {/* Profile Section */}
+                                <div className="flex items-center space-x-3 sm:space-x-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face" 
+                                            alt="Arif Rahman"
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Arif Rahman</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Pemilik Warung</p>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>

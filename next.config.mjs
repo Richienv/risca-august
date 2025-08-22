@@ -9,7 +9,8 @@ const nextConfig = {
     remotePatterns: [
       { hostname: "localhost" }, 
       { hostname: "randomuser.me" },
-      { hostname: "images.unsplash.com" }
+      { hostname: "images.unsplash.com" },
+      { hostname: "cdn.sanity.io" }
     ],
   },
   webpack: (config) => {

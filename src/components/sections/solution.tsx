@@ -3,145 +3,181 @@
 import { motion } from "framer-motion";
 import OverlappingImages from "@/components/overlapping-images";
 import { Spotlight } from "@/components/spotlight-new";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const transformations = [
   {
-    title: "7 Tahun Komitmen = Income 15 Milyar/bulan.",
-    description: "You heard me right. Tangga kesuksesan yang pasti, bukan 7 tahun buat janji promosi tapi hasil yang pasti. Kerjaannya susah banget? Kamu bakal terkejut 'hah gamunkin cuman itu doang!' Sampai kamu lihat sendiri mereka yang berhasil baru bisa percaya. ",
+    title: "Day 1 to 12 — Fundamental Asuransi",
+    description: "Kamu akan belajar dari dasar banget tentang dunia asuransi. Mulai dari jenis-jenis produk, cara kerja sistem, sampai mindset yang benar sebagai agen. Gak perlu khawatir kalau sebelumnya gak tau apa-apa, karena semua dimulai dari nol. Di akhir fase ini, kamu udah paham semua basic yang dibutuhin buat jadi agen professional.",
   },
   {
-    title: "Script Selling designed by Experts.",
-    description: "Kamu bakal di ajarkan how to handle objection, the art to persuade, speak like a leader, how to build your charisma, dan masih banyak lagi. Kenapa? Kita mau sukses bareng gakaya 9-5 yang cuman mau sukses sendiri. Jadi tricks/resource akan kita share buat yang mau to improve.",
+    title: "Day 13 to 24 — Closing Deal",
+    description: "Setelah paham fundamentalnya, sekarang saatnya belajar gimana cara nutup deal dengan benar. Kamu bakal dikasih script yang udah terbukti berhasil, teknik handling objection, dan cara buat client percaya sama kamu. Phase ini yang bakal ngebedain kamu dari agen-agen lain yang cuma asal nawarin.",
   },
   {
-    title: "Trained With Mentors 2x Seminggu",
-    description: "Aku ngerti pasti di awal kamu takut, tapi aku janji bakal hold your hands tights buat kamu bisa adapt & improve fast. Kamu bakal jadi priority aku dan aku bakal do my best buat kamu bisa ngerasain yang aku rasain sekarang.",
+    title: "Day 25 to 36 — Membangun Profit Besar",
+    description: "Kamu udah bisa closing, tapi sekarang waktunya scale up income kamu. Bakal diajarkan strategi buat dapetin client premium, cara manage portfolio yang profitable, dan teknik upselling yang natural. Target di phase ini adalah kamu udah bisa konsisten dapetin komisi besar setiap bulannya.",
   },
   {
-    title: "High-Value Member to Boost Networth Kamu.",
-    description: "Aku paham kamu pengen temen/partner baru yang lebih berkualitas. That's why ngga sembarang orang bisa masuk ke bisnis ini. Aku sendiri yang bakal seleksi to make sure our circle have standard of quality. With this semua member di dalam bisa kerja-sama dan create something big together.",
+    title: "Day 37 to 48 — Strategi Persuasion Digital",
+    description: "Era digital ini, kamu gak bisa andalin cara lama doang. Di phase ini bakal belajar gimana leverage social media, buat content yang engaging, dan build personal brand yang kuat. Kamu juga bakal tau cara prospect lewat digital channels yang efektif dan convert follower jadi paying client.",
   },
   {
-    title: "Freedom to Work Anywhere, Whenever.",
-    description: "Dengan training, sistem dan mentor pribadi. Kamu di beri kepercayaan untuk do your work dengan cara kamu dimana aja dan kapan aja. Kenapa? Karena bisnis ini driven by result bukan berapa jam kamu kerja seperti 9-5. ",
+    title: "Day 49 to 60 — Negosiasi dan Penutupan",
+    description: "Level advanced dari closing skills. Kamu bakal belajar psychology of selling, advanced negotiation techniques, dan cara handle big ticket clients. Di phase ini mindset kamu udah berubah dari sekedar sales person jadi trusted advisor yang bisa charge premium untuk expertise kamu.",
   },
   {
-    title: "Mulai Hari Ini, Hasil Besok",
-    description: "Gak perlu nunggu berbulan-bulan buat liat hasil pertama. Member rata-rata udah ngerasain perubahan income dalam 2-3 minggu pertama. Lo cuma perlu ikutin step-by-step yang udah dikasih, tanpa perlu mikir ribet atau analisis berlebihan. Sistemnya udah disederhanakan banget, bahkan anak SMA pun bisa langsung paham dan action. Yang penting lo mau mulai hari ini, sisanya sistem yang akan guide lo sampai berhasil.",
+    title: "Day 61 to 84 — Logistik dan Dokumen Ekspor",
+    description: "Karena target kita bukan cuma domestik, kamu bakal diajarkan gimana cara handle international clients dan ekspor produk asuransi. Mulai dari compliance, dokumentasi, sampai cara komunikasi dengan client dari negara lain. Skill ini yang bakal bikin income kamu berkali-kali lipat.",
   },
   {
-    title: "Private  Mentorship",
-    description: "Belajar dari mereka yang udah punya hidup yang kamu mau, income milyaran mobil sport, property owner yang kerja nya cuman 2-4 jam sehari. Tanyain semua yang kamu mau dan belajar dari mereka langsung tanpa harus keluar ratusan juta atau cuman nonton dari youtube.",
-  },
-  {
-    title: "Copy-Paste Kesuksesan",
-    description: "Lo gak perlu jadi pioneer atau coba-coba sendiri. Dari cara ngomong, cara approach, sampe cara handle objection, semua udah ada panduannya yang detailed. Lo tinggal ikutin aja, gak perlu mikir kreatif atau inovatif.",
+    title: "Day 85 to 90 — Finalisasi Bisnis Ekspor",
+    description: "Phase terakhir ini adalah putting it all together. Kamu bakal praktek langsung semua yang udah dipelajari dengan mentorship intensif. Target di akhir program ini kamu udah punya sistem bisnis yang bisa jalan sendiri dan generate passive income secara konsisten. Plus kamu udah punya network international yang valuable.",
   },
 ];
 
 function FeatureCard({ 
   title, 
   description, 
-  isLast,
   index
 }: { 
   title: string; 
   description: string; 
-  isLast: boolean;
   index: number;
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  // Array of different images for variety
+  const imageUrls = [
+    "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop", // Business meeting
+    "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=300&fit=crop", // Charts and analytics
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop", // Office workspace
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop", // Professional portrait
+    "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=500&h=300&fit=crop", // Team collaboration
+    "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500&h=300&fit=crop", // Digital marketing
+    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=300&fit=crop", // Business strategy
+  ];
+  
+  const currentImage = imageUrls[index % imageUrls.length];
+
   return (
-    <div 
-      className="relative overflow-hidden group rounded-2xl p-6 lg:p-8 mb-6 lg:mb-8 transition-all duration-500"
-      style={{
-        background: 'linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(0, 0, 0, 0.98) 50%, rgba(20, 5, 5, 0.95) 100%)',
-        border: '1px solid transparent',
-        backgroundImage: 'linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(0, 0, 0, 0.98) 50%, rgba(20, 5, 5, 0.95) 100%), linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.2))',
-        backgroundOrigin: 'border-box',
-        backgroundClip: 'padding-box, border-box',
-      }}
-    >
-      {/* Corner Gradient Overlays */}
-      <div className="absolute top-0 left-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-           style={{
-             background: 'radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
-           }}></div>
-      <div className="absolute top-0 right-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-           style={{
-             background: 'radial-gradient(circle at 100% 0%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
-           }}></div>
-      <div className="absolute bottom-0 left-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-           style={{
-             background: 'radial-gradient(circle at 0% 100%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
-           }}></div>
-      <div className="absolute bottom-0 right-0 w-20 h-20 opacity-30 group-hover:opacity-50 transition-opacity duration-500"
-           style={{
-             background: 'radial-gradient(circle at 100% 100%, rgba(239, 68, 68, 0.4) 0%, rgba(220, 38, 38, 0.2) 40%, transparent 70%)',
-           }}></div>
+    <div className="relative">
+      {/* Red glow effect behind the card */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-red-600/20 via-red-500/30 to-red-600/20 rounded-lg lg:rounded-xl blur-sm"></div>
       
-      {/* Enhanced Corner Glow Effect */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-           style={{
-             boxShadow: 'inset 0 0 50px rgba(239, 68, 68, 0.1), 0 0 30px rgba(239, 68, 68, 0.05)',
-           }}></div>
-      {/* Enhanced Corner accent elements with gradient backgrounds */}
+      {/* Main card */}
       <div 
-        className="absolute top-2 left-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
-        style={{
-          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
-          animationDelay: '0.1s',
-        }}
+        className="relative overflow-hidden group rounded-lg lg:rounded-xl p-4 sm:p-6 lg:p-8 mb-3 sm:mb-4 lg:mb-6 transition-all duration-500 bg-gradient-to-br from-black/50 via-black/40 to-pink-900/10 backdrop-blur-sm border border-white/10 hover:border-pink-500/30"
       >
-        <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse"></div>
-      </div>
-      
-      <div 
-        className="absolute top-2 right-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
-        style={{
-          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
-          animationDelay: '0.2s',
-        }}
-      >
-        <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-      </div>
-      
-      <div 
-        className="absolute bottom-2 left-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
-        style={{
-          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
-          animationDelay: '0.3s',
-        }}
-      >
-        <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-      </div>
-      
-      <div 
-        className="absolute bottom-2 right-2 w-10 h-10 border border-red-500/30 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 rounded"
-        style={{
-          background: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.08) 60%, transparent 100%)',
-          animationDelay: '0.4s',
-        }}
-      >
-        <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-60 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
-      </div>
-      
-      <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12 relative z-10">
-        {/* Left side - Text content */}
-        <div className="w-full lg:w-3/5 order-2 lg:order-1">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extralight leading-tight tracking-tight mb-3 lg:mb-4 text-white">
-            {title}
-          </h3>
-          <p className="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-white/70 max-w-xl">
-            {description}
-          </p>
+      <div className="flex flex-col lg:flex-row items-start gap-3 sm:gap-4 lg:gap-16 relative z-10">
+        {/* Left side - Text content group */}
+        <div className="w-full lg:w-3/5 order-2 lg:order-1 text-center lg:text-left">
+          {/* Text and icon grouped together */}
+          <div className="space-y-2 sm:space-y-3 lg:space-y-6">
+            {/* Main title - Day range */}
+            <div>
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-extralight leading-tight tracking-tight text-white mb-1 sm:mb-2 lg:mb-3">
+                {title.split(' — ')[0]}
+              </h2>
+              <h3 className="text-xs sm:text-sm lg:text-base font-light text-white/80 leading-relaxed">
+                {title.split(' — ')[1]}
+              </h3>
+            </div>
+            
+            {/* Arrow button grouped with text */}
+            <div className="flex justify-center lg:justify-start">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsExpanded(!isExpanded);
+                }}
+                className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 lg:w-12 lg:h-12 rounded-full border border-pink-500/40 bg-gradient-to-r from-pink-500/15 to-purple-500/10 hover:from-pink-500/25 hover:to-purple-500/20 transition-all duration-300 shadow-lg shadow-pink-500/20"
+              >
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown className="w-3 h-3 sm:w-3 sm:h-3 lg:w-5 lg:h-5 text-pink-400" />
+                </motion.div>
+              </button>
+            </div>
+          </div>
+          
+          {/* Expandable description */}
+          <motion.div
+            initial={false}
+            animate={{
+              height: isExpanded ? "auto" : 0,
+              opacity: isExpanded ? 1 : 0
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden mt-2"
+          >
+            <div className="pt-2 sm:pt-3 lg:pt-4 border-t border-white/10">
+              <p className="text-xs sm:text-sm lg:text-base font-light leading-snug sm:leading-relaxed text-white/75 max-w-2xl">
+                {description}
+              </p>
+            </div>
+          </motion.div>
         </div>
 
-        {/* Right side - Overlapping Images */}
+        {/* Right side - Image group with more spacing */}
         <div className="w-full lg:w-2/5 flex justify-center lg:justify-end order-1 lg:order-2">
-          <div className="w-full max-w-sm lg:max-w-md h-52 sm:h-64 lg:h-72">
-            <OverlappingImages solutionIndex={index} />
+          <div className="w-full max-w-xs sm:max-w-sm lg:max-w-lg h-32 sm:h-40 lg:h-72 relative overflow-hidden rounded-lg lg:rounded-xl shadow-xl lg:shadow-2xl">
+            <motion.div 
+              className="flex h-full gap-1 sm:gap-2 lg:gap-3"
+              animate={{
+                x: [0, '-33.333%']
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop", 
+                  duration: 10,
+                  ease: "linear",
+                },
+              }}
+            >
+              {/* First set of 3 images */}
+              <div className="flex-shrink-0 w-full h-full relative">
+                <img 
+                  src={currentImage} 
+                  alt={`Training phase ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md lg:rounded-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-md lg:rounded-lg"></div>
+              </div>
+              <div className="flex-shrink-0 w-full h-full relative">
+                <img 
+                  src={imageUrls[(index + 1) % imageUrls.length]} 
+                  alt={`Training content ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md lg:rounded-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-md lg:rounded-lg"></div>
+              </div>
+              <div className="flex-shrink-0 w-full h-full relative">
+                <img 
+                  src={imageUrls[(index + 2) % imageUrls.length]} 
+                  alt={`Training materials ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md lg:rounded-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-md lg:rounded-lg"></div>
+              </div>
+              {/* Duplicate first image for seamless loop */}
+              <div className="flex-shrink-0 w-full h-full relative">
+                <img 
+                  src={currentImage} 
+                  alt={`Training phase ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md lg:rounded-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-md lg:rounded-lg"></div>
+              </div>
+            </motion.div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
@@ -166,15 +202,7 @@ export default function SolutionSection() {
       <div className="relative z-10 py-20 lg:py-28">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16 px-6 lg:px-8 max-w-7xl mx-auto">
-          <motion.h2 
-            className="text-xs sm:text-sm font-mono font-light text-white/70 uppercase tracking-[0.2em] opacity-80 mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Apa Jaminan Untuk Bisa Sukses?
-          </motion.h2>
+
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
           <motion.h1 
             className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-6"
@@ -194,7 +222,7 @@ export default function SolutionSection() {
               ease: 'linear'
             }}
           >
-           SISTEM YANG UDAH DI-RANCANG PULUHAN TAHUN
+            Kenapa 90 Hari?
           </motion.h1>
           <motion.p
             className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-3xl mx-auto text-center"
@@ -203,14 +231,13 @@ export default function SolutionSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Yes, bukan aku yang buat sistem ini. Tapi Group of Professional Business Consultant dari Salah Satu Perusahaan Terbesar di Indonesia. Perusahaan dengan omzet puluhan sampai ratusan triliun per tahun buat sistem cuman untuk kamu copy dan implementasi, masih ngga mau?
-            <br /><br />
-            Gak ada yang spesial. Semua bisa suskses asalkan mau berusaha, sistem di bawah ini aku share dan aku harap kamu pay attention closely.
+           Pelatihan ini buat kamu punya arahan yang jelas dan bisa buat kamu jadi insurance leader yang sukses.
+
           </motion.p>
         </div>
         
         {/* Features List with more generous spacing */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6 lg:space-y-8">
+        <div className="max-w-5xl mx-auto px-12 sm:px-16 lg:px-20 xl:px-24 space-y-4 sm:space-y-6 lg:space-y-8">
           {transformations.map((feature, index) => (
             <motion.div
               key={index}
@@ -222,7 +249,6 @@ export default function SolutionSection() {
               <FeatureCard 
                 title={feature.title} 
                 description={feature.description} 
-                isLast={index === transformations.length - 1}
                 index={index}
               />
             </motion.div>

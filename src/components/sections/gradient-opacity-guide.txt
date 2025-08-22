@@ -1,0 +1,169 @@
+Got it! Here are two clean, copy-paste ways to get a smooth “Framer-like” gradient opacity in a React .tsx file.
+
+⸻
+
+1) Overlay tint (most common in Framer)
+
+Use a transparent→solid background gradient on an absolutely-positioned overlay. This tints the content smoothly without actually erasing pixels.
+
+// GradientOverlay.tsx
+import React from "react";
+
+type Props = {
+  direction?: "top" | "bottom" | "y" | "x" | "radial";
+  color?: string;        // CSS color WITHOUT alpha, e.g. "0,0,0" for black
+  className?: string;    // extra classes if you use Tailwind etc.
+};
+
+export const GradientOverlay: React.FC<Props> = ({
+  direction = "y",
+  color = "0,0,0",
+  className = "",
+}) => {
+  const bg =
+    direction === "top"
+      ? `linear-gradient(to top, rgba(${color},0) 0%, rgba(${color},.6) 60%, rgba(${color},.9) 100%)`
+      : direction === "bottom"
+      ? `linear-gradient(to bottom, rgba(${color},0) 0%, rgba(${color},.6) 60%, rgba(${color},.9) 100%)`
+      : direction === "x"
+      ? `linear-gradient(to right, rgba(${color},.9) 0%, rgba(${color},0) 35%, rgba(${color},0) 65%, rgba(${color},.9) 100%)`
+      : direction === "radial"
+      ? `radial-gradient(80% 80% at 50% 50%, rgba(${color},0) 0%, rgba(${color},.75) 100%)`
+      : // "y" (top+bottom)
+        `linear-gradient(to bottom, rgba(${color},.9) 0%, rgba(${color},0) 35%, rgba(${color},0) 65%, rgba(${color},.9) 100%)`;
+
+  return (
+    <div
+      aria-hidden
+      className={`pointer-events-none absolute inset-0 ${className}`}
+      style={{ backgroundImage: bg }}
+    />
+  );
+};
+
+Use it:
+
+// ExampleCard.tsx
+import { GradientOverlay } from "./GradientOverlay";
+
+export default function ExampleCard() {
+  return (
+    <div className="relative overflow-hidden rounded-2xl" style={{width: 560, height: 260}}>
+      <img
+        src="/your-background.jpg"
+        alt=""
+        className="h-full w-full object-cover"
+      />
+      {/* Smooth bottom tint, like Framer sections */}
+      <GradientOverlay direction="bottom" color="0,0,0" />
+      <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">
+        Omset bulanan: <span className="text-amber-300">$1,429,716.25</span>
+      </div>
+    </div>
+  );
+}
+
+Why this feels “Framer-smooth”:
+	•	Multiple stops (0% → 60% → 100%) avoid harsh edges.
+	•	You tint with alpha (rgba), not container opacity, so text stays crisp.
+
+⸻
+
+2) True opacity fade (mask)
+
+If you want the content to fade out to transparent (not just darken), use CSS mask-image.
+
+// OpacityMask.tsx
+import React from "react";
+
+type MaskProps = {
+  edge?: "top" | "bottom" | "both";
+  fade?: number; // px
+  className?: string;
+};
+
+export const OpacityMask: React.FC<MaskProps> = ({
+  edge = "bottom",
+  fade = 120,
+  className = "",
+  children,
+}) => {
+  const maskBottom = `linear-gradient(to bottom, black ${100 - (fade / 1000) * 100}%, transparent 100%)`;
+  const maskTop    = `linear-gradient(to top, black ${100 - (fade / 1000) * 100}%, transparent 100%)`;
+
+  const mask =
+    edge === "both"
+      ? `linear-gradient(to bottom, transparent 0, black ${fade}px, black calc(100% - ${fade}px), transparent 100%)`
+      : edge === "top"
+      ? maskTop
+      : maskBottom;
+
+  // -webkit-mask is needed for Safari/Chromium
+  const style: React.CSSProperties = {
+    WebkitMaskImage: mask,
+    maskImage: mask,
+  };
+
+  return (
+    <div className={className} style={style}>
+      {children}
+    </div>
+  );
+};
+
+Use it to fade a list/card content:
+
+import { OpacityMask } from "./OpacityMask";
+
+export default function FadeExample() {
+  return (
+    <OpacityMask edge="bottom" fade={140} className="relative rounded-2xl overflow-hidden">
+      <div style={{width: 560, height: 260, position: "relative"}}>
+        <img src="/your-background.jpg" alt="" className="h-full w-full object-cover" />
+        <div className="absolute bottom-4 left-4 text-white">Dana masuk ke rek…</div>
+      </div>
+    </OpacityMask>
+  );
+}
+
+Notes
+	•	mask-image fades actual opacity; background shows through.
+	•	Keep overflow: hidden on the masked element if you clip children.
+	•	Safari/Chrome need -webkit-mask-image (we set both).
+
+⸻
+
+Tailwind one-liner (if you use it)
+
+You can inline without components:
+
+<div
+  className="relative overflow-hidden rounded-2xl"
+  style={{
+    // Overlay tint (Framer-like)
+    backgroundImage:
+      "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 60%, rgba(0,0,0,.9) 100%)",
+  }}
+/>
+
+Or mask fade:
+
+<div
+  className="relative overflow-hidden rounded-2xl"
+  style={{
+    WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+    maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+  }}
+>
+  {/* content */}
+</div>
+
+
+⸻
+
+Common pitfalls
+	•	Don’t set opacity on the whole container (it fades text/icons too).
+	•	Add multiple stops for smoothness (transparent → 60% → 100%).
+	•	For masks, always include WebkitMaskImage for Safari.
+
+If you tell me which effect you want (tinted vs true fade) and your tech stack (Tailwind/Styled-Components/Vanilla CSS), I’ll tailor the snippet exactly to your codebase.

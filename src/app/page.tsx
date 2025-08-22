@@ -3,6 +3,7 @@ import FAQ from "@/components/sections/faq";
 import Features from "@/components/sections/features";
 import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
+import { HeroSection } from "@/components/sections/hook";
 import HowItWorks from "@/components/sections/how-it-works";
 import Pricing from "@/components/sections/pricing";
 import ProblemSection from "@/components/sections/problem";
@@ -17,13 +18,14 @@ import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
+
       <Hero />
-      <PerubahanSection />
       <AboutMeSection />
+      <TestimonialsCarousel />
       <BlueGradientSeparator />
       <SolutionSection />
+
       <HowItWorks />
-      <TestimonialsCarousel />
       <DigitalSerenity />
       <Features />
       <Testimonials />

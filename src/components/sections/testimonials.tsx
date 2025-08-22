@@ -1,264 +1,163 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/avatar';
-import { Card, CardContent } from '@/components/card-2';
-import { Marquee } from '@/components/3d-testimonial';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Card, CardContent } from '@/components/card-8';
 import { motion } from 'framer-motion';
 import { Spotlight } from '@/components/spotlight-new';
-
-gsap.registerPlugin(ScrollTrigger);
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 
 const testimonials = [
   {
     name: "Jojo",
-    username: "@jojo",
-    body: "Awalnya aku memilih Riscasebagai mentor karena dia yang pertama kali mengenalkan aku ke peluang ini. Gaya mentoring-nya luar biasa – sabar, bisa menyesuaikan dengan tempo belajar aku yang kadang lambat. Sekarang bisa beli apartemen, mobil baru, bahkan umroh pakai uang sendiri.",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Ex Mahasiswa",
+    quote: "Awalnya aku memilih Risca sebagai mentor karena dia yang pertama kali mengenalkan aku ke peluang ini.",
+    story: "Gaya mentoring-nya luar biasa – sabar, bisa menyesuaikan dengan tempo belajar aku yang kadang lambat. Sekarang bisa beli apartemen, mobil baru, bahkan umroh pakai uang sendiri.",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Devina Hartono",
-    username: "@devina",
-    body: "Sebelum bergabung dengan Risca, saya adalah orang yang tidak punya ambisi besar dan selalu menganggap diri introvert. Bersyukur sekali bisa join di Risca, sehingga saya tahu kemampuan-kemampuan yang sebelumnya tidak pernah terpikirkan. Sekarang punya mimpi dan tujuan hidup yang jelas.",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Ex Introvert",
+    quote: "Sebelum bergabung dengan Risca, saya adalah orang yang tidak punya ambisi besar dan selalu menganggap diri introvert.",
+    story: "Bersyukur sekali bisa join di Risca, sehingga saya tahu kemampuan-kemampuan yang sebelumnya tidak pernah terpikirkan. Sekarang punya mimpi dan tujuan hidup yang jelas.",
+    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Sharon Gunawan",
-    username: "@sharon",
-    body: "Riscaorangnya sangat berpengetahuan luas dan tidak pelit berbagi ilmu. Melihat Riscasebagai pemimpin, saya bisa lihat bagaimana dia selalu merawat timnya dan memberi mereka rasa tanggung jawab. Di Risca, saya belajar membangun relasi yang bermakna dengan orang lain.",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Team Leader",
+    quote: "Risca orangnya sangat berpengetahuan luas dan tidak pelit berbagi ilmu.",
+    story: "Melihat Risca sebagai pemimpin, saya bisa lihat bagaimana dia selalu merawat timnya dan memberi mereka rasa tanggung jawab. Di Risca, saya belajar membangun relasi yang bermakna dengan orang lain.",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Jessica Suwarsono", 
-    username: "@jessica",
-    body: "Sebagai mantan karyawan korporat, saya benar-benar merasakan perubahan hidup sejak bergabung dengan Risca. Penghasilan yang saya dapatkan selama 4 tahun menjalankan bisnis Risca sudah mencapai dua kali lipat dari gaji terakhir saya di perusahaan.",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Ex Karyawan Korporat",
+    quote: "Sebagai mantan karyawan korporat, saya benar-benar merasakan perubahan hidup sejak bergabung dengan Risca.",
+    story: "Penghasilan yang saya dapatkan selama 4 tahun menjalankan bisnis Risca sudah mencapai dua kali lipat dari gaji terakhir saya di perusahaan.",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Shanelle",
-    username: "@shanelle", 
-    body: "Bermain keras, bekerja LEBIH KERAS. Yang paling terasa adalah lingkungannya yang penuh dengan high-achiever. Jadi ada trigger untuk keluar dari zona nyaman, bermimpi besar, dan mencapai lebih banyak lagi. Bonus mentoring dari orang-orang hebat.",
-    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "High Achiever",
+    quote: "Bermain keras, bekerja LEBIH KERAS. Yang paling terasa adalah lingkungannya yang penuh dengan high-achiever.",
+    story: "Jadi ada trigger untuk keluar dari zona nyaman, bermimpi besar, dan mencapai lebih banyak lagi. Bonus mentoring dari orang-orang hebat.",
+    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Trisna",
-    username: "@trisna",
-    body: "Riscaadalah gudang ilmu! Gesit bersama tim, mindset yang terbuka. Perubahan sejak bergabung dengan Risca BANYAK SEKALI! Tapi yang paling saya sadari adalah MIMPI. Saya jadi berani untuk bermimpi lagi. Ternyata mimpi bisa direalisasikan berkat Risca.",
-    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Dreamer",
+    quote: "Risca adalah gudang ilmu! Gesit bersama tim, mindset yang terbuka.",
+    story: "Perubahan sejak bergabung dengan Risca BANYAK SEKALI! Tapi yang paling saya sadari adalah MIMPI. Saya jadi berani untuk bermimpi lagi. Ternyata mimpi bisa direalisasikan berkat Risca.",
+    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Joceline",
-    username: "@joceline",
-    body: "Riscasebagai salah satu partner senior selalu memberikan wawasan tentang menjalankan bisnis. Sangat bersyukur bisa bergabung di bisnis Risca. Selain mendapat teman-teman positif, percepatan income di bisnis ini benar-benar nyata dan terasa.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Business Partner",
+    quote: "Risca sebagai salah satu partner senior selalu memberikan wawasan tentang menjalankan bisnis.",
+    story: "Sangat bersyukur bisa bergabung di bisnis Risca. Selain mendapat teman-teman positif, percepatan income di bisnis ini benar-benar nyata dan terasa.",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Sarchie",
-    username: "@sarchie",
-    body: "Etos kerja Riscabenar-benar luar biasa. Dia tidak pernah setengah-setengah dalam melakukan sesuatu. Ketika dia serius terhadap sesuatu, hasilnya selalu memuaskan - penuh integritas dan kualitas tinggi.",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Quality Leader",
+    quote: "Etos kerja Risca benar-benar luar biasa. Dia tidak pernah setengah-setengah dalam melakukan sesuatu.",
+    story: "Ketika dia serius terhadap sesuatu, hasilnya selalu memuaskan - penuh integritas dan kualitas tinggi.",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Sheila Tang",
-    username: "@sheila",
-    body: "Akselerasinya sangat cepat, mulai dari menyekolahkan anak ke sekolah internasional hingga membeli aset properti. Semuanya hasil dari kerja keras dan membantu orang lain. Sejak tahun ketiga, tim semakin besar dan berkembang pesat.",
-    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Property Investor",
+    quote: "Akselerasinya sangat cepat, mulai dari menyekolahkan anak ke sekolah internasional hingga membeli aset properti.",
+    story: "Semuanya hasil dari kerja keras dan membantu orang lain. Sejak tahun ketiga, tim semakin besar dan berkembang pesat.",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Rafi Ahmad",
-    username: "@rafi",
-    body: "Gue dulu karyawan 9-5 yang stuck banget. Income cuma 5 juta sebulan, hidup gitu-gitu aja. Setelah ikut sistem ini, dalam 4 bulan pertama udah bisa 12 juta per bulan. Sekarang bisa traveling sambil kerja, freedom banget!",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Ex Karyawan 9-5",
+    quote: "Gue dulu karyawan 9-5 yang stuck banget. Income cuma 5 juta sebulan, hidup gitu-gitu aja.",
+    story: "Setelah ikut sistem ini, dalam 4 bulan pertama udah bisa 12 juta per bulan. Sekarang bisa traveling sambil kerja, freedom banget!",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Anya Putri",
-    username: "@anyaputri",
-    body: "Dulu skeptis banget sama bisnis online. Mikir pasti scam atau MLM. Ternyata salah besar! Ini beneran sistem yang proven. Dalam 6 bulan udah bisa bayar cicilan motor sendiri dan nabung buat wedding. Game changer banget!",
-    img: "https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Ex Skeptis",
+    quote: "Dulu skeptis banget sama bisnis online. Mikir pasti scam atau MLM. Ternyata salah besar!",
+    story: "Ini beneran sistem yang proven. Dalam 6 bulan udah bisa bayar cicilan motor sendiri dan nabung buat wedding. Game changer banget!",
+    img: "https://images.unsplash.com/photo-1494790108755-2616b612b1dc?w=400&h=500&fit=crop&crop=face",
   },
   {
     name: "Kevin Pratama",
-    username: "@kevinp",
-    body: "Fresh graduate yang bingung mau ngapain. Ngelamar kerja susah, kalau dapat gaji kecil. Ikut program ini jadi turning point hidup gue. Sekarang penghasilan udah 15 juta per bulan di umur 22 tahun!",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
-  },
-  {
-    name: "Sarah Maharani",
-    username: "@sarahmhrn",
-    body: "Ibu rumah tangga yang pengen bantu ekonomi keluarga tapi gak bisa ninggalin anak. Sistem ini perfect banget buat work from home. Sekarang bisa contribute 8-10 juta per bulan sambil ngurus keluarga. Suami juga support banget!",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
-  },
-  {
-    name: "Dimas Wijaya",
-    username: "@dimasw",
-    body: "Mahasiswa semester akhir yang butuh uang saku lebih. Awalnya cuma iseng ikut, eh ternyata serius banget hasilnya. Sekarang bisa bayar kuliah sendiri bahkan bantu ortu. Temen-temen pada iri liat lifestyle gue berubah drastis.",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
-  },
-  {
-    name: "Luna Sari",
-    username: "@lunasari",
-    body: "Pernah gagal di bisnis lain sampai hutang 20 juta. Desperate banget waktu itu. Sistem ini benar-benar jadi penyelamat. Dalam 8 bulan udah bisa lunasin hutang dan sekarang profit bersih 18 juta per bulan. Hidup jadi tenang lagi!",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
-  },
-  {
-    name: "Budi Santoso",
-    username: "@budisant",
-    body: "Umur 35 tapi masih jadi karyawan biasa. Merasa terlambat buat mulai bisnis. Ternyata gak ada kata terlambat! Sistemnya mudah diikuti even buat yang gaptek kayak gue. Sekarang side income udah 12 juta, mau resign tahun depan!",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
-  },
-  {
-    name: "Citra Dewi",
-    username: "@citradewi",
-    body: "Introvert parah yang susah banget networking. Sistem ini ngajarin gue cara approach orang dengan natural tanpa keliatan pushy. Confidence gue naik drastis, income juga. Dalam 3 bulan udah 14 juta per bulan. Mind blown!",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
-  },
-  {
-    name: "Fajar Nugroho",
-    username: "@fajarn",
-    body: "Karyawan pabrik yang capek fisik mental tiap hari. Gaji UMR tapi tenaga terkuras habis. Ikut program ini jadi harapan baru. Sekarang udah bisa resign dan full time di bisnis ini. Income 20 juta lebih per bulan, kerja santai dari rumah!",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    country: "🇮🇩 Indonesia",
+    role: "Fresh Graduate",
+    quote: "Fresh graduate yang bingung mau ngapain. Ngelamar kerja susah, kalau dapat gaji kecil.",
+    story: "Ikut program ini jadi turning point hidup gue. Sekarang penghasilan udah 15 juta per bulan di umur 22 tahun!",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
   },
 ];
 
-function TestimonialCard({ img, name, username, body, country }: (typeof testimonials)[number]) {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (cardRef.current) {
-      gsap.fromTo(cardRef.current, 
-        { 
-          opacity: 0, 
-          y: 50,
-          scale: 0.9,
-          rotateX: 10
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          rotateX: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
-
-      const handleMouseEnter = () => {
-        gsap.to(cardRef.current, {
-          scale: 1.05,
-          rotateY: 5,
-          z: 50,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      };
-
-      const handleMouseLeave = () => {
-        gsap.to(cardRef.current, {
-          scale: 1,
-          rotateY: 0,
-          z: 0,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      };
-
-      cardRef.current.addEventListener('mouseenter', handleMouseEnter);
-      cardRef.current.addEventListener('mouseleave', handleMouseLeave);
-
-      return () => {
-        if (cardRef.current) {
-          cardRef.current.removeEventListener('mouseenter', handleMouseEnter);
-          cardRef.current.removeEventListener('mouseleave', handleMouseLeave);
-        }
-      };
-    }
-  }, []);
-
+function TestimonialCard({ name, role, quote, story, img }: (typeof testimonials)[number]) {
   return (
-    <Card ref={cardRef} className="w-50 testimonial-card transform-gpu">
-      <CardContent>
-        <div className="flex items-center gap-2.5">
-          <Avatar className="size-9">
-            <AvatarImage src={img} alt={name} />
-            <AvatarFallback>{name[0]}</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col">
-            <figcaption className="text-sm font-medium text-foreground flex items-center gap-1">
-              {name} <span className="text-xs">{country}</span>
-            </figcaption>
-            <p className="text-xs font-medium text-muted-foreground">{username}</p>
+    <Card className="relative w-full overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+      <CardContent className="relative z-10 p-4 sm:p-5 lg:p-8 flex flex-col">
+        {/* Quote Icon */}
+        <div className="mb-4 sm:mb-5 lg:mb-8">
+          <Quote className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-pink-500" strokeWidth={2} />
+        </div>
+        
+        {/* Main Quote */}
+        <div className="mb-4 sm:mb-5 lg:mb-8">
+          <p className="text-sm sm:text-base lg:text-lg font-medium text-white leading-tight">
+            "{quote}"
+          </p>
+        </div>
+        
+        {/* Story */}
+        <div className="text-white mb-4 sm:mb-5 lg:mb-8">
+          <p className="text-xs sm:text-sm lg:text-base text-white/80 leading-relaxed font-light">
+            {story}
+          </p>
+        </div>
+        
+        {/* Profile Section */}
+        <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-5">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-lg overflow-hidden flex-shrink-0">
+            <img 
+              src={img} 
+              alt={name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-white">{name}</h3>
+            <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">{role}</p>
           </div>
         </div>
-        <blockquote className="mt-3 text-sm text-secondary-foreground">{body}</blockquote>
       </CardContent>
     </Card>
   );
 }
 
 export default function TestimonialsSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 60%",
-        end: "bottom 40%",
-        toggleActions: "play none none reverse"
-      }
-    });
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
-    tl.fromTo(titleRef.current, 
-      { opacity: 0, y: 30 }, 
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
-    )
-    .fromTo(subtitleRef.current, 
-      { opacity: 0, y: 20 }, 
-      { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 
-      "-=0.4"
-    )
-    .fromTo(containerRef.current, 
-      { opacity: 0, scale: 0.95 }, 
-      { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }, 
-      "-=0.3"
-    );
-
-    return () => {
-      tl.kill();
-    };
-  }, []);
+  // Get visible testimonials (3 on desktop, 1 on mobile)
+  const getVisibleTestimonials = () => {
+    const result = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      result.push(testimonials[index]);
+    }
+    return result;
+  };
 
   return (
-    <div ref={sectionRef} className="relative py-16 md:py-32 bg-black overflow-hidden">
+    <div className="relative py-16 md:py-32 bg-black overflow-hidden">
       {/* Pink Spotlight Effects */}
       <Spotlight 
         gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
@@ -273,8 +172,8 @@ export default function TestimonialsSection() {
       />
       
       <div className="text-center mb-12 relative z-10">
-        <h2 ref={titleRef} className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-          Mereka Dulu Seperti Lo
+        <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
+          Kata - Kata
         </h2>
         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
         <motion.h1 
@@ -295,65 +194,64 @@ export default function TestimonialsSection() {
             ease: 'linear'
           }}
         >
-          SEKARANG BEDA BANGET
+          Mereka Udah Mulai
         </motion.h1>
-        <p ref={subtitleRef} className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-[1200px] mx-auto px-4">
+        <p className="text-xs sm:text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-sm sm:max-w-3xl mx-auto px-0 sm:px-6 lg:px-8">
           Dari yang skeptis sampe akhirnya ngaku "gue salah banget dulu ragu". Ini cerita real dari member yang dulu mikir persis kayak lo sekarang.
         </p>
       </div>
       
-      <div className="flex items-center justify-center relative z-10 px-4">
-        <div ref={containerRef} className="border border-white/10 rounded-lg relative flex h-[400px] sm:h-[500px] lg:h-[600px] w-full max-w-[calc(100vw-2rem)] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1200px] flex-row items-center justify-center overflow-hidden gap-1.5 [perspective:300px] shadow-2xl bg-black/20 backdrop-blur-sm">
-          <div
-            className="flex flex-row items-center gap-4"
-            style={{
-              transform:
-                'translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)',
-            }}
+      {/* Manual Navigation Carousel */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4">
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          {getVisibleTestimonials().map((testimonial, index) => (
+            <motion.div
+              key={`${currentIndex}-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`${index > 0 ? 'hidden lg:block' : ''}`} // Only show first card on mobile
+            >
+              <TestimonialCard {...testimonial} />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Navigation Controls at Bottom */}
+        <div className="flex justify-center items-center gap-4">
+          <button
+            onClick={prevSlide}
+            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+            aria-label="Previous testimonial"
           >
-            {/* Vertical Marquee (downwards) */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (upwards) */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (downwards) */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (upwards) */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (downwards) - Column 5 */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (upwards) - Column 6 */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+          
+          {/* Dot Indicators */}
+          <div className="flex gap-2">
+            {[0, 1, 2].map((dotIndex) => {
+              const testimonialIndex = (currentIndex + dotIndex) % testimonials.length;
+              return (
+                <button
+                  key={dotIndex}
+                  onClick={() => setCurrentIndex(testimonialIndex)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    dotIndex === 0 ? 'bg-pink-500' : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                  aria-label={`Go to testimonial ${testimonialIndex + 1}`}
+                />
+              );
+            })}
           </div>
           
-          {/* Gradient overlays for vertical marquee */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-black"></div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black"></div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black"></div>
+          <button
+            onClick={nextSlide}
+            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
         </div>
       </div>
     </div>
