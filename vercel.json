@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm ci --legacy-peer-deps && npm run build",
+  "installCommand": "npm ci --legacy-peer-deps",
+  "functions": {
+    "app/**": {
+      "maxDuration": 30
+    }
+  }
+}

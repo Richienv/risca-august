@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 332 44% 11%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 332 20% 95%;
+    --secondary-foreground: 332 44% 11%;
+    --muted: 332 20% 95%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 347 72% 51%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 332 44% 11%;
+    --radius: 0.5rem;
+    --chart-1: 332 44% 11%;
+    --chart-2: 332 44% 25%;
+    --chart-3: 332 44% 35%;
+    --chart-4: 332 44% 45%;
+    --chart-5: 332 44% 55%;
+    --color-1: 332 44% 11%;
+    --color-2: 332 60% 20%;
+    --color-3: 332 70% 30%;
+    --color-4: 332 80% 40%;
+    --color-5: 332 90% 50%;
+    --aura-glow: 332 44% 11%;
+    --aura-light: 332 44% 25%;
+    --gradient-start: 332 44% 11%;
+    --gradient-mid: 332 60% 20%;
+    --gradient-end: 332 80% 30%;
+  }
+
+  .dark {
+    --background: 332 44% 3%;
+    --foreground: 0 0% 98%;
+    --card: 332 44% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 332 44% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 332 44% 25%;
+    --primary-foreground: 332 44% 3%;
+    --secondary: 332 44% 8%;
+    --secondary-foreground: 332 44% 70%;
+    --muted: 332 44% 8%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 347 72% 51%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 332 44% 15%;
+    --input: 332 44% 15%;
+    --ring: 332 44% 70%;
+    --chart-1: 332 44% 25%;
+    --chart-2: 332 44% 35%;
+    --chart-3: 332 44% 45%;
+    --chart-4: 332 44% 55%;
+    --chart-5: 332 44% 65%;
+    --color-1: 332 44% 25%;
+    --color-2: 332 60% 35%;
+    --color-3: 332 70% 45%;
+    --color-4: 332 80% 55%;
+    --color-5: 332 90% 65%;
+    --aura-glow: 332 44% 25%;
+    --aura-light: 332 44% 40%;
+    --gradient-start: 332 44% 15%;
+    --gradient-mid: 332 60% 25%;
+    --gradient-end: 332 80% 35%;
+  }
+}
+
+@layer base {
+  :root {
+    --chart-1: 332 44% 11%;
+    --chart-2: 332 44% 25%;
+    --chart-3: 332 44% 35%;
+    --chart-4: 332 44% 45%;
+    --chart-5: 332 44% 55%;
+    font-family: Inter, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt";
+  }
+
+  .dark {
+    --chart-1: 332 44% 25%;
+    --chart-2: 332 44% 35%;
+    --chart-3: 332 44% 45%;
+    --chart-4: 332 44% 55%;
+    --chart-5: 332 44% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  @supports (font-variation-settings: normal) {
+    :root {
+      font-family: InterVariable, sans-serif;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt";
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+
+  /* Aura Effects */
+  .aura-glow {
+    box-shadow: 0 0 20px hsla(var(--aura-glow), 0.3),
+                0 0 40px hsla(var(--aura-glow), 0.2),
+                0 0 60px hsla(var(--aura-glow), 0.1);
+  }
+
+  .aura-glow-intense {
+    box-shadow: 0 0 30px hsla(var(--aura-glow), 0.5),
+                0 0 60px hsla(var(--aura-glow), 0.3),
+                0 0 90px hsla(var(--aura-glow), 0.2);
+  }
+
+  .aura-border {
+    border: 1px solid hsla(var(--aura-light), 0.5);
+    box-shadow: inset 0 0 20px hsla(var(--aura-glow), 0.1);
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-aura {
+    background: linear-gradient(135deg, 
+      hsla(var(--gradient-start), 1) 0%,
+      hsla(var(--gradient-mid), 0.8) 50%,
+      hsla(var(--gradient-end), 0.6) 100%);
+  }
+
+  .gradient-aura-subtle {
+    background: linear-gradient(135deg, 
+      hsla(var(--gradient-start), 0.1) 0%,
+      hsla(var(--gradient-mid), 0.05) 50%,
+      hsla(var(--gradient-end), 0.02) 100%);
+  }
+
+  /* Animated Aura Effects */
+  .aura-pulse {
+    animation: aura-pulse 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes aura-pulse {
+    0% {
+      box-shadow: 0 0 20px hsla(var(--aura-glow), 0.3);
+    }
+    100% {
+      box-shadow: 0 0 40px hsla(var(--aura-glow), 0.6),
+                  0 0 60px hsla(var(--aura-glow), 0.3);
+    }
+  }
+
+  /* Shimmer Effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent,
+      hsla(var(--aura-light), 0.3),
+      transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Metallic Flow Animation */
+  @keyframes metallic-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
