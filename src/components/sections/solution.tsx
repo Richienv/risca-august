@@ -7,32 +7,40 @@ import { ChevronDown } from "lucide-react";
 
 const transformations = [
   {
-    title: "Day 1 to 12 — Fundamental Asuransi",
-    description: "Kamu akan belajar dari dasar banget tentang dunia asuransi. Mulai dari jenis-jenis produk, cara kerja sistem, sampai mindset yang benar sebagai agen. Gak perlu khawatir kalau sebelumnya gak tau apa-apa, karena semua dimulai dari nol. Di akhir fase ini, kamu udah paham semua basic yang dibutuhin buat jadi agen professional.",
+    title: "Hari 1–10 — Nyalakan Mimpi & Siapkan Diri",
+    description: "Temukan alasan terbesarmu. Kenali peluang bisnisnya. Dapatkan arahan langsung dari mentor dan komunitas support yang siap bantu kamu sukses dari awal.",
   },
   {
-    title: "Day 13 to 24 — Closing Deal",
-    description: "Setelah paham fundamentalnya, sekarang saatnya belajar gimana cara nutup deal dengan benar. Kamu bakal dikasih script yang udah terbukti berhasil, teknik handling objection, dan cara buat client percaya sama kamu. Phase ini yang bakal ngebedain kamu dari agen-agen lain yang cuma asal nawarin.",
+    title: "Hari 11–20 — Closing Pertamamu",
+    description: "Belajar cara presentasi yang mudah dipahami. Mulai cerita ke orang terdekat. Dengan panduan mentor, kamu akan closing 1–2 klien pertamamu dan capai ALP hingga 50–100 juta. Di sini kamu mulai merasakan income nyata.",
   },
   {
-    title: "Day 25 to 36 — Membangun Profit Besar",
-    description: "Kamu udah bisa closing, tapi sekarang waktunya scale up income kamu. Bakal diajarkan strategi buat dapetin client premium, cara manage portfolio yang profitable, dan teknik upselling yang natural. Target di phase ini adalah kamu udah bisa konsisten dapetin komisi besar setiap bulannya.",
+    title: "Hari 21–30 — Bangun Kredibilitas & Magnet Sosial",
+    description: "Posting testimoni, share progres kamu, dan mulai bangun personal branding. Orang mulai percaya, bertanya, dan tertarik ikut.",
   },
   {
-    title: "Day 37 to 48 — Strategi Persuasion Digital",
-    description: "Era digital ini, kamu gak bisa andalin cara lama doang. Di phase ini bakal belajar gimana leverage social media, buat content yang engaging, dan build personal brand yang kuat. Kamu juga bakal tau cara prospect lewat digital channels yang efektif dan convert follower jadi paying client.",
+    title: "Hari 31–40 — Gandakan Hasilmu",
+    description: "Teruskan pola yang berhasil. Closing rutin. Targetmu adalah tembus 150–200 juta ALP dari penjualan pribadi. Income makin terasa.",
   },
   {
-    title: "Day 49 to 60 — Negosiasi dan Penutupan",
-    description: "Level advanced dari closing skills. Kamu bakal belajar psychology of selling, advanced negotiation techniques, dan cara handle big ticket clients. Di phase ini mindset kamu udah berubah dari sekedar sales person jadi trusted advisor yang bisa charge premium untuk expertise kamu.",
+    title: "Hari 41–50 — Rekrut Tim Pertamamu",
+    description: "Sudah ada yang tertarik ikut? Sekarang saatnya kamu latih 2 orang untuk jadi BE. Ajak mereka duplikasi sistem yang kamu pakai.",
   },
   {
-    title: "Day 61 to 84 — Logistik dan Dokumen Ekspor",
-    description: "Karena target kita bukan cuma domestik, kamu bakal diajarkan gimana cara handle international clients dan ekspor produk asuransi. Mulai dari compliance, dokumentasi, sampai cara komunikasi dengan client dari negara lain. Skill ini yang bakal bikin income kamu berkali-kali lipat.",
+    title: "Hari 51–60 — Jadi Leader Kecil",
+    description: "Bantu tim kamu closing. Jalankan sesi mentoring sederhana. Kamu sekarang bukan cuma penjual, tapi pembimbing.",
   },
   {
-    title: "Day 85 to 90 — Finalisasi Bisnis Ekspor",
-    description: "Phase terakhir ini adalah putting it all together. Kamu bakal praktek langsung semua yang udah dipelajari dengan mentorship intensif. Target di akhir program ini kamu udah punya sistem bisnis yang bisa jalan sendiri dan generate passive income secara konsisten. Plus kamu udah punya network international yang valuable.",
+    title: "Hari 61–70 — Bangun Struktur Menuju BP",
+    description: "Gabungkan hasil pribadi dan tim. Kamu sekarang makin dekat ke 300 juta ALP. Income bisa tembus Rp 4–5 juta/bulan.",
+  },
+  {
+    title: "Hari 71–80 — Kunci Posisi BP",
+    description: "Pastikan semua syarat terpenuhi (Option 1/2/3). Validasi income, buat sistem kerja tim, dan siapkan langkah scale-up.",
+  },
+  {
+    title: "Hari 81–90 — Tampil & Jadi Role Model",
+    description: "Ceritakan perjalananmu. Rekrut BE baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis.",
   },
 ];
 
@@ -209,7 +217,7 @@ export default function SolutionSection() {
               ease: 'linear'
             }}
           >
-            Kenapa 90 Hari?
+            90 Hari Menuju BP Allianz
           </motion.h1>
           <motion.p
             className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-3xl mx-auto text-center"
@@ -218,7 +226,7 @@ export default function SolutionSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-           Pelatihan ini buat kamu punya arahan yang jelas dan bisa buat kamu jadi insurance leader yang sukses.
+           Mulai dari nol, kamu akan dibimbing untuk closing pertama dalam 2 minggu, bangun tim dalam 2 bulan, dan capai posisi Business Partner dalam 90 hari. Tanpa pengalaman? Bukan masalah. Asal niat dan komitmen, hasilnya bisa kamu rasakan cepat.
 
           </motion.p>
         </div>

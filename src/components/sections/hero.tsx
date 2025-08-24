@@ -16,7 +16,7 @@ function HeroTitles() {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    let scrollSpeed = 0.5; // pixels per tick
+    let scrollSpeed = 0.4; // pixels per tick (super slow speed)
     let frameId: number;
 
     const step = () => {
@@ -96,7 +96,7 @@ function HeroTitles() {
       {/* Mobile height: h-32 | Desktop height: sm:h-96 */}
       <div 
         ref={scrollRef}
-        className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-25rem] sm:mt-[-12rem] mx-auto opacity-70 sm:opacity-100"
+        className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-10rem] sm:mt-[-6rem] mx-auto opacity-70 sm:opacity-100"
         style={{
           overflowY: "scroll",
           scrollbarWidth: "none", // Firefox
@@ -152,7 +152,7 @@ function HeroTitles() {
 
       {/* Subtle Tag - Apple style with reduced top margin for closer spacing */}
       <motion.div
-        className="flex justify-center mb-4 mt-2 relative z-10"
+        className="flex justify-center mb-4 mt-8 relative z-10"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -202,7 +202,7 @@ function HeroTitles() {
       
       {/* Subtitle - closer to title */}
       <motion.p
-        className="text-xs sm:text-lg tracking-tight text-gray-300 text-balance text-center max-w-2xl mx-auto mb-6"
+        className="text-xs sm:text-lg tracking-tight text-gray-300 text-balance text-center max-w-2xl mx-auto mb-8"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -246,72 +246,20 @@ function HeroTitles() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <p className="text-white font-bold text-base sm:text-lg mb-2">
+        <p className="text-white font-bold text-base sm:text-3xl mb-0">
           Limited Slots
         </p>
-        <p className="text-gray-400 text-[9px] sm:text-xs">
-          Penawaran Terbatas:
-        </p>
         <p className="text-white font-medium text-[9px] sm:text-xs">
-          FREE iPad Untuk 10 Orang Tercepat Selesaikan Challange Pertama.
+          FREE iPad Untuk 10 Orang Tercepat Capai Misi.
         </p>
       </motion.div>
     </div>
   );
 }
 
-function HeroVideo() {
-  return (
-    <motion.div
-      className="relative mx-auto flex w-full flex-col items-center justify-center"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 1, ease }}
-    >
-      <div className="relative w-full max-w-4xl mt-8">
-        {/* Video Container */}
-        <div className="relative w-full">
-          {/* Video Container with thick transparent border */}
-          <motion.div
-            className="relative z-50 aspect-video w-full overflow-hidden rounded-2xl"
-            style={{ 
-              isolation: 'isolate',
-              transform: 'translateZ(0)', // Force hardware acceleration
-            }}
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Thick transparent border frame */}
-            <div className="absolute inset-0 z-60 rounded-2xl border-8 border-white/20 backdrop-blur-sm pointer-events-none"></div>
-            
-            {/* YouTube embedded video */}
-            <div className="relative w-full h-full bg-black rounded-xl overflow-hidden group cursor-pointer">
-              {/* YouTube Embed */}
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/pxGM_TOgHuM?si=FuvN40zntrmZNYfg&autoplay=0&mute=1&controls=1&showinfo=0&rel=0"
-                title="YouTube video preview"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  filter: 'none !important',
-                  transform: 'translateZ(0)',
-                }}
-              />
-              
-              {/* Custom overlay for styling (optional) */}
-              <div className="absolute inset-0 bg-transparent pointer-events-none z-10"></div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden w-full min-h-[80vh] sm:min-h-screen flex items-end sm:items-center justify-center bg-background pt-8 sm:pt-0 pb-8">
+    <section id="hero" className="relative overflow-hidden w-full min-h-[100vh] sm:min-h-screen flex items-center justify-center bg-background pt-16 sm:pt-8 pb-8">
       {/* Spotlight Effects - More subtle on mobile, positioned behind */}
       <div className="absolute inset-0 z-0">
         <Spotlight 
@@ -336,33 +284,62 @@ export default function Hero() {
               {/* Main Title and Subtitle with integrated notifications */}
               <HeroTitles />
               
-              {/* Video at the bottom */}
-              <HeroVideo />
-              
-              {/* Star Rating Section - Below the video */}
-              <div className="mt-8 flex justify-center">
-                <div className="text-center">
+              {/* Star Rating Section - Positioned to right edge */}
+              <div className="mt-8 w-full flex justify-end pr-8 sm:pr-12 lg:pr-16">
+                <div className="text-right">
                   {/* Star Rating */}
-                  <div className="flex items-center gap-0.5 mb-1 justify-center">
+                  <div className="flex items-center gap-0.5 mb-1 justify-end">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <svg
                         key={star}
-                        className="w-2 h-2 text-orange-400 fill-current"
+                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-400 fill-current"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
-                    <span className="ml-1 text-white font-semibold text-[8px]">4.8/5</span>
+                    <span className="ml-1 text-white font-semibold text-[10px] sm:text-xs">4.8/5</span>
                   </div>
                   
                   {/* Rating Text */}
-                  <p className="text-gray-300 text-[7px]">
-                    Rated excellent: 5000+ students
+                  <p className="text-gray-300 text-[9px] sm:text-xs">
+                    Rated excellent: 500+ Member
                   </p>
                 </div>
               </div>
+
+              {/* Video Section - positioned below rating */}
+              <motion.div
+                className="relative mx-auto flex w-full flex-col items-center justify-center mt-8"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4, duration: 1 }}
+              >
+                <div className="relative w-full max-w-xl px-8">
+                  {/* Video Container with thin gray border and medium padding */}
+                  <div className="relative w-full border border-gray-600 rounded-lg overflow-hidden p-3">
+                    <motion.div
+                      className="relative aspect-video w-full overflow-hidden rounded-md"
+                      whileHover={{ scale: 1.01 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {/* YouTube embedded video */}
+                      <iframe
+                        className="absolute inset-0 w-full h-full"
+                        src="https://www.youtube.com/embed/pxGM_TOgHuM?si=FuvN40zntrmZNYfg&autoplay=0&mute=1&controls=1&showinfo=0&rel=0"
+                        title="YouTube video preview"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        style={{
+                          filter: 'none !important',
+                          transform: 'translateZ(0)',
+                        }}
+                      />
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>

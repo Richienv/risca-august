@@ -8,8 +8,8 @@ export default function Pricing() {
         <section id="pricing-section" className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="mx-auto max-w-2xl space-y-6 text-left">
-                    <h1 className="text-left text-2xl font-semibold lg:text-3xl">Paket Keanggotaan Asuransi</h1>
-                    <p className="text-sm lg:text-base">Pilih paket yang sesuai dengan kemampuan dan target income bulanan Anda. Semua paket mendapat asuransi pribadi dan keluarga plus bonus menarik.</p>
+                    <h1 className="text-left text-2xl font-semibold lg:text-3xl">Paket Asuransi dengan Cashback & Rewards</h1>
+                    <p className="text-sm lg:text-base">Yang kamu bayar 100% dikembalikan sebagai cashback untuk beli asuransi keluarga. Jadi kamu dapat proteksi gratis PLUS income bulanan dan bonus menarik!</p>
                 </div>
 
                 <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
@@ -17,14 +17,14 @@ export default function Pricing() {
                         <CardHeader>
                             <CardTitle className="font-medium text-sm">Starter Package</CardTitle>
                             <span className="my-3 block text-lg font-semibold">Rp 10 Jt / bulan</span>
-                            <CardDescription className="text-xs">Paket Pemula</CardDescription>
+                            <CardDescription className="text-xs">100% Cashback + Proteksi Keluarga</CardDescription>
                         </CardHeader>
 
                         <CardContent className="space-y-4">
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-xs">
-                                {['Asuransi Pribadi & Keluarga', 'Income Rp 2.335.000/bulan', 'Komisi 23,35% dari paket', 'Durasi 2 tahun', 'Target 4 orang referral', 'Bonus Logam Mulia 5 Gram (10 Jt)', 'Bonus iPad (6 Jt)', 'Total Bonus 16 Jt dalam 1-3 bulan'].map((item, index) => (
+                                {['💰 Cashback 100% untuk beli asuransi keluarga', '🏠 Proteksi lengkap tanpa keluar uang tambahan', '💵 Income Rp 2.335.000/bulan (komisi 23,35%)', '⏰ Program 2 tahun dengan hasil pasti', '👥 Target 4 orang referral untuk maksimal hasil', '🥇 Bonus Logam Mulia 5 Gram senilai 10 Jt', '📱 Bonus iPad senilai 6 Jt', '🎁 Total bonus 16 Jt dalam 1-3 bulan'].map((item, index) => (
                                     <li
                                         key={index}
                                         className="flex items-center gap-2">
@@ -52,13 +52,13 @@ export default function Pricing() {
                             <CardHeader>
                                 <CardTitle className="font-medium text-sm">Professional Package</CardTitle>
                                 <span className="my-3 block text-lg font-semibold">Rp 17 Jt / bulan</span>
-                                <CardDescription className="text-xs">Paket Profesional</CardDescription>
+                                <CardDescription className="text-xs">100% Cashback + Proteksi Premium</CardDescription>
                             </CardHeader>
 
                             <CardContent className="space-y-4">
                                 <hr className="border-dashed" />
                                 <ul className="list-outside space-y-3 text-xs">
-                                    {['Asuransi Pribadi & Keluarga', 'Income Rp 3.969.500/bulan', 'Komisi 23,35% dari paket', 'Durasi 2 tahun', 'Target 2 orang referral', 'Bonus Logam Mulia 5 Gram (10 Jt)', 'Bonus iPad (6 Jt)', 'Total Bonus 16 Jt dalam 1-3 bulan', 'Income lebih stabil', 'Target referral lebih sedikit'].map((item, index) => (
+                                    {['💰 Cashback 100% untuk proteksi keluarga premium', '🏠 Asuransi lengkap tanpa biaya tambahan', '💵 Income Rp 3.969.500/bulan (komisi 23,35%)', '⏰ Program 2 tahun dengan hasil terjamin', '👥 Target hanya 2 orang referral (lebih mudah)', '🥇 Bonus Logam Mulia 5 Gram senilai 10 Jt', '📱 Bonus iPad senilai 6 Jt', '🎁 Total bonus 16 Jt dalam 1-3 bulan', '📈 Income lebih stabil dan besar', '🎯 Target referral lebih sedikit = lebih realistis'].map((item, index) => (
                                         <li
                                             key={index}
                                             className="flex items-center gap-2">
@@ -83,14 +83,14 @@ export default function Pricing() {
                         <CardHeader>
                             <CardTitle className="font-medium text-sm">Premium Package</CardTitle>
                             <span className="my-3 block text-lg font-semibold">Rp 25 Jt / bulan</span>
-                            <CardDescription className="text-xs">Paket Premium</CardDescription>
+                            <CardDescription className="text-xs">100% Cashback + Proteksi VIP</CardDescription>
                         </CardHeader>
 
                         <CardContent className="space-y-4">
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-xs">
-                                {['Asuransi Pribadi & Keluarga', 'Income Rp 5.837.500/bulan', 'Komisi 23,35% dari paket', 'Durasi 2 tahun', 'Tanpa target referral', 'Bonus Logam Mulia 5 Gram (10 Jt)', 'Bonus iPad (6 Jt)', 'Total Bonus 16 Jt dalam 1-3 bulan', 'Income tertinggi', 'Paling mudah dicapai'].map((item, index) => (
+                                {['💰 Cashback 100% untuk proteksi VIP keluarga', '🏠 Proteksi terlengkap tanpa keluar uang ekstra', '💵 Income Rp 5.837.500/bulan (komisi 23,35%)', '⏰ Program 2 tahun dengan hasil maksimal', '🚀 TANPA target referral (paling mudah dicapai)', '🥇 Bonus Logam Mulia 5 Gram senilai 10 Jt', '📱 Bonus iPad senilai 6 Jt', '🎁 Total bonus 16 Jt dalam 1-3 bulan', '👑 Income tertinggi dari semua paket', '✨ Paling mudah dicapai karena tanpa syarat referral'].map((item, index) => (
                                     <li
                                         key={index}
                                         className="flex items-center gap-2">

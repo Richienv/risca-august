@@ -6,39 +6,49 @@ import Image from 'next/image';
 
 const stepsData = [
   {
-    title: "Hari ke 1-12 — Fundamental Bisnis Asuransi",
-    description: "Memulai dari nol dengan modal nekat. Belajar dasar industri, jenis produk, dan mindset yang benar sebagai agen professional.",
+    title: "Hari 1–10 — Nyalakan Mimpi & Siapkan Diri",
+    description: "Di 10 hari pertama, aku mulai buka pikiran. Aku tanya ke diriku sendiri: kenapa aku harus sukses? Aku ikut sesi bareng mentor, kenalan sama tim yang supportive banget, dan nulis target penghasilan pertamaku.",
     imageSrc: "/images/1.png"
   },
   {
-    title: "Hari ke 13-24 — Teknik Closing dan Persuasi",
-    description: "Master script closing yang proven, teknik handling objection, dan cara bikin client percaya. Ini yang bedain kamu dari agen biasa.",
+    title: "Hari 11–20 — Closing Pertamaku",
+    description: "Aku belajar cara jelasin produk Allianz dengan bahasa yang sederhana. Mentor dampingin aku latihan ngomong, roleplay, dan akhirnya aku dapet closing pertama. Rasanya campur aduk — deg-degan, tapi bangga banget.",
     imageSrc: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari ke 25-36 — Membangun Profit Konsisten",
-    description: "Scale up income dengan strategi client premium, portfolio management yang profitable, dan teknik upselling natural.",
+    title: "Hari 21–30 — Percaya Diri & Kuasai Ceritaku",
+    description: "Aku belum posting apa-apa di medsos, tapi aku mulai nulis cerita kenapa aku jalanin ini semua. Aku latihan ngomong ke teman dan keluarga. Pelan-pelan aku mulai percaya diri.",
     imageSrc: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari ke 37-48 — Strategi Digital Marketing",
-    description: "Leverage social media, build personal brand yang kuat, dan convert follower jadi paying client dengan sistem proven.",
+    title: "Hari 31–40 — Gandakan Hasilku",
+    description: "Setelah berhasil closing, aku ulangi langkah yang sama. Aku presentasi lebih banyak, follow up lebih serius. Closing kedua dan ketiga pun datang. Aku capai total ALP di atas 150 juta.",
     imageSrc: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari ke 49-60 — Advanced Sales Psychology",
-    description: "Psychology of selling, advanced negotiation, dan handle big ticket clients. Transform dari sales jadi trusted advisor.",
+    title: "Hari 41–50 — Rekrut Tim Pertamaku",
+    description: "Ada teman yang tanya-tanya, akhirnya aku ajak join. Aku cerita jujur tentang pengalamanku. Dalam 10 hari ini, aku rekrut 2 orang dan mulai bimbing mereka langkah demi langkah.",
     imageSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari ke 61-84 — Ekspansi ke Pasar International",
-    description: "Handle international clients, ekspor produk asuransi, compliance, dan komunikasi cross-border yang effective.",
+    title: "Hari 51–60 — Latih & Dukung Tim Kecilku",
+    description: "Aku ajarin mereka cara presentasi, bantu latihan, dan bikin grup kecil bareng. Rasanya seru banget bisa bantu orang lain mulai dari nol. Sekarang aku gak jalan sendiri — aku punya tim.",
     imageSrc: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari ke 85-90 — Sistem Passive Income",
-    description: "Putting it all together. Build sistem bisnis yang jalan sendiri dan generate passive income konsisten dengan mentorship intensif.",
+    title: "Hari 61–70 — Bangun Struktur Menuju BP",
+    description: "Aku gabungkan hasil pribadiku dan ALP tim. Kita saling support dan saling pantau progres. Aku bener-bener seriusin target 300 juta ALP. Di sini aku makin semangat karena semuanya udah makin dekat.",
     imageSrc: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=500&h=400&fit=crop"
+  },
+  {
+    title: "Hari 71–80 — Kunci Kualifikasi BP",
+    description: "Hari-hari ini aku full action. Tutup sisa kekurangan, bantu tim closing, dan validasi income-ku bareng mentor. Pas targetnya tercapai, aku nangis kecil. Ternyata aku beneran bisa.",
+    imageSrc: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=400&fit=crop"
+  },
+  {
+    title: "Hari 81–90 — Naik Level & Duplikasi",
+    description: "Aku mulai sharing perjalanan aku. Aku bikin video singkat, cerita di WA, dan bantu tim aku mulai 90 hari versi mereka. Sekarang aku bukan cuma punya penghasilan — aku punya dampak.",
+    imageSrc: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop"
   }
 ];
 
@@ -84,10 +94,10 @@ export default function HowItWorks() {
               ease: 'linear'
             }}
           >
-            Proses 90 hari Kamu Kedepan
+            Program 90 Hari Menuju BP Allianz
           </motion.h1>
           <p className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-2xl mx-auto">
-            Setiap hari ada progress baru, setiap minggu ada breakthrough. Ini bukan cuma training, tapi transformasi total mindset dan skill kamu.
+            Transformasi nyata yang aku jalani sendiri dari nol sampai jadi BP dalam waktu 90 hari. Cocok buat ibu rumah tangga atau siapa pun yang pengen bangun penghasilan dari rumah. Ini perjalanan aku — dan kamu juga bisa.
           </p>
         </div>
 

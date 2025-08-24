@@ -9,33 +9,34 @@ const AboutMeSection = () => {
   const cardData = [
     {
       icon: DollarSign,
-      title: "Hasilkan miliaran",
-      description: "Dapatkan penghasilan dengan bisa menghasilkan omzet miliaran rupiah."
+      title: "Income 3 Digit/Bulan",
+      description: "Target realistis untuk leader asuransi berpengalaman dengan sistem yang tepat."
     },
     {
       icon: TrendingUp,
-      title: "Maju tanpa batas",
-      description: "Gabung kelompok bisnis grup dengan keuntungan tanpa batas."
+      title: "Karir Tanpa Batas",
+      description: "Jenjang karir dari agent sampai regional manager dengan passive income."
     },
     {
       icon: Clock,
-      title: "Meluangkan waktu",
-      description: "Fokus memanfaatkan langkah yang sukses bukan menunda-nunda waktu yang."
+      title: "Fleksibilitas Waktu",
+      description: "Atur jadual sendiri, kerja dari mana saja, dan tetap dapat hasil maksimal."
     }
   ];
 
   const wrongPathItems = [
-    "Kamu lebih memakan waktu kerja — untuk menai orang lain",
-    "Kamu hukup minta jin untuk bantuanmu, bukannya memberikan dampak",
-    "Satu kepercayaan bisa bias membuyar keluh hidup kepercayaanmu",
-    "Masih tetap diam, masih harus untuk berlaku"
+    "Kerja 8 jam sehari cuma buat hidup pas-pasan",
+    "Hari demi hari berlalu tanpa pertumbuhan atau prestasi yang kamu bisa banggakan",
+    "Kamu lembur, bos kamu yang naik mobil baru",
+    "Saat anak sudah besar, kamu bingung: “Aku mau ngapain sekarang?”",
+    "Gak punya warisan untuk ditinggalkan"
   ];
 
   const rightPathItems = [
-    "Kamu bisa hasilkan uang tanpa harus punya keahlian khusus — betulinya yang manjakan kamu dengan belajar",
-    "Waktu training → kamu bisa langsung praktek dan dapatkan dana",
-    "Tanpa skema, tanpa tipu-tipu, kamu bijak untuk mengatur sendiri",
-    "Potensi penghasilan tanggung renteng karna kamu bukan bekerja seorang diri"
+    "Gak perlu korbankan waktu keluarga demi karier",
+    "Gaji kamu bisa setara bahkan melebihi suami, dalam waktu < 6 bulan",
+    "Punya dampak nyata, bantu keluarga lain meraih perlindungan keuangan",
+    "Mulai bangun masa depan anak & warisan keluarga dari sekarang"
   ];
 
 
@@ -51,18 +52,15 @@ const AboutMeSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal text-white mb-0 leading-tight">
-              Jadi pengusaha
+            <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold text-white mb-0 leading-tight">
+              Masih Bangga Jadi Karyawan?
             </h1>
-            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal text-white mb-0 leading-tight">
-              internasional — butuh
+            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal text-white mb-4 sm:mb-8 leading-tight">
+              Padahal Hidup Kamu Disetir Orang Lain
             </h2>
-            <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal text-white mb-4 sm:mb-8 leading-tight">
-              kemampuan yang hebat
-            </h3>
             <p className="text-xs sm:text-base lg:text-lg text-gray-400 max-w-2xl leading-relaxed">
-              kini dengan anugeran komputerisasi begayung, 
-              digital tahu mudahnya biasanya menggunakan
+              Terus mau sampai kapan kerja buat mimpi orang lain? 
+              Waktunya switch jalur — karena gak ada kebebasan di meja kantor.
             </p>
           </motion.div>
 
@@ -105,12 +103,8 @@ const AboutMeSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold leading-tight mb-4 sm:mb-12 lg:mb-16 text-left">
-              <span className="text-white">Kamu berada di jalur yang salah — </span>
-              <br className="hidden sm:block" />
-              <span className="text-white font-semibold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                jangan mau diperbodoh jadi karyawan
-              </span>
+            <h2 className="text-base sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold leading-tight mb-4 sm:mb-12 lg:mb-16 text-left">
+              <span className="text-white">Fakta seperti ini pernah terlintas di pikiran kamu ngga? - Serem nggasih?</span>
             </h2>
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-8 2xl:gap-12 space-y-1 xl:space-y-0 sm:space-y-5 lg:space-y-6 max-w-xl sm:max-w-4xl xl:max-w-none">
@@ -125,7 +119,7 @@ const AboutMeSection = () => {
                   <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5">
                     <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" strokeWidth={2.5} />
                   </div>
-                  <p className="text-gray-300 text-[10px] sm:text-sm lg:text-base leading-tight sm:leading-relaxed font-light">
+                  <p className="text-gray-300 text-xs sm:text-base lg:text-lg leading-tight sm:leading-relaxed font-light">
                     {item}
                   </p>
                 </motion.div>
@@ -141,12 +135,8 @@ const AboutMeSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <h2 className="text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold leading-tight mb-4 sm:mb-12 lg:mb-16 text-left">
-                  <span className="text-white">Kamu dijalur yang tepat — </span>
-                  <br className="hidden sm:block" />
-                  <span className="text-white font-semibold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                    bisnis ekspor membebaskanmu
-                  </span>
+                <h2 className="text-base sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold leading-tight mb-4 sm:mb-12 lg:mb-16 text-left">
+                  <span className="text-white">Kamu Dijalur yang tepat - Bisnis asuransi membebaskanmu </span>
                 </h2>
               </motion.div>
 
@@ -163,7 +153,7 @@ const AboutMeSection = () => {
                     <div className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5">
                       <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" strokeWidth={2.5} />
                     </div>
-                    <p className="text-white text-[10px] sm:text-sm lg:text-base leading-tight sm:leading-relaxed font-light">
+                    <p className="text-white text-xs sm:text-base lg:text-lg leading-tight sm:leading-relaxed font-light">
                       {item}
                     </p>
                   </motion.div>
