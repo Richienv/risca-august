@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import OverlappingImages from "@/components/overlapping-images";
-import { Spotlight } from "@/components/spotlight-new";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -64,11 +63,11 @@ function FeatureCard({
   return (
     <div className="relative">
       {/* Red glow effect behind the card */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-red-600/20 via-red-500/30 to-red-600/20 rounded-lg lg:rounded-xl blur-sm"></div>
+      <div className="absolute -inset-3 bg-gradient-to-r from-red-600/10 via-red-500/15 to-red-600/10 rounded-lg lg:rounded-xl blur-lg"></div>
       
       {/* Main card */}
       <div 
-        className="relative overflow-hidden group rounded-lg lg:rounded-xl p-4 sm:p-6 lg:p-8 mb-3 sm:mb-4 lg:mb-6 transition-all duration-500 bg-gradient-to-br from-black/50 via-black/40 to-pink-900/10 backdrop-blur-sm border border-white/10 hover:border-pink-500/30"
+        className="relative overflow-hidden group rounded-lg lg:rounded-xl p-4 sm:p-6 lg:p-8 mb-3 sm:mb-4 lg:mb-6 transition-all duration-500 bg-black backdrop-blur-sm border border-white/10 hover:border-pink-500/30"
       >
       <div className="flex flex-col lg:flex-row items-start gap-3 sm:gap-4 lg:gap-16 relative z-10">
         {/* Left side - Text content group */}
@@ -93,7 +92,7 @@ function FeatureCard({
                   e.stopPropagation();
                   setIsExpanded(!isExpanded);
                 }}
-                className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 lg:w-12 lg:h-12 rounded-full border border-pink-500/40 bg-gradient-to-r from-pink-500/15 to-purple-500/10 hover:from-pink-500/25 hover:to-purple-500/20 transition-all duration-300 shadow-lg shadow-pink-500/20"
+                className="flex items-center justify-center transition-all duration-300"
               >
                 <motion.div
                   animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -186,18 +185,6 @@ function FeatureCard({
 export default function SolutionSection() {
   return (
     <div className="relative w-full bg-black overflow-hidden">
-      {/* Pink Spotlight Effects */}
-      <Spotlight 
-        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
-        translateY={-220}
-        width={450}
-        height={900}
-        smallWidth={180}
-        duration={14}
-        xOffset={70}
-      />
       
       <div className="relative z-10 py-20 lg:py-28">
         {/* Section Header */}

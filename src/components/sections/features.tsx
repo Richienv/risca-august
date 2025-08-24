@@ -3,13 +3,12 @@
 import Section from "@/components/section";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Spotlight } from "@/components/spotlight-new";
 
 const data = [
   {
     id: 1,
-    category: "Reward System",
-    testimonial: "Gue baru 2 bulan join udah dapet iPad dari weekly contest. Yang gila lagi, setiap closing ada chance dapet logam mulia. Ini yang bikin gue makin semangat, gak cuma duit komisi doang!",
+    testimonial: "Gue baru 2 bulan join udah dapet iPad dari weekly contest.",
+    story: "Yang gila lagi, setiap closing ada chance dapet logam mulia. Ini yang bikin gue makin semangat, gak cuma duit komisi doang!",
     memberName: "Andi Pratama",
     memberRole: "Top Performer Bulan Ini",
     images: [
@@ -20,8 +19,8 @@ const data = [
   },
   {
     id: 2,
-    category: "Exclusive Events",
-    testimonial: "VIP dinner kemarin gila sih, ketemu sama C-level executives dari berbagai industry. Networking-nya next level banget, beda sama event biasa. Feeling like a real successful person!",
+    testimonial: "VIP dinner kemarin gila sih, ketemu sama C-level executives dari berbagai industry.",
+    story: "Networking-nya next level banget, beda sama event biasa. Feeling like a real successful person!",
     memberName: "Sarah Wulandari",
     memberRole: "Special Awardee 2024",
     images: [
@@ -32,8 +31,8 @@ const data = [
   },
   {
     id: 3,
-    category: "Mentorship",
-    testimonial: "Martha ikut gue meeting sama klien besar kemarin. Dari yang awalnya ragu, klien langsung tertarik. Ini yang gue suka, mentor benar-benar turun tangan bantu kita sukses.",
+    testimonial: "Risca ikut gue meeting sama klien besar kemarin.",
+    story: "Dari yang awalnya ragu, klien langsung tertarik. Ini yang gue suka, mentor benar-benar turun tangan bantu kita sukses.",
     memberName: "Budi Santoso",
     memberRole: "Rising Star Member",
     images: [
@@ -44,8 +43,8 @@ const data = [
   },
   {
     id: 4,
-    category: "Expert Training",
-    testimonial: "Training sama speakers yang udah berhasil itu beda banget. Mereka share real experience, bukan teori textbook. Sekarang mindset gue udah berubah total soal bisnis.",
+    testimonial: "Training sama speakers yang udah berhasil itu beda banget.",
+    story: "Mereka share real experience, bukan teori textbook. Sekarang mindset gue udah berubah total soal bisnis.",
     memberName: "Lisa Permata",
     memberRole: "Fast Track Graduate",
     images: [
@@ -56,8 +55,8 @@ const data = [
   },
   {
     id: 5,
-    category: "Personal Coaching",
-    testimonial: "Konsultasi 1-on-1 setiap minggu itu game changer. Martha personally ngasih feedback ke strategy gue, bahkan sampai review deal yang lagi gue handle. Personal banget!",
+    testimonial: "Konsultasi 1-on-1 setiap minggu itu game changer.",
+    story: "Martha personally ngasih feedback ke strategy gue, bahkan sampai review deal yang lagi gue handle. Personal banget!",
     memberName: "Ricky Hakim",
     memberRole: "Platinum Member",
     images: [
@@ -68,8 +67,8 @@ const data = [
   },
   {
     id: 6,
-    category: "Premium Tools",
-    testimonial: "Database klien premium dan lead generation tools yang dikasih gratis ini nilai-nya jutaan. Prospecting jadi jauh lebih efektif, conversion rate gue naik 3x lipat!",
+    testimonial: "Database klien premium dan lead generation tools yang dikasih gratis ini nilai-nya jutaan.",
+    story: "Prospecting jadi jauh lebih efektif, conversion rate gue naik 3x lipat!",
     memberName: "Diana Kusuma",
     memberRole: "Tech Savvy Achiever",
     images: [
@@ -80,8 +79,8 @@ const data = [
   },
   {
     id: 7,
-    category: "Brand Partnerships",
-    testimonial: "Jadi brand ambassador untuk luxury brand itu impian gue dari dulu. Networking dengan brand-brand premium buka peluang bisnis yang gak pernah gue bayangin sebelumnya.",
+    testimonial: "Jadi brand ambassador untuk luxury brand itu impian gue dari dulu.",
+    story: "Networking dengan brand-brand premium buka peluang bisnis yang gak pernah gue bayangin sebelumnya.",
     memberName: "Kevin Tanoto",
     memberRole: "Brand Ambassador",
     images: [
@@ -92,8 +91,8 @@ const data = [
   },
   {
     id: 8,
-    category: "Bonus Structure",
-    testimonial: "Bonus bulanan, quarterly incentive, annual awards... sistemnya berlapis banget. Bulan lalu aja total bonus gue hampir sama dengan gaji pokok. Crazy but true!",
+    testimonial: "Bonus bulanan, quarterly incentive, annual awards... sistemnya berlapis banget.",
+    story: "Bulan lalu aja total bonus gue hampir sama dengan gaji pokok. Crazy but true!",
     memberName: "Maya Indira",
     memberRole: "Bonus Queen 2024",
     images: [
@@ -145,7 +144,7 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
               <div key={imgIndex} className="flex-shrink-0 w-full h-full relative">
                 <img 
                   src={imageSrc} 
-                  alt={`${item.category} ${imgIndex + 1}`}
+                  alt={`Feature ${imgIndex + 1}`}
                   className="w-full h-full object-cover rounded-md lg:rounded-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-md lg:rounded-lg"></div>
@@ -156,20 +155,20 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
         
         {/* Testimonial Content */}
         <div className="space-y-2 sm:space-y-3">
-          {/* Category Tag */}
-          <div className="inline-block">
-            <span className="text-xs font-mono text-pink-400 uppercase tracking-wider px-2 py-1 rounded bg-pink-500/10 border border-pink-500/20">
-              {item.category}
-            </span>
-          </div>
-          
-          {/* Testimonial Quote */}
+          {/* Main Quote */}
           <div className="relative">
-            <svg className="absolute -top-2 -left-2 w-6 h-6 text-pink-400/30" fill="currentColor" viewBox="0 0 32 32">
+            <svg className="w-4 h-4 text-pink-400/30 mb-2" fill="currentColor" viewBox="0 0 32 32">
               <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14h-4c0-2.2 1.8-4 4-4V8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-4c0-2.2 1.8-4 4-4V8z"/>
             </svg>
-            <p className="text-xs sm:text-sm lg:text-base font-light leading-relaxed text-white/80 pl-4">
-              {item.testimonial}
+            <p className="text-sm sm:text-base lg:text-lg font-medium leading-relaxed text-white mb-3">
+              "{item.testimonial}"
+            </p>
+          </div>
+          
+          {/* Story */}
+          <div className="relative">
+            <p className="text-xs sm:text-sm lg:text-base font-light leading-relaxed text-white/70">
+              {item.story}
             </p>
           </div>
           
@@ -191,18 +190,6 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
 export default function FeaturesSection() {
   return (
     <div className="relative w-full bg-black overflow-hidden">
-      {/* Pink Spotlight Effects */}
-      <Spotlight 
-        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
-        translateY={-210}
-        width={430}
-        height={870}
-        smallWidth={190}
-        duration={11}
-        xOffset={55}
-      />
       
       <Section className="py-8 md:py-32 relative">
         <div className="relative z-10">

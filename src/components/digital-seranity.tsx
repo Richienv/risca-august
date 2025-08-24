@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const DigitalSerenity = () => {
   return (
-    <div className="w-full h-[50vh] bg-black text-slate-100 font-primary overflow-hidden relative">
+    <div className="w-full h-[35vh] bg-black text-slate-100 font-primary overflow-hidden relative">
       <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 py-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Title */}
@@ -33,7 +33,7 @@ const DigitalSerenity = () => {
           {/* CTA Button */}
           <div>
             <Link href="/contact">
-              <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+              <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm">
                 Saya Siap Mulai Sekarang
               </button>
             </Link>

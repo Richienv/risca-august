@@ -4,20 +4,19 @@ import React from 'react';
 import Section from "@/components/section";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Spotlight } from "@/components/spotlight-new";
 
 const choiceData = [
   {
     id: "action",
     title: "Orang Yang Mau Melompat Untuk Merubah Hidupnya",
     description: "Berani ambil risiko, keluar dari zona nyaman, dan berjuang untuk masa depan yang lebih baik",
-    image: "/images/success.png"
+    image: "/images/mau-melompat.png"
   },
   {
     id: "passive", 
     title: "Dan Yang Mau Berdiam Diri.",
     description: "Tetap di zona aman, takut perubahan, dan puas dengan kondisi saat ini",
-    image: "/images/failure.png"
+    image: "/images/berdiam-diri.png"
   }
 ];
 
@@ -39,7 +38,7 @@ function ChoiceCard({ choice, index }: { choice: typeof choiceData[0], index: nu
       className="group relative"
     >
       {/* Main Image Container */}
-      <div className="relative w-full h-96 sm:h-[500px] lg:h-[600px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
+      <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] xl:h-[800px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
         <img 
           src={choice.image}
           alt={choice.title}
@@ -53,18 +52,6 @@ function ChoiceCard({ choice, index }: { choice: typeof choiceData[0], index: nu
 export default function ComparisonSection() {
   return (
     <div className="relative w-full bg-black overflow-hidden">
-      {/* Pink Spotlight Effects */}
-      <Spotlight 
-        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
-        translateY={-240}
-        width={460}
-        height={920}
-        smallWidth={200}
-        duration={9}
-        xOffset={65}
-      />
       
       <Section className="py-20 md:py-32 relative">
         <div className="relative z-10">

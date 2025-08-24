@@ -9,7 +9,7 @@ import Pricing from "@/components/sections/pricing";
 import ProblemSection from "@/components/sections/problem";
 import PerubahanSection from "@/components/sections/perubahan";
 import SolutionSection from "@/components/sections/solution";
-import Testimonials from "@/components/sections/testimonials";
+import Pricing2 from "@/components/sections/pricing2";
 import TestimonialsCarousel from "@/components/sections/testimonials-carousel";
 import AboutMeSection from "@/components/sections/abous-me";
 import DigitalSerenity from "@/components/digital-seranity";
@@ -22,13 +22,13 @@ export default function Home() {
       <Hero />
       <AboutMeSection />
       <TestimonialsCarousel />
-      <BlueGradientSeparator />
+
       <SolutionSection />
 
       <HowItWorks />
       <DigitalSerenity />
       <Features />
-      <Testimonials />
+      <Pricing2 />
       <Pricing />
       <FAQ />
       <CTA />

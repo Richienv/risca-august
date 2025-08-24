@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Spotlight } from '@/components/spotlight-new';
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -59,18 +58,6 @@ export default function HowItWorks() {
 
   return (
     <section className="relative bg-black py-16 md:py-32 overflow-hidden">
-      {/* Pink Spotlight Effects */}
-      <Spotlight 
-        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
-        translateY={-160}
-        width={380}
-        height={750}
-        smallWidth={140}
-        duration={16}
-        xOffset={50}
-      />
       
       <div className="relative z-10 w-full px-12 md:px-20 lg:px-32 xl:px-40">
         {/* Section Header */}
@@ -156,14 +143,14 @@ export default function HowItWorks() {
                   
                   {/* Content Card */}
                   <div className="ml-8 flex-1 bg-gradient-to-br from-black/50 via-black/40 to-orange-900/10 backdrop-blur-sm rounded-lg p-4 sm:p-5">
-                    <div className="space-y-3">
+                    <div className="space-y-1">
                       {/* Small Tag */}
-                      <p className="text-xs font-mono text-orange-400 uppercase tracking-wider">
+                      <p className="text-[10px] sm:text-xs font-mono text-orange-400 uppercase tracking-wider">
                         {step.title.split(' — ')[0]}
                       </p>
                       
                       {/* Bold Title */}
-                      <h3 className="text-base sm:text-lg lg:text-xl font-bold leading-tight text-white">
+                      <h3 className="text-base sm:text-lg lg:text-xl font-bold leading-tight text-white mb-1">
                         {step.title.split(' — ')[1]}
                       </h3>
                       

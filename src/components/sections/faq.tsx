@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion";
 import { siteConfig } from "@/lib/config";
 import { motion } from "framer-motion";
-import { Spotlight } from "@/components/spotlight-new";
 
 const faqs = [
   {
@@ -64,29 +63,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="relative w-full bg-gradient-to-br from-red-950 via-black to-red-900 overflow-hidden">
-      {/* Pink Spotlight Effects */}
-      <Spotlight 
-        gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-        gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-        gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
-        translateY={-150}
-        width={360}
-        height={720}
-        smallWidth={140}
-        duration={18}
-        xOffset={25}
-      />
-      
-      {/* Red grid pattern background */}
-      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <pattern id="faqGridRed" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#faqGridRed)" />
-      </svg>
+    <div className="relative w-full bg-black overflow-hidden">
       
       <Section className="py-20 md:py-32 relative z-10">
         <div className="text-center mb-16">
@@ -115,7 +92,7 @@ export default function FAQ() {
             FAQ
           </motion.h1>
           <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto px-4 md:px-0">
-            Jawaban lengkap buat yang masih ragu-ragu
+             lengkap buat yang masih ragu-ragu
           </p>
         </div>
         <div className="mx-auto my-8 max-w-3xl">

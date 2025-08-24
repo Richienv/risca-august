@@ -24,7 +24,8 @@
       "WebFetch(domain:api.github.com)",
       "Bash(git config:*)",
       "Bash(true)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Read(//var/folders/vz/vx653c3j7qsg9c6dnjr63chh0000gn/T/TemporaryItems/NSIRD_screencaptureui_FCBKcD/**)"
     ],
     "deny": []
   }

@@ -1,18 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-import { Icons } from "@/components/icons";
 import { Spotlight } from "@/components/spotlight-new";
 import Link from "next/link";
-import { Play, Star } from "lucide-react";
 
 
 const ease = [0.16, 1, 0.3, 1];
 
-// Image carousel component for payment screenshots
-function HeroImageCarousel() {
+function HeroTitles() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollSpeed = 0.5; // pixels per tick
+    let frameId: number;
+
+    const step = () => {
+      if (!scrollContainer) return;
+
+      scrollContainer.scrollTop += scrollSpeed;
+
+      if (
+        scrollContainer.scrollTop >= scrollContainer.scrollHeight / 3
+      ) {
+        // Reset to top when we've scrolled through 1/3 (one set of cards)
+        scrollContainer.scrollTop = 0;
+      }
+
+      frameId = requestAnimationFrame(step);
+    };
+
+    frameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(frameId);
+  }, []);
+
   const paymentImages = [
     {
       type: "bri",
@@ -65,86 +91,68 @@ function HeroImageCarousel() {
   ];
 
   return (
-    <div className="w-full max-w-xs sm:max-w-md mx-auto mb-4 relative overflow-hidden h-48 sm:h-60">
-      <motion.div
-        className="flex flex-col space-y-2"
+    <div className="flex w-full max-w-4xl flex-col text-center mb-8 relative">
+      {/* Notification Carousel - positioned at the very top with ceiling-to-tagline flow */}
+      {/* Mobile height: h-32 | Desktop height: sm:h-96 */}
+      <div 
+        ref={scrollRef}
+        className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-25rem] sm:mt-[-12rem] mx-auto opacity-70 sm:opacity-100"
         style={{
-          WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15px, black calc(100% - 15px), transparent 100%)",
-          maskImage: "linear-gradient(to bottom, transparent 0%, black 15px, black calc(100% - 15px), transparent 100%)"
-        }}
-        animate={{ y: [0, -400] }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "linear"
+          overflowY: "scroll",
+          scrollbarWidth: "none", // Firefox
+          msOverflowStyle: "none", // IE
         }}
       >
-        {/* Duplicate the array for seamless loop */}
-        {[...paymentImages, ...paymentImages].map((payment, index) => (
-          <div
-            key={`${payment.type}-${index}`}
-            className="bg-gray-900/60 backdrop-blur-sm rounded-xl p-2 border border-gray-700/50 flex-shrink-0 shadow-lg"
-          >
-            <div className="flex items-start">
-              <div className="flex items-center space-x-2 flex-1">
-                <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-lg flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-md ${
-                  payment.type === 'bri' ? 'bg-gradient-to-br from-blue-600 to-blue-700' : 
-                  payment.type === 'bca' ? 'bg-gradient-to-br from-blue-700 to-blue-800' :
-                  payment.type === 'dana' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
-                  payment.type === 'gopay' ? 'bg-gradient-to-br from-green-600 to-green-700' :
-                  payment.type === 'paypal' ? 'bg-gradient-to-br from-blue-600 to-blue-700' :
-                  payment.type === 'mandiri' ? 'bg-gradient-to-br from-orange-600 to-orange-700' : 'bg-gray-600'
-                }`}>
-                  {payment.type === 'bri' ? 'BRI' : 
-                   payment.type === 'bca' ? 'BCA' :
-                   payment.type === 'dana' ? 'D' :
-                   payment.type === 'gopay' ? 'G' :
-                   payment.type === 'paypal' ? 'P' :
-                   payment.type === 'mandiri' ? 'M' : 'X'}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center space-x-1">
-                    <div className="text-gray-100 font-semibold text-[11px] sm:text-xs">{payment.label}</div>
-                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full"></div>
-                    <div className="text-green-400 text-[10px] sm:text-xs font-medium">Berhasil</div>
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+        <div className="flex flex-col space-y-0.5 sm:space-y-2 py-2">
+          {/* Render cards multiple times to ensure scrollable content */}
+          {[...paymentImages, ...paymentImages, ...paymentImages].map((payment, index) => (
+            <div
+              key={`${payment.type}-${index}`}
+              className="backdrop-blur-sm rounded-md sm:rounded-xl p-1 sm:p-3 border border-gray-300/20 flex-shrink-0 shadow-lg"
+              style={{ backgroundColor: '#E3E4E3' }}
+            >
+              <div className="flex items-start">
+                <div className="flex items-center space-x-1.5 sm:space-x-3 flex-1">
+                  <div className={`w-5 h-5 sm:w-8 sm:h-8 rounded-sm sm:rounded-lg flex items-center justify-center text-white font-bold text-[7px] sm:text-xs shadow-md ${
+                    payment.type === 'bri' ? 'bg-gradient-to-br from-blue-600 to-blue-700' : 
+                    payment.type === 'bca' ? 'bg-gradient-to-br from-blue-700 to-blue-800' :
+                    payment.type === 'dana' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
+                    payment.type === 'gopay' ? 'bg-gradient-to-br from-green-600 to-green-700' :
+                    payment.type === 'paypal' ? 'bg-gradient-to-br from-blue-600 to-blue-700' :
+                    payment.type === 'mandiri' ? 'bg-gradient-to-br from-orange-600 to-orange-700' : 'bg-gray-600'
+                  }`}>
+                    {payment.type === 'bri' ? 'BRI' : 
+                     payment.type === 'bca' ? 'BCA' :
+                     payment.type === 'dana' ? 'D' :
+                     payment.type === 'gopay' ? 'G' :
+                     payment.type === 'paypal' ? 'P' :
+                     payment.type === 'mandiri' ? 'M' : 'X'}
                   </div>
-                  <div className="text-gray-400 text-[10px] sm:text-xs truncate pr-1">{payment.subtitle}</div>
-                  <div className="text-gray-500 text-[9px] sm:text-[10px] mt-0.5">{payment.time}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-0.5 sm:space-x-1">
+                        <div className="text-gray-900 font-semibold text-[10px] sm:text-sm">{payment.label}</div>
+                        <div className="text-gray-600 text-[10px] sm:text-sm">•</div>
+                      </div>
+                      <div className="text-gray-600 text-[4px] sm:text-sm">{payment.time}</div>
+                    </div>
+                    <div className="text-gray-700 text-[6px] sm:text-sm font-medium truncate pr-1 text-left">{payment.subtitle}</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
+          ))}
+        </div>
+      </div>
 
-
-// Star ratings component
-function HeroRatings() {
-  return (
-    <motion.div
-      className="flex items-center justify-center space-x-1 mb-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 0.8, ease }}
-    >
-      {[...Array(5)].map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-      ))}
-      <span className="text-white/80 text-sm ml-2">4.8/5</span>
-      <span className="text-white/60 text-xs ml-1">(2000+ reviews)</span>
-    </motion.div>
-  );
-}
-
-function HeroTitles() {
-  return (
-    <div className="flex w-full max-w-4xl flex-col overflow-hidden text-center mb-8">
-      {/* Subtle Tag - Apple style */}
+      {/* Subtle Tag - Apple style with reduced top margin for closer spacing */}
       <motion.div
-        className="flex justify-center mb-4"
+        className="flex justify-center mb-4 mt-2 relative z-10"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -153,12 +161,12 @@ function HeroTitles() {
           delay: 0.2,
         }}
       >
-        <div className="bg-gray-900/40 backdrop-blur-sm border border-gray-700/50 text-gray-300 px-3 py-1.5 rounded-full text-xs font-medium">
-          Omset bulanan: <span className="text-orange-400 font-semibold">$1,429,716.25</span>
+        <div className="bg-gray-900/40 backdrop-blur-sm border border-gray-700/50 text-gray-300 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md text-[10px] sm:text-xs font-medium">
+          87% member <span className="text-orange-400 font-semibold">Capai Income Pertamanya &lt; 21 Hari</span>
         </div>
       </motion.div>
 
-      {/* Title - closer spacing */}
+      {/* Title - positioned after notifications */}
       <motion.div
         initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -170,7 +178,7 @@ function HeroTitles() {
         className="mb-3"
       >
         <motion.h1
-          className="text-center text-3xl font-bold leading-tight tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto relative"
+          className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter whitespace-normal px-6 sm:px-8 md:px-12 lg:px-16 max-w-full mx-auto relative"
           style={{
             background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
             backgroundSize: '200% 100%',
@@ -187,13 +195,14 @@ function HeroTitles() {
             ease: 'linear'
           }}
         >
-         Hanya 90 hari bisa punya passive income tiap bulan
+        Dalam 14 Hari, Buat Income Pasif (Jutaan)
+
         </motion.h1>
       </motion.div>
       
       {/* Subtitle - closer to title */}
       <motion.p
-        className="text-sm sm:text-lg tracking-tight text-gray-300 text-balance text-center max-w-2xl mx-auto mb-6"
+        className="text-xs sm:text-lg tracking-tight text-gray-300 text-balance text-center max-w-2xl mx-auto mb-6"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -202,7 +211,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        Cuman modal ngomong, nongkrong, dan networking. Bikin passive income dari asuransi tanpa ribet!
+        Bikin passive income dari asuransi, disertai pelatihan dan rewards worth ratusan juta, membuat kamu ubah waktu kamu jadi uang dalam waktu cepat!
       </motion.p>
 
       {/* CTA Buttons - separated from group */}
@@ -212,107 +221,42 @@ function HeroTitles() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
+        <button 
+          onClick={() => {
+            const pricingSection = document.getElementById('pricing-section');
+            if (pricingSection) {
+              pricingSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-3 py-1.5 sm:px-6 sm:py-2.5 rounded-md sm:rounded-lg font-small sm:font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-[11px] sm:text-sm"
+        >
+          Saya Mau Perubahan
+        </button>
         <Link href="/contact">
-          <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-5 py-2 sm:px-6 sm:py-2.5 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-xs sm:text-sm">
-            Saya Mau Perubahan
-          </button>
-        </Link>
-        <Link href="/signup">
-          <button className="bg-transparent border-2 border-gray-600 text-gray-300 px-5 py-2 sm:px-6 sm:py-2.5 rounded-lg font-semibold hover:border-gray-500 hover:text-white hover:scale-105 transition-all duration-300 text-xs sm:text-sm">
+          <button className="bg-transparent border border-gray-600 text-gray-300 px-3 py-1.5 sm:px-6 sm:py-2.5 rounded-md sm:rounded-lg font-medium sm:font-semibold hover:border-gray-500 hover:text-white hover:scale-105 transition-all duration-300 text-[11px] sm:text-sm">
             Gabung Komunitas
           </button>
         </Link>
       </motion.div>
-    </div>
-  );
-}
 
-function HeroTestimonial() {
-  const testimonials = [
-    {
-      quote: "Gue yang dulu skeptis banget, sekarang udah ngerasain sendiri gimana rasanya dapet 15 juta dalam 4 bulan. Sistemnya beneran work dan mentornya supportive banget.",
-      author: "Reza Pratama",
-      role: "Member since 2023",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "Pertama kali dengar soal bisnis asuransi, gue pikir ribet banget. Ternyata setelah ikut mentorship, sekarang gue bisa earning 8-12 juta per bulan cuma dari networking.",
-      author: "Sari Wulandari",
-      role: "Member since 2024",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "Dari yang tadinya cuma pegawai kantoran biasa, sekarang gue punya passive income yang lebih besar dari gaji. Game changer banget sistem ini!",
-      author: "Andi Kurniawan",
-      role: "Member since 2023",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    }
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 4000); // Switch every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  const currentTestimonial = testimonials[currentIndex];
-
-  return (
-    <motion.div
-      className="flex flex-col items-center space-y-4 max-w-xl mx-auto mb-12"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.4, duration: 0.8, ease }}
-    >
-      {/* Testimonial Quote Container */}
-      <motion.div 
-        key={currentIndex}
-        className="text-center px-6"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
-        transition={{ duration: 0.5 }}
-      >
-        <blockquote className="text-base md:text-lg text-gray-300 font-light leading-relaxed italic">
-          "{currentTestimonial.quote}"
-        </blockquote>
-      </motion.div>
-      
-      {/* Author Info Container */}
-      <motion.div 
-        key={`author-${currentIndex}`}
-        className="flex items-center space-x-3"
-        initial={{ opacity: 0, y: 10 }}
+      {/* Limited Offer Text */}
+      <motion.div
+        className="mt-8 text-center"
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <img
-          src={currentTestimonial.avatar}
-          alt={currentTestimonial.author}
-          className="w-8 h-8 rounded-full border border-gray-600"
-        />
-        <div className="text-left">
-          <div className="text-gray-200 font-medium text-sm">{currentTestimonial.author}</div>
-          <div className="text-gray-500 text-xs">{currentTestimonial.role}</div>
-        </div>
+        <p className="text-white font-bold text-base sm:text-lg mb-2">
+          Limited Slots
+        </p>
+        <p className="text-gray-400 text-[9px] sm:text-xs">
+          Penawaran Terbatas:
+        </p>
+        <p className="text-white font-medium text-[9px] sm:text-xs">
+          FREE iPad Untuk 10 Orang Tercepat Selesaikan Challange Pertama.
+        </p>
       </motion.div>
-
-      {/* Dots indicator */}
-      <div className="flex space-x-2 mt-4">
-        {testimonials.map((_, index) => (
-          <div
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'bg-pink-500' : 'bg-gray-600'
-            }`}
-          />
-        ))}
-      </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -325,38 +269,41 @@ function HeroVideo() {
       transition={{ delay: 1.2, duration: 1, ease }}
     >
       <div className="relative w-full max-w-4xl mt-8">
-        {/* Video Container with thick transparent border */}
-        <motion.div
-          className="relative z-50 aspect-video w-full overflow-hidden rounded-2xl"
-          style={{ 
-            isolation: 'isolate',
-            transform: 'translateZ(0)', // Force hardware acceleration
-          }}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-        >
-          {/* Thick transparent border frame */}
-          <div className="absolute inset-0 z-60 rounded-2xl border-8 border-white/20 backdrop-blur-sm pointer-events-none"></div>
-          
-          {/* YouTube embedded video */}
-          <div className="relative w-full h-full bg-black rounded-xl overflow-hidden group cursor-pointer">
-            {/* YouTube Embed */}
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/pxGM_TOgHuM?si=FuvN40zntrmZNYfg&autoplay=0&mute=1&controls=1&showinfo=0&rel=0"
-              title="YouTube video preview"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              style={{
-                filter: 'none !important',
-                transform: 'translateZ(0)',
-              }}
-            />
+        {/* Video Container */}
+        <div className="relative w-full">
+          {/* Video Container with thick transparent border */}
+          <motion.div
+            className="relative z-50 aspect-video w-full overflow-hidden rounded-2xl"
+            style={{ 
+              isolation: 'isolate',
+              transform: 'translateZ(0)', // Force hardware acceleration
+            }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Thick transparent border frame */}
+            <div className="absolute inset-0 z-60 rounded-2xl border-8 border-white/20 backdrop-blur-sm pointer-events-none"></div>
             
-            {/* Custom overlay for styling (optional) */}
-            <div className="absolute inset-0 bg-transparent pointer-events-none z-10"></div>
-          </div>
-        </motion.div>
+            {/* YouTube embedded video */}
+            <div className="relative w-full h-full bg-black rounded-xl overflow-hidden group cursor-pointer">
+              {/* YouTube Embed */}
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/pxGM_TOgHuM?si=FuvN40zntrmZNYfg&autoplay=0&mute=1&controls=1&showinfo=0&rel=0"
+                title="YouTube video preview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  filter: 'none !important',
+                  transform: 'translateZ(0)',
+                }}
+              />
+              
+              {/* Custom overlay for styling (optional) */}
+              <div className="absolute inset-0 bg-transparent pointer-events-none z-10"></div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </motion.div>
   );
@@ -364,7 +311,7 @@ function HeroVideo() {
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden w-full min-h-screen flex items-center justify-center bg-background pt-0">
+    <section id="hero" className="relative overflow-hidden w-full min-h-[80vh] sm:min-h-screen flex items-end sm:items-center justify-center bg-background pt-8 sm:pt-0 pb-8">
       {/* Spotlight Effects - More subtle on mobile, positioned behind */}
       <div className="absolute inset-0 z-0">
         <Spotlight 
@@ -382,23 +329,40 @@ export default function Hero() {
       
       {/* Main Content - Centered */}
       <div className="relative z-10 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-8 sm:px-12 lg:px-16">
           <div className="relative flex w-full flex-col items-center justify-center pt-0">
-            {/* 1. Image Carousel at the top - in its own space */}
-            <div className="w-full flex justify-center mb-6">
-              <HeroImageCarousel />
-            </div>
-            
-            {/* 2. Main content below carousel */}
-            <div className="w-full flex flex-col items-center space-y-8">
-              {/* Main Title and Subtitle */}
+            {/* Main content */}
+            <div className="w-full flex flex-col items-center space-y-1">
+              {/* Main Title and Subtitle with integrated notifications */}
               <HeroTitles />
-              
-              {/* Testimonial */}
-              <HeroTestimonial />
               
               {/* Video at the bottom */}
               <HeroVideo />
+              
+              {/* Star Rating Section - Below the video */}
+              <div className="mt-8 flex justify-center">
+                <div className="text-center">
+                  {/* Star Rating */}
+                  <div className="flex items-center gap-0.5 mb-1 justify-center">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg
+                        key={star}
+                        className="w-2 h-2 text-orange-400 fill-current"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                    <span className="ml-1 text-white font-semibold text-[8px]">4.8/5</span>
+                  </div>
+                  
+                  {/* Rating Text */}
+                  <p className="text-gray-300 text-[7px]">
+                    Rated excellent: 5000+ students
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
