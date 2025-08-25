@@ -2,32 +2,16 @@
 
 import { Card, CardContent } from '@/components/card-8'
 import { motion } from 'framer-motion'
-import { Spotlight } from '@/components/spotlight-new'
 import { Quote } from 'lucide-react'
 
 export default function BonusCarousel() {
     return (
         <section className="relative bg-black py-12 md:py-20 overflow-hidden">
-            {/* Pink Spotlight Effects */}
-            <Spotlight 
-                gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-                gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-                gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
-                translateY={-190}
-                width={400}
-                height={850}
-                smallWidth={170}
-                duration={13}
-                xOffset={45}
-            />
-            
             <div className="mx-auto w-full px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 2xl:px-40 relative z-10">
                 <div className="relative">
                     {/* Heading Section - focusing on real testimonials */}
                     <div className="text-center mb-12">
-                        <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-4">
-                            Mereka yang Dulunya Sama Seperti Kamu
-                        </h2>
+
                         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
                         <motion.h1 
                             className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
@@ -47,7 +31,7 @@ export default function BonusCarousel() {
                                 ease: 'linear'
                             }}
                         >
-                            Jangan Cuman Percaya Kata Saya - Buktikan, Rasakan
+                            Jangan Cuman Percaya Kata Saya
                         </motion.h1>
                         <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
                             Lihat mereka yang udah merubah karir mereka dari pekerja biasa jadi pengusaha yang penghasilan pasifnya puluhan ratusan hingga milyaran rupiah setiap bulannya
