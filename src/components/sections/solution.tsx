@@ -86,7 +86,7 @@ export default function SolutionSection() {
                                 ease: 'linear'
                             }}
                         >
-                            90 Hari Menuju BP Allianz
+                            90 Hari Menuju Versi Terbaik Diri Kamu
                         </motion.h1>
                         <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
                             Mulai dari nol, kamu akan dibimbing untuk closing pertama dalam 2 minggu, bangun tim dalam 2 bulan, dan capai posisi Business Partner dalam 90 hari. Tanpa pengalaman? Bukan masalah. Asal niat dan komitmen, hasilnya bisa kamu rasakan cepat.
@@ -133,7 +133,7 @@ export default function SolutionSection() {
                                                     {/* Main Quote/Title */}
                                                     <div className="mb-3 sm:mb-5 lg:mb-8">
                                                         <p className="text-sm sm:text-base lg:text-lg font-medium text-white leading-tight">
-                                                            "{transformation.subtitle}"
+                                                            {transformation.subtitle}
                                                         </p>
                                                     </div>
                                                     
@@ -153,7 +153,7 @@ export default function SolutionSection() {
                                                         </div>
                                                         <div>
                                                             <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-white">Fase {index + 1}</h3>
-                                                            <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">{transformation.title} — 90 Hari Program</p>
+                                                            <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">90 Hari Program</p>
                                                         </div>
                                                     </div>
                                                 </div>
