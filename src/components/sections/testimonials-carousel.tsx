@@ -11,7 +11,6 @@ export default function BonusCarousel() {
                 <div className="relative">
                     {/* Heading Section - focusing on real testimonials */}
                     <div className="text-center mb-12">
-
                         <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
                         <motion.h1 
                             className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
