@@ -5,58 +5,64 @@ import { motion } from 'framer-motion'
 
 const transformations = [
   {
-    title: "Hari 1–10",
-    subtitle: "Nyalakan Mimpi & Siapkan Diri",
-    description: "Temukan alasan terbesarmu. Kenali peluang bisnisnya. Dapatkan arahan langsung dari mentor dan komunitas support yang siap bantu kamu sukses dari awal.",
+    title: "Hari 1–7",
+    subtitle: "Setup & Persiapan Awal",
+    description: "Temukan alasan terbesarmu. Kenali peluang bisnisnya. Dapatkan arahan langsung dari mentor dan komunitas support. Target: siapkan mindset dan sistem kerja.",
     image: "/images/first-step.png"
   },
   {
-    title: "Hari 11–20",
-    subtitle: "Closing Pertamamu",
-    description: "Belajar cara presentasi yang mudah dipahami. Mulai cerita ke orang terdekat. Dengan panduan mentor, kamu akan closing 1–2 klien pertamamu dan capai ALP hingga 50–100 juta. Di sini kamu mulai merasakan income nyata.",
+    title: "Hari 8–14",
+    subtitle: "Mulai Ketemu 2 Orang Per Hari",
+    description: "Aktivitas harian: ketemu 2 orang setiap hari (6 hari kerja = 12 orang per minggu). Belajar cara presentasi sederhana. Fokus pada orang terdekat dulu.",
     image: "/images/deal.png"
   },
   {
-    title: "Hari 21–30",
-    subtitle: "Bangun Kredibilitas & Magnet Sosial",
-    description: "Posting testimoni, share progres kamu, dan mulai bangun personal branding. Orang mulai percaya, bertanya, dan tertarik ikut.",
+    title: "Hari 15–21",
+    subtitle: "Closing Pertama: Rasio 4:1",
+    description: "Sistem ini mudah: cukup ngobrol sama 12 orang dalam seminggu (2 orang per hari). Dari 12 orang itu, pasti ada 3 yang tertarik beli. Setiap orang yang beli = Rp 15 juta masuk ke kantong kamu. Total seminggu bisa Rp 45 juta!",
     image: "/images/branding.png"
   },
   {
-    title: "Hari 31–40",
-    subtitle: "Gandakan Hasilmu",
-    description: "Teruskan pola yang berhasil. Closing rutin. Targetmu adalah tembus 150–200 juta ALP dari penjualan pribadi. Income makin terasa.",
+    title: "Hari 22–28",
+    subtitle: "Bangun Kredibilitas & Momentum",
+    description: "Posting testimoni dan share progress. Teruskan pola: 12 orang per minggu → 3 closing → Rp 45 juta. Orang mulai percaya dan tertarik ikut.",
     image: "/images/meetmeet.png"
   },
   {
-    title: "Hari 41–50",
-    subtitle: "Rekrut Tim Pertamamu",
-    description: "Sudah ada yang tertarik ikut? Sekarang saatnya kamu latih 2 orang untuk jadi BE. Ajak mereka duplikasi sistem yang kamu pakai.",
+    title: "Hari 29–35",
+    subtitle: "Konsistensi & Duplikasi Sistem",
+    description: "Sudah ada yang tertarik ikut? Mulai latih 1-2 orang untuk jadi BE. Ajak mereka duplikasi sistem yang kamu pakai. Tetap focus pada target pribadi.",
     image: "/images/cheers.png"
   },
   {
-    title: "Hari 51–60",
-    subtitle: "Jadi Leader Kecil",
-    description: "Bantu tim kamu closing. Jalankan sesi mentoring sederhana. Kamu sekarang bukan cuma penjual, tapi pembimbing.",
+    title: "Hari 36–42",
+    subtitle: "Jadi Leader & Mentor",
+    description: "Bantu tim kamu closing. Jalankan sesi mentoring sederhana. Kamu sekarang bukan cuma penjual, tapi pembimbing. Gabungkan hasil pribadi dan tim.",
     image: "/images/speach.png"
   },
   {
-    title: "Hari 61–70",
+    title: "Hari 43–49",
     subtitle: "Bangun Struktur Menuju BP",
-    description: "Gabungkan hasil pribadi dan tim. Kamu sekarang makin dekat ke 300 juta ALP. Income bisa tembus Rp 4–5 juta/bulan.",
+    description: "Sekarang kamu dapat bonus dari tim! Setiap tim kamu closing, kamu juga dapat untung. Semakin bagus performa tim, semakin besar penghasilan kamu. ",
     image: "/images/study.png"
   },
   {
-    title: "Hari 71–80",
+    title: "Hari 50–56",
     subtitle: "Kunci Posisi BP",
-    description: "Pastikan semua syarat terpenuhi (Option 1/2/3). Validasi income, buat sistem kerja tim, dan siapkan langkah scale-up.",
+    description: "Pastikan semua syarat terpenuhi. Target: 300 juta ALP total, income Rp 6-7 juta per bulan (komisi 23,25%). Hasil tim + hasil pribadi = jalan cepat menuju promosi jadi ultimate leader!",
     image: "/images/checklist.png"
   },
   {
-    title: "Hari 81–90",
-    subtitle: "Tampil & Jadi Role Model",
-    description: "Ceritakan perjalananmu. Rekrut BE baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis.",
+    title: "Hari 57–60",
+    subtitle: "Raih Status Business Partner",
+    description: "Ceritakan perjalananmu. Rekrut BE baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis dan tim yang solid.",
     image: "/images/confident.png"
+  },
+  {
+    title: "Bonus Achievement",
+    subtitle: "Hadiah Khusus Business Partner",
+    description: "Selamat! Kamu berhasil jadi BP. Terima hadiah spesial: iPad senilai Rp 6 juta + Logam Mulia 5 gram senilai Rp 10 juta. Total bonus Rp 16 juta langsung masuk ke tangan kamu!",
+    image: "/images/ipad.png"
   },
 ];
 
@@ -86,10 +92,10 @@ export default function SolutionSection() {
                                 ease: 'linear'
                             }}
                         >
-                            90 Hari Menuju Versi Terbaik Diri Kamu
+                            60 Hari Menuju Business Partner
                         </motion.h1>
                         <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
-                            Mulai dari nol, kamu akan dibimbing untuk closing pertama dalam 2 minggu, bangun tim dalam 2 bulan, dan capai posisi Business Partner dalam 90 hari. Tanpa pengalaman? Bukan masalah. Asal niat dan komitmen, hasilnya bisa kamu rasakan cepat.
+                            Program sistematis 60 hari: ketemu 2 orang setiap hari, capai rasio closing 4:1, raih omzet Rp 360 juta dalam 8 minggu, dan dapatkan komisi hingga Rp 6,9 juta per bulan. Bonus: promosi ke Business Partner!
                         </p>
                     </div>
                     
@@ -132,14 +138,22 @@ export default function SolutionSection() {
                                                 <div className="relative z-10 p-4 sm:p-5 lg:p-8 h-full flex flex-col">
                                                     {/* Main Quote/Title */}
                                                     <div className="mb-3 sm:mb-5 lg:mb-8">
-                                                        <p className="text-sm sm:text-base lg:text-lg font-medium text-white leading-tight">
+                                                        <p className={`text-sm sm:text-base lg:text-lg font-medium leading-tight ${
+                                                            index === transformations.length - 1 
+                                                                ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent'
+                                                                : 'text-white'
+                                                        }`}>
                                                             {transformation.subtitle}
                                                         </p>
                                                     </div>
                                                     
                                                     {/* Story with Numbers */}
                                                     <div className="text-white mb-3 sm:mb-5 lg:mb-8 flex-1">
-                                                        <p className="text-xs sm:text-sm lg:text-base text-white/80 leading-relaxed font-light">
+                                                        <p className={`text-xs sm:text-sm lg:text-base leading-relaxed font-light ${
+                                                            index === transformations.length - 1
+                                                                ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent'
+                                                                : 'text-white/80'
+                                                        }`}>
                                                             {transformation.description}
                                                         </p>
                                                     </div>
@@ -153,7 +167,7 @@ export default function SolutionSection() {
                                                         </div>
                                                         <div>
                                                             <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-white">Fase {index + 1}</h3>
-                                                            <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">90 Hari Program</p>
+                                                            <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">60 Hari Program</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -164,6 +178,15 @@ export default function SolutionSection() {
                             </motion.div>
                         ))}
 
+                        </div>
+                    </div>
+                    
+                    {/* Small Terms Note */}
+                    <div className="mt-12 text-center">
+                        <div className="inline-block bg-white/5 backdrop-blur-sm rounded-lg px-6 py-4 mx-auto">
+                            <p className="text-white/70 text-xs">
+                                <strong className="text-white">Catatan:</strong> ALP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | BE = Business Executive | BP = Business Partner
+                            </p>
                         </div>
                     </div>
                 </div>

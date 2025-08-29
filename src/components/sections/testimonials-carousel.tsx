@@ -32,15 +32,15 @@ export default function BonusCarousel() {
                         >
                             Jangan Cuman Percaya Kata Saya
                         </motion.h1>
-                        <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+                        <p className="text-xs sm:text-lg font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
                             Lihat mereka yang udah merubah karir mereka dari pekerja biasa jadi pengusaha yang penghasilan pasifnya puluhan ratusan hingga milyaran rupiah setiap bulannya
                         </p>
                     </div>
                     
                     <div className="relative z-10 w-full">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                         
-                        {/* Card 1 - Housewife */}
+                        {/* Card 1 - Yovina Salim */}
                         <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
@@ -50,15 +50,15 @@ export default function BonusCarousel() {
                                 
                                 {/* Main Quote */}
                                 <div className="mb-5 sm:mb-8">
-                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
-                                        "Dulu aku paling nyinyir tiap ditawarin… sekarang aku yang ngajak orang join."
+                                    <p className="text-sm sm:text-lg font-medium text-white leading-tight">
+                                        "Dulu aku hanya sibuk lindungi mimpi orang lain, sekarang saatnya aku wujudkan mimpiku sendiri."
                                     </p>
                                 </div>
                                 
                                 {/* Story with Numbers */}
                                 <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
-                                        Ibu rumah tangga yang skeptis dan sering nolak ajakan bisnis. Sekarang income 15 juta/bulan dan punya team 25 orang. Baru 8 bulan join sudah beli mobil cash.
+                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
+                                        Berawal dari kerja keras & konsistensi, Yovina berhasil capai reward perjalanan gratis tak terlupakan bersama Allianz Vision. Dari mimpi jadi nyata — dan ini baru permulaan.
                                     </p>
                                 </div>
                                 
@@ -66,20 +66,20 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1494790108755-2616b332e234?w=400&h=500&fit=crop&crop=face"
-                                            alt="Nina Sari"
+                                            src="/images/yovina.jpeg"
+                                            alt="Yovina Salim"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Nina Sari</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Ibu Rumah Tangga</p>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Yovina Salim</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Joined 2024</p>
                                     </div>
                                 </div>
                             </CardContent>
                         </Card>
 
-                        {/* Card 2 - Housewife */}
+                        {/* Card 2 - Hartono & Athena */}
                         <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
@@ -89,15 +89,15 @@ export default function BonusCarousel() {
                                 
                                 {/* Main Quote */}
                                 <div className="mb-5 sm:mb-8">
-                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
-                                        "Bisnis suami bangkrut — justru dari sini aku bangkit."
+                                    <p className="text-sm sm:text-lg font-medium text-white leading-tight">
+                                        "Dari nol hingga berprestasi bersama Allianz — inilah perjalanan hidup kami."
                                     </p>
                                 </div>
                                 
                                 {/* Story with Numbers */}
                                 <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
-                                        Saat usaha suami tutup dan hutang 200 juta, dia mulai dari nol. 10 bulan kemudian income 28 juta/bulan, lunasi semua hutang dan buka toko baru.
+                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
+                                        Memulai di tahun 2021 hanya dengan harapan hidup lebih baik, Hartono & Athena kini menikmati hasil luar biasa. Allianz membuka pintu mimpi yang lebih besar, hingga kini penghasilan mereka mencapai 1 miliar/tahun.
                                     </p>
                                 </div>
                                 
@@ -105,20 +105,20 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop&crop=face"
-                                            alt="Maya Dewi"
+                                            src="/images/hartono-athena.jpg"
+                                            alt="Hartono"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Maya Dewi</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Ibu Rumah Tangga</p>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Hartono & Athena</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Joined 2021</p>
                                     </div>
                                 </div>
                             </CardContent>
                         </Card>
 
-                        {/* Card 3 - Housewife */}
+                        {/* Card 3 - Ayu Rahayu */}
                         <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
@@ -128,15 +128,15 @@ export default function BonusCarousel() {
                                 
                                 {/* Main Quote */}
                                 <div className="mb-5 sm:mb-8">
-                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
-                                        "Awalnya coba-coba, sekarang jadi sumber nafkah utama keluarga."
+                                    <p className="text-sm sm:text-lg font-medium text-white leading-tight">
+                                        "Awalnya cuma iseng join… sekarang satu per satu mimpi terwujud."
                                     </p>
                                 </div>
                                 
                                 {/* Story with Numbers */}
                                 <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
-                                        Iseng ikut training, sekarang penghasilannya 35 juta/bulan melebihi suami yang kerja di bank. Dalam 14 bulan sudah punya rumah kedua untuk investasi.
+                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
+                                        Dari sekadar ingin punya proteksi sendiri, Ayu menemukan panggilan lebih besar: membantu orang lain lindungi yang mereka cintai. Perjalanan itu bukan hanya membawa dampak bagi banyak orang, tapi juga wujudkan mimpinya — keliling dunia, beli mobil & rumah impian, hingga jadi berkat bagi sesama.
                                     </p>
                                 </div>
                                 
@@ -144,59 +144,21 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face"
-                                            alt="Rina Wijaya"
+                                            src="/images/ayu.jpeg"
+                                            alt="Ayu Rahayu"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Rina Wijaya</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Ibu Rumah Tangga</p>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Ayu Rahayu</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Joined 2022</p>
                                     </div>
                                 </div>
                             </CardContent>
                         </Card>
 
-                        {/* Card 4 - Housewife */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
-                                {/* Quote Icon */}
-                                <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500" strokeWidth={2} />
-                                </div>
-                                
-                                {/* Main Quote */}
-                                <div className="mb-5 sm:mb-8">
-                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
-                                        "Aku pikir ini cuma kerjaan iseng… ternyata ini panggilan hidupku."
-                                    </p>
-                                </div>
-                                
-                                {/* Story with Numbers */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
-                                        Mulai sambilan saat anak masih kecil, sekarang tim 40+ orang dengan income 42 juta/bulan. Sudah bantu 200+ keluarga dapat proteksi asuransi.
-                                    </p>
-                                </div>
-                                
-                                {/* Profile Section */}
-                                <div className="flex items-center space-x-3 sm:space-x-5">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face"
-                                            alt="Sinta Maharani"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Sinta Maharani</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex Ibu Rumah Tangga</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
 
-                        {/* Card 5 - Gen-X Ex Corporate */}
+                        {/* Card 5 - Eni Rofikoh */}
                         <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
@@ -206,15 +168,15 @@ export default function BonusCarousel() {
                                 
                                 {/* Main Quote */}
                                 <div className="mb-5 sm:mb-8">
-                                    <p className="text-base sm:text-lg font-medium text-white leading-tight">
-                                        "Gengsi hampir bikin aku lewatin peluang terbesar dalam hidupku."
+                                    <p className="text-sm sm:text-lg font-medium text-white leading-tight">
+                                        "Dulu harus tunggu usaha jalan dulu baru terasa hasilnya… sekarang percepatan income benar-benar nyata."
                                     </p>
                                 </div>
                                 
                                 {/* Story with Numbers */}
                                 <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-sm sm:text-base text-white/80 leading-relaxed font-light">
-                                        15 tahun di corporate, gaji 18 juta mandek. Nekat resign umur 45, sekarang income 65 juta/bulan dari asuransi. Dana pensiun terkumpul 800 juta dalam 18 bulan.
+                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
+                                        Sejak bergabung di Allianz tahun 2023, Eni merasakan hidup yang lebih bebas: bisa sering traveling dengan uang sendiri, atur jam kerja sesuka hati, dan punya lebih banyak waktu berkualitas bersama keluarga. Dengan kerja keras & pantang menyerah, Tuhan selalu buka jalan menuju impian.
                                     </p>
                                 </div>
                                 
@@ -222,14 +184,14 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face"
-                                            alt="Bambang Sutrisno"
+                                            src="/images/eni.jpeg"
+                                            alt="Eni Rofikoh"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Bambang Sutrisno</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex General Manager</p>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Eni Rofikoh</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Joined 2023</p>
                                     </div>
                                 </div>
                             </CardContent>
