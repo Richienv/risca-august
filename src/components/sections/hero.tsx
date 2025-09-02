@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 import { Spotlight } from "@/components/spotlight-new";
 import Link from "next/link";
@@ -46,7 +47,8 @@ function HeroTitles() {
       label: "BRImo",
       subtitle: "Online Bill Payment Rp. 425.128.328 for MV-5779",
       time: "2 menit yang lalu",
-      status: "success"
+      status: "success",
+      icon: "/images/brimo2.png"
     },
     {
       type: "bca", 
@@ -54,7 +56,8 @@ function HeroTitles() {
       label: "MyBCA",
       subtitle: "Online Instant Transfer Rp. 234.876.234",
       time: "5 menit yang lalu",
-      status: "success"
+      status: "success",
+      icon: "/images/myBCA.png"
     },
     {
       type: "dana",
@@ -62,31 +65,17 @@ function HeroTitles() {
       label: "DANA",
       subtitle: "Transfer dari DANA Rp. 156.789.123",
       time: "8 menit yang lalu",
-      status: "success"
-    },
-    {
-      type: "gopay",
-      amount: "Rp 98.456.789",
-      label: "GoPay",
-      subtitle: "Pembayaran GoPay berhasil Rp. 98.456.789",
-      time: "12 menit yang lalu",
-      status: "success"
-    },
-    {
-      type: "paypal",
-      amount: "$4.267",
-      label: "PayPal", 
-      subtitle: "You received a payment of $4.267",
-      time: "15 menit yang lalu",
-      status: "success"
+      status: "success",
+      icon: "/images/dana.png"
     },
     {
       type: "mandiri",
       amount: "Rp 312.567.890",
       label: "Livin'",
       subtitle: "Transfer Mandiri Online Rp. 312.567.890",
-      time: "18 menit yang lalu",
-      status: "success"
+      time: "12 menit yang lalu",
+      status: "success",
+      icon: "/images/livinMandiri.png"
     }
   ];
 
@@ -118,20 +107,14 @@ function HeroTitles() {
             >
               <div className="flex items-start">
                 <div className="flex items-center space-x-1.5 sm:space-x-3 flex-1">
-                  <div className={`w-5 h-5 sm:w-8 sm:h-8 rounded-sm sm:rounded-lg flex items-center justify-center text-white font-bold text-[7px] sm:text-xs shadow-md ${
-                    payment.type === 'bri' ? 'bg-gradient-to-br from-blue-600 to-blue-700' : 
-                    payment.type === 'bca' ? 'bg-gradient-to-br from-blue-700 to-blue-800' :
-                    payment.type === 'dana' ? 'bg-gradient-to-br from-blue-500 to-blue-600' :
-                    payment.type === 'gopay' ? 'bg-gradient-to-br from-green-600 to-green-700' :
-                    payment.type === 'paypal' ? 'bg-gradient-to-br from-blue-600 to-blue-700' :
-                    payment.type === 'mandiri' ? 'bg-gradient-to-br from-orange-600 to-orange-700' : 'bg-gray-600'
-                  }`}>
-                    {payment.type === 'bri' ? 'BRI' : 
-                     payment.type === 'bca' ? 'BCA' :
-                     payment.type === 'dana' ? 'D' :
-                     payment.type === 'gopay' ? 'G' :
-                     payment.type === 'paypal' ? 'P' :
-                     payment.type === 'mandiri' ? 'M' : 'X'}
+                  <div className="w-5 h-5 sm:w-8 sm:h-8 rounded-sm sm:rounded-lg flex items-center justify-center shadow-md bg-white p-0.5">
+                    <Image
+                      src={payment.icon}
+                      alt={payment.label}
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-contain rounded-sm"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">

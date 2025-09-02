@@ -24,7 +24,7 @@ export default function Pricing() {
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-xs">
-                                {['💰 Cashback 100% untuk beli asuransi keluarga', '🏠 Proteksi lengkap tanpa keluar uang tambahan', '💵 Income Rp 2.335.000/bulan (komisi 23,35%)', '⏰ Program 2 tahun dengan hasil pasti', '👥 Target 4 orang referral untuk maksimal hasil', '🥇 Bonus Logam Mulia 5 Gram senilai 10 Jt', '📱 Bonus iPad senilai 6 Jt', '🎁 Total bonus 16 Jt dalam 1-3 bulan'].map((item, index) => (
+                                {['Cashback 100% untuk beli asuransi keluarga', 'Proteksi lengkap tanpa keluar uang tambahan', 'Income Rp 2.335.000/bulan (komisi 23,35%)', 'Program 2 tahun dengan hasil pasti', 'Target 4 orang referral untuk maksimal hasil', 'Bonus Logam Mulia 5 Gram senilai 10 Jt', 'Bonus iPad senilai 6 Jt', 'Total bonus 16 Jt dalam 1-3 bulan'].map((item, index) => (
                                     <li
                                         key={index}
                                         className="flex items-center gap-2">
@@ -58,7 +58,7 @@ export default function Pricing() {
                             <CardContent className="space-y-4">
                                 <hr className="border-dashed" />
                                 <ul className="list-outside space-y-3 text-xs">
-                                    {['💰 Cashback 100% untuk proteksi keluarga premium', '🏠 Asuransi lengkap tanpa biaya tambahan', '💵 Income Rp 3.969.500/bulan (komisi 23,35%)', '⏰ Program 2 tahun dengan hasil terjamin', '👥 Target hanya 2 orang referral (lebih mudah)', '🥇 Bonus Logam Mulia 5 Gram senilai 10 Jt', '📱 Bonus iPad senilai 6 Jt', '🎁 Total bonus 16 Jt dalam 1-3 bulan', '📈 Income lebih stabil dan besar', '🎯 Target referral lebih sedikit = lebih realistis'].map((item, index) => (
+                                    {['Cashback 100% untuk proteksi keluarga premium', 'Asuransi lengkap tanpa biaya tambahan', 'Income Rp 3.969.500/bulan (komisi 23,35%)', 'Program 2 tahun dengan hasil terjamin', 'Target hanya 2 orang referral (lebih mudah)', 'Bonus Logam Mulia 5 Gram senilai 10 Jt', 'Bonus iPad senilai 6 Jt', 'Total bonus 16 Jt dalam 1-3 bulan', 'Income lebih stabil dan besar', 'Target referral lebih sedikit = lebih realistis'].map((item, index) => (
                                         <li
                                             key={index}
                                             className="flex items-center gap-2">
@@ -90,7 +90,7 @@ export default function Pricing() {
                             <hr className="border-dashed" />
 
                             <ul className="list-outside space-y-3 text-xs">
-                                {['💰 Cashback 100% untuk proteksi VIP keluarga', '🏠 Proteksi terlengkap tanpa keluar uang ekstra', '💵 Income Rp 5.837.500/bulan (komisi 23,35%)', '⏰ Program 2 tahun dengan hasil maksimal', '🚀 TANPA target referral (paling mudah dicapai)', '🥇 Bonus Logam Mulia 5 Gram senilai 10 Jt', '📱 Bonus iPad senilai 6 Jt', '🎁 Total bonus 16 Jt dalam 1-3 bulan', '👑 Income tertinggi dari semua paket', '✨ Paling mudah dicapai karena tanpa syarat referral'].map((item, index) => (
+                                {['Cashback 100% untuk proteksi VIP keluarga', 'Proteksi terlengkap tanpa keluar uang ekstra', 'Income Rp 5.837.500/bulan (komisi 23,35%)', 'Program 2 tahun dengan hasil maksimal', 'TANPA target referral (paling mudah dicapai)', 'Bonus Logam Mulia 5 Gram senilai 10 Jt', 'Bonus iPad senilai 6 Jt', 'Total bonus 16 Jt dalam 1-3 bulan', 'Income tertinggi dari semua paket', 'Paling mudah dicapai karena tanpa syarat referral'].map((item, index) => (
                                     <li
                                         key={index}
                                         className="flex items-center gap-2">

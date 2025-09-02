@@ -1,53 +1,50 @@
 "use client";
 
+import Link from 'next/link';
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
 
 const stepsData = [
   {
-    title: "Hari 1–10 — Nyalakan Mimpi & Siapkan Diri",
-    description: "Di 10 hari pertama, aku mulai buka pikiran. Aku tanya ke diriku sendiri: kenapa aku harus sukses? Aku ikut sesi bareng mentor, kenalan sama tim yang supportive banget, dan nulis target penghasilan pertamaku.",
+    title: "Hari ke 1–5 — System & License",
+    description: "Kamu akan menerima akses sistem kerja dan lisensi resmi sebagai modal awal. Untuk unlock tahap ini, kamu perlu mempelajari dasar-dasar asuransi melalui materi ringan yang bisa dipelajari dari handphone-mu, termasuk cara kerja polis dan manfaat proteksi.",
     imageSrc: "/images/1.png"
   },
   {
-    title: "Hari 11–20 — Closing Pertamaku",
-    description: "Aku belajar cara jelasin produk Allianz dengan bahasa yang sederhana. Mentor dampingin aku latihan ngomong, roleplay, dan akhirnya aku dapet closing pertama. Rasanya campur aduk — deg-degan, tapi bangga banget.",
+    title: "Hari ke 6–15 — Knowledge Pack",
+    description: "Di tahap ini, kamu akan mendapatkan knowledge pack berupa materi presentasi sederhana, script super boost yang akan meningkatkan kemampuan selling-mu secara drastis, dan simulasi roleplay bersama mentor. Untuk unlock, kamu perlu melakukan presentasi pertama kepada teman atau keluarga dengan panduan mentor.",
     imageSrc: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari 21–30 — Percaya Diri & Kuasai Ceritaku",
-    description: "Aku belum posting apa-apa di medsos, tapi aku mulai nulis cerita kenapa aku jalanin ini semua. Aku latihan ngomong ke teman dan keluarga. Pelan-pelan aku mulai percaya diri.",
+    title: "Hari ke 16–30 — Storytelling Kit",
+    description: "Kamu akan membuka storytelling kit setelah berhasil melakukan closing pertama. Reward ini membantumu menyusun cerita pribadi tentang alasan memilih bisnis asuransi, yang bisa menjadi senjata saat berbagi dengan calon nasabah.",
     imageSrc: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari 31–40 — Gandakan Hasilku",
-    description: "Setelah berhasil closing, aku ulangi langkah yang sama. Aku presentasi lebih banyak, follow up lebih serius. Closing kedua dan ketiga pun datang. Aku capai total ALP di atas 150 juta.",
+    title: "Hari ke 31–45 — Exclusive Bootcamp",
+    description: "Setelah punya hasil awal, kamu akan unlock exclusive bootcamp dari well-known speaker yang akan memberikan insight mendalam tentang strategi advanced selling dan mindset sukses. Bootcamp ini hanya tersedia untuk member yang sudah mencapai milestone ini.",
     imageSrc: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari 41–50 — Rekrut Tim Pertamaku",
-    description: "Ada teman yang tanya-tanya, akhirnya aku ajak join. Aku cerita jujur tentang pengalamanku. Dalam 10 hari ini, aku rekrut 2 orang dan mulai bimbing mereka langkah demi langkah.",
+    title: "Hari ke 46–60 — First 5 Million/Month Income",
+    description: "Tahap ini adalah milestone penting: kamu unlock penghasilan pertamamu sebesar 5 juta/bulan. Untuk mencapainya, kamu perlu menggandakan closing, memperkuat follow-up, dan mengelola pipeline klien dengan konsisten.",
     imageSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari 51–60 — Latih & Dukung Tim Kecilku",
-    description: "Aku ajarin mereka cara presentasi, bantu latihan, dan bikin grup kecil bareng. Rasanya seru banget bisa bantu orang lain mulai dari nol. Sekarang aku gak jalan sendiri — aku punya tim.",
+    title: "Hari ke 61–70 — Leadership Pass",
+    description: "Kamu unlock leadership pass setelah berhasil melatih tim kecilmu hingga mereka juga bisa closing sendiri. Kamu belajar mengarahkan presentasi, mengatur strategi tim, dan menjaga motivasi mereka.",
     imageSrc: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari 61–70 — Bangun Struktur Menuju BP",
-    description: "Aku gabungkan hasil pribadiku dan ALP tim. Kita saling support dan saling pantau progres. Aku bener-bener seriusin target 300 juta ALP. Di sini aku makin semangat karena semuanya udah makin dekat.",
+    title: "Hari ke 71–80 — Logam Mulia",
+    description: "Jika di tahap ini kamu mampu mencapai target produksi tim yang ditentukan, kamu unlock reward berupa logam mulia sebagai simbol pencapaian finansial yang berharga.",
     imageSrc: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=500&h=400&fit=crop"
   },
   {
-    title: "Hari 71–80 — Kunci Kualifikasi BP",
-    description: "Hari-hari ini aku full action. Tutup sisa kekurangan, bantu tim closing, dan validasi income-ku bareng mentor. Pas targetnya tercapai, aku nangis kecil. Ternyata aku beneran bisa.",
-    imageSrc: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=400&fit=crop"
-  },
-  {
-    title: "Hari 81–90 — Naik Level & Duplikasi",
-    description: "Aku mulai sharing perjalanan aku. Aku bikin video singkat, cerita di WA, dan bantu tim aku mulai 90 hari versi mereka. Sekarang aku bukan cuma punya penghasilan — aku punya dampak.",
+    title: "Hari ke 81–90 — iPad & Trip to Europe",
+    description: "Tahap puncak 90 hari ini akan unlock hadiah spesial berupa iPad dan perjalanan ke Eropa (termasuk tiket pesawat & hotel) jika target besarmu tercapai. Untuk mendapatkannya, kamu harus membuktikan duplikasi tim: timmu juga mulai menjalankan '90 hari' mereka, sementara kamu tetap konsisten menjaga produksi pribadi.",
     imageSrc: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop"
   }
 ];
@@ -73,7 +70,7 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-xs sm:text-sm font-mono font-light text-white/70 uppercase tracking-[0.2em] opacity-80 mb-4">
-            Jangan Takut Ayo Mulai.
+            90 Hari Battle Pass Insurance Path
           </h2>
           <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto mb-6"></div>
           <motion.h1 
@@ -94,10 +91,10 @@ export default function HowItWorks() {
               ease: 'linear'
             }}
           >
-            Program 90 Hari Menuju BP Allianz
+            Apa yang Bakal Kamu Dapatkan Saat Join
           </motion.h1>
           <p className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-2xl mx-auto">
-            Transformasi nyata yang aku jalani sendiri dari nol sampai jadi BP dalam waktu 90 hari. Cocok buat ibu rumah tangga atau siapa pun yang pengen bangun penghasilan dari rumah. Ini perjalanan aku — dan kamu juga bisa.
+            Battle pass 90 hari versi insurance path yang realistis, step by step sesuai milestone di bisnis ini. Reward ditempatkan di titik besar dengan "apa yang kamu capai" sesuai alur asuransi.
           </p>
         </div>
 
@@ -165,9 +162,16 @@ export default function HowItWorks() {
                       </h3>
                       
                       {/* Description */}
-                      <p className="text-xs sm:text-sm font-light leading-relaxed text-white/70 max-w-lg">
+                      <p className="text-xs sm:text-sm font-light leading-relaxed text-white/70 max-w-lg mb-2">
                         {step.description}
                       </p>
+                      
+                      {/* T&C Link - Small, subtle clickable text */}
+                      <Link href="/terms-conditions" className="inline-block">
+                        <span className="text-[9px] sm:text-[10px] text-gray-500 hover:text-gray-400 cursor-pointer transition-colors duration-200">
+                          T&C berlaku
+                        </span>
+                      </Link>
                       
                       {/* Image */}
                       <div className="mt-4 w-full max-w-xs h-40 sm:h-48 rounded-lg overflow-hidden">

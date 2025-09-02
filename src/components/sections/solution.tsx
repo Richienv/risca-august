@@ -61,7 +61,7 @@ const transformations = [
   {
     title: "Bonus Achievement",
     subtitle: "Hadiah Khusus Business Partner",
-    description: "Selamat! Kamu berhasil jadi BP. Terima hadiah spesial: iPad senilai Rp 6 juta + Logam Mulia 5 gram senilai Rp 10 juta. Total bonus Rp 16 juta langsung masuk ke tangan kamu!",
+    description: "Kamu berhasil! iPad Rp 6 juta + Logam Mulia 5 gram Rp 10 juta menunggumu. Total Rp 16 juta langsung cair ke tanganmu. Ini bukan mimpi - ini hasilnya kerja kerasmu!",
     image: "/images/ipad.png"
   },
 ];
@@ -138,20 +138,39 @@ export default function SolutionSection() {
                                                 <div className="relative z-10 p-4 sm:p-5 lg:p-8 h-full flex flex-col">
                                                     {/* Main Quote/Title */}
                                                     <div className="mb-3 sm:mb-5 lg:mb-8">
-                                                        <p className={`text-sm sm:text-base lg:text-lg font-medium leading-tight ${
-                                                            index === transformations.length - 1 
-                                                                ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent'
-                                                                : 'text-white'
-                                                        }`}>
-                                                            {transformation.subtitle}
-                                                        </p>
+                                                        {index === transformations.length - 1 ? (
+                                                            <motion.p 
+                                                                className="text-sm sm:text-base lg:text-lg leading-tight font-medium tracking-wide"
+                                                                style={{
+                                                                    background: 'linear-gradient(90deg, #fde047 0%, #f59e0b 50%, #fde047 100%)',
+                                                                    backgroundSize: '200% 100%',
+                                                                    WebkitBackgroundClip: 'text',
+                                                                    WebkitTextFillColor: 'transparent',
+                                                                    backgroundClip: 'text',
+                                                                }}
+                                                                animate={{
+                                                                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                                                                }}
+                                                                transition={{
+                                                                    duration: 3,
+                                                                    repeat: Infinity,
+                                                                    ease: 'linear'
+                                                                }}
+                                                            >
+                                                                {transformation.subtitle}
+                                                            </motion.p>
+                                                        ) : (
+                                                            <p className="text-sm sm:text-base lg:text-lg leading-tight text-white font-medium">
+                                                                {transformation.subtitle}
+                                                            </p>
+                                                        )}
                                                     </div>
                                                     
                                                     {/* Story with Numbers */}
                                                     <div className="text-white mb-3 sm:mb-5 lg:mb-8 flex-1">
                                                         <p className={`text-xs sm:text-sm lg:text-base leading-relaxed font-light ${
                                                             index === transformations.length - 1
-                                                                ? 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent'
+                                                                ? 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-semibold'
                                                                 : 'text-white/80'
                                                         }`}>
                                                             {transformation.description}
