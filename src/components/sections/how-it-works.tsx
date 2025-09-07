@@ -10,42 +10,42 @@ const stepsData = [
   {
     title: "Hari ke 1–5 — System & License",
     description: "Kamu akan menerima akses sistem kerja dan lisensi resmi sebagai modal awal. Untuk unlock tahap ini, kamu perlu mempelajari dasar-dasar asuransi melalui materi ringan yang bisa dipelajari dari handphone-mu, termasuk cara kerja polis dan manfaat proteksi.",
-    imageSrc: "/images/1.png"
+    imageSrc: "/images/system-licence.png"
   },
   {
     title: "Hari ke 6–15 — Knowledge Pack",
     description: "Di tahap ini, kamu akan mendapatkan knowledge pack berupa materi presentasi sederhana, script super boost yang akan meningkatkan kemampuan selling-mu secara drastis, dan simulasi roleplay bersama mentor. Untuk unlock, kamu perlu melakukan presentasi pertama kepada teman atau keluarga dengan panduan mentor.",
-    imageSrc: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&h=400&fit=crop"
+    imageSrc: "/images/knowledge-pack.png"
   },
   {
     title: "Hari ke 16–30 — Storytelling Kit",
     description: "Kamu akan membuka storytelling kit setelah berhasil melakukan closing pertama. Reward ini membantumu menyusun cerita pribadi tentang alasan memilih bisnis asuransi, yang bisa menjadi senjata saat berbagi dengan calon nasabah.",
-    imageSrc: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=500&h=400&fit=crop"
+    imageSrc: "/images/storytelling-kit.png"
   },
   {
     title: "Hari ke 31–45 — Exclusive Bootcamp",
     description: "Setelah punya hasil awal, kamu akan unlock exclusive bootcamp dari well-known speaker yang akan memberikan insight mendalam tentang strategi advanced selling dan mindset sukses. Bootcamp ini hanya tersedia untuk member yang sudah mencapai milestone ini.",
-    imageSrc: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500&h=400&fit=crop"
+    imageSrc: "/images/exclusive-bootcamp.png"
   },
   {
     title: "Hari ke 46–60 — First 5 Million/Month Income",
     description: "Tahap ini adalah milestone penting: kamu unlock penghasilan pertamamu sebesar 5 juta/bulan. Untuk mencapainya, kamu perlu menggandakan closing, memperkuat follow-up, dan mengelola pipeline klien dengan konsisten.",
-    imageSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
+    imageSrc: "/images/first-income.png"
   },
   {
     title: "Hari ke 61–70 — Leadership Pass",
     description: "Kamu unlock leadership pass setelah berhasil melatih tim kecilmu hingga mereka juga bisa closing sendiri. Kamu belajar mengarahkan presentasi, mengatur strategi tim, dan menjaga motivasi mereka.",
-    imageSrc: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=400&fit=crop"
+    imageSrc: "/images/leadership-pass.png"
   },
   {
     title: "Hari ke 71–80 — Logam Mulia",
     description: "Jika di tahap ini kamu mampu mencapai target produksi tim yang ditentukan, kamu unlock reward berupa logam mulia sebagai simbol pencapaian finansial yang berharga.",
-    imageSrc: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=500&h=400&fit=crop"
+    imageSrc: "/images/logam-mulia.png"
   },
   {
     title: "Hari ke 81–90 — iPad & Trip to Europe",
     description: "Tahap puncak 90 hari ini akan unlock hadiah spesial berupa iPad dan perjalanan ke Eropa (termasuk tiket pesawat & hotel) jika target besarmu tercapai. Untuk mendapatkannya, kamu harus membuktikan duplikasi tim: timmu juga mulai menjalankan '90 hari' mereka, sementara kamu tetap konsisten menjaga produksi pribadi.",
-    imageSrc: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=400&fit=crop"
+    imageSrc: "/images/ipad-trip-europe.png"
   }
 ];
 

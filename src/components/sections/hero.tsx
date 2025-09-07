@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import { Spotlight } from "@/components/spotlight-new";
@@ -11,34 +10,6 @@ import Link from "next/link";
 const ease = [0.16, 1, 0.3, 1];
 
 function HeroTitles() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-
-    let scrollSpeed = 0.4; // pixels per tick (super slow speed)
-    let frameId: number;
-
-    const step = () => {
-      if (!scrollContainer) return;
-
-      scrollContainer.scrollTop += scrollSpeed;
-
-      if (
-        scrollContainer.scrollTop >= scrollContainer.scrollHeight / 3
-      ) {
-        // Reset to top when we've scrolled through 1/3 (one set of cards)
-        scrollContainer.scrollTop = 0;
-      }
-
-      frameId = requestAnimationFrame(step);
-    };
-
-    frameId = requestAnimationFrame(step);
-
-    return () => cancelAnimationFrame(frameId);
-  }, []);
 
   const paymentImages = [
     {
@@ -82,37 +53,70 @@ function HeroTitles() {
   return (
     <div className="flex w-full max-w-4xl flex-col text-center mb-8 relative">
       {/* Notification Carousel - positioned at the very top with ceiling-to-tagline flow */}
-      {/* Mobile height: h-32 | Desktop height: sm:h-96 */}
-      <div 
-        ref={scrollRef}
-        className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-10rem] sm:mt-[-6rem] mx-auto opacity-70 sm:opacity-100"
-        style={{
-          overflowY: "scroll",
-          scrollbarWidth: "none", // Firefox
-          msOverflowStyle: "none", // IE
-        }}
-      >
+      <div className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-10rem] sm:mt-[-6rem] mx-auto opacity-70 sm:opacity-100 overflow-hidden">
+        {/* Custom CSS for infinite scroll animation */}
         <style jsx>{`
-          div::-webkit-scrollbar {
-            display: none;
+          @keyframes scrollInfinite {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-50%);
+            }
+          }
+          .scroll-container {
+            animation: scrollInfinite 20s linear infinite;
           }
         `}</style>
-        <div className="flex flex-col space-y-0.5 sm:space-y-2 py-2">
-          {/* Render cards multiple times to ensure scrollable content */}
-          {[...paymentImages, ...paymentImages, ...paymentImages].map((payment, index) => (
+        
+        <div className="scroll-container flex flex-col space-y-0.5 sm:space-y-2 py-2">
+          {/* Render cards twice for seamless loop */}
+          {paymentImages.map((payment, index) => (
             <div
-              key={`${payment.type}-${index}`}
+              key={`first-${payment.type}-${index}`}
               className="backdrop-blur-sm rounded-md sm:rounded-xl p-1 sm:p-3 border border-gray-300/20 flex-shrink-0 shadow-lg"
               style={{ backgroundColor: '#E3E4E3' }}
             >
               <div className="flex items-start">
                 <div className="flex items-center space-x-1.5 sm:space-x-3 flex-1">
-                  <div className="w-5 h-5 sm:w-8 sm:h-8 rounded-sm sm:rounded-lg flex items-center justify-center shadow-md bg-white p-0.5">
+                  <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-sm sm:rounded-lg flex items-center justify-center shadow-md bg-white p-1">
                     <Image
                       src={payment.icon}
                       alt={payment.label}
-                      width={32}
-                      height={32}
+                      width={40}
+                      height={40}
+                      className="w-full h-full object-contain rounded-sm"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-0.5 sm:space-x-1">
+                        <div className="text-gray-900 font-semibold text-[10px] sm:text-sm">{payment.label}</div>
+                        <div className="text-gray-600 text-[10px] sm:text-sm">•</div>
+                      </div>
+                      <div className="text-gray-600 text-[4px] sm:text-sm">{payment.time}</div>
+                    </div>
+                    <div className="text-gray-700 text-[6px] sm:text-sm font-medium truncate pr-1 text-left">{payment.subtitle}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {paymentImages.map((payment, index) => (
+            <div
+              key={`second-${payment.type}-${index}`}
+              className="backdrop-blur-sm rounded-md sm:rounded-xl p-1 sm:p-3 border border-gray-300/20 flex-shrink-0 shadow-lg"
+              style={{ backgroundColor: '#E3E4E3' }}
+            >
+              <div className="flex items-start">
+                <div className="flex items-center space-x-1.5 sm:space-x-3 flex-1">
+                  <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-sm sm:rounded-lg flex items-center justify-center shadow-md bg-white p-1">
+                    <Image
+                      src={payment.icon}
+                      alt={payment.label}
+                      width={40}
+                      height={40}
                       className="w-full h-full object-contain rounded-sm"
                     />
                   </div>
