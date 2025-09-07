@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const statusResponse = await coreApi.transaction.status(orderId)
+    const statusResponse = await coreApi.status(orderId)
     
     const response: PaymentStatusResponse = {
       order_id: statusResponse.order_id,
@@ -80,13 +80,13 @@ export async function POST(request: NextRequest) {
     
     switch (action) {
       case 'cancel':
-        result = await coreApi.transaction.cancel(order_id)
+        result = await coreApi.cancel(order_id)
         break
       case 'approve':
-        result = await coreApi.transaction.approve(order_id)
+        result = await coreApi.approve(order_id)
         break
       case 'deny':
-        result = await coreApi.transaction.deny(order_id)
+        result = await coreApi.deny(order_id)
         break
       default:
         return NextResponse.json(

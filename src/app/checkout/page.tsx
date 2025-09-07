@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -12,7 +12,7 @@ import { usePayment } from '@/hooks/usePayment'
 import PaymentStatusModal from '@/components/payment/PaymentStatusModal'
 import Link from 'next/link'
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const packageType = searchParams.get('package') as PackageType
@@ -296,8 +296,22 @@ export default function CheckoutPage() {
         isOpen={showStatusModal}
         onClose={() => setShowStatusModal(false)}
         paymentResult={paymentResult}
-        orderId={orderId}
+        orderId={orderId || undefined}
       />
     </div>
+  )
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="w-full max-w-4xl mx-auto p-4 animate-pulse">
+          <div className="bg-gray-900 rounded-lg h-96 border border-gray-800"></div>
+        </div>
+      </div>
+    }>
+      <CheckoutContent />
+    </Suspense>
   )
 }
