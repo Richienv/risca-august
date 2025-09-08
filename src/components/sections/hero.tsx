@@ -35,16 +35,16 @@ function HeroTitles() {
       amount: "Rp 156.789.123",
       label: "DANA",
       subtitle: "Transfer dari DANA Rp. 156.789.123",
-      time: "8 menit yang lalu",
-      status: "success",
-      icon: "/images/dana.png"
-    },
-    {
-      type: "mandiri",
-      amount: "Rp 312.567.890",
-      label: "Livin'",
-      subtitle: "Transfer Mandiri Online Rp. 312.567.890",
-      time: "12 menit yang lalu",
+    time: "8 menit yang lalu",
+    status: "success",
+    icon: "/images/dana.png"
+  },
+  {
+    type: "mandiri",
+    amount: "Rp 312.567.890",
+    label: "Livin'",
+    subtitle: "Transfer Mandiri Online Rp. 312.567.890",
+    time: "12 menit yang lalu",
       status: "success",
       icon: "/images/livinMandiri.png"
     }
@@ -52,25 +52,10 @@ function HeroTitles() {
 
   return (
     <div className="flex w-full max-w-4xl flex-col text-center mb-8 relative">
-      {/* Notification Carousel - positioned at the very top with ceiling-to-tagline flow */}
-      <div className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-10rem] sm:mt-[-6rem] mx-auto opacity-70 sm:opacity-100 overflow-hidden">
-        {/* Custom CSS for infinite scroll animation */}
-        <style jsx>{`
-          @keyframes scrollInfinite {
-            0% {
-              transform: translateY(0);
-            }
-            100% {
-              transform: translateY(-50%);
-            }
-          }
-          .scroll-container {
-            animation: scrollInfinite 20s linear infinite;
-          }
-        `}</style>
-        
-        <div className="scroll-container flex flex-col space-y-0.5 sm:space-y-2 py-2">
-          {/* Render cards twice for seamless loop */}
+      {/* Payment Notifications - positioned directly on top of tagline */}
+      <div className="relative w-full max-w-[180px] sm:max-w-md h-[300px] sm:h-[400px] z-20 mt-[-2rem] sm:mt-[0rem] mx-auto opacity-70 sm:opacity-100 overflow-hidden">
+        <div className="flex flex-col space-y-0.5 sm:space-y-2 py-2">
+          {/* First set of payment cards */}
           {paymentImages.map((payment, index) => (
             <div
               key={`first-${payment.type}-${index}`}
@@ -102,7 +87,7 @@ function HeroTitles() {
               </div>
             </div>
           ))}
-          {/* Duplicate for seamless loop */}
+          {/* Duplicate set for more length */}
           {paymentImages.map((payment, index) => (
             <div
               key={`second-${payment.type}-${index}`}
@@ -307,14 +292,14 @@ export default function Hero() {
                   {/* Video Container with thin gray border and medium padding */}
                   <div className="relative w-full border border-gray-600 rounded-lg overflow-hidden p-3">
                     <motion.div
-                      className="relative aspect-video w-full overflow-hidden rounded-md"
+                      className="relative w-full overflow-hidden rounded-md aspect-[9/16] sm:aspect-video"
                       whileHover={{ scale: 1.01 }}
                       transition={{ duration: 0.3 }}
                     >
-                      {/* YouTube embedded video */}
+                      {/* YouTube embedded video short */}
                       <iframe
                         className="absolute inset-0 w-full h-full"
-                        src="https://www.youtube.com/embed/pxGM_TOgHuM?si=FuvN40zntrmZNYfg&autoplay=0&mute=1&controls=1&showinfo=0&rel=0"
+                        src="https://www.youtube.com/embed/5NVytJcGvFM?si=B9tszCMxDn9k0LPI&autoplay=0&mute=1&controls=1&showinfo=0&rel=0"
                         title="YouTube video preview"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen

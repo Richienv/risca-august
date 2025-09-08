@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Image from 'next/image';
 
 const stepsData = [
   {
@@ -136,11 +135,11 @@ export default function HowItWorks() {
                       }}
                       transition={{ duration: 0.6, ease: "easeInOut" }}
                     >
-                      <Image
+                      <img
                         src="/images/badge.png"
                         alt="Step badge"
-                        width={28}
-                        height={28}
+                        width="28"
+                        height="28"
                         className={`transition-all duration-500 ${
                           activeSteps.includes(index) ? 'opacity-100 brightness-110' : 'opacity-70 brightness-75'
                         }`}
@@ -174,11 +173,15 @@ export default function HowItWorks() {
                       </Link>
                       
                       {/* Image */}
-                      <div className="mt-4 w-full max-w-xs h-40 sm:h-48 rounded-lg overflow-hidden">
+                      <div className="mt-4 w-full max-w-xs aspect-[4/6] rounded-lg overflow-hidden">
                         <img
                           src={step.imageSrc}
                           alt={step.title}
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            console.error(`Failed to load image: ${step.imageSrc}`);
+                            e.currentTarget.style.display = 'none';
+                          }}
                         />
                       </div>
                     </div>

@@ -11,15 +11,17 @@ export default function BonusCarousel() {
                 <div className="relative">
                     {/* Heading Section - focusing on real testimonials */}
                     <div className="text-center mb-12">
-                        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
+                        <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent mx-auto mb-6" style={{ filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.6))' }}></div>
                         <motion.h1 
                             className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
                             style={{
-                                background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+                                background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
                                 backgroundSize: '200% 100%',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
+                                textShadow: '0 0 20px rgba(251, 191, 36, 0.5), 0 0 40px rgba(251, 191, 36, 0.3)',
+                                filter: 'drop-shadow(0 0 10px rgba(251, 191, 36, 0.4))'
                             }}
                             animate={{
                                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
@@ -32,100 +34,20 @@ export default function BonusCarousel() {
                         >
                             Jangan Cuman Percaya Kata Saya
                         </motion.h1>
-                        <p className="text-xs sm:text-lg font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+                        <p className="text-xs sm:text-lg font-light leading-relaxed text-slate-300 max-w-3xl mx-auto" style={{ textShadow: '0 0 15px rgba(251, 191, 36, 0.2)' }}>
                             Lihat mereka yang udah merubah karir mereka dari pekerja biasa jadi pengusaha yang penghasilan pasifnya puluhan ratusan hingga milyaran rupiah setiap bulannya
                         </p>
                     </div>
                     
                     <div className="relative z-10 w-full">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         
-                        {/* Card 1 - Marshel Yap */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                        {/* Card 1 - Bambang Sudianto + Silfianty (Top Income: 1 Milyar/bulan) */}
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group hover:bg-black/50" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.1)' }}>
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
                                 <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
-                                </div>
-                                
-                                {/* Main Quote */}
-                                <div className="mb-5 sm:mb-8">
-                                    <motion.p 
-                                        className="text-sm sm:text-lg font-medium leading-tight"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        "Dulu ga pernah nyangka, dari keluarga menengah ke bawah yang bahkan ga punya rumah sendiri."
-                                    </motion.p>
-                                </div>
-                                
-                                {/* Story */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Marshel membuktikan bahwa latar belakang tidak menentukan masa depan. Dari keluarga yang dulu tidak punya rumah sendiri, kini bisa menikmati perjalanan ke Asia & Eropa setiap tahun. Yang dulu hanya impian kini jadi kenyataan indah.
-                                    </p>
-                                </div>
-
-                                {/* Income */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <motion.div 
-                                        className="text-xs sm:text-sm font-semibold"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        <span className="font-medium">Penghasilan:</span> 120 jt/bulan
-                                    </motion.div>
-                                </div>
-                                
-                                {/* Profile Section */}
-                                <div className="flex items-center space-x-3 sm:space-x-5">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
-                                        <img 
-                                            src="/images/marsel-yap.jpeg"
-                                            alt="Marshel Yap"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Marshel Yap</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-Marketing</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Card 2 - Bambang Sudianto + Silfianty */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
-                                {/* Quote Icon */}
-                                <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" strokeWidth={2} style={{ filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.6))' }} />
                                 </div>
                                 
                                 {/* Main Quote */}
@@ -200,12 +122,12 @@ export default function BonusCarousel() {
                             </CardContent>
                         </Card>
 
-                        {/* Card 3 - Suci Lestari */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                        {/* Card 2 - Suci Lestari (150 jt/bulan) */}
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group hover:bg-black/50" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.1)' }}>
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
                                 <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" strokeWidth={2} style={{ filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.6))' }} />
                                 </div>
                                 
                                 {/* Main Quote */}
@@ -280,13 +202,12 @@ export default function BonusCarousel() {
                             </CardContent>
                         </Card>
 
-
-                        {/* Card 4 - Eddy */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
+                        {/* Card 3 - Marshel Yap (120 jt/bulan) */}
+                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group hover:bg-black/50" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.1)' }}>
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
                                 <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
+                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" strokeWidth={2} style={{ filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.6))' }} />
                                 </div>
                                 
                                 {/* Main Quote */}
@@ -309,14 +230,14 @@ export default function BonusCarousel() {
                                             ease: 'linear'
                                         }}
                                     >
-                                        "Dulu cuma bermimpi punya penghasilan besar, sekarang syukur sudah bisa mencapainya."
+                                        "Dulu ga pernah nyangka, dari keluarga menengah ke bawah yang bahkan ga punya rumah sendiri."
                                     </motion.p>
                                 </div>
                                 
                                 {/* Story */}
                                 <div className="text-white mb-5 sm:mb-8">
                                     <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Hadiah sesungguhnya bukan hanya angka penghasilan — tetapi pertumbuhan, perjalanan, dan kesempatan membantu orang lain melindungi hal yang paling berharga. Sekarang misi saya jelas: tidak hanya dilihat, tetapi dipercaya, diingat, dan dicari.
+                                        Marshel membuktikan bahwa latar belakang tidak menentukan masa depan. Dari keluarga yang dulu tidak punya rumah sendiri, kini bisa menikmati perjalanan ke Asia & Eropa setiap tahun. Yang dulu hanya impian kini jadi kenyataan indah.
                                     </p>
                                 </div>
 
@@ -340,7 +261,7 @@ export default function BonusCarousel() {
                                             ease: 'linear'
                                         }}
                                     >
-                                        <span className="font-medium">Penghasilan:</span> 100+ jt/bulan
+                                        <span className="font-medium">Penghasilan:</span> 120 jt/bulan
                                     </motion.div>
                                 </div>
                                 
@@ -348,334 +269,14 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="/images/eddy.jpeg"
-                                            alt="Eddy"
+                                            src="/images/marsel-yap.jpeg"
+                                            alt="Marshel Yap"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Eddy</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-S2 Arsitek</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Card 5 - Surianto (Acai) */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
-                                {/* Quote Icon */}
-                                <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
-                                </div>
-                                
-                                {/* Main Quote */}
-                                <div className="mb-5 sm:mb-8">
-                                    <motion.p 
-                                        className="text-sm sm:text-lg font-medium leading-tight"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        "Kunci keberhasilan adalah berani mengambil risiko dan tidak takut gagal."
-                                    </motion.p>
-                                </div>
-                                
-                                {/* Story */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Kapasitas manusia tidak akan bertambah berkembang bila ada rasa takut gagal di dalamnya. Surianto membuktikan bahwa keberanian mengambil risiko dan konsistensi adalah fondasi kesuksesan yang sesungguhnya.
-                                    </p>
-                                </div>
-
-                                {/* Income */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <motion.div 
-                                        className="text-xs sm:text-sm font-semibold"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        <span className="font-medium">Penghasilan:</span> 150 jt/bulan
-                                    </motion.div>
-                                </div>
-                                
-                                {/* Profile Section */}
-                                <div className="flex items-center space-x-3 sm:space-x-5">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
-                                        <img 
-                                            src="/images/surianto.jpeg"
-                                            alt="Surianto (Acai)"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Surianto (Acai)</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-Salesman</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Card 6 - Elya */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
-                                {/* Quote Icon */}
-                                <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
-                                </div>
-                                
-                                {/* Main Quote */}
-                                <div className="mb-5 sm:mb-8">
-                                    <motion.p 
-                                        className="text-sm sm:text-lg font-medium leading-tight"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        "Bersyukur bisa berkembang, diberkati untuk melindungi sesama."
-                                    </motion.p>
-                                </div>
-                                
-                                {/* Story */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Saya bersyukur mendapat kesempatan berkembang di bisnis ini — tidak hanya sebagai profesional, tetapi sebagai manusia. Melalui asuransi, saya bisa melayani orang lain, melindungi hal yang paling berharga, dan berbagi berkat masa depan yang terjamin. Perjalanan: Taiwan, Turkey, Korea, Bali dan masih banyak lagi.
-                                    </p>
-                                </div>
-
-                                {/* Income */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <motion.div 
-                                        className="text-xs sm:text-sm font-semibold"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        <span className="font-medium">Penghasilan:</span> 50 jt/bulan
-                                    </motion.div>
-                                </div>
-                                
-                                {/* Profile Section */}
-                                <div className="flex items-center space-x-3 sm:space-x-5">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
-                                        <img 
-                                            src="/images/elya.jpeg"
-                                            alt="Elya"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Elya</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-Beauty Entrepreneur</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Card 7 - Soehartono & Athena */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
-                                {/* Quote Icon */}
-                                <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
-                                </div>
-                                
-                                {/* Main Quote */}
-                                <div className="mb-5 sm:mb-8">
-                                    <motion.p 
-                                        className="text-sm sm:text-lg font-medium leading-tight"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        "Dari Moscow sampai Paris, dari Korea sampai Taiwan — mimpi tidak mengenal batas."
-                                    </motion.p>
-                                </div>
-                                
-                                {/* Story */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Perjalanan mereka telah membawa ke seluruh dunia - Moscow, Paris, Korea Selatan, Taiwan, Shangrila South China, Prague, Italy. Bukti nyata apa yang mungkin terjadi ketika Anda berkomitmen pada keunggulan dalam bisnis ini.
-                                    </p>
-                                </div>
-
-                                {/* Income */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <motion.div 
-                                        className="text-xs sm:text-sm font-semibold"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        <span className="font-medium">Penghasilan:</span> 83 jt/bulan
-                                    </motion.div>
-                                </div>
-                                
-                                {/* Profile Section */}
-                                <div className="flex items-center space-x-3 sm:space-x-5">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
-                                        <img 
-                                            src="/images/s-h.jpeg"
-                                            alt="Soehartono & Athena"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Soehartono & Athena</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-Manager & Ibu RT</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Card 8 - Vicki Aditya */}
-                        <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-white/10 hover:border-white/20 transition-all duration-300 group hover:bg-black/50">
-                            <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
-                                {/* Quote Icon */}
-                                <div className="mb-5 sm:mb-8">
-                                    <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-amber-400" strokeWidth={2} />
-                                </div>
-                                
-                                {/* Main Quote */}
-                                <div className="mb-5 sm:mb-8">
-                                    <motion.p 
-                                        className="text-sm sm:text-lg font-medium leading-tight"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        "Ora et Labora, inilah panggilan hidup saya."
-                                    </motion.p>
-                                </div>
-                                
-                                {/* Story */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Perjalanan asuransi ini tidak hanya membantu saya memenuhi impian pribadi, tetapi yang lebih penting, memberikan kehormatan untuk mendidik dan memberdayakan sesama Indonesia. Saya sangat bersyukur untuk komunitas yang terus membuat saya berkembang, dan tetap berkomitmen memimpin dengan kerendahan hati, integritas, dan hati yang penuh syukur.
-                                    </p>
-                                </div>
-
-                                {/* Income */}
-                                <div className="text-white mb-5 sm:mb-8">
-                                    <motion.div 
-                                        className="text-xs sm:text-sm font-semibold"
-                                        style={{
-                                            background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
-                                            backgroundSize: '200% 100%',
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            backgroundClip: 'text',
-                                        }}
-                                        animate={{
-                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                        }}
-                                        transition={{
-                                            duration: 3,
-                                            repeat: Infinity,
-                                            ease: 'linear'
-                                        }}
-                                    >
-                                        <span className="font-medium">Penghasilan:</span> 100+ jt/bulan
-                                    </motion.div>
-                                </div>
-                                
-                                {/* Profile Section */}
-                                <div className="flex items-center space-x-3 sm:space-x-5">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
-                                        <img 
-                                            src="/images/vickiaditya.jpeg"
-                                            alt="Vicki Aditya"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Vicki Aditya</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Joined 2018</p>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Marshel Yap</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-Marketing</p>
                                     </div>
                                 </div>
                             </CardContent>

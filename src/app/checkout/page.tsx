@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
-import { ArrowLeft, CreditCard, Shield, Check } from 'lucide-react'
+import { ArrowLeft, CreditCard, Shield, Check, ChevronDown, ChevronUp } from 'lucide-react'
 import { PackageType, PACKAGES, isValidEmail, isValidPhone, formatPhoneNumber, PaymentFormData } from '@/types/payment'
 import { usePayment } from '@/hooks/usePayment'
 import PaymentStatusModal from '@/components/payment/PaymentStatusModal'
@@ -27,6 +27,7 @@ function CheckoutContent() {
   
   const [errors, setErrors] = useState<Partial<PaymentFormData>>({})
   const [showStatusModal, setShowStatusModal] = useState(false)
+  const [isOrderSummaryOpen, setIsOrderSummaryOpen] = useState(true)
 
   const { 
     paymentState, 
@@ -112,129 +113,131 @@ function CheckoutContent() {
           <div className="flex items-center gap-3 mb-3">
             <Link 
               href="/#pricing-section"
-              className="text-gray-400 hover:text-pink-400 transition-colors"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
             >
               <ArrowLeft className="h-5 w-5" />
             </Link>
-            <h1 className="text-2xl font-bold text-white">Checkout</h1>
+            <h1 className="text-2xl font-bold text-white" style={{
+              background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
+              backgroundSize: '200% 100%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              textShadow: '0 0 15px rgba(251, 191, 36, 0.3)'
+            }}>Checkout</h1>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Order Summary */}
-          <div className="order-2 lg:order-1">
-            <Card className="bg-black border-gray-800">
-              <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-2 text-white text-lg">
-                  <Shield className="h-4 w-4 text-green-500" />
-                  Ringkasan Pesanan
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {/* Package Info */}
-                <div className="bg-transparent p-4 rounded-lg border border-gray-700/50">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="font-semibold text-base text-white">{packageInfo.name}</h3>
-                      <p className="text-sm text-gray-400">{packageInfo.description}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-lg sm:text-xl font-bold text-white">{packageInfo.monthlyPrice}</p>
-                      <p className="text-xs text-gray-500">per bulan</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <div className="grid gap-1 max-h-32 overflow-y-auto">
-                      {packageInfo.features.slice(0, 4).map((feature, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <Check className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-xs text-gray-400">{feature}</span>
-                        </div>
-                      ))}
-                      {packageInfo.features.length > 4 && (
-                        <p className="text-xs text-gray-500 italic ml-5">
-                          +{packageInfo.features.length - 4} fitur lainnya
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Price Breakdown */}
-                <div className="space-y-2 border-t border-gray-800 pt-3">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Subtotal</span>
-                    <span className="text-white">{packageInfo.monthlyPrice}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Biaya Admin</span>
-                    <span className="text-white">GRATIS</span>
-                  </div>
-                  <hr className="border-gray-800" />
-                  <div className="flex justify-between font-bold">
-                    <span className="text-white">Total</span>
-                    <span className="text-white">{packageInfo.monthlyPrice}</span>
-                  </div>
-                </div>
-
-                {/* Security Info */}
-                <div className="bg-yellow-900/20 p-3 rounded-lg border border-yellow-700/30">
+        <div className="max-w-2xl mx-auto">
+          {/* Payment Form with embedded Order Summary */}
+          <Card className="bg-black border-yellow-400/20 hover:border-yellow-400/30 transition-all duration-300" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.1)' }}>
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-2 text-white text-lg" style={{ textShadow: '0 0 10px rgba(251, 191, 36, 0.3)' }}>
+                <CreditCard className="h-4 w-4 text-yellow-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.6))' }} />
+                Informasi Pembayaran
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              
+              {/* Collapsible Order Summary */}
+              <div className="border border-yellow-400/20 rounded-lg">
+                <button
+                  onClick={() => setIsOrderSummaryOpen(!isOrderSummaryOpen)}
+                  className="w-full flex items-center justify-between p-4 hover:bg-yellow-400/5 transition-colors rounded-t-lg"
+                >
                   <div className="flex items-center gap-2">
-                    <Shield className="h-3 w-3 text-yellow-500" />
-                    <span className="text-xs text-yellow-400">Pembayaran aman dengan Midtrans SSL</span>
+                    <Shield className="h-4 w-4 text-yellow-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.6))' }} />
+                    <span className="text-white font-medium" style={{ textShadow: '0 0 10px rgba(251, 191, 36, 0.3)' }}>
+                      Ringkasan Pesanan
+                    </span>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                  {isOrderSummaryOpen ? (
+                    <ChevronUp className="h-4 w-4 text-yellow-500" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4 text-yellow-500" />
+                  )}
+                </button>
+                
+                {isOrderSummaryOpen && (
+                  <div className="p-4 pt-0 space-y-4">
+                    {/* Package Info */}
+                    <div className="bg-transparent p-4 rounded-lg border border-yellow-400/20">
+                      <div className="mb-3">
+                        <div>
+                          <h3 className="font-semibold text-base text-white" style={{ textShadow: '0 0 8px rgba(251, 191, 36, 0.2)' }}>{packageInfo.name}</h3>
+                          <p className="text-sm text-gray-400">{packageInfo.description}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <div className="grid gap-1 max-h-40 overflow-y-auto">
+                          {packageInfo.features.map((feature, index) => (
+                            <div key={index} className="flex items-start gap-2">
+                              <Check className="h-3 w-3 text-yellow-500 mt-0.5 flex-shrink-0" style={{ filter: 'drop-shadow(0 0 4px rgba(251, 191, 36, 0.6))' }} />
+                              <span className="text-xs text-gray-400">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
 
-          {/* Payment Form */}
-          <div className="order-1 lg:order-2">
-            <Card className="bg-black border-gray-800">
-              <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-2 text-white text-lg">
-                  <CreditCard className="h-4 w-4" />
-                  Informasi Pembayaran
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
+                    {/* Price Breakdown - Only Total */}
+                    <div className="space-y-2 border-t border-yellow-400/20 pt-3">
+                      <div className="flex justify-between font-bold">
+                        <span className="text-white">Total</span>
+                        <span className="text-white" style={{ textShadow: '0 0 8px rgba(251, 191, 36, 0.3)' }}>{packageInfo.monthlyPrice}</span>
+                      </div>
+                    </div>
+
+                    {/* Security Info */}
+                    <div className="bg-yellow-900/20 p-3 rounded-lg border border-yellow-700/30">
+                      <div className="flex items-center gap-2">
+                        <Shield className="h-3 w-3 text-yellow-500" />
+                        <span className="text-xs text-yellow-400">Pembayaran aman dengan Midtrans SSL</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Payment Form Fields */}
+              <div className="space-y-4">
                 <div className="space-y-3">
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <Label htmlFor="firstName" className="text-gray-400 text-sm">Nama Depan *</Label>
+                      <Label htmlFor="firstName" className="text-gray-600 text-sm">Nama Depan *</Label>
                       <Input
                         id="firstName"
                         value={formData.firstName}
                         onChange={(e) => handleInputChange('firstName', e.target.value)}
                         placeholder="John"
-                        className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-pink-500 focus:ring-pink-500 h-9 ${errors.firstName ? 'border-red-500' : ''}`}
+                        className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 h-9 ${errors.firstName ? 'border-red-500' : ''}`}
                       />
                       {errors.firstName && (
                         <p className="text-xs text-red-400 mt-1">{errors.firstName}</p>
                       )}
                     </div>
                     <div>
-                      <Label htmlFor="lastName" className="text-gray-400 text-sm">Nama Belakang</Label>
+                      <Label htmlFor="lastName" className="text-gray-600 text-sm">Nama Belakang</Label>
                       <Input
                         id="lastName"
                         value={formData.lastName}
                         onChange={(e) => handleInputChange('lastName', e.target.value)}
                         placeholder="Doe"
-                        className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-pink-500 focus:ring-pink-500 h-9"
+                        className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 h-9"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-gray-400 text-sm">Email *</Label>
+                    <Label htmlFor="email" className="text-gray-600 text-sm">Email *</Label>
                     <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
                       placeholder="john@example.com"
-                      className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-pink-500 focus:ring-pink-500 h-9 ${errors.email ? 'border-red-500' : ''}`}
+                      className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 h-9 ${errors.email ? 'border-red-500' : ''}`}
                     />
                     {errors.email && (
                       <p className="text-sm text-red-400 mt-1">{errors.email}</p>
@@ -242,13 +245,13 @@ function CheckoutContent() {
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-gray-300">Nomor Telepon *</Label>
+                    <Label htmlFor="phone" className="text-gray-600">Nomor Telepon *</Label>
                     <Input
                       id="phone"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
                       placeholder="08123456789"
-                      className={`bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-pink-500 focus:ring-pink-500 ${errors.phone ? 'border-red-500' : ''}`}
+                      className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 ${errors.phone ? 'border-red-500' : ''}`}
                     />
                     {errors.phone && (
                       <p className="text-sm text-red-400 mt-1">{errors.phone}</p>
@@ -265,7 +268,11 @@ function CheckoutContent() {
                 <Button
                   onClick={handlePayment}
                   disabled={isLoading}
-                  className="w-full bg-gradient-to-r from-pink-600 to-pink-500 hover:from-pink-500 hover:to-pink-400 text-white py-3 text-base font-semibold border-0 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-yellow-500 to-amber-400 hover:from-yellow-400 hover:to-amber-300 text-amber-950 py-3 text-base font-semibold border-0 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  style={{ 
+                    boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)',
+                    textShadow: '0 0 8px rgba(0, 0, 0, 0.3)'
+                  }}
                   size="lg"
                 >
                   {isLoading ? (
@@ -283,12 +290,12 @@ function CheckoutContent() {
 
                 <p className="text-xs text-gray-400 text-center">
                   Dengan melanjutkan pembayaran, Anda menyetujui{' '}
-                  <Link href="#" className="text-blue-400 hover:underline">syarat dan ketentuan</Link> serta{' '}
-                  <Link href="#" className="text-blue-400 hover:underline">kebijakan privasi</Link> kami.
+                  <Link href="#" className="text-gray-500 hover:text-gray-400">syarat dan ketentuan</Link> serta{' '}
+                  <Link href="#" className="text-gray-500 hover:text-gray-400">kebijakan privasi</Link> kami.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
 
