@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { Card, CardContent } from '@/components/card-8';
 import { motion } from 'framer-motion';
 
@@ -148,11 +147,9 @@ const cardData = [
                       {/* Image Side */}
                       <div className="w-full lg:w-1/2 relative flex-shrink-0">
                         <div className="relative overflow-hidden h-full">
-                          <Image 
+                          <img 
                             src={card.image}
                             alt={card.title}
-                            width={400}
-                            height={300}
                             className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:h-96 object-cover animate-pulse-icon"
                             style={{ animationDelay: `${index * 0.1}s` }}
                           />
