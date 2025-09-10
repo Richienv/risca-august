@@ -109,7 +109,7 @@ const cardData = [
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden py-3 sm:py-4 lg:py-7">
-      <div className="container mx-auto px-12 sm:px-16 lg:px-24 xl:px-40 2xl:px-56 relative z-10">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
         <div className="max-w-none xl:max-w-none 2xl:max-w-none mx-auto">
           
           {/* Title and Subtitle Section */}
@@ -127,7 +127,7 @@ const cardData = [
           </div>
 
           {/* Cards Section */}
-          <div className="space-y-8 lg:space-y-12">
+          <div className="space-y-8 lg:space-y-12 px-4 sm:px-8 lg:px-12">
             {cardData.map((card, index) => (
               <motion.div
                 key={index}
@@ -142,18 +142,18 @@ const cardData = [
                 {/* Unified Card Container */}
                 <Card className="relative overflow-hidden bg-black/40 backdrop-blur-md border-transparent hover:border-transparent transition-all duration-300 group hover:bg-black/50">
                   <CardContent className="p-0">
-                    <div className={`flex flex-row items-stretch gap-0 ${
+                    <div className={`flex flex-col lg:flex-row items-stretch gap-0 ${
                       index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                     }`}>
                       {/* Image Side */}
-                      <div className="w-2/5 sm:w-2/5 lg:w-1/2 relative flex-shrink-0">
+                      <div className="w-full lg:w-1/2 relative flex-shrink-0">
                         <div className="relative overflow-hidden h-full">
                           <Image 
                             src={card.image}
                             alt={card.title}
                             width={400}
                             height={300}
-                            className="w-full h-full min-h-[200px] sm:min-h-[280px] lg:h-96 object-cover animate-pulse-icon"
+                            className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:h-96 object-cover animate-pulse-icon"
                             style={{ animationDelay: `${index * 0.1}s` }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -161,7 +161,7 @@ const cardData = [
                       </div>
 
                       {/* Text Side */}
-                      <div className="flex-1 w-3/5 sm:w-3/5 lg:w-1/2 relative">
+                      <div className="flex-1 w-full lg:w-1/2 relative">
                         <div className="relative z-10 p-4 sm:p-5 lg:p-8 h-full flex flex-col">
                           {/* Title */}
                           <div className="mb-3 sm:mb-5 lg:mb-8">
