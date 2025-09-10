@@ -14,10 +14,21 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Template Pro",
-  description: "Premium Business Templates & Solutions",
-  url: "https://templatepro.com",
-  keywords: ["business", "template", "professional", "premium", "solutions", "corporate"],
+  name: "Alife - Bisnis Asuransi",
+  description: "Komunitas bisnis asuransi terpercaya di Indonesia. Bergabunglah dengan program mentoring dan training untuk meraih kesuksesan finansial melalui bisnis asuransi.",
+  url: "https://your-domain.com", // Replace with your actual domain
+  keywords: [
+    "bisnis asuransi",
+    "asuransi indonesia", 
+    "komunitas asuransi",
+    "training asuransi",
+    "mentoring bisnis",
+    "agen asuransi",
+    "bisnis finansial",
+    "asuransi jiwa",
+    "peluang bisnis",
+    "keuangan keluarga"
+  ],
   header: [
     // Add your header items here
     // Example:

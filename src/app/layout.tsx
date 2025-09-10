@@ -6,49 +6,42 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({
-  metadataBase: new URL('https://templatepro.com'),
-  title: "Template Pro - Premium Business Templates & Solutions",
-  description: "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
+  metadataBase: new URL('https://your-domain.com'), // Replace with your actual domain
+  title: "Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia",
+  description: "Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial melalui bisnis asuransi.",
   openGraph: {
-    title: "Template Pro - Premium Business Templates & Solutions",
-    description: "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
-    url: 'https://templatepro.com',
-    siteName: 'Template Pro',
+    title: "Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia",
+    description: "Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial.",
+    url: 'https://your-domain.com', // Replace with your actual domain
+    siteName: 'Alife - Bisnis Asuransi',
     images: [
       {
-        url: '/thumb.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Template Pro - Premium Business Templates',
-        type: 'image/png',
-      },
-      {
-        url: '/thumb-square.png',
-        width: 600,
-        height: 600,
-        alt: 'Template Pro - Premium Business Templates',
+        alt: 'Alife - Komunitas Bisnis Asuransi',
         type: 'image/png',
       },
     ],
-    locale: 'en_US',
+    locale: 'id_ID',
     type: 'website',
   },
   other: {
-    'og:image:secure_url': 'https://templatepro.com/thumb.png',
+    'og:image:secure_url': 'https://your-domain.com/og.png', // Replace with your actual domain
     'og:image:type': 'image/png',
     'og:image:width': '1200',
     'og:image:height': '630',
-    'og:locale': 'en_US',
-    'og:site_name': 'Template Pro',
-    'og:title': 'Template Pro - Premium Business Templates & Solutions',
-    'og:description': 'Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.',
-    'og:url': 'https://templatepro.com?v=1',
+    'og:locale': 'id_ID',
+    'og:site_name': 'Alife - Bisnis Asuransi',
+    'og:title': 'Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia',
+    'og:description': 'Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial.',
+    'og:url': 'https://your-domain.com', // Replace with your actual domain
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Template Pro - Premium Business Templates & Solutions",
-    description: "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
-    images: ['/thumb.png'],
+    title: "Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia",
+    description: "Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial.",
+    images: ['/og.png'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -56,24 +49,29 @@ export const metadata: Metadata = constructMetadata({
     apple: '/apple-touch-icon.png',
   },
   keywords: [
-    'business templates',
-    'premium templates',
-    'professional solutions',
-    'corporate design',
-    'business tools',
-    'template pro'
+    'bisnis asuransi',
+    'asuransi indonesia',
+    'komunitas asuransi', 
+    'training asuransi',
+    'mentoring bisnis',
+    'agen asuransi',
+    'bisnis finansial',
+    'asuransi jiwa',
+    'peluang bisnis',
+    'keuangan keluarga',
+    'alife',
+    'komunitas bisnis'
   ],
-  authors: [{ name: 'Template Pro Team' }],
-  creator: 'Template Pro',
-  publisher: 'Template Pro',
+  authors: [{ name: 'Alife Team' }],
+  creator: 'Alife',
+  publisher: 'Alife',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   verification: {
-    // Add your site verification tokens if you have them
-    google: 'your-google-site-verification',
+    google: 'your-google-site-verification-code', // You'll get this from Google Search Console
   },
   robots: {
     index: true,
