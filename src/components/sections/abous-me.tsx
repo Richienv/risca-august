@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { Card, CardContent } from '@/components/card-8';
+import { motion } from 'framer-motion';
 
 const AboutMeSection = () => {
 
@@ -125,34 +127,75 @@ const cardData = [
           </div>
 
           {/* Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
-            {cardData.map((card, index) => {
-              return (
-                <div
-                  key={index}
-                  className="gold-aura bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-1 hover:scale-102 flex items-center gap-4"
-                >
-                  <div className="w-20 h-20 flex-shrink-0">
-                    <Image 
-                      src={card.image}
-                      alt={card.title}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-contain animate-pulse-icon"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    />
-                  </div>
-                  <div className="flex-1 text-left">
-                    <h3 className="text-sm sm:text-xl lg:text-2xl font-semibold text-white mb-3 sm:mb-4">
-                      {card.title}
-                    </h3>
-                    <p className="text-xs sm:text-base text-gray-300 leading-relaxed">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="space-y-8 lg:space-y-12">
+            {cardData.map((card, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className={`${
+                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
+              >
+                {/* Unified Card Container */}
+                <Card className="relative overflow-hidden bg-black/40 backdrop-blur-md border-transparent hover:border-transparent transition-all duration-300 group hover:bg-black/50">
+                  <CardContent className="p-0">
+                    <div className={`flex flex-row items-stretch gap-0 ${
+                      index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                    }`}>
+                      {/* Image Side */}
+                      <div className="w-2/5 sm:w-2/5 lg:w-1/2 relative flex-shrink-0">
+                        <div className="relative overflow-hidden h-full">
+                          <Image 
+                            src={card.image}
+                            alt={card.title}
+                            width={400}
+                            height={300}
+                            className="w-full h-full min-h-[200px] sm:min-h-[280px] lg:h-96 object-cover animate-pulse-icon"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        </div>
+                      </div>
+
+                      {/* Text Side */}
+                      <div className="flex-1 w-3/5 sm:w-3/5 lg:w-1/2 relative">
+                        <div className="relative z-10 p-4 sm:p-5 lg:p-8 h-full flex flex-col">
+                          {/* Title */}
+                          <div className="mb-3 sm:mb-5 lg:mb-8">
+                            <p className="text-sm sm:text-base lg:text-lg leading-tight text-white font-medium">
+                              {card.title}
+                            </p>
+                          </div>
+                          
+                          {/* Description */}
+                          <div className="text-white mb-3 sm:mb-5 lg:mb-8 flex-1">
+                            <p className="text-xs sm:text-sm lg:text-base leading-relaxed font-light text-white/80">
+                              {card.description}
+                            </p>
+                          </div>
+                          
+                          {/* Phase Info Section */}
+                          <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-5">
+                            <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                              <span className="text-yellow-400 text-xs sm:text-sm lg:text-base font-bold">
+                                {index + 1}
+                              </span>
+                            </div>
+                            <div>
+                              <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-white">Alasan {index + 1}</h3>
+                              <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">Bisnis Asuransi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
