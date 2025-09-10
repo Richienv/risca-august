@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const AboutMeSection = () => {
 
   React.useEffect(() => {
-    // Add CSS animations
+    // Add CSS animations (removed pulse animation)
     const style = document.createElement('style');
     style.textContent = `
       @keyframes fadeInLeft {
@@ -24,21 +24,6 @@ const AboutMeSection = () => {
       .animate-fade-in-left {
         animation: fadeInLeft 0.6s ease-out forwards;
         opacity: 0;
-      }
-
-      .animate-pulse-icon {
-        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-      }
-
-      @keyframes pulse {
-        0%, 100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.8;
-          transform: scale(1.05);
-        }
       }
 
       .gold-aura {
@@ -150,8 +135,7 @@ const cardData = [
                           <img 
                             src={card.image}
                             alt={card.title}
-                            className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:h-96 object-cover animate-pulse-icon"
-                            style={{ animationDelay: `${index * 0.1}s` }}
+                            className="w-full h-full min-h-[180px] sm:min-h-[220px] lg:h-72 object-cover"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         </div>
