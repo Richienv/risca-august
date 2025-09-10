@@ -122,7 +122,7 @@ export default function BonusCarousel() {
                             </CardContent>
                         </Card>
 
-                        {/* Card 2 - Suci Lestari (150 jt/bulan) */}
+                        {/* Card 2 - Vicki Aditya (100+ jt/bulan) */}
                         <Card className="relative col-span-1 overflow-hidden bg-black/40 backdrop-blur-md border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group hover:bg-black/50" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.1)' }}>
                             <CardContent className="relative z-10 p-5 sm:p-8 flex flex-col">
                                 {/* Quote Icon */}
@@ -150,14 +150,14 @@ export default function BonusCarousel() {
                                             ease: 'linear'
                                         }}
                                     >
-                                        "Dari karyawan biasa jadi entrepreneur — sekarang hidup dengan kebebasan yang dulu cuma bisa dibayangkan."
+                                        "Ora et Labora, inilah panggilan hidup saya."
                                     </motion.p>
                                 </div>
                                 
                                 {/* Story */}
                                 <div className="text-white mb-5 sm:mb-8">
                                     <p className="text-xs sm:text-base text-white/80 leading-relaxed font-light">
-                                        Dulu hanya pekerja 9-5 biasa, sekarang bisa membangun bisnis dari mana saja, kapan saja. Penghasilan impian, gaya hidup impian — semua dimulai dari satu keputusan kecil. Bekerja dari mana saja, hidup dengan tujuan yang jelas.
+                                        Perjalanan asuransi ini tidak hanya membantu saya memenuhi impian pribadi, tetapi yang lebih penting, memberikan kehormatan untuk mendidik dan memberdayakan sesama Indonesia. Saya sangat bersyukur untuk komunitas yang terus membuat saya berkembang.
                                     </p>
                                 </div>
 
@@ -181,7 +181,7 @@ export default function BonusCarousel() {
                                             ease: 'linear'
                                         }}
                                     >
-                                        <span className="font-medium">Penghasilan:</span> 150 jt/bulan
+                                        <span className="font-medium">Penghasilan:</span> 100+ jt/bulan
                                     </motion.div>
                                 </div>
                                 
@@ -189,14 +189,14 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="/images/sucilestari.jpeg"
-                                            alt="Suci Lestari"
+                                            src="/images/vickiaditya.jpeg"
+                                            alt="Vicki Aditya"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
                                     <div>
-                                        <h3 className="text-sm sm:text-base font-semibold text-white">Suci Lestari</h3>
-                                        <p className="text-xs sm:text-sm text-white/70 font-light">Ex-Corporate</p>
+                                        <h3 className="text-sm sm:text-base font-semibold text-white">Vicki Aditya</h3>
+                                        <p className="text-xs sm:text-sm text-white/70 font-light">Joined 2018</p>
                                     </div>
                                 </div>
                             </CardContent>

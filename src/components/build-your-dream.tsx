@@ -278,7 +278,7 @@ const BuildYourDream = () => {
             
             {/* CTA Button - moved below title */}
             <div className="opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.5s' }}>
-              <Link href="/contact">
+              <Link href="#pricing-section">
                 <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
                   SAYA MAU JADI YANG BERIKUTNYA
                 </button>

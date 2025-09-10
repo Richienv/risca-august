@@ -31,14 +31,14 @@ const data = [
   },
   {
     id: 3,
-    testimonial: "Vicki Aditya - Ora et Labora, inilah panggilan hidup saya.",
-    story: "Perjalanan asuransi ini tidak hanya membantu saya memenuhi impian pribadi, tetapi yang lebih penting, memberikan kehormatan untuk mendidik dan memberdayakan sesama Indonesia. Saya sangat bersyukur untuk komunitas yang terus membuat saya berkembang, dan tetap berkomitmen memimpin dengan kerendahan hati, integritas, dan hati yang penuh syukur.",
-    memberName: "Vicki Aditya",
-    memberRole: "Joined 2018 • 100+ jt/bulan",
+    testimonial: "Suci Lestari - Dari karyawan biasa jadi entrepreneur — sekarang hidup dengan kebebasan yang dulu cuma bisa dibayangkan.",
+    story: "Dulu hanya pekerja 9-5 biasa, sekarang bisa membangun bisnis dari mana saja, kapan saja. Penghasilan impian, gaya hidup impian — semua dimulai dari satu keputusan kecil. Bekerja dari mana saja, hidup dengan tujuan yang jelas.",
+    memberName: "Suci Lestari",
+    memberRole: "Ex-Corporate • 50 jt/bulan",
     images: [
-      "/images/vickiaditya.jpeg",
-      "/images/vickiaditya.jpeg",
-      "/images/vickiaditya.jpeg"
+      "/images/sucilestari.jpeg",
+      "/images/sucilestari.jpeg",
+      "/images/sucilestari.jpeg"
     ]
   },
   {
@@ -88,14 +88,14 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
       <div className="relative w-full bg-gradient-to-br from-black/50 via-black/40 to-yellow-900/10 backdrop-blur-sm rounded-lg lg:rounded-xl p-4 sm:p-5 transition-all duration-500 hover:border-yellow-400/30 border border-yellow-400/10" style={{ boxShadow: '0 0 15px rgba(251, 191, 36, 0.1)' }}>
         
         {/* Image Carousel Section */}
-        <div className="w-full h-24 sm:h-32 lg:h-48 relative overflow-hidden rounded-lg mb-3 sm:mb-4">
+        <div className="w-full aspect-square relative overflow-hidden rounded-lg mb-3 sm:mb-4">
           <div className="flex h-full gap-1 sm:gap-2 lg:gap-3">
             {/* Show only the first image, no movement */}
             <div className="flex-shrink-0 w-full h-full relative">
               <img 
                 src={item.images[0]} 
                 alt={`Feature 1`}
-                className="w-full h-full object-cover rounded-md lg:rounded-lg"
+                className="w-full h-full object-cover object-top rounded-md lg:rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-md lg:rounded-lg"></div>
             </div>

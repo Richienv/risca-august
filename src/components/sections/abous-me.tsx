@@ -71,23 +71,23 @@ const AboutMeSection = () => {
     };
   }, []);
 
-  const cardData = [
-    {
-      title: "Income Bisa Diwariskan",
-      description: "Income yang kamu punya sekarang kalau terjadi apa-apa akan langsung diteruskan ke ahli waris kamu. Jadi kamu bisa kerja keras dan tahu bahwa hasil kerja keras kamu aman.",
-      image: "/images/icon-gold.png"
-    },
-    {
-      title: "Closing Deal Sekali, Income Terus Ngalir",
-      description: "Income kamu akan terus ngalir setiap bulannya tanpa reset. Kamu kejar target supaya penghasilan kamu setiap bulan naik instead.",
-      image: "/images/gold-rising.png"
-    },
-    {
-      title: "Reward Based Achievement",
-      description: "Kalau ga capai ga di pecat dan kalau capai malah dikasih logam mulia, cash, iPad, jalan-jalan supaya kamu tambah on-fire.",
-      image: "/images/spotlight.png"
-    }
-  ];
+const cardData = [
+  {
+    title: "Income Bisa Diwariskan",
+    description: "Income yang kamu punya sekarang kalau terjadi apa-apa akan langsung diteruskan ke ahli waris kamu. Jadi kamu bisa kerja keras dan tahu bahwa hasil kerja keras kamu aman.",
+    image: "/images/icon-gold.png"
+  },
+  {
+    title: "Closing Deal Sekali, Income Terus Ngalir",
+    description: "Income kamu akan terus ngalir setiap bulannya tanpa reset. Kamu kejar target supaya penghasilan kamu setiap bulan naik instead.",
+    image: "/images/gold-rising.png"
+  },
+  {
+    title: "Private Mentoring",
+    description: "Kalau kamu benar-benar commit di 3 bulan pertama, ditambah dengan bimbingan private mentoring, peluangmu untuk meraih income pertama sangat besar—hampir bisa dipastikan kamu akan merasakan sukses awal seperti banyak orang sukses di bawah ini.",
+    image: "/images/private-mentoring.png"
+  }
+];
 
   const wrongPathItems = [
     "Kerja 8 jam sehari cuma buat hidup pas-pasan",
@@ -106,7 +106,7 @@ const AboutMeSection = () => {
 
 
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden py-3 sm:py-8 lg:py-16">
+    <section className="relative min-h-screen bg-black text-white overflow-hidden py-3 sm:py-4 lg:py-7">
       <div className="container mx-auto px-12 sm:px-16 lg:px-24 xl:px-40 2xl:px-56 relative z-10">
         <div className="max-w-none xl:max-w-none 2xl:max-w-none mx-auto">
           
@@ -125,7 +125,7 @@ const AboutMeSection = () => {
           </div>
 
           {/* Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-20 lg:mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
             {cardData.map((card, index) => {
               return (
                 <div
