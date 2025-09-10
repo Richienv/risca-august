@@ -131,7 +131,7 @@ const cardData = [
                     }`}>
                       {/* Image Side */}
                       <div className="w-full lg:w-1/2 relative flex-shrink-0">
-                        <div className="relative overflow-hidden h-full px-4 sm:px-6 lg:px-8">
+                        <div className="relative overflow-hidden h-full px-8 sm:px-12 lg:px-16">
                           <img 
                             src={card.image}
                             alt={card.title}
