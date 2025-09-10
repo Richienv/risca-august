@@ -131,11 +131,11 @@ const cardData = [
                     }`}>
                       {/* Image Side */}
                       <div className="w-full lg:w-1/2 relative flex-shrink-0">
-                        <div className="relative overflow-hidden h-full">
+                        <div className="relative overflow-hidden h-full px-4 sm:px-6 lg:px-8">
                           <img 
                             src={card.image}
                             alt={card.title}
-                            className="w-full h-full min-h-[180px] sm:min-h-[220px] lg:h-72 object-cover"
+                            className="w-full h-full min-h-[180px] sm:min-h-[220px] lg:h-72 object-cover rounded-lg"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         </div>
