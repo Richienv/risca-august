@@ -110,7 +110,7 @@ export default function ComparisonSection() {
             viewport={{ once: true }}
             className="mt-16 lg:mt-20 text-center"
           >
-            <Link href="/contact">
+            <Link href="#pricing-section">
               <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-4 sm:px-12 sm:py-6 rounded-full font-medium hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/25 text-sm sm:text-lg tracking-wide uppercase">
                 SAYA MAU JADI ORANG YANG MELOMPAT
               </button>

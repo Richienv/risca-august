@@ -158,49 +158,71 @@ React.useEffect(() => {
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden py-3 sm:py-4 lg:py-7">
-      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-32 2xl:px-48 relative z-10">
-        <div className="max-w-none xl:max-w-none 2xl:max-w-none mx-auto">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 relative z-10">
+        <div className="w-full">
           
           {/* Title and Subtitle Section */}
-          <div className="mb-8 sm:mb-16 lg:mb-20">
-            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-white mb-0 leading-tight text-left">Kamu Pikirkan
+          <div className="mb-8 sm:mb-16 lg:mb-20 text-center">
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-white mb-0 leading-tight">
+              3 Alasan Untuk Kamu Pikirkan
             </h1>
-            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal text-white mb-4 sm:mb-8 leading-tight text-left">
+            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal text-white mb-4 sm:mb-8 leading-tight">
               Kenapa harus Cobain Bisnis Asuransi.
             </h2>
-            <p className="text-xs sm:text-base lg:text-lg text-gray-400 max-w-2xl leading-relaxed text-left">
+            <p className="text-xs sm:text-base lg:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Dari sekian banyak pilihan bisnis yang ada, kenapa harus asuransi? 
               Ini 3 alasan kuat yang bisa jadi pertimbangan kamu untuk mulai.
             </p>
           </div>
 
-          {/* Cards Section */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 xl:gap-12 mb-8 lg:mb-12">
+          {/* Cards Section - Stacked on Mobile, Side by Side on Desktop */}
+          <div className="space-y-8 lg:space-y-12 w-full">
             {cardData.map((card, index) => {
               return (
                 <div
                   key={index}
                   ref={(el) => (cardRefs.current[index] = el)}
-                  className="gold-aura animate-fade-in-left bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 sm:p-10 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 hover:scale-105 flex flex-col items-center text-center"
+                  className="w-full gold-aura animate-fade-in-left bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-12 xl:p-16 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2"
                   style={{ animationDelay: `${index * 0.12}s` }}
                 >
-                  <div className="w-28 h-28 mb-6">
-                    <Image 
-                      src={card.image}
-                      alt={card.title}
-                      width={112}
-                      height={112}
-                      className="w-full h-full object-contain"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg sm:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-5 gold-glow-text">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm sm:text-lg text-gray-300 leading-relaxed">
-                      {card.description}
-                    </p>
+                  <div className={`flex flex-col lg:flex-row items-center gap-6 lg:gap-16 xl:gap-20 w-full ${
+                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                  }`}>
+                    {/* Image Section - Portrait Format */}
+                    <div className="flex-shrink-0 w-full lg:w-2/5 xl:w-1/3 max-w-xs lg:max-w-md">
+                      <div className="w-full aspect-[3/4] lg:aspect-[4/5] flex items-center justify-center bg-gradient-to-b from-amber-500/10 to-transparent rounded-xl p-4">
+                        <Image 
+                          src={card.image}
+                          alt={card.title}
+                          width={300}
+                          height={400}
+                          className="w-full h-full object-contain"
+                          style={{ animationDelay: `${index * 0.1}s` }}
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Content Section */}
+                    <div className="flex-1 text-center lg:text-left w-full">
+                      <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
+                        <div className="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center">
+                          <span className="text-yellow-400 text-base font-bold">
+                            {index + 1}
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-semibold text-white">Alasan {index + 1}</h4>
+                          <p className="text-sm text-white/70">Bisnis Asuransi</p>
+                        </div>
+                      </div>
+                      
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold mb-4 sm:mb-6 lg:mb-8 gold-glow-text leading-tight">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-300 leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );

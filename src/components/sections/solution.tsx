@@ -69,7 +69,7 @@ const transformations = [
 export default function SolutionSection() {
     return (
         <section className="relative bg-black py-12 md:py-20 overflow-hidden">
-            <div className="mx-auto w-full px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 2xl:px-40 relative z-10">
+            <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 relative z-10">
                 <div className="relative">
                     {/* Heading Section */}
                     <div className="text-center mb-12">
@@ -94,14 +94,14 @@ export default function SolutionSection() {
                         >
                             60 Hari Menuju Business Partner
                         </motion.h1>
-                        <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+                        <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-4xl mx-auto">
                             Program sistematis 60 hari: ketemu 2 orang setiap hari, capai rasio closing 4:1, raih omzet Rp 360 juta dalam 8 minggu, dan dapatkan komisi hingga Rp 6,9 juta per bulan. Bonus: promosi ke Business Partner!
                         </p>
                     </div>
                     
-                    {/* Two Column Layout */}
+                    {/* Full Width Layout */}
                     <div className="relative z-10 w-full">
-                        <div className="space-y-8 lg:space-y-12">
+                        <div className="space-y-8 lg:space-y-12 w-full">
                         
                         {transformations.map((transformation, index) => (
                             <motion.div
@@ -110,37 +110,52 @@ export default function SolutionSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
                                 viewport={{ once: true, margin: "-50px" }}
-                                className={`${
-                                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                                }`}
+                                className="w-full"
                             >
-                                {/* Unified Card Container */}
-                                <Card className="relative overflow-hidden bg-black/40 backdrop-blur-md border-transparent hover:border-transparent transition-all duration-300 group hover:bg-black/50">
-                                    <CardContent className="p-0">
-                                        <div className={`flex flex-row items-stretch gap-0 ${
+                                {/* Full Width Card Container */}
+                                <Card className="w-full relative overflow-hidden bg-black/40 backdrop-blur-md border-transparent hover:border-transparent transition-all duration-300 group hover:bg-black/50">
+                                    <CardContent className="p-0 w-full">
+                                        <div className={`flex flex-col lg:flex-row items-center w-full ${
                                             index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                                         }`}>
-                                            {/* Image Side */}
-                                            <div className="w-2/5 sm:w-2/5 lg:w-1/2 relative flex-shrink-0">
-                                                <div className="relative overflow-hidden h-full">
-                                                    <img 
-                                                        src={transformation.image}
-                                                        alt={transformation.subtitle}
-                                                        className="w-full h-full min-h-[200px] sm:min-h-[280px] lg:h-96 object-cover"
-                                                    />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                                                    
+                                            {/* Image Side - Portrait Format */}
+                                            <div className="w-full lg:w-2/5 xl:w-1/3 flex-shrink-0">
+                                                <div className="w-full aspect-[3/4] lg:aspect-[4/5] p-4 lg:p-6">
+                                                    <div className="w-full h-full flex items-center justify-center rounded-xl overflow-hidden">
+                                                        <img 
+                                                            src={transformation.image}
+                                                            alt={transformation.subtitle}
+                                                            className="w-full h-full object-contain max-w-[300px] lg:max-w-full"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
 
                                             {/* Text Side */}
-                                            <div className="flex-1 w-3/5 sm:w-3/5 lg:w-1/2 relative">
-                                                <div className="relative z-10 p-4 sm:p-5 lg:p-8 h-full flex flex-col">
-                                                    {/* Main Quote/Title */}
-                                                    <div className="mb-3 sm:mb-5 lg:mb-8">
+                                            <div className="flex-1 w-full lg:w-3/5 xl:w-2/3">
+                                                <div className="p-6 sm:p-8 lg:p-12 xl:p-16 h-full flex flex-col text-center lg:text-left">
+                                                    
+                                                    {/* Phase Info Section - Top */}
+                                                    <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
+                                                        <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-pink-500/20 flex items-center justify-center flex-shrink-0">
+                                                            <span className="text-pink-400 text-base lg:text-lg font-bold">
+                                                                {index + 1}
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <h3 className="text-base lg:text-lg font-semibold text-white">Fase {index + 1}</h3>
+                                                            <p className="text-sm lg:text-base text-white/70 font-light">60 Hari Program</p>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Title */}
+                                                    <div className="mb-4 lg:mb-6">
+                                                        <h4 className="text-lg lg:text-xl xl:text-2xl font-bold text-white mb-2">
+                                                            {transformation.title}
+                                                        </h4>
                                                         {index === transformations.length - 1 ? (
                                                             <motion.p 
-                                                                className="text-sm sm:text-base lg:text-lg leading-tight font-medium tracking-wide"
+                                                                className="text-xl lg:text-2xl xl:text-3xl leading-tight font-semibold tracking-wide"
                                                                 style={{
                                                                     background: 'linear-gradient(90deg, #fde047 0%, #f59e0b 50%, #fde047 100%)',
                                                                     backgroundSize: '200% 100%',
@@ -160,34 +175,21 @@ export default function SolutionSection() {
                                                                 {transformation.subtitle}
                                                             </motion.p>
                                                         ) : (
-                                                            <p className="text-sm sm:text-base lg:text-lg leading-tight text-white font-medium">
+                                                            <p className="text-xl lg:text-2xl xl:text-3xl leading-tight text-pink-400 font-semibold">
                                                                 {transformation.subtitle}
                                                             </p>
                                                         )}
                                                     </div>
                                                     
-                                                    {/* Story with Numbers */}
-                                                    <div className="text-white mb-3 sm:mb-5 lg:mb-8 flex-1">
-                                                        <p className={`text-xs sm:text-sm lg:text-base leading-relaxed font-light ${
+                                                    {/* Description */}
+                                                    <div className="flex-1">
+                                                        <p className={`text-sm lg:text-base xl:text-lg leading-relaxed ${
                                                             index === transformations.length - 1
                                                                 ? 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-semibold'
-                                                                : 'text-white/80'
+                                                                : 'text-white/80 font-light'
                                                         }`}>
                                                             {transformation.description}
                                                         </p>
-                                                    </div>
-                                                    
-                                                    {/* Phase Info Section */}
-                                                    <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-5">
-                                                        <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-lg bg-pink-500/20 flex items-center justify-center flex-shrink-0">
-                                                            <span className="text-pink-400 text-xs sm:text-sm lg:text-base font-bold">
-                                                                {index + 1}
-                                                            </span>
-                                                        </div>
-                                                        <div>
-                                                            <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-white">Fase {index + 1}</h3>
-                                                            <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">60 Hari Program</p>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,7 +205,7 @@ export default function SolutionSection() {
                     {/* Small Terms Note */}
                     <div className="mt-12 text-center">
                         <div className="inline-block bg-white/5 backdrop-blur-sm rounded-lg px-6 py-4 mx-auto">
-                            <p className="text-white/70 text-xs">
+                            <p className="text-white/70 text-xs lg:text-sm">
                                 <strong className="text-white">Catatan:</strong> ALP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | BE = Business Executive | BP = Business Partner
                             </p>
                         </div>
