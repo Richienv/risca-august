@@ -292,7 +292,7 @@ export default function Hero() {
                   {/* Video Container with thin gray border and medium padding */}
                   <div className="relative w-full border border-gray-600 rounded-lg overflow-hidden p-3">
                     <motion.div
-                      className="relative w-full overflow-hidden rounded-md aspect-[9/16] sm:aspect-video"
+                      className="relative w-full overflow-hidden rounded-md aspect-[9/16]"
                       whileHover={{ scale: 1.01 }}
                       transition={{ duration: 0.3 }}
                     >

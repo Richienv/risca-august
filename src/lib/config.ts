@@ -14,20 +14,24 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Alife - Bisnis Asuransi",
-  description: "Komunitas bisnis asuransi terpercaya di Indonesia. Bergabunglah dengan program mentoring dan training untuk meraih kesuksesan finansial melalui bisnis asuransi.",
-  url: "https://your-domain.com", // Replace with your actual domain
+  name: "Risca Agustine - Tim Throne Allianz",
+  description: "Peluang bisnis asuransi Allianz untuk ibu rumah tangga di Jakarta. Bergabung dengan Tim Throne yang dipimpin Risca Agustine dan raih penghasilan tambahan dengan waktu fleksibel.",
+  url: "https://risca-agustine.com",
   keywords: [
-    "bisnis asuransi",
-    "asuransi indonesia", 
-    "komunitas asuransi",
-    "training asuransi",
-    "mentoring bisnis",
-    "agen asuransi",
-    "bisnis finansial",
-    "asuransi jiwa",
-    "peluang bisnis",
-    "keuangan keluarga"
+    "risca agustine",
+    "tim throne",
+    "allianz jakarta", 
+    "asuransi allianz",
+    "bisnis asuransi jakarta",
+    "peluang bisnis ibu rumah tangga",
+    "agen asuransi jakarta",
+    "penghasilan tambahan ibu",
+    "bisnis sambilan ibu",
+    "asuransi jiwa allianz",
+    "mentor asuransi jakarta",
+    "tim asuransi jakarta",
+    "ibu produktif jakarta",
+    "bisnis fleksibel ibu"
   ],
   header: [
     // Add your header items here
@@ -65,12 +69,12 @@ export const siteConfig: SiteConfig = {
     },
   ],
   socials: [
-    { icon: FaTwitter, href: "https://twitter.com/templatepro" },
-    { icon: FaFacebook, href: "https://facebook.com/templatepro" },
-    { icon: FaInstagram, href: "https://instagram.com/templatepro" },
-    { icon: FaLinkedin, href: "https://linkedin.com/company/templatepro" },
+    { icon: FaInstagram, href: "https://www.instagram.com/risca.agustine" },
+    { icon: FaFacebook, href: "https://www.facebook.com/risca.agustine" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/risca-agustine" },
+    { icon: FaTwitter, href: "https://twitter.com/riscaagustine" },
   ],
   links: {
-    email: "hello@templatepro.com"
+    email: "contact@risca-agustine.com"
   },
 };
