@@ -181,7 +181,9 @@ React.useEffect(() => {
               return (
                 <div
                   key={index}
-                  ref={(el) => (cardRefs.current[index] = el)}
+                  ref={(el: HTMLDivElement | null) => {
+                    cardRefs.current[index] = el;
+                  }}
                   className="w-full gold-aura animate-fade-in-left bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-12 xl:p-16 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2"
                   style={{ animationDelay: `${index * 0.12}s` }}
                 >
