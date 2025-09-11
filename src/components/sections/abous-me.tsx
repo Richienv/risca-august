@@ -1,13 +1,12 @@
 "use client";
 
 import React from 'react';
-import { Card, CardContent } from '@/components/card-8';
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const AboutMeSection = () => {
 
   React.useEffect(() => {
-    // Add CSS animations (removed pulse animation)
+    // Add CSS animations
     const style = document.createElement('style');
     style.textContent = `
       @keyframes fadeInLeft {
@@ -22,8 +21,26 @@ const AboutMeSection = () => {
       }
       
       .animate-fade-in-left {
-        animation: fadeInLeft 0.6s ease-out forwards;
         opacity: 0;
+        transform: translateX(-20px);
+        will-change: transform, opacity;
+      }
+      .animate-fade-in-left.in-view {
+        animation: fadeInLeft 0.6s ease-out forwards;
+      }
+
+      .animate-pulse-icon {
+        animation: fadeInIcon 1s ease-out forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeInIcon {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
       .gold-aura {
@@ -47,6 +64,30 @@ const AboutMeSection = () => {
             0 0 40px rgba(255, 215, 0, 0.2),
             0 0 80px rgba(255, 223, 0, 0.15),
             0 0 120px rgba(255, 193, 7, 0.08);
+        }
+      }
+      .gold-glow-text {
+        color: #FBBF24; /* amber-400 */
+        text-shadow:
+          0 0 6px rgba(251, 191, 36, 0.45),
+          0 0 12px rgba(251, 191, 36, 0.35),
+          0 0 20px rgba(251, 191, 36, 0.25);
+        animation: goldTextPulse 2.8s ease-in-out infinite;
+      }
+      @keyframes goldTextPulse {
+        0%, 100% {
+          text-shadow:
+            0 0 6px rgba(251, 191, 36, 0.40),
+            0 0 12px rgba(251, 191, 36, 0.30),
+            0 0 20px rgba(251, 191, 36, 0.20);
+          filter: saturate(100%);
+        }
+        50% {
+          text-shadow:
+            0 0 10px rgba(251, 191, 36, 0.60),
+            0 0 20px rgba(251, 191, 36, 0.45),
+            0 0 32px rgba(251, 191, 36, 0.35);
+          filter: saturate(120%);
         }
       }
     `;
@@ -75,6 +116,30 @@ const cardData = [
   }
 ];
 
+const cardRefs = React.useRef<Array<HTMLDivElement | null>>([]);
+
+React.useEffect(() => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    // Fallback: immediately show if IO not supported
+    cardRefs.current.forEach(el => el?.classList.add('in-view'));
+    return;
+  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target as HTMLElement;
+        if (entry.isIntersecting) {
+          el.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2, rootMargin: '0px 0px -10% 0px' }
+  );
+  cardRefs.current.forEach((el) => el && observer.observe(el));
+  return () => observer.disconnect();
+}, []);
+
   const wrongPathItems = [
     "Kerja 8 jam sehari cuma buat hidup pas-pasan",
     "Hari demi hari berlalu tanpa pertumbuhan atau prestasi yang kamu bisa banggakan",
@@ -93,13 +158,12 @@ const cardData = [
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden py-3 sm:py-4 lg:py-7">
-      <div className="container mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 xl:px-32 2xl:px-48 relative z-10">
         <div className="max-w-none xl:max-w-none 2xl:max-w-none mx-auto">
           
           {/* Title and Subtitle Section */}
           <div className="mb-8 sm:mb-16 lg:mb-20">
-            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-white mb-0 leading-tight text-left">
-              3 Alasan Untuk Kamu Pikirkan
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-white mb-0 leading-tight text-left">Kamu Pikirkan
             </h1>
             <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-normal text-white mb-4 sm:mb-8 leading-tight text-left">
               Kenapa harus Cobain Bisnis Asuransi.
@@ -111,72 +175,36 @@ const cardData = [
           </div>
 
           {/* Cards Section */}
-          <div className="space-y-8 lg:space-y-12 px-4 sm:px-8 lg:px-12">
-            {cardData.map((card, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className={`${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
-              >
-                {/* Unified Card Container */}
-                <Card className="relative overflow-hidden bg-black/40 backdrop-blur-md border-transparent hover:border-transparent transition-all duration-300 group hover:bg-black/50">
-                  <CardContent className="p-0">
-                    <div className={`flex flex-col lg:flex-row items-stretch gap-0 ${
-                      index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                    }`}>
-                      {/* Image Side */}
-                      <div className="w-full lg:w-1/2 relative flex-shrink-0">
-                        <div className="relative overflow-hidden h-full px-8 sm:px-12 lg:px-16">
-                          <img 
-                            src={card.image}
-                            alt={card.title}
-                            className="w-full h-full min-h-[180px] sm:min-h-[220px] lg:h-72 object-cover rounded-lg"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                        </div>
-                      </div>
-
-                      {/* Text Side */}
-                      <div className="flex-1 w-full lg:w-1/2 relative">
-                        <div className="relative z-10 p-4 sm:p-5 lg:p-8 h-full flex flex-col">
-                          {/* Title */}
-                          <div className="mb-3 sm:mb-5 lg:mb-8">
-                            <p className="text-sm sm:text-base lg:text-lg leading-tight text-white font-medium">
-                              {card.title}
-                            </p>
-                          </div>
-                          
-                          {/* Description */}
-                          <div className="text-white mb-3 sm:mb-5 lg:mb-8 flex-1">
-                            <p className="text-xs sm:text-sm lg:text-base leading-relaxed font-light text-white/80">
-                              {card.description}
-                            </p>
-                          </div>
-                          
-                          {/* Phase Info Section */}
-                          <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-5">
-                            <div className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
-                              <span className="text-yellow-400 text-xs sm:text-sm lg:text-base font-bold">
-                                {index + 1}
-                              </span>
-                            </div>
-                            <div>
-                              <h3 className="text-xs sm:text-sm lg:text-base font-semibold text-white">Alasan {index + 1}</h3>
-                              <p className="text-xs sm:text-xs lg:text-sm text-white/70 font-light">Bisnis Asuransi</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 xl:gap-12 mb-8 lg:mb-12">
+            {cardData.map((card, index) => {
+              return (
+                <div
+                  key={index}
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className="gold-aura animate-fade-in-left bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 sm:p-10 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 hover:scale-105 flex flex-col items-center text-center"
+                  style={{ animationDelay: `${index * 0.12}s` }}
+                >
+                  <div className="w-28 h-28 mb-6">
+                    <Image 
+                      src={card.image}
+                      alt={card.title}
+                      width={112}
+                      height={112}
+                      className="w-full h-full object-contain"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-5 gold-glow-text">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm sm:text-lg text-gray-300 leading-relaxed">
+                      {card.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

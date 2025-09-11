@@ -7,19 +7,19 @@ import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({
   metadataBase: new URL('https://your-domain.com'), // Replace with your actual domain
-  title: "Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia",
-  description: "Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial melalui bisnis asuransi.",
+  title: "Risca Agustine - Tim Asuransi Allianz Jakarta | Peluang Bisnis untuk Ibu Rumah Tangga",
+  description: "Bergabung dengan Tim Throne yang dipimpin Risca Agustine, leader asuransi Allianz Jakarta. Peluang bisnis asuransi khusus untuk ibu rumah tangga yang ingin mengoptimalkan waktu dan meraih penghasilan tambahan.",
   openGraph: {
-    title: "Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia",
-    description: "Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial.",
+    title: "Risca Agustine - Tim Asuransi Allianz Jakarta | Peluang Bisnis untuk Ibu",
+    description: "Bergabung dengan Tim Throne yang dipimpin Risca Agustine. Peluang bisnis asuransi Allianz untuk ibu rumah tangga di Jakarta yang ingin penghasilan tambahan.",
     url: 'https://your-domain.com', // Replace with your actual domain
-    siteName: 'Alife - Bisnis Asuransi',
+    siteName: 'Risca Agustine - Tim Throne Allianz',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Alife - Komunitas Bisnis Asuransi',
+        alt: 'Risca Agustine - Tim Throne Allianz Jakarta',
         type: 'image/png',
       },
     ],
@@ -32,15 +32,15 @@ export const metadata: Metadata = constructMetadata({
     'og:image:width': '1200',
     'og:image:height': '630',
     'og:locale': 'id_ID',
-    'og:site_name': 'Alife - Bisnis Asuransi',
-    'og:title': 'Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia',
-    'og:description': 'Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial.',
+    'og:site_name': 'Risca Agustine - Tim Throne Allianz',
+    'og:title': 'Risca Agustine - Tim Asuransi Allianz Jakarta | Peluang Bisnis untuk Ibu',
+    'og:description': 'Bergabung dengan Tim Throne yang dipimpin Risca Agustine. Peluang bisnis asuransi Allianz untuk ibu rumah tangga di Jakarta.',
     'og:url': 'https://your-domain.com', // Replace with your actual domain
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Alife - Komunitas Bisnis Asuransi Terpercaya Indonesia",
-    description: "Bergabunglah dengan Alife, komunitas bisnis asuransi terpercaya di Indonesia. Dapatkan training, mentoring, dan dukungan untuk meraih kesuksesan finansial.",
+    title: "Risca Agustine - Tim Asuransi Allianz Jakarta | Peluang Bisnis untuk Ibu",
+    description: "Bergabung dengan Tim Throne yang dipimpin Risca Agustine. Peluang bisnis asuransi Allianz untuk ibu rumah tangga di Jakarta.",
     images: ['/og.png'],
   },
   icons: {
@@ -49,22 +49,24 @@ export const metadata: Metadata = constructMetadata({
     apple: '/apple-touch-icon.png',
   },
   keywords: [
-    'bisnis asuransi',
-    'asuransi indonesia',
-    'komunitas asuransi', 
-    'training asuransi',
-    'mentoring bisnis',
-    'agen asuransi',
-    'bisnis finansial',
-    'asuransi jiwa',
-    'peluang bisnis',
-    'keuangan keluarga',
-    'alife',
-    'komunitas bisnis'
+    'risca agustine',
+    'tim throne',
+    'allianz jakarta',
+    'asuransi allianz',
+    'bisnis asuransi jakarta',
+    'peluang bisnis ibu rumah tangga',
+    'agen asuransi jakarta',
+    'penghasilan tambahan ibu',
+    'bisnis sambilan ibu',
+    'asuransi jiwa allianz',
+    'mentor asuransi jakarta',
+    'tim asuransi jakarta',
+    'ibu produktif jakarta',
+    'bisnis fleksibel ibu'
   ],
-  authors: [{ name: 'Alife Team' }],
-  creator: 'Alife',
-  publisher: 'Alife',
+  authors: [{ name: 'Risca Agustine' }],
+  creator: 'Risca Agustine',
+  publisher: 'Tim Throne Allianz',
   formatDetection: {
     email: false,
     address: false,
@@ -100,7 +102,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -109,17 +111,93 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Template Pro",
-              "description": "Discover premium business templates and professional solutions. Elevate your brand with our cutting-edge designs and comprehensive business tools.",
-              "url": "https://templatepro.com",
-              "logo": "https://templatepro.com/logo.png",
+              "@type": "Person",
+              "name": "Risca Agustine",
+              "jobTitle": "Insurance Leader & Mentor",
+              "description": "Leader Tim Throne Allianz Jakarta yang berdedikasi membantu ibu rumah tangga meraih penghasilan tambahan melalui bisnis asuransi.",
+              "url": "https://your-domain.com",
+              "image": "https://your-domain.com/images/risca-agustine.png",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Tim Throne Allianz",
+                "description": "Tim asuransi Allianz Jakarta yang fokus pada pemberdayaan ibu rumah tangga untuk sukses dalam bisnis asuransi."
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jakarta",
+                "addressCountry": "ID"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Jakarta"
+              },
+              "knowsAbout": ["Asuransi Allianz", "Mentoring Bisnis", "Pemberdayaan Ibu"],
               "sameAs": [
-                "https://www.twitter.com/templatepro",
-                "https://www.facebook.com/templatepro",
-                "https://www.instagram.com/templatepro",
-                "https://www.linkedin.com/company/templatepro"
+                "https://www.instagram.com/risca.agustine",
+                "https://www.facebook.com/risca.agustine"
               ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Tim Throne Allianz",
+              "description": "Tim asuransi Allianz Jakarta yang dipimpin Risca Agustine. Fokus pada peluang bisnis asuransi untuk ibu rumah tangga yang ingin penghasilan tambahan.",
+              "url": "https://your-domain.com",
+              "logo": "https://your-domain.com/images/tim-throne-logo.png",
+              "founder": {
+                "@type": "Person",
+                "name": "Risca Agustine"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "areaServed": "Jakarta",
+                "availableLanguage": "Indonesian"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jakarta",
+                "addressCountry": "ID"
+              },
+              "sameAs": [
+                "https://www.instagram.com/tim.throne.allianz",
+                "https://www.facebook.com/tim.throne.allianz"
+              ],
+              "serviceType": "Insurance Business Opportunities",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Ibu Rumah Tangga Jakarta",
+                "geographicArea": {
+                  "@type": "City",
+                  "name": "Jakarta"
+                }
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Risca Agustine - Tim Throne Allianz",
+              "url": "https://your-domain.com",
+              "description": "Website resmi Risca Agustine dan Tim Throne Allianz Jakarta. Peluang bisnis asuransi untuk ibu rumah tangga.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://your-domain.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "mainEntity": {
+                "@type": "Person",
+                "name": "Risca Agustine"
+              }
             })
           }}
         />
