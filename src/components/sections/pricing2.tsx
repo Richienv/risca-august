@@ -61,7 +61,7 @@ export default function Pricing() {
                                 textShadow: '0 0 8px rgba(0, 0, 0, 0.3)'
                             }}
                         >
-                            <Link href="#pricing-section">
+                            <Link href={`/checkout?package=${packageType}`}>
                                 Pilih Paket
                             </Link>
                         </Button>

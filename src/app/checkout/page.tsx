@@ -140,10 +140,10 @@ function CheckoutContent() {
             <CardContent className="space-y-6">
               
               {/* Collapsible Order Summary */}
-              <div className="border border-yellow-400/20 rounded-lg">
+              <div className="rounded-lg">
                 <button
                   onClick={() => setIsOrderSummaryOpen(!isOrderSummaryOpen)}
-                  className="w-full flex items-center justify-between p-4 hover:bg-yellow-400/5 transition-colors rounded-t-lg"
+                  className="w-full flex items-center justify-between p-4 hover:bg-yellow-400/5 transition-colors rounded-lg"
                 >
                   <div className="flex items-center gap-2">
                     <Shield className="h-4 w-4 text-yellow-500" style={{ filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.6))' }} />
@@ -161,7 +161,7 @@ function CheckoutContent() {
                 {isOrderSummaryOpen && (
                   <div className="p-4 pt-0 space-y-4">
                     {/* Package Info */}
-                    <div className="bg-transparent p-4 rounded-lg border border-yellow-400/20">
+                    <div className="bg-gray-900/30 p-4 rounded-lg">
                       <div className="mb-3">
                         <div>
                           <h3 className="font-semibold text-base text-white" style={{ textShadow: '0 0 8px rgba(251, 191, 36, 0.2)' }}>{packageInfo.name}</h3>
@@ -182,7 +182,7 @@ function CheckoutContent() {
                     </div>
 
                     {/* Price Breakdown - Only Total */}
-                    <div className="space-y-2 border-t border-yellow-400/20 pt-3">
+                    <div className="space-y-2 border-t border-gray-700/50 pt-3 mt-4">
                       <div className="flex justify-between font-bold">
                         <span className="text-white">Total</span>
                         <span className="text-white" style={{ textShadow: '0 0 8px rgba(251, 191, 36, 0.3)' }}>{packageInfo.monthlyPrice}</span>
@@ -190,10 +190,10 @@ function CheckoutContent() {
                     </div>
 
                     {/* Security Info */}
-                    <div className="bg-yellow-900/20 p-3 rounded-lg border border-yellow-700/30">
+                    <div className="bg-yellow-900/10 p-3 rounded-lg">
                       <div className="flex items-center gap-2">
                         <Shield className="h-3 w-3 text-yellow-500" />
-                        <span className="text-xs text-yellow-400">Pembayaran aman dengan Midtrans SSL</span>
+                        <span className="text-xs text-yellow-400/80">Pembayaran aman dengan Midtrans SSL</span>
                       </div>
                     </div>
                   </div>
@@ -211,7 +211,7 @@ function CheckoutContent() {
                         value={formData.firstName}
                         onChange={(e) => handleInputChange('firstName', e.target.value)}
                         placeholder="John"
-                        className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 h-9 ${errors.firstName ? 'border-red-500' : ''}`}
+                        className={`bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-custom focus:border-yellow-400 focus:ring-yellow-400 h-9 ${errors.firstName ? 'border-red-500' : ''}`}
                       />
                       {errors.firstName && (
                         <p className="text-xs text-red-400 mt-1">{errors.firstName}</p>
@@ -224,7 +224,7 @@ function CheckoutContent() {
                         value={formData.lastName}
                         onChange={(e) => handleInputChange('lastName', e.target.value)}
                         placeholder="Doe"
-                        className="bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 h-9"
+                        className="bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-custom focus:border-yellow-400 focus:ring-yellow-400 h-9"
                       />
                     </div>
                   </div>
@@ -237,7 +237,7 @@ function CheckoutContent() {
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
                       placeholder="john@example.com"
-                      className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 h-9 ${errors.email ? 'border-red-500' : ''}`}
+                      className={`bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-custom focus:border-yellow-400 focus:ring-yellow-400 h-9 ${errors.email ? 'border-red-500' : ''}`}
                     />
                     {errors.email && (
                       <p className="text-sm text-red-400 mt-1">{errors.email}</p>
@@ -251,7 +251,7 @@ function CheckoutContent() {
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
                       placeholder="08123456789"
-                      className={`bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-yellow-400 ${errors.phone ? 'border-red-500' : ''}`}
+                      className={`bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-custom focus:border-yellow-400 focus:ring-yellow-400 ${errors.phone ? 'border-red-500' : ''}`}
                     />
                     {errors.phone && (
                       <p className="text-sm text-red-400 mt-1">{errors.phone}</p>
@@ -283,7 +283,7 @@ function CheckoutContent() {
                   ) : (
                     <div className="flex items-center gap-2">
                       <CreditCard className="h-4 w-4" />
-                      Bayar Sekarang - {packageInfo.monthlyPrice}
+                      Bayar Sekarang
                     </div>
                   )}
                 </Button>

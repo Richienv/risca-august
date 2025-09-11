@@ -202,4 +202,22 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
+
+  /* Custom placeholder colors for checkout form */
+  .placeholder-amber-custom::placeholder {
+    color: white !important;
+  }
+  
+  .placeholder-amber-custom::-webkit-input-placeholder {
+    color: white !important;
+  }
+  
+  .placeholder-amber-custom::-moz-placeholder {
+    color: white !important;
+    opacity: 1;
+  }
+  
+  .placeholder-amber-custom:-ms-input-placeholder {
+    color: white !important;
+  }
 }
