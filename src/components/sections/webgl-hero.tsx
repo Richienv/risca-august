@@ -2,14 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-import { Spotlight } from "@/components/spotlight-new";
 import Link from "next/link";
-
+import { WebGLShader } from "@/components/ui/web-gl-shader";
 
 const ease = [0.16, 1, 0.3, 1];
 
-// Payment Carousel Component - extracted from HeroTitles
+// Payment Carousel Component - copied from Hero
 function PaymentCarousel() {
   const paymentImages = [
     {
@@ -78,7 +76,7 @@ function PaymentCarousel() {
   ];
 
   return (
-    <div className="h-full overflow-hidden flex flex-col justify-end">
+    <div className="h-full overflow-hidden">
         <div className="flex flex-col space-y-2">
           {/* Payment cards */}
           {paymentImages.map((payment, index) => (
@@ -190,17 +188,11 @@ function HeroTitles() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <button 
-          onClick={() => {
-            const pricingSection = document.getElementById('pricing-section');
-            if (pricingSection) {
-              pricingSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-[16px]"
-        >
-          Saya Mau Perubahan
-        </button>
+        <Link href="/pricing">
+          <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-[16px]">
+            Saya Mau Peruabahan
+          </button>
+        </Link>
         <Link href="/contact">
           <button className="bg-transparent border border-gray-600 text-gray-300 px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white hover:scale-105 transition-all duration-300 text-[16px]">
             Gabung Komunitas
@@ -211,30 +203,21 @@ function HeroTitles() {
   );
 }
 
-export default function Hero() {
+export default function WebGLHeroSection() {
   return (
-    <section id="hero" className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden">
-      {/* Spotlight Effects - More subtle on mobile, positioned behind */}
+    <section className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden">
+      {/* WebGL Shader Background */}
       <div className="absolute inset-0 z-0">
-        <Spotlight 
-          gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.05) 30%, rgba(236, 72, 153, 0.02) 60%, transparent 90%)`}
-          gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.06) 0%, rgba(219, 39, 119, 0.03) 50%, rgba(236, 72, 153, 0.01) 80%, transparent 100%)`}
-          gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.05) 0%, rgba(236, 72, 153, 0.02) 60%, transparent 90%)`}
-          translateY={-300}
-          width={600}
-          height={1200}
-          smallWidth={250}
-          duration={8}
-          xOffset={50}
-        />
+        <WebGLShader />
       </div>
       
       {/* Overlay for slight dimming effect */}
-      <div className="absolute inset-0 bg-black/40 z-5" />
+      <div className="absolute inset-0 bg-black/40 z-10" />
       
       {/* Main Content - Centered */}
-      <div className="relative z-10 w-full px-2 sm:px-4 lg:px-6 py-16 sm:py-20 lg:py-24">
-        <div className="relative flex w-full flex-col items-center justify-center">
+      <div className="relative z-20 w-full">
+        <div className="container mx-auto px-1 sm:px-2 lg:px-4 py-8 sm:py-12 lg:py-16 max-w-7xl">
+          <div className="relative flex w-full flex-col items-center justify-center">
             
             {/* Main Section: Title + Rectangles Grid */}
             <motion.div 
@@ -247,15 +230,15 @@ export default function Hero() {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 {/* Left: Title and Subheading */}
-                <div className="lg:col-span-5 order-2 lg:order-1">
+                <div className="lg:col-span-5 order-1">
                   <HeroTitles />
                 </div>
                 
                 {/* Right: Video */}
-                <div className="lg:col-span-7 order-1 lg:order-2">
+                <div className="lg:col-span-7 order-2">
                   <div className="flex justify-center">
                     <div className="w-full max-w-md">
                       <div className="rounded-2xl aspect-[9/16] p-6 overflow-hidden">
@@ -316,6 +299,7 @@ export default function Hero() {
 
             </div>
 
+          </div>
         </div>
       </div>
     </section>

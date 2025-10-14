@@ -1,5 +1,5 @@
 // Payment package types
-export type PackageType = 'starter' | 'professional' | 'premium'
+export type PackageType = 'free' | 'paid'
 
 // Customer details interface
 export interface CustomerDetails {
@@ -83,66 +83,48 @@ export interface SnapPaymentOptions {
 
 // Package pricing constants
 export const PACKAGE_PRICES: Record<PackageType, number> = {
-  starter: 10000000,
-  professional: 17000000,
-  premium: 25000000
+  free: 0,
+  paid: 10000000
 }
 
 // Package information constants
 export const PACKAGES: Record<PackageType, PackageInfo> = {
-  starter: {
-    type: 'starter',
-    name: 'Starter Package',
+  free: {
+    type: 'free',
+    name: 'Free Entry',
+    price: 0,
+    monthlyPrice: 'GRATIS',
+    description: 'Bergabung tanpa biaya dengan memenuhi kriteria yang ditentukan',
+    features: [
+      'Preferably wanita',
+      'Usia 20-40 tahun',
+      'Tidak perlu pengalaman kerja, cukup growth mindset',
+      'Fokus dan siap memberikan semua untuk sukses',
+      'Minimal pendidikan SMA/D1',
+      'Lokasi di Jabodetabek',
+      '(Jika di luar Jakarta) bersedia mengikuti Zoom'
+    ]
+  },
+  paid: {
+    type: 'paid',
+    name: 'Paid Commitment',
     price: 10000000,
-    monthlyPrice: 'Rp 10 Jt / bulan',
-    description: '100% Cashback + Proteksi Keluarga',
+    monthlyPrice: 'Rp 10 Jt',
+    description: 'Komitmen fee yang akan dikembalikan 100% setelah 2 bulan',
     features: [
-      'Cashback 100% untuk beli asuransi keluarga',
-      'Proteksi lengkap tanpa keluar uang tambahan',
-      'Income Rp 2.335.000/bulan (komisi 23,35%)',
-      'Program 2 tahun dengan hasil pasti',
-      'Target 4 orang referral untuk maksimal hasil',
-      'Bonus Logam Mulia 5 Gram senilai 10 Jt',
-      'Bonus iPad senilai 6 Jt',
-      'Total bonus 16 Jt dalam 1-3 bulan'
-    ]
-  },
-  professional: {
-    type: 'professional',
-    name: 'Professional Package',
-    price: 17000000,
-    monthlyPrice: 'Rp 17 Jt / bulan',
-    description: '100% Cashback + Proteksi Premium',
-    features: [
-      'Cashback 100% untuk proteksi keluarga premium',
-      'Asuransi lengkap tanpa biaya tambahan',
-      'Income Rp 3.969.500/bulan (komisi 23,35%)',
-      'Program 2 tahun dengan hasil terjamin',
-      'Target hanya 2 orang referral (lebih mudah)',
-      'Bonus Logam Mulia 5 Gram senilai 10 Jt',
-      'Bonus iPad senilai 6 Jt',
-      'Total bonus 16 Jt dalam 1-3 bulan',
-      'Income lebih stabil dan besar',
-      'Target referral lebih sedikit = lebih realistis'
-    ]
-  },
-  premium: {
-    type: 'premium',
-    name: 'Premium Package',
-    price: 25000000,
-    monthlyPrice: 'Rp 25 Jt / bulan',
-    description: '100% Cashback + Proteksi VIP',
-    features: [
-      'Cashback 100% untuk proteksi VIP keluarga',
-      'Proteksi terlengkap tanpa keluar uang ekstra',
-      'Income Rp 5.837.500/bulan (komisi 23,35%)',
-      'Program 2 tahun dengan hasil maksimal',
-      'TANPA target referral (paling mudah dicapai)',
-      'Bonus Logam Mulia 5 Gram senilai 10 Jt',
-      'Bonus iPad senilai 6 Jt',
-      'Total bonus 16 Jt dalam 1-3 bulan',
-      'Income tertinggi dari semua paket',
-      'Paling mudah dicapai karena tanpa syarat referral'
+      'Preferably wanita',
+      'Usia 20-40 tahun',
+      'Tidak perlu pengalaman kerja, cukup growth mindset',
+      'Fokus dan siap memberikan semua untuk sukses',
+      'Minimal pendidikan SMA/D1',
+      'Lokasi di Jabodetabek',
+      '(Jika di luar Jakarta) bersedia mengikuti Zoom',
+      'Akses penuh ke semua program pembelajaran',
+      'Pengembalian commitment fee jika dalam 2 bulan berhasil capai target',
+      'Jika tidak berhasil, akan diinvestasikan dan seluruh hasil + 10 juta tetap milik kamu',
+      'Immediate private mentoring & blueprint to success (tinggal copy dan jalankan)',
+      'Dapat cashback dan bonus',
+      'Chance to win FREE iPad'
     ]
   }
 }

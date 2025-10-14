@@ -25,7 +25,16 @@
       "Bash(git config:*)",
       "Bash(true)",
       "Bash(pkill:*)",
-      "Read(//var/folders/vz/vx653c3j7qsg9c6dnjr63chh0000gn/T/TemporaryItems/NSIRD_screencaptureui_FCBKcD/**)"
+      "Read(//var/folders/vz/vx653c3j7qsg9c6dnjr63chh0000gn/T/TemporaryItems/NSIRD_screencaptureui_FCBKcD/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_isccAl/**)",
+      "WebFetch(domain:21st.dev)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_5n1do8/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_HbvTtp/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_o4gAo1/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_cCCbC8/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_QzDjrf/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_3YBRSJ/**)",
+      "Read(//var/folders/ck/rryz88l124vc30cs_pgmdvrh0000gn/T/TemporaryItems/NSIRD_screencaptureui_TFy7Id/**)"
     ],
     "deny": []
   }

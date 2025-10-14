@@ -151,8 +151,11 @@ const BuildYourDream = () => {
 
   if (!mounted) {
     return (
-      <div className="w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
-        <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
+      <div className="relative w-full min-h-screen text-slate-100 font-primary overflow-hidden">
+        {/* Overlay for slight dimming effect */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        
+        <div className="relative z-20 min-h-screen flex flex-col justify-between items-center px-6 py-6 sm:px-8 sm:py-8 md:px-16 md:py-12">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
               <span>Udah</span>
@@ -189,7 +192,7 @@ const BuildYourDream = () => {
   return (
     <>
       <style>{pageStyles}</style>
-      <div className="w-full min-h-screen bg-gradient-to-br from-red-950 via-black to-red-900 text-slate-100 font-primary overflow-hidden relative">
+      <div className="relative w-full min-h-screen text-slate-100 font-primary overflow-hidden">
         
         {/* Pink Spotlight Effects */}
         <Spotlight 
@@ -203,6 +206,9 @@ const BuildYourDream = () => {
           duration={22}
           xOffset={15}
         />
+        
+        {/* Overlay for slight dimming effect */}
+        <div className="absolute inset-0 bg-black/40 z-5" />
         
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
@@ -244,7 +250,7 @@ const BuildYourDream = () => {
         <div className="floating-element-animate" style={{ top: '75%', left: '90%', animationDelay: '2s' }}></div>
 
         {/* Responsive Main Content Padding */}
-        <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
+        <div className="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-6 sm:px-8 sm:py-8 md:px-16 md:py-12">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
               <span className="word-animate" data-delay="0">Udah</span>
@@ -278,8 +284,8 @@ const BuildYourDream = () => {
             
             {/* CTA Button - moved below title */}
             <div className="opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.5s' }}>
-              <Link href="#pricing-section">
-                <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+              <Link href="/pricing">
+                <button className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
                   SAYA MAU JADI YANG BERIKUTNYA
                 </button>
               </Link>

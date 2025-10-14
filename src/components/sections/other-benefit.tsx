@@ -138,29 +138,32 @@ function FeatureCard({ item, index }: { item: typeof data[0], index: number }) {
 
 export default function FeaturesSection() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center bg-black overflow-hidden">
-      <div className="relative z-10 w-full">
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 max-w-7xl">
+    <div className="relative w-full bg-black overflow-hidden">
+      
+      <Section className="py-8 md:py-32 relative">
+        <div className="relative z-10">
           {/* Header */}
-          <div className="text-center mb-8 lg:mb-16">
+          <div className="text-center mb-8 lg:mb-24 px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-2 sm:mb-4">
+              <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80 mb-2 sm:mb-4" style={{ textShadow: '0 0 10px rgba(251, 191, 36, 0.2)' }}>
                 Kerja Keras = Reward Besar
               </h2>
-              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-pink-500/60 to-transparent mx-auto mb-3 sm:mb-6"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent mx-auto mb-3 sm:mb-6" style={{ filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.6))' }}></div>
               <motion.h1 
-                className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tighter whitespace-normal max-w-full mx-auto text-white relative mb-2 sm:mb-4"
+                className="text-center text-2xl sm:text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-2 sm:mb-4"
                 style={{
-                  background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                  background: 'linear-gradient(90deg, #ffffff 0%, #fbbf24 50%, #ffffff 100%)',
                   backgroundSize: '200% 100%',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
+                  backgroundClip: 'text',
+                  textShadow: '0 0 20px rgba(251, 191, 36, 0.5), 0 0 40px rgba(251, 191, 36, 0.3)',
+                  filter: 'drop-shadow(0 0 10px rgba(251, 191, 36, 0.4))'
                 }}
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
@@ -173,14 +176,14 @@ export default function FeaturesSection() {
               >
                 GAK CUMA DUIT DOANG
               </motion.h1>
-              <p className="text-base sm:text-lg font-light leading-relaxed text-slate-300 max-w-3xl mx-auto">
+              <p className="text-xs sm:text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-2xl sm:max-w-3xl mx-auto px-2 sm:px-0" style={{ textShadow: '0 0 15px rgba(251, 191, 36, 0.2)' }}>
                 Benefit gila yang gak bakal lo dapet di tempat lain. Ini yang bikin member kita beda dari yang lain.
               </p>
             </motion.div>
           </div>
 
           {/* Compact grid layout for better mobile experience - adjusted for 5 cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {data.map((item, index) => (
               <div key={item.id}>
                 <FeatureCard item={item} index={index} />
@@ -188,7 +191,7 @@ export default function FeaturesSection() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </Section>
+    </div>
   );
 }
