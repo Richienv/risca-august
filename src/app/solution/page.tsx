@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import Footer from "@/components/sections/footer";
 import { Metadata } from "next";
+import { LiquidGlassContainer } from '@/components/ui/liquid-glass-container';
+import { WebGLShader } from '@/components/ui/web-gl-shader';
 
 const transformations = [
   {
@@ -86,36 +88,45 @@ export default function SolutionDetailsPage() {
                 </div>
             </div>
 
-            <section className="relative bg-black py-12 md:py-20 overflow-hidden">
-                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 relative z-10">
-                    <div className="relative">
-                        {/* Heading Section */}
-                        <div className="text-center mb-12">
-                            <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-6"></div>
-                            <motion.h1 
-                                className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
-                                style={{
-                                    background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
-                                    backgroundSize: '200% 100%',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent',
-                                    backgroundClip: 'text',
-                                }}
-                                animate={{
-                                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                }}
-                                transition={{
-                                    duration: 3,
-                                    repeat: Infinity,
-                                    ease: 'linear'
-                                }}
-                            >
-                                50 Hari Menuju Business Partner
-                            </motion.h1>
-                            <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-4xl mx-auto">
-                                Program sistematis 60 hari: ketemu 2 orang setiap hari, capai rasio closing 4:1, raih omzet Rp 360 juta dalam 8 minggu, dan dapatkan komisi hingga Rp 6,9 juta per bulan. Bonus: promosi ke Business Partner!
-                            </p>
-                        </div>
+            <section className="relative overflow-hidden py-12 md:py-20">
+                {/* WebGL Shader Background */}
+                <div className="absolute inset-0 z-0">
+                    <WebGLShader />
+                </div>
+                
+                {/* Overlay for slight dimming effect */}
+                <div className="absolute inset-0 bg-black/40 z-10" />
+                
+                <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 relative z-20">
+                    <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 transition-all duration-300" colorOverlay="none">
+                        <div className="p-6 lg:p-8 xl:p-12">
+                            {/* Heading Section */}
+                            <div className="text-center mb-12">
+                                <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-pink-500/60 to-transparent mx-auto mb-6"></div>
+                                <motion.h1 
+                                    className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                                        backgroundSize: '200% 100%',
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent',
+                                        backgroundClip: 'text',
+                                    }}
+                                    animate={{
+                                        backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                                    }}
+                                    transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: 'linear'
+                                    }}
+                                >
+                                    50 Hari Menuju Business Partner
+                                </motion.h1>
+                                <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-4xl mx-auto" style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
+                                    Program sistematis 60 hari: ketemu 2 orang setiap hari, capai rasio closing 4:1, raih omzet Rp 360 juta dalam 8 minggu, dan dapatkan komisi hingga Rp 6,9 juta per bulan. Bonus: promosi ke Business Partner!
+                                </p>
+                            </div>
                         
                         {/* Full Width Layout */}
                         <div className="relative z-10 w-full">
@@ -131,8 +142,8 @@ export default function SolutionDetailsPage() {
                                     className="w-full"
                                 >
                                     {/* Full Width Card Container */}
-                                    <Card className="w-full relative overflow-hidden bg-black/40 backdrop-blur-md border-transparent hover:border-transparent transition-all duration-300 group hover:bg-black/50">
-                                        <CardContent className="p-0 w-full">
+                                    <LiquidGlassContainer className="w-full rounded-3xl overflow-hidden bg-black/30 backdrop-blur-md hover:bg-black/40 transition-all duration-300" colorOverlay="none">
+                                        <div className="p-0 w-full">
                                             <div className={`flex flex-col lg:flex-row items-center w-full ${
                                                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                                             }`}>
@@ -205,15 +216,15 @@ export default function SolutionDetailsPage() {
                                                                 index === transformations.length - 1
                                                                     ? 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-semibold'
                                                                     : 'text-white/80 font-light'
-                                                            }`}>
+                                                            }`} style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
                                                                 {transformation.description}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </CardContent>
-                                    </Card>
+                                        </div>
+                                    </LiquidGlassContainer>
                                 </motion.div>
                             ))}
 
@@ -223,13 +234,14 @@ export default function SolutionDetailsPage() {
                         {/* Small Terms Note */}
                         <div className="mt-12 text-center">
                             <div className="inline-block bg-white/5 backdrop-blur-sm rounded-lg px-6 py-4 mx-auto">
-                                <p className="text-white/70 text-xs lg:text-sm">
+                                <p className="text-white/70 text-xs lg:text-sm" style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
                                     <strong className="text-white">Catatan:</strong> ALP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | BE = Business Executive | BP = Business Partner
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </LiquidGlassContainer>
+            </div>
             </section>
 
             <Footer />
