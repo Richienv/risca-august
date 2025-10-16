@@ -52,7 +52,7 @@ const cardData = [
   },
   {
     title: "Sekali Deal Cuan Seumur Hidup",
-    description: "Beda sama sales biasa yang sekali closing langsung habis, di bisnis asuransi sekali kamu closing nasabah, kamu dapat komisi berkali-kali! Contoh: Nasabah bayar premi 5 juta per tahun, kamu dapat komisi 15-25% di tahun pertama, lalu 5-10% setiap tahunnya selama polis aktif. Satu nasabah bisa kasih kamu penghasilan 10-20 tahun!",
+    description: "Berbeda dengan sales biasa yang sekali closing langsung selesai, di bisnis asuransi sekali closing komisi seumur hidup... Di mana lagi kerja sekali dibayar seumur hidup",
     metrics: "15-25% komisi pertama + 5-10% renewal tahunan",
     image: "/images/gold-rising.png"
   },

@@ -19,7 +19,7 @@ export const siteConfig = {
     email: "ask.martha@gmail.com",
     twitter: "https://twitter.com/richienv",
     discord: "https://discord.gg/87p2vpsat5",
-    github: "https://github.com/Richienv/allianz-cinom",
+    github: "https://github.com/Richienv/MANULIFE-cinom",
     instagram: "https://instagram.com/richienv/",
   },
   header: [

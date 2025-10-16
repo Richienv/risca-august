@@ -55,7 +55,7 @@ const BenefitsPage = () => {
               </svg>
             </div>
             <h3 className="text-2xl font-light text-white mb-4">Bonus Income Unlimited</h3>
-            <p className="text-white/80 mb-6">Dapatkan bonus penghasilan tanpa batas dengan sistem kami yang GRATIS! Kerja cerdas untuk keluarga, bukan hanya untung orang lain. Target: 5 polis = Bonus iPad Pro!</p>
+            <p className="text-white/80 mb-6">Dapatkan bonus penghasilan tanpa batas dengan sistem kami yang GRATIS! Kerja cerdas untuk keluarga, bukan hanya untung orang lain. Target: 5 polis = Bonus iPad</p>
             <div className="text-3xl font-bold text-white/90">∞ + 🎁</div>
             <div className="text-white/60 text-sm">License & sistem GRATIS</div>
             </div>

@@ -26,7 +26,7 @@ const AboutMeSection = () => {
                   untuk Masa Depan
                 </span>
               }
-              description="Dapatkan perlindungan kesehatan terbaik dengan coverage lengkap, proses klaim mudah, dan jaringan rumah sakit terluas di Indonesia. Investasi terbaik untuk keamanan keluarga Anda."
+              description="Dapatkan perlindungan kesehatan terbaik dengan coverage lengkap, proses klaim mudah, dan jaringan rumah sakit terluas di Seluruh DUNIA. Investasi terbaik untuk keamanan keluarga Anda."
               buttonText="Konsultasi Gratis"
               buttonProps={{
                 className: "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-semibold",

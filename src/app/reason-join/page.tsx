@@ -4,7 +4,7 @@ import Footer from "@/components/sections/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "6 Alasan Kuat Kenapa Harus Gabung Bisnis Asuransi Sekarang - Tim Throne Allianz Jakarta",
+  title: "6 Alasan Kuat Kenapa Harus Gabung Bisnis Asuransi Sekarang - Tim Throne MANULIFE Jakarta",
   description: "Discover 6 alasan mengapa bisnis asuransi adalah pilihan terbaik: Income bisa diwariskan, sekali deal cuan seumur hidup, mentoring billionaire, bonus trip gratis ke London/Jepang, dan rewards berlimpah. Join sekarang!",
   keywords: [
     "bisnis asuransi",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "komisi residual",
     "mentoring billionaire",
     "bonus trip gratis",
-    "tim throne allianz",
+    "tim throne MANULIFE",
     "free ipad",
     "override bonus",
     "penghasilan bisa diwariskan"

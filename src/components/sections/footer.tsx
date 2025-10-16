@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col items-center mb-8">
           <Image 
             src="/images/risca-logo.png" 
-            alt="Risca Agustine - Tim Throne Allianz Logo" 
+            alt="Risca Agustine - Tim Throne MANULIFE Logo" 
             width={120} 
             height={120} 
             className="w-auto h-20 mb-4"

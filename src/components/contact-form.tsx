@@ -347,7 +347,7 @@ export function ContactForm() {
 
               <div>
                 <label className="block text-sm font-light text-slate-300 mb-2 font-mono tracking-wide">
-                  10. Apakah kamu/pasangan terdaftar sebagai agen di Allianz/di tempat lain?
+                  10. Apakah kamu/pasangan terdaftar sebagai agen di MANULIFE/di tempat lain?
                 </label>
                 <div className="space-y-4">
                   <select
@@ -360,7 +360,7 @@ export function ContactForm() {
                     <option value="" className="bg-black text-slate-300">Pilih Status</option>
                     <option value="Ya" className="bg-black text-slate-300">Ya</option>
                     <option value="Tidak" className="bg-black text-slate-300">Tidak</option>
-                    <option value="Perusahaan Lain" className="bg-black text-slate-300">Perusahaan Selain Allianz</option>
+                    <option value="Perusahaan Lain" className="bg-black text-slate-300">Perusahaan Selain MANULIFE</option>
                   </select>
 
                   {formData.agentStatus === 'Perusahaan Lain' && (

@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Paket Asuransi - Cashback & Rewards | Risca Agustine",
-  description: "Pilih paket asuransi terbaik dengan cashback 100% dan rewards menarik. Dapatkan proteksi gratis plus income bulanan dari Tim Throne Allianz Jakarta.",
+  description: "Pilih paket asuransi terbaik dengan cashback 100% dan rewards menarik. Dapatkan proteksi gratis plus income bulanan dari Tim Throne MANULIFE Jakarta.",
   openGraph: {
     title: "Paket Asuransi - Cashback & Rewards",
     description: "Pilih paket asuransi dengan cashback 100% dan rewards menarik. Proteksi gratis plus income bulanan.",
