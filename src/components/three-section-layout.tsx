@@ -26,7 +26,7 @@ const ThreeSectionLayout = () => {
           
           {/* Left Section - Benefits */}
           <Link href="/benefits" className="block">
-            <div className="flex flex-col h-[550px] md:h-[600px] hover:brightness-110 transition-all duration-500 p-10 md:p-12 group cursor-pointer relative border-r border-white/10 lg:border-r lg:border-white/10">
+            <div className="flex flex-col h-[700px] md:h-[750px] hover:brightness-110 transition-all duration-500 p-10 md:p-12 group cursor-pointer relative border-r border-white/10 lg:border-r lg:border-white/10">
               
               {/* Main Heading with Pink Gradient */}
               <div className="text-center mt-6 mb-5">
@@ -48,7 +48,7 @@ const ThreeSectionLayout = () => {
               {/* Subheading */}
               <div className="text-center mb-6">
                 <p className="text-white/80 text-sm md:text-base">
-                  Dapatkan rewards & benefit eksklusif
+                  Dapatkan reward & benefit eksklusif
                 </p>
               </div>
 
@@ -61,10 +61,10 @@ const ThreeSectionLayout = () => {
 
               {/* Supporting Image - Reaches Bottom Edge */}
               <div className="flex-1 flex items-end justify-center relative overflow-hidden -mb-6 md:-mb-8">
-                <div className="w-72 md:w-80 h-72 md:h-80 relative">
+                <div className="w-[400px] h-[700px] relative">
                   <img 
-                    src="/images/woman.png" 
-                    alt="Professional woman" 
+                    src="/images/new2.png" 
+                    alt="Orang yang merayakan dengan bonus dan penghargaan" 
                     className="w-full h-full object-contain object-bottom"
                   />
                 </div>
@@ -75,7 +75,7 @@ const ThreeSectionLayout = () => {
 
           {/* Middle Section - Solution */}
           <Link href="/solution" className="block">
-            <div className="flex flex-col h-[550px] md:h-[600px] hover:brightness-110 transition-all duration-500 p-10 md:p-12 group cursor-pointer relative border-r border-white/10 lg:border-r lg:border-white/10">
+            <div className="flex flex-col h-[700px] md:h-[750px] hover:brightness-110 transition-all duration-500 p-10 md:p-12 group cursor-pointer relative border-r border-white/10 lg:border-r lg:border-white/10">
               
               {/* Main Heading with Pink Gradient */}
               <div className="text-center mt-6 mb-5">
@@ -110,10 +110,10 @@ const ThreeSectionLayout = () => {
 
               {/* Supporting Image - Reaches Bottom Edge */}
               <div className="flex-1 flex items-end justify-center relative overflow-hidden -mb-6 md:-mb-8">
-                <div className="w-72 md:w-80 h-72 md:h-80 relative">
+                <div className="w-[400px] h-[700px] relative">
                   <img 
-                    src="/images/woman.png" 
-                    alt="Professional woman" 
+                    src="/images/new3.png" 
+                    alt="Orang-orang bekerja dan berkolaborasi" 
                     className="w-full h-full object-contain object-bottom"
                   />
                 </div>
@@ -124,7 +124,7 @@ const ThreeSectionLayout = () => {
 
           {/* Right Section - Income Breakdown */}
           <Link href="/income-breakdown" className="block">
-            <div className="flex flex-col h-[550px] md:h-[600px] hover:brightness-110 transition-all duration-500 p-10 md:p-12 group cursor-pointer relative">
+            <div className="flex flex-col h-[700px] md:h-[750px] hover:brightness-110 transition-all duration-500 p-10 md:p-12 group cursor-pointer relative">
               
               {/* Main Heading with Pink Gradient */}
               <div className="text-center mt-6 mb-5">
@@ -159,10 +159,10 @@ const ThreeSectionLayout = () => {
 
               {/* Supporting Image - Reaches Bottom Edge */}
               <div className="flex-1 flex items-end justify-center relative overflow-hidden -mb-6 md:-mb-8">
-                <div className="w-64 md:w-72 h-64 md:h-72 relative">
+                <div className="w-[400px] h-[700px] relative">
                   <img 
-                    src="/images/medic.png" 
-                    alt="Medical kit" 
+                    src="/images/new4.png" 
+                    alt="Orang menghitung pendapatan dan pertumbuhan keuangan" 
                     className="w-full h-full object-contain object-bottom"
                   />
                 </div>

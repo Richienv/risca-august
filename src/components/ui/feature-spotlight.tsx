@@ -66,12 +66,12 @@ const AnimatedFeatureSpotlight = React.forwardRef<HTMLElement, AnimatedFeatureSp
           </div>
 
           {/* Right Column: Animated Visual */}
-          <div className="relative w-full min-h-[250px] md:min-h-[320px] flex items-end justify-center animate-in fade-in zoom-in-95 duration-700 delay-200">
+          <div className="relative w-full min-h-[600px] flex items-end justify-center animate-in fade-in zoom-in-95 duration-700 delay-200">
             {/* Main Image with entrance animation only, positioned to bottom */}
             <img
               src={imageUrl}
               alt={imageAlt}
-              className="w-full max-w-md object-contain object-bottom"
+              className="w-[400px] h-[600px] object-contain object-bottom"
             />
           </div>
         </div>

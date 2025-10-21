@@ -34,8 +34,8 @@ const AboutMeSection = () => {
                   window.location.href = '/reason-join';
                 }
               }}
-              imageUrl="/images/woman.png"
-              imageAlt="Professional woman representing insurance services"
+              imageUrl="/images/new1.png"
+              imageAlt="Profesional yang percaya diri mewakili layanan asuransi"
               className="bg-transparent border border-amber-500/30 text-white"
             />
           </div>

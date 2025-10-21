@@ -190,7 +190,7 @@ function HeroTitles() {
       >
         <Link href="/pricing">
           <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-3 py-2 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-[12px] sm:text-[14px] lg:text-[16px]">
-            Saya Mau Peruabahan
+            Saya Mau Perubahan
           </button>
         </Link>
         <Link href="/contact">
@@ -249,12 +249,12 @@ export default function WebGLHeroSection() {
               }}
             >
               <div className="flex justify-center">
-                <div className="w-full max-w-sm lg:max-w-md">
-                  <div className="rounded-2xl aspect-[9/16] p-4 lg:p-6 overflow-hidden">
+                <div className="w-full max-w-lg lg:max-w-2xl">
+                  <div className="rounded-2xl aspect-[16/9] p-4 lg:p-6 overflow-hidden">
                     <div className="relative w-full h-full rounded-xl overflow-hidden">
                       <iframe
                         className="absolute inset-0 w-full h-full rounded-xl"
-                        src="https://www.youtube.com/embed/Bm2s0_oO_A4?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
+                        src="https://www.youtube.com/embed/DfVbBunX7PU?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
                         title="YouTube video"
                         frameBorder={0}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -297,7 +297,7 @@ export default function WebGLHeroSection() {
                 transition={{ delay: 0.8, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               >
                 <p className="text-white text-[18px] sm:text-[20px] lg:text-[22px] font-bold mb-1">
-                  Limited Slots
+                  Slot Terbatas
                 </p>
                 <p className="text-white text-[14px] sm:text-[16px] font-medium mb-4 lg:mb-6">
                   FREE iPad Untuk 10 Orang Tercepat Capai Misi.

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "JOHANES HENDRA BUHOKAN",
+    "role": "Ex Stock Analyst & Branch Manager",
+    "quote": "Consistency beats Talent & Privileges. I learnt it the hardway, so please add the consistency in your success.",
+    "story": "Bergabung dengan MANULIFE sejak 2018. Dari background sebagai Stock Analyst dan Branch Manager Steel Distributor, kini meraih income 45 juta per bulan.",
+    "image": "/images/johanes.png",
+    "rating": 5,
+    "income": "45 Juta/Bulan"
+  },
+  {
+    "id": 2,
+    "name": "NORMAN KOSASIH",
+    "role": "Billionaire 6",
+    "quote": "Saya suka pekerjaan yang menantang dan juga ingin belajar lebih banyak sehingga saya berharap bisa sukses besar.",
+    "story": "Join 7 Maret, sudah 6 bulan dan kini meraih 1M per bulan. Membuktikan bahwa dengan tekad dan kerja keras, mimpi besar bisa tercapai.",
+    "image": "/images/norman-kosasih.png",
+    "rating": 5,
+    "income": "1M/Bulan"
+  },
+  {
+    "id": 3,
+    "name": "AHUAT",
+    "role": "Ex Sales PALUGADA",
+    "quote": "Tidak ada yang tidak mungkin. Jika mau sesuatu lupakan alasan, if mau alasan lupakan mau mu.",
+    "story": "Testimoni 2 minggu join MANULIFE income 160 juta. Dari sales biasa kini meraih penghasilan yang fantastis.",
+    "image": "/sharon.jpg",
+    "rating": 5,
+    "income": "160 Juta"
+  },
+  {
+    "id": 4,
+    "name": "AMANDA",
+    "role": "S1 Universitas Indonesia",
+    "quote": "Buat aku, sukses itu bukan cuma soal angka, tapi tentang punya kendali atas hidup sendiri.",
+    "story": "Lulusan UI yang kini bisa nikmatin slow morning tanpa terburu-buru dengan income 32 juta. Sukses dengan cara yang bermakna.",
+    "image": "/images/amanda.png",
+    "rating": 5,
+    "income": "32 Juta"
+  },
+  {
+    "id": 5,
+    "name": "SUCI LESTARI",
+    "role": "Insurance Professional",
+    "quote": "Ora et Labora, this is my calling.",
+    "story": "Perusahaan ini mengajarkan saya untuk sabar, mendengarkan, melayani, dan berkomitmen memimpin dengan kerendahan hati dan integritas. Income 100 juta per bulan.",
+    "image": "/images/suci.png",
+    "rating": 5,
+    "income": "100 Juta"
+  },
+  {
+    "id": 6,
+    "name": "MARSHEL YAP",
+    "role": "Ex Manager",
+    "quote": "Ora et Labora, this is my calling.",
+    "story": "Dari background Manager kini meraih 80 juta per bulan. Perusahaan mengajarkan kesabaran dan kepemimpinan dengan kerendahan hati.",
+    "image": "/trisna.jpg",
+    "rating": 5,
+    "income": "80 Juta/Bulan"
+  },
+  {
+    "id": 7,
+    "name": "VICKY ADITYA", 
+    "role": "Entrepreneur",
+    "quote": "Grow Big, Live Free, Share More.",
+    "story": "Dulu hanya bermimpi punya penghasilan besar. Sekarang dengan kerja keras, ada kemajuan. Income 80 juta per bulan membuktikan mimpi bisa jadi kenyataan.",
+    "image": "/jessica.jpg",
+    "rating": 5,
+    "income": "80 Juta/Bulan"
+  },
+  {
+    "id": 8,
+    "name": "ELYA",
+    "role": "Ex Owner Studio Eyebrows",
+    "quote": "Grateful to Grow, Blessed to Protect.",
+    "story": "Dari owner studio eyebrows kini meraih 50 juta per bulan. Bersyukur bisa tumbuh dalam bisnis ini dan melayani orang lain melalui asuransi.",
+    "image": "/devina.jpg",
+    "rating": 5,
+    "income": "50 Juta/Bulan"
+  },
+  {
+    "id": 9,
+    "name": "CALVIN ASIKIN",
+    "role": "Business Professional",
+    "quote": "Konsistensi adalah kunci kesuksesan di bisnis ini.",
+    "story": "Membuktikan bahwa dengan dedikasi dan kerja keras, siapa pun bisa meraih kesuksesan. Kini meraih income 12 juta per bulan.",
+    "image": "/images/calvin-asikin.png",
+    "rating": 5,
+    "income": "12 Juta/Bulan"
+  },
+  {
+    "id": 10,
+    "name": "FAMMY",
+    "role": "Insurance Agent",
+    "quote": "Kerja keras dan konsistensi selalu membuahkan hasil.",
+    "story": "Perjalanan di MANULIFE membuktikan bahwa dengan fokus dan dedikasi, target 45 juta bisa tercapai. Sebuah pencapaian yang membanggakan.",
+    "image": "/images/fammy.png",
+    "rating": 5,
+    "income": "45 Juta"
+  }
+]

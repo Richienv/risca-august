@@ -10,6 +10,7 @@ import PerubahanSection from "@/components/sections/perubahan";
 import SolutionSection from "@/components/sections/solution";
 import Pricing2 from "@/components/sections/pricing2";
 import AboutMeSection from "@/components/sections/abous-me";
+import TestimonialSection from "@/components/sections/testimonial-section";
 import DigitalSerenity from "@/components/digital-seranity";
 import { BlueGradientSeparator } from "@/components/blue-gradient-separator";
 import Navbar from "@/components/navbar";
@@ -48,6 +49,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between">
         <WebGLHeroSection />
         {/* <Hero /> */}
+        <TestimonialSection />
         <AboutMeSection />
         <ThreeSectionLayout />
 
