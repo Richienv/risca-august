@@ -54,14 +54,14 @@ const transformations = [
   },
   {
     title: "Hari 50–56",
-    subtitle: "Kunci Posisi Life Planner"
-    description: "Pastikan semua syarat terpenuhi. Target: 300 juta FYP total, income Rp 6-7 juta per bulan (komisi 25%). Hasil tim + hasil pribadi = jalan cepat menuju promosi jadi ultimate leader!"
+    subtitle: "Kunci Posisi Life Planner",
+    description: "Pastikan semua syarat terpenuhi. Target: 300 juta FYP total, income Rp 6-7 juta per bulan (komisi 25%). Hasil tim + hasil pribadi = jalan cepat menuju promosi jadi ultimate leader!",
     image: "/images/checklist.png"
   },
   {
     title: "Hari 57–60",
     subtitle: "Raih Status Business Partner",
-    description: "Ceritakan perjalananmu. Rekrut Life Planner baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis dan tim yang solid."
+    description: "Ceritakan perjalananmu. Rekrut Life Planner baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis dan tim yang solid.",
     image: "/images/confident.png"
   },
   {

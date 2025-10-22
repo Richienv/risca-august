@@ -356,7 +356,11 @@ export default function CheckoutPage() {
         <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="relative z-20 min-h-screen flex items-center justify-center">
           <div className="w-full max-w-4xl mx-auto p-4 animate-pulse">
-            <LiquidGlassContainer className="bg-gray-900/30 rounded-3xl h-96 border border-pink-400/20" colorOverlay="none" />
+            <LiquidGlassContainer className="bg-gray-900/30 rounded-3xl h-96 border border-pink-400/20" colorOverlay="none">
+              <div className="flex items-center justify-center h-full">
+                <div className="text-white">Loading...</div>
+              </div>
+            </LiquidGlassContainer>
           </div>
         </div>
       </div>
