@@ -43,7 +43,7 @@
     "id": 5,
     "name": "SUCI LESTARI",
     "role": "Insurance Professional",
-    "quote": "Ora et Labora, this is my calling.",
+    "quote": "-",
     "story": "Perusahaan ini mengajarkan saya untuk sabar, mendengarkan, melayani, dan berkomitmen memimpin dengan kerendahan hati dan integritas. Income 100 juta per bulan.",
     "image": "/images/suci.png",
     "rating": 5,
@@ -53,7 +53,7 @@
     "id": 6,
     "name": "MARSHEL YAP",
     "role": "Ex Manager",
-    "quote": "Ora et Labora, this is my calling.",
+    "quote": "-",
     "story": "Dari background Manager kini meraih 80 juta per bulan. Perusahaan mengajarkan kesabaran dan kepemimpinan dengan kerendahan hati.",
     "image": "/trisna.jpg",
     "rating": 5,
@@ -98,5 +98,35 @@
     "image": "/images/fammy.png",
     "rating": 5,
     "income": "45 Juta"
+  },
+  {
+    "id": 11,
+    "name": "SAM",
+    "role": "Entrepreneur", 
+    "quote": "Membangun Karier sendiri sejak lulus Kuliah",
+    "story": "Saya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu. Join akhir Agustus kemarin earn ~175jt.",
+    "image": "/images/sam.png",
+    "rating": 5,
+    "income": "175 Juta"
+  },
+  {
+    "id": 12,
+    "name": "EDDY",
+    "role": "Insurance Professional",
+    "quote": "Grow Big, Live Free, Share More.",
+    "story": "Saya dulu hanya bermimpi memiliki penghasilan besar (yang saya maksud 3 digit). Sekarang saya bersyukur, namun penghargaan sejati bukan hanya angka — melainkan pertumbuhan, perjalanan, dan kesempatan membantu orang lain melindungi hal yang paling berarti. Rumah dan mobil sudah tercapai; perjalanan adalah bonus manis. Motivasi saya sekarang: mengangkat tim, melayani klien lebih baik, menginspirasi lebih banyak orang untuk mengubah hidup mereka.",
+    "image": "/images/Eddy.png",
+    "rating": 5,
+    "income": "80 Juta/Bulan"
+  },
+  {
+    "id": 13,
+    "name": "ELYA",
+    "role": "Ex Owner Studio Eyebrows and Eyelashes",
+    "quote": "Grateful to Grow, Blessed to Protect.",
+    "story": "Elya berterima kasih atas kesempatan tumbuh dalam bisnis ini — bukan hanya sebagai profesional, tetapi juga sebagai pribadi. Melalui asuransi, ia dapat melayani orang lain, melindungi hal yang paling berarti, dan berbagi berkah masa depan yang aman.",
+    "image": "/images/elya.png",
+    "rating": 5,
+    "income": "50 Juta/Bulan"
   }
 ]

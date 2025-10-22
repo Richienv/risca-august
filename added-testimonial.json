@@ -1,0 +1,99 @@
+{
+    "testimonials": [
+      {
+        "id": "t-eddy-001",
+        "name": "EDDY",
+        "original_text": "Nama : EDDY\n\nIncome : 80 Juta / Bulan (\"Ready to Inspire, Blessed to Achieve.\")\n\nEx Job :\n\nBackground : I once only dreamed of having a big income (by Big means 3 Digit income). Today, I’m grateful But the true reward isn’t just the number — it’s the growth, the journey, and the chance to help others protect what matters most.\n\nThat’s just the sweet bonus. Now my mission is clear: not just to be seen, but to be trusted, remembered, and sought after.\n\nKata Mutiara : \"Grow Big, Live Free, Share More.\"\n\nIf you ask me about motivation... well, the house and car are already achieved. And traveling? That’s just the sweet bonus.\n\nNow, my drive isn’t about material things anymore. It’s about lifting my team higher, serving clients better, and inspiring more people to change their lives. Because with Eddy, there’s always a way to live safer, calmer, and happier.",
+        "clean_text_id": "Saya dulu hanya bermimpi memiliki penghasilan besar (yang saya maksud 3 digit). Sekarang saya bersyukur, namun penghargaan sejati bukan hanya angka — melainkan pertumbuhan, perjalanan, dan kesempatan membantu orang lain melindungi hal yang paling berarti. Rumah dan mobil sudah tercapai; perjalanan adalah bonus manis. Motivasi saya sekarang: mengangkat tim, melayani klien lebih baik, menginspirasi lebih banyak orang untuk mengubah hidup mereka. \"Grow Big, Live Free, Share More.\"",
+        "clean_text_en": "I once dreamed of earning big (three-digit income). Now I'm grateful — the real reward isn't just the number but the growth, the journey, and helping others protect what matters. House and car are achieved; travel is a sweet bonus. My drive is now to lift my team, serve clients better, and inspire people to change their lives. \"Grow Big, Live Free, Share More.\"",
+        "language": "id",
+        "summary": "EDDY — income ~Rp 80,000,000/month; shifted motivation from material goals to leadership, team growth, and serving clients.",
+        "earnings": {
+          "amount_display": "80 Juta / Bulan",
+          "amount_numeric": 80000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "bulan"
+        },
+        "ex_job": null,
+        "background": "Once dreamed of big income; now focuses on team & clients",
+        "kata_mutiara": "Grow Big, Live Free, Share More.",
+        "tags": ["income", "motivation", "leadership", "client-service"],
+        "structure": {
+          "past": "dreamed of big income",
+          "present_outcome": "house & car achieved; income ~80 juta/bulan",
+          "motivation_shift": "from material goals → lifting team & serving clients"
+        },
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:0‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "screenshot": "/mnt/data/Screenshot 2025-10-22 at 15.59.14.png",
+          "notes": "Extracted from PDF/screenshot; small editorial cleanup for readability."
+        }
+      },
+      {
+        "id": "t-elya-002",
+        "name": "ELYA",
+        "original_text": "Nama : ELYA\n\nIncome : 50 Juta / Bulan\n\nEx Job : Owner Studio Eyebrows and Eyelashes\n\nBackground :\n\nKata Mutiara : “Grateful to Grow, Blessed to Protect.”\n\nI am thankful for the chance to grow in this business — not only as a professional, but as a person. Through insurance, I can serve others, protect what matters most, and share the blessing of a secure future.",
+        "clean_text_id": "Nama: ELYA. Income: 50 Juta/Bulan. Ex-job: Owner Studio Eyebrows and Eyelashes. Kata mutiara: \"Grateful to Grow, Blessed to Protect.\" Elya berterima kasih atas kesempatan tumbuh dalam bisnis ini — bukan hanya sebagai profesional, tetapi juga sebagai pribadi. Melalui asuransi, ia dapat melayani orang lain, melindungi hal yang paling berarti, dan berbagi berkah masa depan yang aman.",
+        "clean_text_en": "Name: ELYA. Income: Rp 50,000,000/month. Previous job: Owner of an eyebrows & eyelashes studio. Quote: \"Grateful to Grow, Blessed to Protect.\" She is thankful for the chance to grow professionally and personally; through insurance she can serve others and protect what matters most.",
+        "language": "id",
+        "summary": "ELYA — income Rp50 juta/bulan; ex-owner of beauty studio; values growth and protecting clients through insurance.",
+        "earnings": {
+          "amount_display": "50 Juta / Bulan",
+          "amount_numeric": 50000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "bulan"
+        },
+        "ex_job": "Owner Studio Eyebrows and Eyelashes",
+        "background": null,
+        "kata_mutiara": "Grateful to Grow, Blessed to Protect.",
+        "tags": ["beauty-owner", "income", "service", "insurance"],
+        "structure": {
+          "role": "owner → insurance professional",
+          "value": "growth + protection for clients"
+        },
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:1‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "screenshot": "/mnt/data/Screenshot 2025-10-22 at 15.59.27.png",
+          "notes": "Extracted from PDF/screenshot; paragraph breaks normalized."
+        }
+      },
+      {
+        "id": "t-sam-003",
+        "name": "SAM",
+        "original_text": "\"Membangun Karier sendiri sejak lulus Kuliah\" \n\nSaya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu.\n\nJoin akhir Agustus kmarin earn -+ 175jt nom",
+        "clean_text_id": "Saya memutuskan membangun usaha sendiri setelah lulus kuliah karena percaya jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi dibanding menunggu di tangga karier korporat. Dari status mahasiswa kini bisa menjalankan bisnis di mana saja dan memiliki kebebasan waktu. Pada akhir Agustus lalu menghasilkan sekitar Rp 175.000.000.",
+        "clean_text_en": "I decided to build my own business after graduating because I believe the independent path offers more space to grow and maximize potential compared to waiting on the corporate ladder. From being a student I can now run a business anywhere and have time freedom. In late August I earned approximately Rp 175,000,000.",
+        "language": "id",
+        "summary": "SAM — chose entrepreneurship after graduation; runs business with time freedom; earned ~Rp175 juta in late August.",
+        "earnings": {
+          "amount_display": "Rp 175.000.000",
+          "amount_numeric": 175000000,
+          "currency": "IDR",
+          "approximate": true,
+          "period_text": "akhir Agustus"
+        },
+        "ex_job": null,
+        "background": "transitioned from student to entrepreneur; values time freedom",
+        "kata_mutiara": null,
+        "tags": ["entrepreneurship", "student-turned-founder", "income"],
+        "structure": {
+          "motivation": "jalur mandiri memberi ruang berkembang & memaksimalkan potensi",
+          "transition": "mahasiswa → menjalankan bisnis di mana saja",
+          "outcome": "kebebasan waktu & pendapatan ~Rp175jt (akhir Agustus)"
+        },
+        "metadata": {
+          "source": "user_input / screenshot",
+          "screenshot": "/mnt/data/Screenshot 2025-10-22 at 15.59.50.png",
+          "notes": "Teks diberikan oleh pengguna melalui chat screenshot; minor typo corrections applied ('kmarin' → 'kemarin')."
+        }
+      }
+    ],
+    "metadata": {
+      "extraction_note": "Entries EDDY and ELYA extracted from DATA PERSONAL.pdf (OCR); SAM added from user-provided screenshot/chat. Numeric amounts normalized to integers (IDR).",
+      "pdf_citation": " [oai_citation:2‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)"
+    }
+  }

@@ -37,7 +37,7 @@ const transformations = [
   {
     title: "Hari 29–35",
     subtitle: "Konsistensi & Duplikasi Sistem",
-    description: "Sudah ada yang tertarik ikut? Mulai latih 1-2 orang untuk jadi BE. Ajak mereka duplikasi sistem yang kamu pakai. Tetap focus pada target pribadi.",
+    description: "Sudah ada yang tertarik ikut? Mulai latih 1-2 orang untuk jadi Life Planner. Ajak mereka duplikasi sistem yang kamu pakai. Tetap focus pada target pribadi.",
     image: "/images/cheers.png"
   },
   {
@@ -48,20 +48,20 @@ const transformations = [
   },
   {
     title: "Hari 43–49",
-    subtitle: "Bangun Struktur Menuju BP",
+    subtitle: "Bangun Struktur Menuju Life Planner",
     description: "Sekarang kamu dapat bonus dari tim! Setiap tim kamu closing, kamu juga dapat untung. Semakin bagus performa tim, semakin besar penghasilan kamu. ",
     image: "/images/study.png"
   },
   {
     title: "Hari 50–56",
-    subtitle: "Kunci Posisi BP",
-    description: "Pastikan semua syarat terpenuhi. Target: 300 juta ALP total, income Rp 6-7 juta per bulan (komisi 23,25%). Hasil tim + hasil pribadi = jalan cepat menuju promosi jadi ultimate leader!",
+    subtitle: "Kunci Posisi Life Planner"
+    description: "Pastikan semua syarat terpenuhi. Target: 300 juta FYP total, income Rp 6-7 juta per bulan (komisi 25%). Hasil tim + hasil pribadi = jalan cepat menuju promosi jadi ultimate leader!"
     image: "/images/checklist.png"
   },
   {
     title: "Hari 57–60",
     subtitle: "Raih Status Business Partner",
-    description: "Ceritakan perjalananmu. Rekrut BE baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis dan tim yang solid.",
+    description: "Ceritakan perjalananmu. Rekrut Life Planner baru. Duplikasi pola suksesmu. Sekarang kamu bukan cuma punya penghasilan — tapi juga punya bisnis dan tim yang solid."
     image: "/images/confident.png"
   },
   {
@@ -235,7 +235,7 @@ export default function SolutionDetailsPage() {
                         <div className="mt-12 text-center">
                             <div className="inline-block bg-white/5 backdrop-blur-sm rounded-lg px-6 py-4 mx-auto">
                                 <p className="text-white/70 text-xs lg:text-sm" style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
-                                    <strong className="text-white">Catatan:</strong> ALP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | BE = Business Executive | BP = Business Partner
+                                    <strong className="text-white">Catatan:</strong> FYP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | Life Planner | Life Planner
                                 </p>
                             </div>
                         </div>

@@ -91,6 +91,13 @@ const testimonials = [
     story: "Ikut program ini jadi turning point hidup gue. Sekarang penghasilan udah 15 juta per bulan di umur 22 tahun!",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
   },
+  {
+    name: "SAM",
+    role: "Entrepreneur",
+    quote: "Membangun Karier sendiri sejak lulus Kuliah",
+    story: "Saya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu. Join akhir Agustus kemarin earn ~175jt.",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+  },
 ];
 
 function TestimonialCard({ name, role, quote, story, img }: (typeof testimonials)[number]) {

@@ -1,0 +1,329 @@
+{
+    "testimonials": [
+      {
+        "id": "t-001",
+        "name": "JOHANES HENDRA BUHOKAN",
+        "original_text": "Nama: JOHANES HENDRA BUHOKAN\n\nIncome: 45 / Bulan\n\nEx Job : Pernah jadi Stock Analyst & Branch Manager Steel Distributor\nBackground : Join Manu Official per hari ini di asuransi sejak 2018\n\nKata Mutiara : \"Consistency beats Talent & Privileges”. | learnt it the\nhardway, so please add the consistency in your success.",
+        "clean_text_id": "Nama: JOHANES HENDRA BUHOKAN\n\nIncome: 45 / Bulan\n\nEx Job : Pernah jadi Stock Analyst & Branch Manager Steel Distributor\nBackground : Join Manu Official per hari ini di asuransi sejak 2018\n\nKata Mutiara : \"Consistency beats Talent & Privileges”. I learnt it the\nhardway, so please add the consistency in your success.",
+        "clean_text_en": "Name: JOHANES HENDRA BUHOKAN\nIncome: 45 / Bulan\nPrevious job: Pernah jadi Stock Analyst & Branch Manager Steel Distributor\nBackground: Join Manu Official sejak 2018\nQuote: \"Consistency beats Talent & Privileges\" (learned the hard way).",
+        "language": "id",
+        "summary": "JOHANES HENDRA BUHOKAN - income: 45 / Bulan; ex job: Pernah jadi Stock Analyst & Branch Manager Steel Distributor",
+        "earnings": {
+          "amount_display": "45 / Bulan",
+          "amount_numeric": null,
+          "currency": "IDR",
+          "approximate": true,
+          "period_text": "Bulan"
+        },
+        "ex_job": "Pernah jadi Stock Analyst & Branch Manager Steel Distributor",
+        "background": "Join Manu Official per hari ini di asuransi sejak 2018",
+        "kata_mutiara": "\"Consistency beats Talent & Privileges”. | learnt it the hardway, so please add the consistency in your success.",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:1‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-002",
+        "name": "AMANDA",
+        "original_text": "Nama: AMANDA\n\nIncome: 32 Juta\n\nEx Job:\n\nBackground : S1 Universitas Indonesia\n\nBuat aku, sukses itu bukan cuma soal angka, tapi tentang punya kendali\natas hidup sendiri. Bisa nikmatin slow morning tanpa terburu-buru,",
+        "clean_text_id": "Nama: AMANDA\n\nIncome: 32 Juta\n\nEx Job:\n\nBackground : S1 Universitas Indonesia\n\nBuat aku, sukses itu bukan cuma soal angka, tapi tentang punya kendali atas hidup sendiri. Bisa nikmatin slow morning tanpa terburu-buru,",
+        "clean_text_en": "Name: AMANDA\nIncome: 32 Juta\nPrevious job: N/A\nBackground: S1 Universitas Indonesia\nQuote/Thought: Success is not only numbers but having control over your life; enjoy slow mornings without rush.",
+        "language": "id",
+        "summary": "AMANDA - income: 32 Juta; background: S1 Universitas Indonesia",
+        "earnings": {
+          "amount_display": "32 Juta",
+          "amount_numeric": 32000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": null
+        },
+        "ex_job": null,
+        "background": "S1 Universitas Indonesia",
+        "kata_mutiara": null,
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:2‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-003",
+        "name": "AHUAT",
+        "original_text": "Nama: AHUAT\n\nIncome: 160 Juta\n\nEx Job : Sales PALUGADA ( Apa yang lu mau aku ada )\n\nBackground :\n\nTestimoni 2 minggu join manulife income 160 Juta\n\nKata Mutiara : Tidak ada yang,Tidak mungkin Hanya mau atau Tidak\n\nuntuk melakukan nya. jika mau sesuatu Lupakan alasan,\nif mau alasan Lupakan mau mu.",
+        "clean_text_id": "Nama: AHUAT\n\nIncome: 160 Juta\n\nEx Job : Sales PALUGADA ( Apa yang lu mau aku ada )\n\nBackground :\n\nTestimoni 2 minggu join manulife income 160 Juta\n\nKata Mutiara : Tidak ada yang,Tidak mungkin Hanya mau atau Tidak\n\nuntuk melakukan nya. jika mau sesuatu Lupakan alasan,\nif mau alasan Lupakan mau mu.",
+        "clean_text_en": "Name: AHUAT\nIncome: 160 Juta\nPrevious job: Sales PALUGADA (\"Apa yang lu mau aku ada\")\nBackground: N/A\nQuote: \"Nothing is impossible. If you want something, forget the reasons; if you want excuses, forget the desire.\"",
+        "language": "id",
+        "summary": "AHUAT - income: 160 Juta; ex job: Sales PALUGADA",
+        "earnings": {
+          "amount_display": "160 Juta",
+          "amount_numeric": 160000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": null
+        },
+        "ex_job": "Sales PALUGADA ( Apa yang lu mau aku ada )",
+        "background": null,
+        "kata_mutiara": "Tidak ada yang,Tidak mungkin Hanya mau atau Tidak\n\nuntuk melakukan nya. jika mau sesuatu Lupakan alasan,\nif mau alasan Lupakan mau mu.",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:3‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-004",
+        "name": "NORMAN KOSASIH Billionaire 6",
+        "original_text": "Nama: NORMAN KOSASIH Billionaire 6\n\nIncome: 1M/ Bulan\n\nEx Job\n\nBackground : Saya suka pekerjaan yang menantang dan juga ingin belajar lebih banyak sehingga saya berharap bisa sukses besar .\n\nJoin 7 Maret, Sudah 6 bulan\n\nKata Mutiara :",
+        "clean_text_id": "Nama: NORMAN KOSASIH Billionaire 6\n\nIncome: 1M/ Bulan\n\nEx Job\n\nBackground : Saya suka pekerjaan yang menantang dan juga ingin belajar lebih banyak sehingga saya berharap bisa sukses besar .\n\nJoin 7 Maret, Sudah 6 bulan\n\nKata Mutiara :",
+        "clean_text_en": "Name: NORMAN KOSASIH (Billionaire 6)\nIncome: 1M/ Bulan\nPrevious job: N/A\nBackground: Likes challenging work and wants to learn more; hopes to be very successful. Joined March 7; already 6 months.\nQuote: N/A",
+        "language": "id",
+        "summary": "NORMAN KOSASIH - income: 1M/ Bulan; background: suka pekerjaan menantang, join 7 Maret",
+        "earnings": {
+          "amount_display": "1M/ Bulan",
+          "amount_numeric": null,
+          "currency": "IDR",
+          "approximate": true,
+          "period_text": "Bulan"
+        },
+        "ex_job": null,
+        "background": "Saya suka pekerjaan yang menantang dan juga ingin belajar lebih banyak sehingga saya berharap bisa sukses besar .",
+        "kata_mutiara": null,
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:4‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-005",
+        "name": "CALVIN ASIKIN",
+        "original_text": "Nama: CALVIN ASIKIN\n\nIncome: 12 juta/bulan\n\nEx Job :\n\nBackground :\n\nKata Mutiara :",
+        "clean_text_id": "Nama: CALVIN ASIKIN\n\nIncome: 12 juta/bulan\n\nEx Job :\n\nBackground :\n\nKata Mutiara :",
+        "clean_text_en": "Name: CALVIN ASIKIN\nIncome: 12 juta/bulan\nPrevious job: N/A\nBackground: N/A\nQuote: N/A",
+        "language": "id",
+        "summary": "CALVIN ASIKIN - income: 12 juta/bulan",
+        "earnings": {
+          "amount_display": "12 juta/bulan",
+          "amount_numeric": 12000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "bulan"
+        },
+        "ex_job": null,
+        "background": null,
+        "kata_mutiara": null,
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:5‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-006",
+        "name": "FAMMY",
+        "original_text": "Nama: FAMMY\n\nIncome: 45Juta\n\nEx Job :\n\nBackground :\n\nKata Mutiara :",
+        "clean_text_id": "Nama: FAMMY\n\nIncome: 45Juta\n\nEx Job :\n\nBackground :\n\nKata Mutiara :",
+        "clean_text_en": "Name: FAMMY\nIncome: 45 Juta\nPrevious job: N/A\nBackground: N/A\nQuote: N/A",
+        "language": "id",
+        "summary": "FAMMY - income: 45 Juta",
+        "earnings": {
+          "amount_display": "45Juta",
+          "amount_numeric": 45000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": null
+        },
+        "ex_job": null,
+        "background": null,
+        "kata_mutiara": null,
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:6‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-007",
+        "name": "SUCI LESTARI",
+        "original_text": "Nama: SUCI LESTARI\n\nIncome: 100 Juta\n\nEx Job :\n\nBackground :\n\nKata Mutiara : “Ora et Labora, this is my calling.”\n\nThis company taught me to be patient, to listen, to serve, and to be\ncommitted to leading\nwith humility, integrity, and a grateful heart.",
+        "clean_text_id": "Nama: SUCI LESTARI\n\nIncome: 100 Juta\n\nEx Job :\n\nBackground :\n\nKata Mutiara : “Ora et Labora, this is my calling.”\n\nThis company taught me to be patient, to listen, to serve, and to be\ncommitted to leading\nwith humility, integrity, and a grateful heart.",
+        "clean_text_en": "Name: SUCI LESTARI\nIncome: 100 Juta\nPrevious job: N/A\nBackground: N/A\nQuote: \"Ora et Labora, this is my calling.\" The company taught patience, listening, serving, commitment to lead with humility and integrity.",
+        "language": "id",
+        "summary": "SUCI LESTARI - income: 100 Juta; quote: \"Ora et Labora, this is my calling.\"",
+        "earnings": {
+          "amount_display": "100 Juta",
+          "amount_numeric": 100000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": null
+        },
+        "ex_job": null,
+        "background": null,
+        "kata_mutiara": "“Ora et Labora, this is my calling.”\n\nThis company taught me to be patient, to listen, to serve, and to be\ncommitted to leading\nwith humility, integrity, and a grateful heart.",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:7‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-008",
+        "name": "MARSHEL YAP",
+        "original_text": "Nama: MARSHEL YAP\n\nIncome: 80 Juta/ Bulan\n\nEx Job : Manager\n\nBackground :\n\nKata Mutiara : “Ora et Labora, this is my calling.”\n\nThis company taught me to be patient, to listen, to serve, and to be\ncommitted to leading\nwith humility, integrity, and a grateful heart.",
+        "clean_text_id": "Nama: MARSHEL YAP\n\nIncome: 80 Juta/ Bulan\n\nEx Job : Manager\n\nBackground :\n\nKata Mutiara : “Ora et Labora, this is my calling.”\n\nThis company taught me to be patient, to listen, to serve, and to be\ncommitted to leading\nwith humility, integrity, and a grateful heart.",
+        "clean_text_en": "Name: MARSHEL YAP\nIncome: 80 Juta/ Bulan\nPrevious job: Manager\nBackground: N/A\nQuote: \"Ora et Labora, this is my calling.\" The company taught patience and leadership with humility and integrity.",
+        "language": "id",
+        "summary": "MARSHEL YAP - income: 80 Juta/ Bulan; ex job: Manager",
+        "earnings": {
+          "amount_display": "80 Juta/ Bulan",
+          "amount_numeric": 80000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "Bulan"
+        },
+        "ex_job": "Manager",
+        "background": "Kata Mutiara : “Ora et Labora, this is my calling.”",
+        "kata_mutiara": "“Ora et Labora, this is my calling.”\n\nThis company taught me to be patient, to listen, to serve, and to be\ncommitted to leading\nwith humility, integrity, and a grateful heart.",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:8‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-009",
+        "name": "VICKY ADITYA",
+        "original_text": "Nama: VICKY ADITYA\n\nIncome: 80 Juta / Bulan (\"Ready to Inspire, Blessed to Achieve.\" )\n\nEx Job :\n\nBackground : | once only dreamed of having a big income\n\nKata Mutiara : \"Grow Big, Live Free, Share More.\"\n\nIf you work hard, there is progress. Because with Eddy, there’s always a way to live safer, calmer, and happier.",
+        "clean_text_id": "Nama: VICKY ADITYA\n\nIncome: 80 Juta / Bulan (\"Ready to Inspire, Blessed to Achieve.\" )\n\nEx Job :\n\nBackground : | once only dreamed of having a big income\n\nKata Mutiara : \"Grow Big, Live Free, Share More.\"\n\nIf you work hard, there is progress. Because with Eddy, there’s always a way to live safer, calmer, and happier.",
+        "clean_text_en": "Name: VICKY ADITYA\nIncome: 80 Juta / Bulan\nPrevious job: N/A\nBackground: Once only dreamed of having a big income\nQuote: \"Grow Big, Live Free, Share More.\"",
+        "language": "id",
+        "summary": "VICKY ADITYA - income: 80 Juta / Bulan; background: once dreamed of big income",
+        "earnings": {
+          "amount_display": "80 Juta / Bulan",
+          "amount_numeric": 80000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "Bulan"
+        },
+        "ex_job": null,
+        "background": "| once only dreamed of having a big income",
+        "kata_mutiara": "\"Grow Big, Live Free, Share More.\"",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:9‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-010",
+        "name": "EDDY",
+        "original_text": "Nama: EDDY\n\nIncome: 80 Juta / Bulan (\"Ready to Inspire, Blessed to Achieve.\" )\n\nEx Job :\n\nBackground : | once only dreamed of having a big income\n\nKata Mutiara : \"Grow Big, Live Free, Share More.\"\n\nIf you work hard, there is progress. Because with Eddy, there’s always a way to live safer, calmer, and happier.",
+        "clean_text_id": "Nama: EDDY\n\nIncome: 80 Juta / Bulan (\"Ready to Inspire, Blessed to Achieve.\" )\n\nEx Job :\n\nBackground : | once only dreamed of having a big income\n\nKata Mutiara : \"Grow Big, Live Free, Share More.\"\n\nIf you work hard, there is progress. Because with Eddy, there’s always a way to live safer, calmer, and happier.",
+        "clean_text_en": "Name: EDDY\nIncome: 80 Juta / Bulan\nPrevious job: N/A\nBackground: Once only dreamed of having a big income\nQuote: \"Grow Big, Live Free, Share More.\"",
+        "language": "id",
+        "summary": "EDDY - income: 80 Juta / Bulan; background: once dreamed of big income",
+        "earnings": {
+          "amount_display": "80 Juta / Bulan",
+          "amount_numeric": 80000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "Bulan"
+        },
+        "ex_job": null,
+        "background": "| once only dreamed of having a big income",
+        "kata_mutiara": "\"Grow Big, Live Free, Share More.\"",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:10‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-011",
+        "name": "ELYA",
+        "original_text": "Nama: ELYA\n\nIncome: 50 Juta / Bulan\n\nEx Job : Owner Studio Eyebrows and Eyelashes\n\nBackground :\n\nKata Mutiara : “Grateful to Grow, Blessed to Protect.”\n\n| am thankful for the chance to grow in this business — not only asa\nprofessional, but as a person.\n\nThrough insurance, | can serve others, protect what matters most, and\nshare the blessing of a secure future.”",
+        "clean_text_id": "Nama: ELYA\n\nIncome: 50 Juta / Bulan\n\nEx Job : Owner Studio Eyebrows and Eyelashes\n\nBackground :\n\nKata Mutiara : “Grateful to Grow, Blessed to Protect.”\n\n| am thankful for the chance to grow in this business — not only asa\nprofessional, but as a person.\n\nThrough insurance, | can serve others, protect what matters most, and\nshare the blessing of a secure future.”",
+        "clean_text_en": "Name: ELYA\nIncome: 50 Juta / Bulan\nPrevious job: Owner Studio Eyebrows and Eyelashes\nBackground: N/A\nQuote: \"Grateful to Grow, Blessed to Protect.\" Thankful for chance to grow in business and serve others through insurance.",
+        "language": "id",
+        "summary": "ELYA - income: 50 Juta / Bulan; ex job: Owner Studio Eyebrows and Eyelashes",
+        "earnings": {
+          "amount_display": "50 Juta / Bulan",
+          "amount_numeric": 50000000,
+          "currency": "IDR",
+          "approximate": false,
+          "period_text": "Bulan"
+        },
+        "ex_job": "Owner Studio Eyebrows and Eyelashes",
+        "background": null,
+        "kata_mutiara": "“Grateful to Grow, Blessed to Protect.”\n\n| am thankful for the chance to grow in this business — not only asa\nprofessional, but as a person.\n\nThrough insurance, | can serve others, protect what matters most, and\nshare the blessing of a secure future.”",
+        "tags": [],
+        "structure": {},
+        "metadata": {
+          "source_file": "DATA PERSONAL.pdf",
+          "source_file_citation": " [oai_citation:11‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+          "notes": "Extracted via OCR; may contain OCR errors."
+        }
+      },
+      {
+        "id": "t-012",
+        "name": null,
+        "original_text": "Membangun Karier sendiri sejak lulus Kuliah\n\nSaya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu, oin akhir Agustus kmarin earn -+ 175jt nom",
+        "clean_text_id": "Saya memutuskan untuk membangun usaha sendiri setelah lulus kuliah karena percaya jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi dibanding menunggu di tangga karier korporat. Dari seorang mahasiswa kini bisa menjalankan bisnis dimana saja dan memiliki kebebasan waktu. Pada akhir Agustus kemarin menghasilkan sekitar Rp 175.000.000.",
+        "clean_text_en": "I decided to build my own business after graduating because I believe the independent path offers greater room to grow and maximize potential compared to waiting on the corporate ladder. From being a student I can now run a business anywhere and have time freedom. In late August I earned approximately Rp 175,000,000.",
+        "language": "id",
+        "summary": "Built own career after graduation; from student to running business; earned ~Rp175 million in late August.",
+        "earnings": {
+          "amount_display": "Rp 175.000.000",
+          "amount_numeric": 175000000,
+          "currency": "IDR",
+          "approximate": true,
+          "period_text": "akhir Agustus"
+        },
+        "ex_job": null,
+        "background": null,
+        "kata_mutiara": null,
+        "tags": [
+          "entrepreneurship",
+          "self-employed",
+          "income"
+        ],
+        "structure": {
+          "motivation": "believe independent path gives room to grow",
+          "transition": "student -> running business",
+          "outcome": "time freedom, income ~Rp175M"
+        },
+        "metadata": {
+          "source": "user_input",
+          "notes": "Provided in chat by user; minor typos corrected."
+        }
+      }
+    ],
+    "metadata": {
+      "source_file": "DATA PERSONAL.pdf",
+      "file_citation": " [oai_citation:12‡DATA PERSONAL.pdf](sediment://file_0000000076246230933b2c5497b8a1bc)",
+      "note": "Extracted via OCR; manual addition included for user-provided testimonial."
+    }
+  }
+  

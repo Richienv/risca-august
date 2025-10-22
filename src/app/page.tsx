@@ -1,7 +1,6 @@
 import CTA from "@/components/sections/cta";
 import FAQ from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
-import Hero from "@/components/sections/hero";
 import { HeroSection } from "@/components/sections/hook";
 import HowItWorks from "@/components/sections/how-it-works";
 import Pricing from "@/components/sections/pricing";
@@ -48,7 +47,6 @@ export default function Home() {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between">
         <WebGLHeroSection />
-        {/* <Hero /> */}
         <TestimonialSection />
         <AboutMeSection />
         <ThreeSectionLayout />

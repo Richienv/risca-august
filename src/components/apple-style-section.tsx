@@ -80,7 +80,7 @@ const AppleStyleSection = () => {
               <div className="mt-8">
                 <div className="bg-white/5 backdrop-blur-sm rounded-lg px-4 py-3">
                   <p className="text-white/70 text-xs">
-                    <strong className="text-white">Catatan:</strong> ALP = pembayaran 1 bulan dihitung omzet 12 bulan
+                    <strong className="text-white">Catatan:</strong> FYP = pembayaran 1 bulan dihitung omzet 12 bulan
                   </p>
                 </div>
               </div>

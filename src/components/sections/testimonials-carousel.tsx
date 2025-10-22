@@ -189,7 +189,7 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="/images/vickiaditya.jpeg"
+                                            src="/images/vicky.png"
                                             alt="Vicki Aditya"
                                             className="w-full h-full object-cover"
                                         />
@@ -269,7 +269,7 @@ export default function BonusCarousel() {
                                 <div className="flex items-center space-x-3 sm:space-x-5">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden flex-shrink-0">
                                         <img 
-                                            src="/images/marsel-yap.jpeg"
+                                            src="/images/.marshel.png"
                                             alt="Marshel Yap"
                                             className="w-full h-full object-cover"
                                         />

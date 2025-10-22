@@ -152,7 +152,7 @@ export function ContactForm() {
 
       const result = await emailjs.send(
         "service_hn4zj9i",
-        "template_1mi3iep",
+        "template_suqdira",
         emailData
       );
 

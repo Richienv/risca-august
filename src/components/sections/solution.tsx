@@ -86,7 +86,7 @@ export default function SolutionSection() {
                             <div className="mt-12 text-center">
                                 <div className="inline-block bg-white/5 backdrop-blur-sm rounded-lg px-6 py-4 mx-auto">
                                     <p className="text-white/70 text-xs lg:text-sm" style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
-                                        <strong className="text-white">Catatan:</strong> ALP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | BE = Business Executive | BP = Business Partner
+                                        <strong className="text-white">Catatan:</strong> FYP = pembayaran 1 bulan dihitung omzet 12 bulan (360jt/tahun = 30jt/bulan) | Life Planner | Life Planner
                                     </p>
                                 </div>
                             </div>

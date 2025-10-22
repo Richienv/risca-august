@@ -24,9 +24,9 @@ const data = [
     memberName: "Eddy",
     memberRole: "Ex-S2 Arsitek • 100+ jt/bulan",
     images: [
-      "/images/eddy.jpeg",
-      "/images/eddy.jpeg",
-      "/images/eddy.jpeg"
+      "/images/eddy.png",
+      "/images/eddy.png",
+      "/images/eddy.png"
     ]
   },
   {
@@ -60,9 +60,9 @@ const data = [
     memberName: "Elya",
     memberRole: "Ex-Beauty Entrepreneur • 50 jt/bulan",
     images: [
-      "/images/elya.jpeg",
-      "/images/elya.jpeg",
-      "/images/elya.jpeg"
+      "/images/elya.png",
+      "/images/elya.png",
+      "/images/elya.png"
     ]
   }
 ];
