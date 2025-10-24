@@ -19,16 +19,7 @@
     "rating": 5,
     "income": "1M/Bulan"
   },
-  {
-    "id": 3,
-    "name": "AHUAT",
-    "role": "Ex Sales PALUGADA",
-    "quote": "Tidak ada yang tidak mungkin. Jika mau sesuatu lupakan alasan, if mau alasan lupakan mau mu.",
-    "story": "Testimoni 2 minggu join MANULIFE income 160 juta. Dari sales biasa kini meraih penghasilan yang fantastis.",
-    "image": "/images/ahuat.png",
-    "rating": 5,
-    "income": "160 Juta"
-  },
+
   {
     "id": 4,
     "name": "AMANDA",
@@ -87,7 +78,7 @@
     "story": "Membuktikan bahwa dengan dedikasi dan kerja keras, siapa pun bisa meraih kesuksesan. Kini meraih income 12 juta per bulan.",
     "image": "/images/calvin-asikin.png",
     "rating": 5,
-    "income": "12 Juta/Bulan"
+    "income": "300 Juta/Bulan"
   },
   {
     "id": 10,
