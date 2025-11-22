@@ -19,7 +19,6 @@
     "rating": 5,
     "income": "1M/Bulan"
   },
-
   {
     "id": 4,
     "name": "AMANDA",
@@ -52,7 +51,7 @@
   },
   {
     "id": 7,
-    "name": "VICKY ADITYA", 
+    "name": "VICKY ADITYA",
     "role": "Entrepreneur",
     "quote": "Ora Et Labora, This is My Calling",
     "story": "This insurance journey has not only helped me fulfill my personal dreams, but more importantly, it has given me the honor to educate and uplift my fellow Indonesians. I am deeply grateful for a community that keeps me growing, and I remain committed to leading with humility, integrity, and a grateful heart.",
@@ -74,8 +73,8 @@
     "id": 9,
     "name": "CALVIN ASIKIN",
     "role": "Business Professional",
-    "quote": "Konsistensi adalah kunci kesuksesan di bisnis ini.",
-    "story": "Membuktikan bahwa dengan dedikasi dan kerja keras, siapa pun bisa meraih kesuksesan. Kini meraih income 300 juta per bulan.",
+    "quote": "Perusahaan dan Komunitas memegang peranan penting dalam keberhasilan bisnis kita",
+    "story": "Puji Tuhan dalam 1,5 bulan di Manulife berhasil mengumpulkan income 300jt.. bukan hanya membantu banyak nasabah, tapi sy jg bisa mambantu bnyk tim merasakan percepatan income yg luar biasa..",
     "image": "/images/calvin-asikin.png",
     "rating": 5,
     "income": "300 Juta/Bulan"
@@ -93,7 +92,7 @@
   {
     "id": 11,
     "name": "SAM",
-    "role": "Entrepreneur", 
+    "role": "Entrepreneur",
     "quote": "Membangun Karier sendiri sejak lulus Kuliah",
     "story": "Saya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu. Join akhir Agustus kemarin earn ~175jt.",
     "image": "/images/sam.png",
