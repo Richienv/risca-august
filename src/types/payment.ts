@@ -96,7 +96,7 @@ export const PACKAGES: Record<PackageType, PackageInfo> = {
     monthlyPrice: 'GRATIS',
     description: 'Bergabung tanpa biaya dengan memenuhi kriteria yang ditentukan',
     features: [
-      'Preferably wanita',
+      'Wanita/Pria (prefer wanita)',
       'Usia 20-40 tahun',
       'Tidak perlu pengalaman kerja, cukup growth mindset',
       'Fokus dan siap memberikan semua untuk sukses',
@@ -112,7 +112,7 @@ export const PACKAGES: Record<PackageType, PackageInfo> = {
     monthlyPrice: 'Rp 10 Jt',
     description: 'Komitmen fee yang akan dikembalikan 100% setelah 2 bulan',
     features: [
-      'Preferably wanita',
+      'Wanita/Pria (prefer wanita)',
       'Usia 20-40 tahun',
       'Tidak perlu pengalaman kerja, cukup growth mindset',
       'Fokus dan siap memberikan semua untuk sukses',

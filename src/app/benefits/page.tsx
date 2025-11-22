@@ -12,7 +12,7 @@ const BenefitsPage = () => {
       <div className="absolute inset-0 z-0">
         <WebGLShader />
       </div>
-      
+
       {/* Overlay for slight dimming effect */}
       <div className="absolute inset-0 bg-black/40 z-10" />
       {/* Header */}
@@ -45,95 +45,95 @@ const BenefitsPage = () => {
       {/* Benefits Grid */}
       <section className="relative z-20 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* Income Benefits */}
+
+          {/* Allowance */}
           <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 hover:transform hover:scale-105 transition-all duration-300" colorOverlay="none">
             <div className="p-8 hover:brightness-110 transition-all duration-500">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-white mb-4">Bonus Income Unlimited</h3>
-            <p className="text-white/80 mb-6">Dapatkan bonus penghasilan tanpa batas dengan sistem kami yang GRATIS! Kerja cerdas untuk keluarga, bukan hanya untung orang lain. Target: 5 polis = Bonus iPad</p>
-            <div className="text-3xl font-bold text-white/90">∞ + 🎁</div>
-            <div className="text-white/60 text-sm">License & sistem GRATIS</div>
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Allowance Bulanan</h3>
+              <p className="text-white/80 mb-6">Dapatkan allowance bulanan yang kompetitif untuk mendukung perjalanan karier kamu. Semakin tinggi performa, semakin besar allowance yang kamu terima!</p>
+              <div className="text-3xl font-bold text-white/90">Rp 3-12 Juta</div>
+              <div className="text-white/60 text-sm">Per bulan sesuai performa</div>
             </div>
           </LiquidGlassContainer>
 
-          {/* Commission Benefits */}
+          {/* Quarterly Bonus */}
           <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 hover:transform hover:scale-105 transition-all duration-300" colorOverlay="none">
             <div className="p-8 hover:brightness-110 transition-all duration-500">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-white mb-4">Bonus Komisi Gila</h3>
-            <p className="text-white/80 mb-6">Raih bonus komisi spektakuler dengan license GRATIS dari kami! Lindungi keluarga dari penyakit kritis sambil meraih cuan. Target: 10 polis = Private mentoring 1-on-1!</p>
-            <div className="text-3xl font-bold text-white/90">50%+ 🏆</div>
-            <div className="text-white/60 text-sm">Komisi + bonus mentoring</div>
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Bonus Per 3 Bulan</h3>
+              <p className="text-white/80 mb-6">Raih bonus triwulanan spektakuler berdasarkan pencapaian target kamu. Konsistensi adalah kunci untuk mendapatkan bonus maksimal!</p>
+              <div className="text-3xl font-bold text-white/90">10-30%</div>
+              <div className="text-white/60 text-sm">Dari total performa triwulanan</div>
             </div>
           </LiquidGlassContainer>
 
-          {/* Bonus Benefits */}
+          {/* Revenue Bonus */}
           <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 hover:transform hover:scale-105 transition-all duration-300" colorOverlay="none">
             <div className="p-8 hover:brightness-110 transition-all duration-500">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732L14.146 12.8l-1.179 4.456a1 1 0 01-1.934 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732L9.854 7.2l1.179-4.456A1 1 0 0112 2z" clipRule="evenodd"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-white mb-4">Bonus Trip Reward Mewah</h3>
-            <p className="text-white/80 mb-6">Bonus traveling gratis ke destinasi impian dengan kerja fleksible - gak nyangkut di kantor! Sistem GRATIS kami bikin lo fokus lindungi keluarga dari hal tak terduga. Target: Top 10% = Trip Eropa!</p>
-            <div className="text-3xl font-bold text-white/90">All-Paid ✈️</div>
-            <div className="text-white/60 text-sm">Kerja fleksible + trip gratis</div>
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Bonus dari Omset</h3>
+              <p className="text-white/80 mb-6">Dapatkan 5% dari total omset yang kamu hasilkan! Semakin besar omset, semakin besar penghasilan tambahan kamu.</p>
+              <div className="text-3xl font-bold text-white/90">5%</div>
+              <div className="text-white/60 text-sm">Dari total omset</div>
             </div>
           </LiquidGlassContainer>
 
-          {/* Training Support */}
+          {/* Referral Bonus */}
           <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 hover:transform hover:scale-105 transition-all duration-300" colorOverlay="none">
             <div className="p-8 hover:brightness-110 transition-all duration-500">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.75 2.524z"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-white mb-4">Bonus Training Premium</h3>
-            <p className="text-white/80 mb-6">Akses bonus training premium dengan license GRATIS! Kerja bukan buat untung orang, tapi melindungi keluarga dari penyakit kritis. Target: 3 bulan konsisten = Sertifikasi internasional!</p>
-            <div className="text-3xl font-bold text-white/90">Free 🎓</div>
-            <div className="text-white/60 text-sm">License GRATIS + sertifikasi</div>
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                  <path d="M6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Bonus Referral</h3>
+              <p className="text-white/80 mb-6">Ajak teman atau keluarga untuk bergabung dan dapatkan bonus referral yang menggiurkan! Bangun network sambil dapat cuan.</p>
+              <div className="text-3xl font-bold text-white/90">25%</div>
+              <div className="text-white/60 text-sm">Dari setiap referral yang join</div>
             </div>
           </LiquidGlassContainer>
 
-          {/* Lifestyle Benefits */}
+          {/* Trip Rewards */}
           <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 hover:transform hover:scale-105 transition-all duration-300" colorOverlay="none">
             <div className="p-8 hover:brightness-110 transition-all duration-500">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-white mb-4">Bonus Lifestyle Upgrade</h3>
-            <p className="text-white/80 mb-6">Bonus upgrade lifestyle dengan kerja fleksible, gak terikat kantor. License & sistem GRATIS kami bantu lo fokus lindungi keluarga dari hal yang tidak diinginkan. Target: 6 bulan konsisten = VIP club access!</p>
-            <div className="text-3xl font-bold text-white/90">Elite 👑</div>
-            <div className="text-white/60 text-sm">Lifestyle fleksible + VIP access</div>
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732L14.146 12.8l-1.179 4.456a1 1 0 01-1.934 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732L9.854 7.2l1.179-4.456A1 1 0 0112 2z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Bonus Trip Gratis</h3>
+              <p className="text-white/80 mb-6">Achieve target tertentu dan nikmati trip gratis ke berbagai destinasi impian! Dari Asia sampai Eropa, ALL EXPENSES PAID!</p>
+              <div className="text-3xl font-bold text-white/90">Asia - Eropa ✈️</div>
+              <div className="text-white/60 text-sm">All-paid trip untuk top performers</div>
             </div>
           </LiquidGlassContainer>
 
-          {/* Network Access */}
+          {/* Special Allowance */}
           <LiquidGlassContainer className="rounded-3xl overflow-hidden bg-black/40 backdrop-blur-md hover:bg-black/50 hover:transform hover:scale-105 transition-all duration-300" colorOverlay="none">
             <div className="p-8 hover:brightness-110 transition-all duration-500">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-                <path d="M6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-white mb-4">Bonus Network Exclusive</h3>
-            <p className="text-white/80 mb-6">Bonus koneksi dengan top leaders, dengan sistem GRATIS dari kami. Kerja untuk melindungi keluarga dari penyakit kritis, bukan cuma untung orang. Target: 1 tahun = Lifetime VIP network access!</p>
-            <div className="text-3xl font-bold text-white/90">VIP 🤝</div>
-            <div className="text-white/60 text-sm">Network lifetime + sistem GRATIS</div>
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-4">Allowance Khusus</h3>
+              <p className="text-white/80 mb-6">Punya background di insurance atau bank? Dapatkan allowance khusus sebagai apresiasi atas pengalaman dan expertise kamu!</p>
+              <div className="text-3xl font-bold text-white/90">Bonus Ekstra 🎯</div>
+              <div className="text-white/60 text-sm">Untuk background insurance & banking</div>
             </div>
           </LiquidGlassContainer>
 
