@@ -1,75 +1,58 @@
 "use client";
 
-import { Card, CardContent } from '@/components/card-8'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Footer from "@/components/sections/footer";
-import { Metadata } from "next";
 import { LiquidGlassContainer } from '@/components/ui/liquid-glass-container';
 import { WebGLShader } from '@/components/ui/web-gl-shader';
 
-const transformations = [
+const roadmapSteps = [
     {
-        title: "Fase 1",
-        subtitle: "Temukan Alasan & Persiapan",
-        description: "Temukan alasan terbesar kamu mulai bisnis ini, tentukan apa yang mau kamu capai dari Bisnis ini dan kapan akan mendapatkan itu? Lalu siapkan waktu serta mindset belajar untuk kuasai 1–2 program yang bisa bantu banyak keluarga aman secara finansial.",
+        step: "STEP 1",
+        period: "Hari 1–10",
+        title: "Fondasi & Lisensi Profesional",
+        goal: "Goal: Kamu punya lisensi + dasar pengetahuan produk proteksi dan investasi.",
+        content: [
+            "Proses lisensi untuk bekerja secara profesional",
+            "Belajar dasar proteksi, kebutuhan finansial, dan investasi",
+            "Pengenalan sistem kerja praktis yang bisa dilakukan via HP",
+            "Onboarding 1-on-1 dengan mentor"
+        ],
+        result: "Hasil akhir: Kamu siap secara legal dan memahami fondasi bisnisnya.",
         image: "/images/first-step.png"
     },
     {
-        title: "Fase 2",
-        subtitle: "Datangi Keluarga & Sahabat",
-        description: "Datangi keluarga dan sahabat yang ingin kamu jaga, lalu ceritakan program yang bisa bantu jaga stabilitas keuangan mereka. Mulai dari orang terdekat yang kamu sayangi.",
-        image: "/images/deal.png"
-    },
-    {
-        title: "Fase 3",
-        subtitle: "Ngobrol Ganti Cerita Program",
-        description: "Ngobrol ganti cerita program dari Manulife. Jelaskan bagaimana program ini bisa memberikan perlindungan jiwa, kesehatan, dana pendidikan anak, dan dana pensiun. Fokus pada manfaat nyata untuk keluarga mereka.",
+        step: "STEP 2",
+        period: "Hari 11–30",
+        title: "Skill Dasar Presentasi & Edukasi",
+        goal: "Goal: Kamu bisa menjelaskan produk dasar health & investment sesuai kebutuhan klien.",
+        content: [
+            "Script presentasi singkat yang mudah dipahami",
+            "Cara membuka percakapan tanpa kesan jualan",
+            "Roleplay dengan mentor",
+            "Teknik closing yang halus dan elegan",
+            "Mulai dari circle terdekat untuk bangun kepercayaan"
+        ],
+        result: "Hasil akhir: Kamu bisa presentasi, edukasi, dan mulai mendapatkan klien pertamamu.",
         image: "/images/branding.png"
     },
     {
-        title: "Fase 4",
-        subtitle: "Ajak Kerabat dengan Bonus Referral",
-        description: "Di fase ini juga bisa sambil mengajak kerabat yang ingin mendapat bisnis simple dengan referensi 25% setiap orang. Bangun network sambil dapat cuan!",
-        image: "/images/meetmeet.png"
-    },
-    {
-        title: "Fase 5",
-        subtitle: "Konsistensi & Momentum",
-        description: "Terus konsisten dengan pola yang sudah berjalan. Posting testimoni dan share progress. Orang mulai percaya dan tertarik ikut bergabung dengan kamu.",
-        image: "/images/cheers.png"
-    },
-    {
-        title: "Fase 6",
-        subtitle: "Bantu Tim Closing - Duplikasi Dimulai",
-        description: "Bantu tim kamu closing, kamu akan mendapatkan bonus 25% sejak pertama closing. Bisnis duplikasi mulai terjadi - ini adalah kunci passive income jangka panjang!",
-        image: "/images/speach.png"
-    },
-    {
-        title: "Fase 7",
-        subtitle: "Duplikasi Sempurna = Passive Income",
-        description: "Tim yang kamu ajak akan menjadi kamu selanjutnya. Duplikasi sempurna akan menjadi passive income. Saat kita tiada, bisnis bisa diwariskan untuk keluarga sebagai legacy.",
-        image: "/images/study.png"
-    },
-    {
-        title: "Fase 8",
-        subtitle: "Raih Semua Bonus",
-        description: "Allowance 3-12 juta/bulan, Bonus triwulanan 10-30%, Bonus 5% dari omset, Bonus referral 25%, dan Trip gratis Asia-Eropa untuk top performers. Semua menunggumu!",
+        step: "STEP 3",
+        period: "Hari 31–60",
+        title: "Penguasaan Sistem & Produksi Pertama",
+        goal: "",
+        content: [
+            "Pola kerja harian yang jelas dan terstruktur",
+            "Teknik follow-up yang sopan dan tidak mengganggu",
+            "Praktik konsultasi dan closing didampingi mentor",
+            "Review dan evaluasi ritme kerjamu",
+            "Optimasi konten (untuk yang menjalankan strategi online)",
+            "Penekanan pada konsistensi: lakukan pola kerja yang sama setiap hari"
+        ],
+        result: "Hasil akhir: Kamu mencapai produksi pertama dan siap naik level. Kuncinya: konsisten, ulangi polanya setiap hari, dan kamu akan melihat hasilnya.",
         image: "/images/checklist.png"
-    },
-    {
-        title: "Fase 9",
-        subtitle: "Rekrut Tanpa Modal & Resiko",
-        description: "Ajak orang-orang yang mau bisnis tanpa modal, tanpa resiko, dibimbing untuk punya passive income. Sistem sudah terbukti berhasil, tinggal duplikasi!",
-        image: "/images/confident.png"
-    },
-    {
-        title: "Fase 10",
-        subtitle: "Hadiah Khusus Business Partner",
-        description: "Hadiah khusus kalau status Business Partner dalam waktu 60 hari sejak keluar kode agen: CASH 10.000.000! Ini bukan mimpi - ini hasil kerja keras dan konsistensimu!",
-        image: "/images/ipad.png"
-    },
+    }
 ];
 
 export default function SolutionDetailsPage() {
@@ -80,7 +63,7 @@ export default function SolutionDetailsPage() {
                 <div className="max-w-7xl mx-auto">
                     <Link
                         href="/"
-                        className="inline-flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+                        className="inline-flex items-center gap-2 text-white hover:text-amber-400 transition-colors"
                     >
                         <ArrowLeft className="w-5 h-5" />
                         <span className="text-sm font-medium">Kembali ke Beranda</span>
@@ -102,11 +85,11 @@ export default function SolutionDetailsPage() {
                         <div className="p-6 lg:p-8 xl:p-12">
                             {/* Heading Section */}
                             <div className="text-center mb-12">
-                                <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-pink-500/60 to-transparent mx-auto mb-6"></div>
+                                <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent mx-auto mb-6"></div>
                                 <motion.h1
                                     className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative mb-4"
                                     style={{
-                                        background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                                        background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                                         backgroundSize: '200% 100%',
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent',
@@ -121,10 +104,10 @@ export default function SolutionDetailsPage() {
                                         ease: 'linear'
                                     }}
                                 >
-                                    10 Fase Menuju Business Partner
+                                    Roadmap Karir 60 Hari
                                 </motion.h1>
-                                <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-4xl mx-auto" style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
-                                    Program sistematis 60 hari: ketemu 2 orang setiap hari, capai rasio closing 4:1, raih omzet Rp 360 juta dalam 8 minggu, dan dapatkan komisi hingga Rp 6,9 juta per bulan. Bonus: promosi ke Business Partner!
+                                <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-4xl mx-auto" style={{ textShadow: '0 0 10px rgba(217, 119, 6, 0.1)' }}>
+                                    Roadmap karir yang jelas dan terukur. Setiap fase dirancang untuk memastikan pertumbuhan income dan kapasitas diri Anda.
                                 </p>
                             </div>
 
@@ -132,7 +115,7 @@ export default function SolutionDetailsPage() {
                             <div className="relative z-10 w-full">
                                 <div className="space-y-8 lg:space-y-12 w-full">
 
-                                    {transformations.map((transformation, index) => (
+                                    {roadmapSteps.map((step, index) => (
                                         <motion.div
                                             key={index}
                                             initial={{ opacity: 0, y: 40 }}
@@ -144,15 +127,15 @@ export default function SolutionDetailsPage() {
                                             {/* Full Width Card Container */}
                                             <LiquidGlassContainer className="w-full rounded-3xl overflow-hidden bg-black/30 backdrop-blur-md hover:bg-black/40 transition-all duration-300" colorOverlay="none">
                                                 <div className="p-0 w-full">
-                                                    <div className={`flex flex-col lg:flex-row items-center w-full ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                                                    <div className={`flex flex-col lg:flex-row items-stretch w-full ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                                                         }`}>
                                                         {/* Image Side - Portrait Format */}
-                                                        <div className="w-full lg:w-2/5 xl:w-1/3 flex-shrink-0">
-                                                            <div className="w-full aspect-[3/4] lg:aspect-[4/5] p-4 lg:p-6">
-                                                                <div className="w-full h-full flex items-center justify-center rounded-xl overflow-hidden">
+                                                        <div className="w-full lg:w-2/5 xl:w-1/3 flex-shrink-0 relative min-h-[300px] lg:min-h-full">
+                                                            <div className="absolute inset-0 p-4 lg:p-6">
+                                                                <div className="w-full h-full flex items-center justify-center rounded-xl overflow-hidden bg-gradient-to-b from-amber-500/10 to-transparent">
                                                                     <img
-                                                                        src={transformation.image}
-                                                                        alt={transformation.subtitle}
+                                                                        src={step.image}
+                                                                        alt={step.title}
                                                                         className="w-full h-full object-contain max-w-[300px] lg:max-w-full"
                                                                     />
                                                                 </div>
@@ -161,62 +144,53 @@ export default function SolutionDetailsPage() {
 
                                                         {/* Text Side */}
                                                         <div className="flex-1 w-full lg:w-3/5 xl:w-2/3">
-                                                            <div className="p-6 sm:p-8 lg:p-12 xl:p-16 h-full flex flex-col text-center lg:text-left">
+                                                            <div className="p-6 sm:p-8 lg:p-12 xl:p-16 h-full flex flex-col text-left">
 
                                                                 {/* Phase Info Section - Top */}
-                                                                <div className="flex items-center justify-center lg:justify-start space-x-3 mb-6">
-                                                                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-pink-500/20 flex items-center justify-center flex-shrink-0">
-                                                                        <span className="text-pink-400 text-base lg:text-lg font-bold">
-                                                                            {index + 1}
+                                                                <div className="flex items-center space-x-3 mb-6">
+                                                                    <div className="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                                                                        <span className="text-amber-400 text-sm font-bold tracking-wider">
+                                                                            {step.step}
                                                                         </span>
                                                                     </div>
-                                                                    <div>
-                                                                        <h3 className="text-base lg:text-lg font-semibold text-white">Fase {index + 1}</h3>
-                                                                        <p className="text-sm lg:text-base text-white/70 font-light">60 Hari Program</p>
-                                                                    </div>
+                                                                    <div className="h-px w-8 bg-amber-500/30"></div>
+                                                                    <p className="text-sm lg:text-base text-white/70 font-light tracking-wide">{step.period}</p>
                                                                 </div>
 
                                                                 {/* Title */}
-                                                                <div className="mb-4 lg:mb-6">
-                                                                    <h4 className="text-lg lg:text-xl xl:text-2xl font-bold text-white mb-2">
-                                                                        {transformation.title}
+                                                                <div className="mb-6">
+                                                                    <h4 className="text-2xl lg:text-3xl font-bold text-white mb-2 leading-tight">
+                                                                        {step.title}
                                                                     </h4>
-                                                                    {index === transformations.length - 1 ? (
-                                                                        <motion.p
-                                                                            className="text-xl lg:text-2xl xl:text-3xl leading-tight font-semibold tracking-wide"
-                                                                            style={{
-                                                                                background: 'linear-gradient(90deg, #fde047 0%, #f59e0b 50%, #fde047 100%)',
-                                                                                backgroundSize: '200% 100%',
-                                                                                WebkitBackgroundClip: 'text',
-                                                                                WebkitTextFillColor: 'transparent',
-                                                                                backgroundClip: 'text',
-                                                                            }}
-                                                                            animate={{
-                                                                                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                                                                            }}
-                                                                            transition={{
-                                                                                duration: 3,
-                                                                                repeat: Infinity,
-                                                                                ease: 'linear'
-                                                                            }}
-                                                                        >
-                                                                            {transformation.subtitle}
-                                                                        </motion.p>
-                                                                    ) : (
-                                                                        <p className="text-xl lg:text-2xl xl:text-3xl leading-tight text-pink-400 font-semibold">
-                                                                            {transformation.subtitle}
-                                                                        </p>
-                                                                    )}
                                                                 </div>
 
-                                                                {/* Description */}
-                                                                <div className="flex-1">
-                                                                    <p className={`text-sm lg:text-base xl:text-lg leading-relaxed ${index === transformations.length - 1
-                                                                        ? 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent font-semibold'
-                                                                        : 'text-white/80 font-light'
-                                                                        }`} style={{ textShadow: '0 0 10px rgba(236, 72, 153, 0.1)' }}>
-                                                                        {transformation.description}
-                                                                    </p>
+                                                                {/* Content */}
+                                                                <div className="space-y-6 flex-1">
+                                                                    {step.goal && (
+                                                                        <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+                                                                            <p className="text-white/90 font-medium italic">
+                                                                                {step.goal}
+                                                                            </p>
+                                                                        </div>
+                                                                    )}
+
+                                                                    <div className="space-y-3">
+                                                                        <h5 className="text-amber-400 font-semibold text-sm uppercase tracking-wider">Isi Materi:</h5>
+                                                                        <ul className="space-y-2">
+                                                                            {step.content.map((item, i) => (
+                                                                                <li key={i} className="flex items-start gap-3 text-white/80 font-light">
+                                                                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+                                                                                    <span>{item}</span>
+                                                                                </li>
+                                                                            ))}
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div className="pt-4 border-t border-white/10">
+                                                                        <p className="text-white font-medium">
+                                                                            {step.result}
+                                                                        </p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -226,6 +200,28 @@ export default function SolutionDetailsPage() {
                                         </motion.div>
                                     ))}
 
+                                </div>
+
+                                {/* Penegasan Section */}
+                                <div className="mt-16 sm:mt-24 text-center max-w-3xl mx-auto px-4">
+                                    <div className="p-8 rounded-3xl bg-gradient-to-b from-amber-900/20 to-black border border-amber-500/30 backdrop-blur-sm">
+                                        <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                                            Konsistensi dan pengulangan adalah kunci.
+                                        </h3>
+                                        <p className="text-white/70 text-lg leading-relaxed">
+                                            Bukan tentang seberapa cepat kamu mulai, tetapi seberapa stabil kamu menjalankan sistemnya.
+                                        </p>
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <div className="mt-12">
+                                        <Link href="/checkout?package=paid">
+                                            <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full hover:from-amber-500 hover:to-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 shadow-[0_0_20px_rgba(217,119,6,0.3)] hover:shadow-[0_0_30px_rgba(217,119,6,0.5)] hover:scale-105">
+                                                <span>Mulai Roadmap 60 Harimu</span>
+                                                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                                            </button>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
 
