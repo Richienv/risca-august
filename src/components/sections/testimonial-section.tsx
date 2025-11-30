@@ -144,10 +144,10 @@ const TestimonialSection = () => {
               <span>Testimoni Nyata</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              <span className="text-amber-400">Income Real</span> dari Tim Kami
+              <span className="text-amber-400">Progress Real</span>, Bukan Janji
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto">
-              Dari 12 juta hingga 1M per bulan! Ini bukan mimpi, tapi pencapaian nyata tim MANULIFE. Mereka yang dulu ragu, kini meraih penghasilan fantastis.
+              Inilah kisah mereka yang memilih mencoba, tetap konsisten, dan akhirnya menemukan versi terbaik diri mereka.
             </p>
           </div>
         </div>

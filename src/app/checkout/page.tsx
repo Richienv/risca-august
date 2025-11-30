@@ -17,7 +17,7 @@ function CheckoutContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const packageType = searchParams.get('package') as PackageType
-  
+
   const [formData, setFormData] = useState<PaymentFormData>({
     packageType: packageType || 'starter',
     firstName: '',
@@ -25,18 +25,18 @@ function CheckoutContent() {
     email: '',
     phone: ''
   })
-  
+
   const [errors, setErrors] = useState<Partial<PaymentFormData>>({})
   const [showStatusModal, setShowStatusModal] = useState(false)
   const [isOrderSummaryOpen, setIsOrderSummaryOpen] = useState(true)
 
-  const { 
-    paymentState, 
-    isLoading, 
-    error, 
-    paymentResult, 
+  const {
+    paymentState,
+    isLoading,
+    error,
+    paymentResult,
     orderId,
-    initiatePayment 
+    initiatePayment
   } = usePayment({
     onSuccess: (result) => {
       setShowStatusModal(true)
@@ -112,23 +112,23 @@ function CheckoutContent() {
       <div className="absolute inset-0 z-0">
         <WebGLShader />
       </div>
-      
+
       {/* Overlay for slight dimming effect */}
       <div className="absolute inset-0 bg-black/40 z-10" />
-      
+
       <div className="relative z-20 min-h-screen text-white py-8">
         <div className="container mx-auto px-6 max-w-4xl">
           {/* Header */}
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-3">
-              <Link 
+              <Link
                 href="/#pricing-section"
-                className="text-gray-400 hover:text-pink-400 transition-colors"
+                className="text-gray-400 hover:text-amber-400 transition-colors"
               >
                 <ArrowLeft className="h-5 w-5" />
               </Link>
               <h1 className="text-2xl font-bold text-white" style={{
-                background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                 backgroundSize: '200% 100%',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -140,33 +140,33 @@ function CheckoutContent() {
 
           <div className="max-w-2xl mx-auto">
             {/* Payment Form with embedded Order Summary */}
-            <LiquidGlassContainer className="bg-black/40 backdrop-blur-md border border-pink-400/30 hover:border-pink-400/50 transition-all duration-300 rounded-3xl overflow-hidden" colorOverlay="none">
+            <LiquidGlassContainer className="bg-black/40 backdrop-blur-md border border-amber-500/30 hover:border-amber-500/50 transition-all duration-300 rounded-3xl overflow-hidden" colorOverlay="none">
               <div className="p-8">
                 <div className="pb-4">
-                  <h2 className="flex items-center gap-2 text-white text-lg" style={{ 
-                    background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                  <h2 className="flex items-center gap-2 text-white text-lg" style={{
+                    background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                     backgroundSize: '200% 100%',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                     animation: 'gradient-shift 3s linear infinite'
                   }}>
-                    <CreditCard className="h-4 w-4 text-pink-400" style={{ filter: 'drop-shadow(0 0 6px rgba(236, 72, 153, 0.6))' }} />
+                    <CreditCard className="h-4 w-4 text-amber-400" style={{ filter: 'drop-shadow(0 0 6px rgba(217, 119, 6, 0.6))' }} />
                     Informasi Pembayaran
                   </h2>
                 </div>
                 <div className="space-y-6">
-                  
+
                   {/* Collapsible Order Summary */}
                   <div className="rounded-lg">
                     <button
                       onClick={() => setIsOrderSummaryOpen(!isOrderSummaryOpen)}
-                      className="w-full flex items-center justify-between p-4 hover:bg-pink-400/5 transition-colors rounded-lg"
+                      className="w-full flex items-center justify-between p-4 hover:bg-amber-500/5 transition-colors rounded-lg"
                     >
                       <div className="flex items-center gap-2">
-                        <Shield className="h-4 w-4 text-pink-400" style={{ filter: 'drop-shadow(0 0 6px rgba(236, 72, 153, 0.6))' }} />
-                        <span className="text-white font-medium" style={{ 
-                          background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                        <Shield className="h-4 w-4 text-amber-400" style={{ filter: 'drop-shadow(0 0 6px rgba(217, 119, 6, 0.6))' }} />
+                        <span className="text-white font-medium" style={{
+                          background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                           backgroundSize: '200% 100%',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -177,20 +177,20 @@ function CheckoutContent() {
                         </span>
                       </div>
                       {isOrderSummaryOpen ? (
-                        <ChevronUp className="h-4 w-4 text-pink-400" />
+                        <ChevronUp className="h-4 w-4 text-amber-400" />
                       ) : (
-                        <ChevronDown className="h-4 w-4 text-pink-400" />
+                        <ChevronDown className="h-4 w-4 text-amber-400" />
                       )}
                     </button>
-                    
+
                     {isOrderSummaryOpen && (
                       <div className="p-4 pt-0 space-y-4">
                         {/* Package Info */}
                         <div className="bg-gray-900/30 p-4 rounded-lg">
                           <div className="mb-3">
                             <div>
-                              <h3 className="font-semibold text-base text-white" style={{ 
-                                background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                              <h3 className="font-semibold text-base text-white" style={{
+                                background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                                 backgroundSize: '200% 100%',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -200,12 +200,12 @@ function CheckoutContent() {
                               <p className="text-sm text-gray-400">{packageInfo.description}</p>
                             </div>
                           </div>
-                          
+
                           <div className="space-y-2">
                             <div className="grid gap-1 max-h-40 overflow-y-auto">
                               {packageInfo.features.map((feature, index) => (
                                 <div key={index} className="flex items-start gap-2">
-                                  <Check className="h-3 w-3 text-pink-400 mt-0.5 flex-shrink-0" style={{ filter: 'drop-shadow(0 0 4px rgba(236, 72, 153, 0.6))' }} />
+                                  <Check className="h-3 w-3 text-amber-400 mt-0.5 flex-shrink-0" style={{ filter: 'drop-shadow(0 0 4px rgba(217, 119, 6, 0.6))' }} />
                                   <span className="text-xs text-gray-400">{feature}</span>
                                 </div>
                               ))}
@@ -217,8 +217,8 @@ function CheckoutContent() {
                         <div className="space-y-2 border-t border-gray-700/50 pt-3 mt-4">
                           <div className="flex justify-between font-bold">
                             <span className="text-white">Total</span>
-                            <span className="text-white" style={{ 
-                              background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
+                            <span className="text-white" style={{
+                              background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                               backgroundSize: '200% 100%',
                               WebkitBackgroundClip: 'text',
                               WebkitTextFillColor: 'transparent',
@@ -229,10 +229,10 @@ function CheckoutContent() {
                         </div>
 
                         {/* Security Info */}
-                        <div className="bg-pink-900/10 p-3 rounded-lg">
+                        <div className="bg-amber-900/10 p-3 rounded-lg">
                           <div className="flex items-center gap-2">
-                            <Shield className="h-3 w-3 text-pink-400" />
-                            <span className="text-xs text-pink-400/80">Pembayaran aman dengan Midtrans SSL</span>
+                            <Shield className="h-3 w-3 text-amber-400" />
+                            <span className="text-xs text-amber-400/80">Pembayaran aman dengan Midtrans SSL</span>
                           </div>
                         </div>
                       </div>
@@ -250,7 +250,7 @@ function CheckoutContent() {
                             value={formData.firstName}
                             onChange={(e) => handleInputChange('firstName', e.target.value)}
                             placeholder="John"
-                            className={`bg-pink-900/30 border-pink-700/50 text-white placeholder-pink-300/50 focus:border-pink-400 focus:ring-pink-400 h-9 ${errors.firstName ? 'border-red-500' : ''}`}
+                            className={`bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-300/50 focus:border-amber-400 focus:ring-amber-400 h-9 ${errors.firstName ? 'border-red-500' : ''}`}
                           />
                           {errors.firstName && (
                             <p className="text-xs text-red-400 mt-1">{errors.firstName}</p>
@@ -263,7 +263,7 @@ function CheckoutContent() {
                             value={formData.lastName}
                             onChange={(e) => handleInputChange('lastName', e.target.value)}
                             placeholder="Doe"
-                            className="bg-pink-900/30 border-pink-700/50 text-white placeholder-pink-300/50 focus:border-pink-400 focus:ring-pink-400 h-9"
+                            className="bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-300/50 focus:border-amber-400 focus:ring-amber-400 h-9"
                           />
                         </div>
                       </div>
@@ -276,7 +276,7 @@ function CheckoutContent() {
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
                           placeholder="john@example.com"
-                          className={`bg-pink-900/30 border-pink-700/50 text-white placeholder-pink-300/50 focus:border-pink-400 focus:ring-pink-400 h-9 ${errors.email ? 'border-red-500' : ''}`}
+                          className={`bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-300/50 focus:border-amber-400 focus:ring-amber-400 h-9 ${errors.email ? 'border-red-500' : ''}`}
                         />
                         {errors.email && (
                           <p className="text-sm text-red-400 mt-1">{errors.email}</p>
@@ -290,7 +290,7 @@ function CheckoutContent() {
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
                           placeholder="08123456789"
-                          className={`bg-pink-900/30 border-pink-700/50 text-white placeholder-pink-300/50 focus:border-pink-400 focus:ring-pink-400 ${errors.phone ? 'border-red-500' : ''}`}
+                          className={`bg-amber-900/30 border-amber-700/50 text-white placeholder-amber-300/50 focus:border-amber-400 focus:ring-amber-400 ${errors.phone ? 'border-red-500' : ''}`}
                         />
                         {errors.phone && (
                           <p className="text-sm text-red-400 mt-1">{errors.phone}</p>
@@ -356,7 +356,7 @@ export default function CheckoutPage() {
         <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="relative z-20 min-h-screen flex items-center justify-center">
           <div className="w-full max-w-4xl mx-auto p-4 animate-pulse">
-            <LiquidGlassContainer className="bg-gray-900/30 rounded-3xl h-96 border border-pink-400/20" colorOverlay="none">
+            <LiquidGlassContainer className="bg-gray-900/30 rounded-3xl h-96 border border-amber-400/20" colorOverlay="none">
               <div className="flex items-center justify-center h-full">
                 <div className="text-white">Loading...</div>
               </div>

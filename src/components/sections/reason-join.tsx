@@ -10,31 +10,31 @@ const AboutMeSection = () => {
       title: "Belajar Bareng, Dibimbing Sampai Kamu Bisa",
       description: "Kamu mau belajar step-by-step dari aku dan tim yang sudah membangun bisnis ini dari nol. Semua strategi, arahan, dan materinya sudah aku siapin supaya kamu cepat paham dan nggak bingung harus mulai dari mana.",
       metrics: "Mentoring langsung dari yang sudah berpengalaman",
-      image: "/images/reason_mentoring.png"
+      image: "/images/team_real_photo.png"
     },
     {
       title: "Penghasilan Besar + Waktu Fleksibel",
       description: "Cocok buat kamu yang ingin meningkatkan pendapatan, tapi tetap punya waktu untuk keluarga, pekerjaan, kuliah, dan diri sendiri. Semua bisa dijalankan sesuai ritme hidupmu.",
       metrics: "Fleksibilitas penuh sesuai ritme hidup",
-      image: "/images/reason_flexible.png"
+      image: "/images/team_real_photo.png"
     },
     {
       title: "Kerja yang Ada Manfaatnya",
       description: "Kita membantu banyak keluarga memiliki perencanaan keuangan yang matang, dana pendidikan anak, dan dana pensiun. Ini kerja yang nggak cuma cuan, tapi benar-benar berdampak dan bermakna untuk orang lain.",
       metrics: "Dampak nyata untuk banyak keluarga",
-      image: "/images/reason_meaningful.png"
+      image: "/images/team_real_photo.png"
     },
     {
       title: "Bisa Mulai Dari Nol, Cocok Buat Side Job",
       description: "Nggak perlu pengalaman sebelumnya. Nggak perlu background keuangan. Sistem, pelatihan, materi, dan tools sudah lengkap — kamu tinggal mengikuti alurnya bersama tim.",
       metrics: "Sistem lengkap untuk pemula",
-      image: "/images/reason_beginner.png"
+      image: "/images/team_real_photo.png"
     },
     {
       title: "Bukan Cuman Side Job, Ini Karier yang Bisa Tumbuh Bareng Kamu",
       description: "Kamu bisa membangunnya pelan pelan sambil belajar. Karier ini tumbuh mengikuti hidupmu, dan bisa menjadi sumber penghasilan jangka panjang yang bisa kamu temukan di keluarga nanti.",
       metrics: "Legacy yang bisa diwariskan",
-      image: "/images/reason_longterm.png"
+      image: "/images/team_real_photo.png"
     }
   ];
 

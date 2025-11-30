@@ -94,16 +94,19 @@ export const PACKAGES: Record<PackageType, PackageInfo> = {
     name: 'Starter Partner',
     price: 0,
     monthlyPrice: 'GRATIS',
-    description: 'Mulai perjalanan karirmu sebagai Financial Consultant',
+    description: 'Mulai perjalanan karirmu sebagai Financial Consultant dengan ritme yang fleksibel.',
     features: [
-      'Wanita/Pria (prefer wanita)',
-      'Usia 20-40 tahun',
+      'Wanita/Pria',
+      'Usia 17-35 tahun',
       'Minimal pendidikan SMA/D1',
-      'Lokasi di Jabodetabek (atau bersedia Zoom)',
-      'Akses training dasar',
-      'Komisi penjualan langsung',
-      'Bonus Referral 25%',
-      'Kesempatan upgrade ke Business Partner'
+      'Lokasi di Jabodetabek',
+      'Potensi Income: Unlimited (Sama)',
+      'Bonus Referral: 25% (Sama)',
+      'Reward Trip: Jalan-jalan Gratis (Sama)',
+      'Allowance: Rp 5 Jt/Bln (Target 5 Jt) (Sama)',
+      'Mentoring: Intensif & Full Support (Sama)',
+      'Kecepatan: Tergantung Diri Sendiri',
+      'Guarantee: Tidak Ada Resiko'
     ]
   },
   paid: {
@@ -111,18 +114,19 @@ export const PACKAGES: Record<PackageType, PackageInfo> = {
     name: 'Business Partner',
     price: 10000000,
     monthlyPrice: 'Rp 10 Jt',
-    description: 'Full access dengan allowance bulanan dan bonus eksklusif (Fee dikembalikan 100% jika capai target)',
+    description: 'Akses penuh ke sistem bisnis dengan percepatan, mentoring intensif, dan jaminan keberhasilan.',
     features: [
-      'Monthly Allowance: Rp 3.5 Jt + Rp 1 Jt',
-      'Target Bulanan: Rp 4.2 Jt/bulan',
-      'Bonus 3 Bulan: Total income Rp 17.5 Jt',
-      'Bonus Referral: 25%',
-      'Khusus Banking & Insurance: Gaji Pokok Rp 3-12 Jt (Target Kecil)',
-      'Personal Sales: Income Rp 4.5 Jt (Target Rp 300 Jt)',
-      'Bonus Tambahan: Rp 5 Jt (jika capai target 2 bulan)',
-      'Potensi Income: 2x - 4x lipat dari sebelumnya',
-      'Mentoring Eksklusif & Blueprint Sukses',
-      'Chance to win FREE iPad'
+      'Ingin percepatan income & karir',
+      'Siap mengikuti mentoring intensif',
+      'Fokus mengejar hasil cepat',
+      'Komitmen tinggi untuk sukses',
+      'Potensi Income: Unlimited (Sama)',
+      'Bonus Referral: 25% (Sama)',
+      'Reward Trip: Jalan-jalan Gratis (Sama)',
+      'Allowance: Rp 5 Jt/Bln (Target 5 Jt) (Sama)',
+      'Mentoring: Intensif & Full Support (Sama)',
+      'Kecepatan: Fast Track (3 Bulan)',
+      'Guarantee: Uang Kembali 100%'
     ]
   }
 }

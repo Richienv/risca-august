@@ -31,8 +31,8 @@ const stepsData = [
         colSpan: 1
     },
     {
-        title: "Hari ke 46–60 — Gaji Pasti & Komisi",
-        description: "Nikmati gaji pasti Rp 4.5 jt/bulan (pasti dapat di luar bonus). Dengan target bulanan Rp 4.2 jt/bulan, kamu juga akan dapat komisi QBP/3 bulan. Total income Rp 13 jt + Rp 4.5 jt = Rp 17.5 juta per bulan.",
+        title: "Hari ke 46–60 — Allowance & Komisi",
+        description: "Allowance Rp 5 juta dan target Rp 5 juta. Simpel, jelas, dan transparan.",
         imageSrc: "/images/first-income.png",
         colSpan: 1
     },
@@ -43,14 +43,8 @@ const stepsData = [
         colSpan: 1
     },
     {
-        title: "Hari ke 71–80 — Bonus Cash Rp 5 Juta",
-        description: "Raih bonus cash Rp 5 juta jikalau bisa capai target closing Rp 300 juta dalam 2 bulan langsung. Reward spesial untuk performa luar biasa.",
-        imageSrc: "/images/bonus_cash_gold.png",
-        colSpan: 1
-    },
-    {
         title: "Hari ke 81–90 — Trip Perjalanan Dunia",
-        description: "Grand Reward: Trip perjalanan ke luar negeri (Tiket + Hotel). Syarat: Capai target besar & sukses duplikasi sistem '90 Hari' ke timmu.",
+        description: "Bonus trip Asia + Eropa. Reward spesial untuk performa luar biasa.",
         imageSrc: "/images/trip_world_gold.png",
         colSpan: 1
     }

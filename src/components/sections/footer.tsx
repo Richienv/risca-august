@@ -12,15 +12,21 @@ export default function Footer() {
               Risca Agustine
             </span>
           </div>
-          <p className="text-white/70 text-center max-w-md">
-            MANULIFE Jakarta - Peluang Bisnis Asuransi
-          </p>
+          <div className="text-white/70 text-center max-w-md space-y-1">
+            <p>Life & Health Business Unit – Jakarta</p>
+            <p>Bagian dari Agency Network Manulife</p>
+          </div>
         </div>
 
-        <div className="border-t pt-8 flex flex-col items-center">
-          <span className="text-sm text-muted-foreground mb-4 text-center">
-            © {new Date().getFullYear()} {siteConfig.name}. {siteConfig.description}
-          </span>
+        <div className="border-t border-white/10 pt-8 flex flex-col items-center">
+          <div className="text-center max-w-2xl mx-auto mb-4">
+            <p className="text-sm text-white/60 mb-2">
+              © 2025 Risca Insurance Community.
+            </p>
+            <p className="text-sm text-white/50 leading-relaxed">
+              Join community bisnis proteksi finansial yang tumbuh pesat. Belajar, berkembang, dan sukses bersama melalui mentorship & support system yang sudah terbukti.
+            </p>
+          </div>
           <div className="flex space-x-6">
 
           </div>

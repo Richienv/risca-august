@@ -118,7 +118,7 @@ const IncomeBreakdownSection = () => {
                 <div className="mb-16">
                     {/* 1. Simulation Case Study (The Image Logic) */}
                     <IncomeAccordionItem
-                        title="Simulasi Target: 300 Juta FYP (3 Bulan)"
+                        title="Simulasi Target: 300 Juta (3 Bulan)"
                         icon={Calculator}
                         isOpen={openSection === "simulation"}
                         onClick={() => toggleSection("simulation")}
@@ -128,49 +128,36 @@ const IncomeBreakdownSection = () => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
                                     <div className="text-white/60 text-sm mb-1">Target 3 Bulan</div>
-                                    <div className="text-2xl font-bold text-amber-400">300 Jt FYP</div>
+                                    <div className="text-2xl font-bold text-amber-400">300 Jt</div>
                                 </div>
                                 <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
                                     <div className="text-white/60 text-sm mb-1">Target Per Bulan</div>
-                                    <div className="text-2xl font-bold text-white">100 Jt FYP</div>
+                                    <div className="text-2xl font-bold text-white">100 Jt</div>
                                 </div>
                                 <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
                                     <div className="text-white/60 text-sm mb-1">Target Per Minggu</div>
-                                    <div className="text-2xl font-bold text-white">25 Jt FYP</div>
+                                    <div className="text-2xl font-bold text-white">25 Jt</div>
                                 </div>
                             </div>
 
                             {/* Calculation Details */}
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                {/* Left: The Math */}
+                            <div className="max-w-2xl mx-auto">
                                 <div className="space-y-6">
                                     <div className="space-y-4">
-                                        <h4 className="font-semibold text-white flex items-center gap-2">
+                                        <h4 className="font-semibold text-white flex items-center gap-2 justify-center">
                                             <DollarSign className="w-4 h-4 text-amber-500" />
                                             Perhitungan Income
                                         </h4>
 
                                         {/* Komisi */}
-                                        <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
-                                            <div className="flex justify-between items-center text-sm text-white/70">
+                                        <div className="p-6 rounded-xl bg-white/5 border border-white/10 space-y-2">
+                                            <div className="flex justify-between items-center text-base text-white/70">
                                                 <span>Komisi (Rate 25%)</span>
                                                 <span className="font-mono">300 Jt x 25%</span>
                                             </div>
-                                            <div className="flex justify-between items-center text-xl font-bold text-white">
+                                            <div className="flex justify-between items-center text-2xl font-bold text-white pt-2 border-t border-white/10 mt-2">
                                                 <span>Total Komisi</span>
                                                 <span>Rp 75.000.000</span>
-                                            </div>
-                                        </div>
-
-                                        {/* Bonus Produksi */}
-                                        <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
-                                            <div className="flex justify-between items-center text-sm text-white/70">
-                                                <span>Bonus Produksi (Rate 30%)</span>
-                                                <span className="font-mono">75 Jt x 30%</span>
-                                            </div>
-                                            <div className="flex justify-between items-center text-xl font-bold text-amber-400">
-                                                <span>Total Bonus</span>
-                                                <span>Rp 22.500.000</span>
                                             </div>
                                         </div>
                                     </div>
@@ -180,39 +167,10 @@ const IncomeBreakdownSection = () => {
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="text-white/90 font-medium">Total Income (3 Bulan)</span>
                                         </div>
-                                        <div className="text-3xl md:text-4xl font-bold text-white font-mono">
-                                            Rp 97.500.000
+                                        <div className="text-4xl md:text-5xl font-bold text-white font-mono text-center py-2">
+                                            Rp 75.000.000
                                         </div>
                                     </div>
-                                </div>
-
-                                {/* Right: The Rules (Ketentuan) */}
-                                <div className="p-6 rounded-xl bg-white/5 border border-white/10 h-full">
-                                    <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
-                                        <Target className="w-4 h-4 text-amber-500" />
-                                        Ketentuan Bonus Produksi
-                                    </h4>
-                                    <p className="text-sm text-white/60 mb-6">
-                                        Persentase bonus ditentukan berdasarkan pencapaian komisi kamu:
-                                    </p>
-
-                                    <div className="space-y-3">
-                                        <div className="flex items-center justify-between p-3 rounded-lg bg-black/20 border border-white/5">
-                                            <span className="text-white/80">Komisi 3 Juta</span>
-                                            <span className="font-bold text-amber-500">10%</span>
-                                        </div>
-                                        <div className="flex items-center justify-between p-3 rounded-lg bg-black/20 border border-white/5">
-                                            <span className="text-white/80">Komisi 15 Juta</span>
-                                            <span className="font-bold text-amber-500">20%</span>
-                                        </div>
-                                        <div className="flex items-center justify-between p-3 rounded-lg bg-amber-500/20 border border-amber-500/50">
-                                            <span className="text-white font-medium">Komisi 30 Juta</span>
-                                            <span className="font-bold text-amber-400">30%</span>
-                                        </div>
-                                    </div>
-                                    <p className="text-xs text-white/40 mt-4 italic">
-                                        *Karena komisi simulasi mencapai 75 Juta (di atas 30 Juta), maka berhak mendapatkan rate maksimal 30%.
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +178,7 @@ const IncomeBreakdownSection = () => {
 
                     {/* 2. Fixed Salary & Referral */}
                     <IncomeAccordionItem
-                        title="Income Tambahan: Gaji Tetap & Referral"
+                        title="Income Tambahan: Allowance & Referral"
                         icon={Gift}
                         isOpen={openSection === "additional"}
                         onClick={() => toggleSection("additional")}
@@ -232,9 +190,9 @@ const IncomeBreakdownSection = () => {
                                     <div className="p-2 rounded-lg bg-green-500/20 text-green-400">
                                         <Wallet className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-lg font-bold text-white">Gaji Tetap (Allowance)</h4>
+                                    <h4 className="text-lg font-bold text-white">Allowance</h4>
                                 </div>
-                                <div className="text-3xl font-bold text-white mb-2">Rp 4.500.000<span className="text-sm font-normal text-white/50">/bulan</span></div>
+                                <div className="text-3xl font-bold text-white mb-2">Rp 5.000.000<span className="text-sm font-normal text-white/50">/bulan</span></div>
                                 <p className="text-white/70 text-sm">
                                     Pasti dapat diluar bonus dan komisi. Ini adalah jaring pengaman finansialmu setiap bulan.
                                 </p>
