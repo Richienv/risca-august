@@ -91,39 +91,37 @@ export const PACKAGE_PRICES: Record<PackageType, number> = {
 export const PACKAGES: Record<PackageType, PackageInfo> = {
   free: {
     type: 'free',
-    name: 'Free Entry',
+    name: 'Starter Partner',
     price: 0,
     monthlyPrice: 'GRATIS',
-    description: 'Bergabung tanpa biaya dengan memenuhi kriteria yang ditentukan',
+    description: 'Mulai perjalanan karirmu sebagai Financial Consultant',
     features: [
       'Wanita/Pria (prefer wanita)',
       'Usia 20-40 tahun',
-      'Tidak perlu pengalaman kerja, cukup growth mindset',
-      'Fokus dan siap memberikan semua untuk sukses',
       'Minimal pendidikan SMA/D1',
-      'Lokasi di Jabodetabek',
-      '(Jika di luar Jakarta) bersedia mengikuti Zoom'
+      'Lokasi di Jabodetabek (atau bersedia Zoom)',
+      'Akses training dasar',
+      'Komisi penjualan langsung',
+      'Bonus Referral 25%',
+      'Kesempatan upgrade ke Business Partner'
     ]
   },
   paid: {
     type: 'paid',
-    name: 'Paid Commitment',
+    name: 'Business Partner',
     price: 10000000,
     monthlyPrice: 'Rp 10 Jt',
-    description: 'Komitmen fee yang akan dikembalikan 100% setelah 2 bulan',
+    description: 'Full access dengan allowance bulanan dan bonus eksklusif (Fee dikembalikan 100% jika capai target)',
     features: [
-      'Wanita/Pria (prefer wanita)',
-      'Usia 20-40 tahun',
-      'Tidak perlu pengalaman kerja, cukup growth mindset',
-      'Fokus dan siap memberikan semua untuk sukses',
-      'Minimal pendidikan SMA/D1',
-      'Lokasi di Jabodetabek',
-      '(Jika di luar Jakarta) bersedia mengikuti Zoom',
-      'Akses penuh ke semua program pembelajaran',
-      'Pengembalian commitment fee jika dalam 2 bulan berhasil capai target',
-      'Jika tidak berhasil, akan diinvestasikan dan seluruh hasil + 10 juta tetap milik kamu',
-      'Immediate private mentoring & blueprint to success (tinggal copy dan jalankan)',
-      'Dapat cashback dan bonus',
+      'Monthly Allowance: Rp 3.5 Jt + Rp 1 Jt',
+      'Target Bulanan: Rp 4.2 Jt/bulan',
+      'Bonus 3 Bulan: Total income Rp 17.5 Jt',
+      'Bonus Referral: 25%',
+      'Khusus Banking & Insurance: Gaji Pokok Rp 3-12 Jt (Target Kecil)',
+      'Personal Sales: Income Rp 4.5 Jt (Target Rp 300 Jt)',
+      'Bonus Tambahan: Rp 5 Jt (jika capai target 2 bulan)',
+      'Potensi Income: 2x - 4x lipat dari sebelumnya',
+      'Mentoring Eksklusif & Blueprint Sukses',
       'Chance to win FREE iPad'
     ]
   }

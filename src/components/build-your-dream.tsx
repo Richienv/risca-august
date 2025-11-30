@@ -28,7 +28,7 @@ const BuildYourDream = () => {
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     const animateWords = () => {
       const wordElements = document.querySelectorAll('.word-animate');
       wordElements.forEach(word => {
@@ -44,7 +44,7 @@ const BuildYourDream = () => {
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     const handleMouseMove = (e: MouseEvent) => {
       setMouseGradientStyle({
         left: `${e.clientX}px`,
@@ -65,7 +65,7 @@ const BuildYourDream = () => {
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     const handleClick = (e: MouseEvent) => {
       const newRipple = { id: Date.now(), x: e.clientX, y: e.clientY };
       setRipples(prev => [...prev, newRipple]);
@@ -74,18 +74,18 @@ const BuildYourDream = () => {
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
   }, [mounted]);
-  
+
   useEffect(() => {
     if (!mounted) return;
-    
+
     const wordElements = document.querySelectorAll('.word-animate');
-    const handleMouseEnter = (e: Event) => { 
+    const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target) target.style.textShadow = '0 0 20px rgba(239, 68, 68, 0.5)'; 
+      if (target) target.style.textShadow = '0 0 20px rgba(239, 68, 68, 0.5)';
     };
-    const handleMouseLeave = (e: Event) => { 
+    const handleMouseLeave = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target) target.style.textShadow = 'none'; 
+      if (target) target.style.textShadow = 'none';
     };
     wordElements.forEach(word => {
       word.addEventListener('mouseenter', handleMouseEnter);
@@ -103,7 +103,7 @@ const BuildYourDream = () => {
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     const elements = document.querySelectorAll('.floating-element-animate');
     floatingElementsRef.current = Array.from(elements) as HTMLElement[];
     const handleScroll = () => {
@@ -113,7 +113,7 @@ const BuildYourDream = () => {
           setTimeout(() => {
             if (el && el instanceof HTMLElement) {
               el.style.animationPlayState = 'running';
-              el.style.opacity = ''; 
+              el.style.opacity = '';
             }
           }, (parseFloat(el.style.animationDelay || "0") * 1000) + index * 100);
         });
@@ -154,7 +154,7 @@ const BuildYourDream = () => {
       <div className="relative w-full min-h-screen text-slate-100 font-primary overflow-hidden">
         {/* Overlay for slight dimming effect */}
         <div className="absolute inset-0 bg-black/40 z-10" />
-        
+
         <div className="relative z-20 min-h-screen flex flex-col justify-between items-center px-6 py-6 sm:px-8 sm:py-8 md:px-16 md:py-12">
           <div className="text-center">
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
@@ -192,10 +192,10 @@ const BuildYourDream = () => {
   return (
     <>
       <style>{pageStyles}</style>
-      <div className="relative w-full min-h-screen text-slate-100 font-primary overflow-hidden">
-        
+      <div id="contact" className="relative w-full min-h-screen text-slate-100 font-primary overflow-hidden">
+
         {/* Pink Spotlight Effects */}
-        <Spotlight 
+        <Spotlight
           gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
           gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
           gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
@@ -206,14 +206,14 @@ const BuildYourDream = () => {
           duration={22}
           xOffset={15}
         />
-        
+
         {/* Overlay for slight dimming effect */}
         <div className="absolute inset-0 bg-black/40 z-5" />
-        
+
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <pattern id="gridBuildDreamResponsive" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5"/>
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#gridBuildDreamResponsive)" />
@@ -261,7 +261,7 @@ const BuildYourDream = () => {
 
           <div className="text-center max-w-5xl mx-auto relative">
             {/* Responsive Main Heading Sizes */}
-            <motion.h1 
+            <motion.h1
               className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate mb-8"
               style={{
                 background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
@@ -281,12 +281,12 @@ const BuildYourDream = () => {
             >
               JADI YANG BERHASIL SELANJUTNYA?
             </motion.h1>
-            
+
             {/* CTA Button - moved below title */}
             <div className="opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.5s' }}>
-              <Link href="/pricing">
+              <Link href="https://wa.me/6281234567890" target="_blank">
                 <button className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
-                  SAYA MAU JADI YANG BERIKUTNYA
+                  HUBUNGI KAMI VIA WHATSAPP
                 </button>
               </Link>
             </div>
@@ -307,7 +307,7 @@ const BuildYourDream = () => {
         </div>
 
         {/* Responsive Mouse Gradient Size & Blur */}
-        <div 
+        <div
           id="mouse-gradient-react"
           className="w-60 h-60 blur-xl sm:w-80 sm:h-80 sm:blur-2xl md:w-96 md:h-96 md:blur-3xl"
           style={{

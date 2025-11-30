@@ -7,19 +7,19 @@ import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({
   metadataBase: new URL('https://your-domain.com'), // Replace with your actual domain
-  title: "Risca Agustine - Tim Asuransi MANULIFE Jakarta | Peluang Bisnis untuk Ibu Rumah Tangga",
-  description: "Bergabung dengan Tim Throne yang dipimpin Risca Agustine, leader asuransi MANULIFE Jakarta. Peluang bisnis asuransi khusus untuk ibu rumah tangga yang ingin mengoptimalkan waktu dan meraih penghasilan tambahan.",
+  title: "Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu",
+  description: "Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant khusus untuk ibu rumah tangga yang ingin mengoptimalkan waktu dan meraih penghasilan tambahan. Program mentoring dan training eksklusif.",
   openGraph: {
-    title: "Risca Agustine - Tim Asuransi MANULIFE Jakarta | Peluang Bisnis untuk Ibu",
-    description: "Bergabung dengan Tim Throne yang dipimpin Risca Agustine. Peluang bisnis asuransi MANULIFE untuk ibu rumah tangga di Jakarta yang ingin penghasilan tambahan.",
+    title: "Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu",
+    description: "Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant untuk ibu rumah tangga di Jakarta yang ingin penghasilan tambahan.",
     url: 'https://your-domain.com', // Replace with your actual domain
-    siteName: 'Risca Agustine - Tim Throne MANULIFE',
+    siteName: 'Risca Agustine - Financial Consultant',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Risca Agustine - Tim Throne MANULIFE Jakarta',
+        alt: 'Risca Agustine - Financial Consultant Jakarta',
         type: 'image/png',
       },
     ],
@@ -32,15 +32,15 @@ export const metadata: Metadata = constructMetadata({
     'og:image:width': '1200',
     'og:image:height': '630',
     'og:locale': 'id_ID',
-    'og:site_name': 'Risca Agustine - Tim Throne MANULIFE',
-    'og:title': 'Risca Agustine - Tim Asuransi MANULIFE Jakarta | Peluang Bisnis untuk Ibu',
-    'og:description': 'Bergabung dengan Tim Throne yang dipimpin Risca Agustine. Peluang bisnis asuransi MANULIFE untuk ibu rumah tangga di Jakarta.',
+    'og:site_name': 'Risca Agustine - Financial Consultant',
+    'og:title': 'Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu',
+    'og:description': 'Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant untuk ibu rumah tangga di Jakarta.',
     'og:url': 'https://your-domain.com', // Replace with your actual domain
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Risca Agustine - Tim Asuransi MANULIFE Jakarta | Peluang Bisnis untuk Ibu",
-    description: "Bergabung dengan Tim Throne yang dipimpin Risca Agustine. Peluang bisnis asuransi MANULIFE untuk ibu rumah tangga di Jakarta.",
+    title: "Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu",
+    description: "Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant untuk ibu rumah tangga di Jakarta.",
     images: ['/og.png'],
   },
   icons: {
@@ -50,23 +50,21 @@ export const metadata: Metadata = constructMetadata({
   },
   keywords: [
     'risca agustine',
-    'tim throne',
-    'MANULIFE jakarta',
-    'asuransi MANULIFE',
-    'bisnis asuransi jakarta',
+    'financial consultant',
+    'business partner',
     'peluang bisnis ibu rumah tangga',
-    'agen asuransi jakarta',
+    'konsultan keuangan jakarta',
     'penghasilan tambahan ibu',
     'bisnis sambilan ibu',
-    'asuransi jiwa MANULIFE',
-    'mentor asuransi jakarta',
-    'tim asuransi jakarta',
+    'mentoring bisnis jakarta',
+    'tim bisnis jakarta',
     'ibu produktif jakarta',
-    'bisnis fleksibel ibu'
+    'bisnis fleksibel ibu',
+    'karir ibu rumah tangga'
   ],
   authors: [{ name: 'Risca Agustine' }],
   creator: 'Risca Agustine',
-  publisher: 'Tim Throne MANULIFE',
+  publisher: 'Risca Agustine Team',
   formatDetection: {
     email: false,
     address: false,
@@ -113,14 +111,14 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Risca Agustine",
-              "jobTitle": "Insurance Leader & Mentor",
-              "description": "Leader Tim Throne MANULIFE Jakarta yang berdedikasi membantu ibu rumah tangga meraih penghasilan tambahan melalui bisnis asuransi.",
+              "jobTitle": "Financial Consultant Leader & Mentor",
+              "description": "Leader Tim Risca Agustine Jakarta yang berdedikasi membantu ibu rumah tangga meraih penghasilan tambahan melalui karir Financial Consultant.",
               "url": "https://your-domain.com",
               "image": "https://your-domain.com/images/risca-agustine.png",
               "worksFor": {
                 "@type": "Organization",
-                "name": "Tim Throne MANULIFE",
-                "description": "Tim asuransi MANULIFE Jakarta yang fokus pada pemberdayaan ibu rumah tangga untuk sukses dalam bisnis asuransi."
+                "name": "Risca Agustine Team",
+                "description": "Tim Financial Consultant Jakarta yang fokus pada pemberdayaan ibu rumah tangga untuk sukses dalam bisnis."
               },
               "address": {
                 "@type": "PostalAddress",
@@ -131,7 +129,7 @@ export default function RootLayout({
                 "@type": "City",
                 "name": "Jakarta"
               },
-              "knowsAbout": ["Asuransi MANULIFE", "Mentoring Bisnis", "Pemberdayaan Ibu"],
+              "knowsAbout": ["Financial Planning", "Mentoring Bisnis", "Pemberdayaan Ibu"],
               "sameAs": [
                 "https://www.instagram.com/risca.agustine",
                 "https://www.facebook.com/risca.agustine"
@@ -145,10 +143,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Tim Throne MANULIFE",
-              "description": "Tim asuransi MANULIFE Jakarta yang dipimpin Risca Agustine. Fokus pada peluang bisnis asuransi untuk ibu rumah tangga yang ingin penghasilan tambahan.",
+              "name": "Risca Agustine Team",
+              "description": "Tim Financial Consultant Jakarta yang dipimpin Risca Agustine. Fokus pada peluang bisnis untuk ibu rumah tangga yang ingin penghasilan tambahan.",
               "url": "https://your-domain.com",
-              "logo": "https://your-domain.com/images/tim-throne-logo.png",
+              "logo": "https://your-domain.com/images/risca-logo.png",
               "founder": {
                 "@type": "Person",
                 "name": "Risca Agustine"
@@ -165,10 +163,10 @@ export default function RootLayout({
                 "addressCountry": "ID"
               },
               "sameAs": [
-                "https://www.instagram.com/tim.throne.MANULIFE",
-                "https://www.facebook.com/tim.throne.MANULIFE"
+                "https://www.instagram.com/risca.agustine",
+                "https://www.facebook.com/risca.agustine"
               ],
-              "serviceType": "Insurance Business Opportunities",
+              "serviceType": "Financial Consultant Career Opportunities",
               "audience": {
                 "@type": "Audience",
                 "audienceType": "Ibu Rumah Tangga Jakarta",
@@ -186,9 +184,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Risca Agustine - Tim Throne MANULIFE",
+              "name": "Risca Agustine - Financial Consultant",
               "url": "https://your-domain.com",
-              "description": "Website resmi Risca Agustine dan Tim Throne MANULIFE Jakarta. Peluang bisnis asuransi untuk ibu rumah tangga.",
+              "description": "Website resmi Risca Agustine. Peluang karir Financial Consultant untuk ibu rumah tangga.",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://your-domain.com/search?q={search_term_string}",

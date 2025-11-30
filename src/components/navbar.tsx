@@ -22,17 +22,20 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              href="/faq" 
-              className="text-white hover:text-pink-400 transition-colors duration-200 font-medium"
-            >
-              FAQ
+            <Link href="#how-it-works" className="text-white/80 hover:text-white transition-colors">
+              Cara Kerja
             </Link>
-            <Link 
-              href="/pricing" 
+            <Link href="#income-breakdown" className="text-white/80 hover:text-white transition-colors">
+              Pendapatan
+            </Link>
+            <Link href="#pricing-section" className="text-white/80 hover:text-white transition-colors">
+              Paket Join
+            </Link>
+            <Link
+              href="#contact"
               className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 transition-all duration-300 hover:scale-105"
             >
-              Mulai Sekarang
+              Hubungi Kami
             </Link>
           </div>
 
@@ -52,18 +55,32 @@ export default function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
               <Link
-                href="/faq"
-                className="block px-3 py-2 text-white hover:text-pink-400 transition-colors duration-200 font-medium"
+                href="#how-it-works"
+                className="block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                FAQ
+                Cara Kerja
               </Link>
               <Link
-                href="/pricing"
-                className="block px-3 py-2 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 transition-all duration-300 text-center"
+                href="#income-breakdown"
+                className="block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Mulai Sekarang
+                Pendapatan
+              </Link>
+              <Link
+                href="#pricing-section"
+                className="block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Paket Join
+              </Link>
+              <Link
+                href="#contact"
+                className="block px-3 py-2 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 transition-all duration-300 text-center mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                Hubungi Kami
               </Link>
             </div>
           </div>

@@ -14,24 +14,22 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Risca Agustine - Tim Throne MANULIFE",
-  description: "Peluang bisnis asuransi MANULIFE untuk ibu rumah tangga di Jakarta. Bergabung dengan Tim Throne yang dipimpin Risca Agustine dan raih penghasilan tambahan dengan waktu fleksibel.",
+  name: "Risca Agustine - Financial Consultant",
+  description: "Peluang karir sebagai Financial Consultant untuk ibu rumah tangga di Jakarta. Bergabung dengan Tim Risca Agustine dan raih penghasilan tambahan dengan waktu fleksibel.",
   url: "https://risca-agustine.com",
   keywords: [
     "risca agustine",
-    "tim throne",
-    "MANULIFE jakarta", 
-    "asuransi MANULIFE",
-    "bisnis asuransi jakarta",
+    "financial consultant",
+    "business partner",
+    "konsultan keuangan jakarta",
     "peluang bisnis ibu rumah tangga",
-    "agen asuransi jakarta",
     "penghasilan tambahan ibu",
     "bisnis sambilan ibu",
-    "asuransi jiwa MANULIFE",
-    "mentor asuransi jakarta",
-    "tim asuransi jakarta",
+    "mentoring bisnis jakarta",
+    "tim bisnis jakarta",
     "ibu produktif jakarta",
-    "bisnis fleksibel ibu"
+    "bisnis fleksibel ibu",
+    "karir ibu rumah tangga"
   ],
   header: [
     // Add your header items here

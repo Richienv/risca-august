@@ -1,126 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { WebGLShader } from "@/components/ui/web-gl-shader";
+import { ArrowRight, PlayCircle } from "lucide-react";
 
 const ease = [0.16, 1, 0.3, 1];
 
-// Payment Carousel Component - copied from Hero
-function PaymentCarousel() {
-  const paymentImages = [
-    {
-      type: "bri",
-      amount: "Rp 425.128.328",
-      label: "BRImo",
-      subtitle: "Online Bill Payment Rp. 425.128.328 for MV-5779",
-      time: "2 menit yang lalu",
-      status: "success",
-      icon: "/images/brimo2.png"
-    },
-    {
-      type: "bca", 
-      amount: "Rp 234.876.234",
-      label: "MyBCA",
-      subtitle: "Online Instant Transfer Rp. 234.876.234",
-      time: "5 menit yang lalu",
-      status: "success",
-      icon: "/images/myBCA.png"
-    },
-    {
-      type: "dana",
-      amount: "Rp 156.789.123",
-      label: "DANA",
-      subtitle: "Transfer dari DANA Rp. 156.789.123",
-      time: "8 menit yang lalu",
-      status: "success",
-      icon: "/images/dana.png"
-    },
-    {
-      type: "mandiri",
-      amount: "Rp 312.567.890",
-      label: "Livin'",
-      subtitle: "Transfer Mandiri Online Rp. 312.567.890",
-      time: "12 menit yang lalu",
-      status: "success",
-      icon: "/images/livinMandiri.png"
-    },
-    {
-      type: "ovo",
-      amount: "Rp 189.432.567",
-      label: "OVO",
-      subtitle: "Transfer OVO Premium Rp. 189.432.567",
-      time: "15 menit yang lalu",
-      status: "success",
-      icon: "/images/dana.png"
-    },
-    {
-      type: "gopay",
-      amount: "Rp 278.654.321",
-      label: "GoPay",
-      subtitle: "Transfer GoPay Plus Rp. 278.654.321",
-      time: "18 menit yang lalu",
-      status: "success",
-      icon: "/images/myBCA.png"
-    },
-    {
-      type: "shopeepay",
-      amount: "Rp 345.123.789",
-      label: "ShopeePay",
-      subtitle: "Transfer ShopeePay Rp. 345.123.789",
-      time: "22 menit yang lalu",
-      status: "success",
-      icon: "/images/brimo2.png"
-    }
-  ];
-
-  return (
-    <div className="h-full overflow-hidden">
-        <div className="flex flex-col space-y-2">
-          {/* Payment cards */}
-          {paymentImages.map((payment, index) => (
-            <div
-              key={`${payment.type}-${index}`}
-              className="backdrop-blur-sm rounded-lg p-2 border border-gray-300/20 flex-shrink-0 shadow-lg"
-              style={{ backgroundColor: '#E3E4E3' }}
-            >
-              <div className="flex items-start">
-                <div className="flex items-center space-x-3 flex-1">
-                  <div className="w-7 h-7 rounded-lg flex items-center justify-center shadow-md bg-white p-1">
-                    <Image
-                      src={payment.icon}
-                      alt={payment.label}
-                      width={32}
-                      height={32}
-                      className="w-full h-full object-contain rounded-sm"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-1">
-                        <div className="text-gray-900 font-semibold text-[11px]">{payment.label}</div>
-                        <div className="text-gray-600 text-[11px]">•</div>
-                      </div>
-                      <div className="text-gray-600 text-[10px]">{payment.time}</div>
-                    </div>
-                    <div className="text-gray-700 text-[11px] font-medium truncate pr-1 text-left">{payment.subtitle}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-  );
-}
-
 function HeroTitles() {
   return (
-    <div className="text-center lg:text-left">
+    <div className="text-center lg:text-left relative z-30">
       {/* Subtle Tag */}
       <motion.div
-        className="flex justify-center lg:justify-start mb-4 lg:mb-6"
+        className="flex justify-center lg:justify-start mb-6"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -129,8 +20,12 @@ function HeroTitles() {
           delay: 0.2,
         }}
       >
-        <div className="bg-gray-900/40 backdrop-blur-sm border border-gray-700/50 text-gray-300 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md text-[12px] sm:text-[14px] font-medium">
-          87% member <span className="text-orange-400 font-semibold">Capai Income Pertamanya &lt; 21 Hari</span>
+        <div className="bg-amber-500/10 backdrop-blur-md border border-amber-500/20 text-amber-200 px-4 py-2 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+          </span>
+          87% member <span className="text-amber-400 font-bold">Capai Income Pertamanya &lt; 21 Hari</span>
         </div>
       </motion.div>
 
@@ -143,33 +38,21 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
           delay: 0.3,
         }}
-        className="mb-4 lg:mb-6"
+        className="mb-6"
       >
         <motion.h1
-          className="text-center lg:text-left text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-tight tracking-tighter font-bold"
-          style={{
-            background: 'linear-gradient(90deg, #ffffff 0%, #ec4899 50%, #ffffff 100%)',
-            backgroundSize: '200% 100%',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-          animate={{
-            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
+          className="text-center lg:text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight font-bold text-white mb-6"
         >
-          Dalam 14 Hari, Buat Income Pasif (Jutaan)
+          Mulai Side Career dengan <br className="hidden sm:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-500 to-amber-200 animate-gradient-x">
+            Sistem & Mentor yang Jelas
+          </span>
         </motion.h1>
       </motion.div>
-      
+
       {/* Subtitle */}
       <motion.p
-        className="text-[14px] sm:text-[16px] leading-relaxed text-gray-300 text-center lg:text-left mb-6 lg:mb-8"
+        className="text-base sm:text-lg md:text-xl leading-relaxed text-white/70 text-center lg:text-left mb-8 max-w-2xl mx-auto lg:mx-0"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -178,23 +61,26 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        Bikin passive income dari asuransi, disertai pelatihan dan rewards worth ratusan juta, membuat kamu ubah waktu kamu jadi uang dalam waktu cepat!
+        Income real dari tim kami &gt; perjalanan karier nyata dari anak muda yang berani mulai. Bukan sekadar janji, tapi bukti nyata.
       </motion.p>
 
-      {/* CTA Buttons - moved here below subtitle */}
+      {/* CTA Buttons */}
       <motion.div
-        className="flex justify-center lg:justify-start items-center gap-2 sm:gap-3 lg:gap-4"
+        className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <Link href="/pricing">
-          <button className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-3 py-2 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 rounded-lg font-semibold hover:from-pink-500 hover:to-pink-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-[12px] sm:text-[14px] lg:text-[16px]">
-            Saya Mau Perubahan
+        <Link href="/pricing" className="w-full sm:w-auto">
+          <button className="w-full sm:w-auto bg-gradient-to-r from-amber-600 to-amber-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-amber-500 hover:to-amber-400 hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] flex items-center justify-center gap-2 group relative overflow-hidden">
+            <span className="relative z-10">Saya Mau Perubahan</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 skew-y-12" />
           </button>
         </Link>
-        <Link href="/contact">
-          <button className="bg-transparent border border-gray-600 text-gray-300 px-3 py-2 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white hover:scale-105 transition-all duration-300 text-[12px] sm:text-[14px] lg:text-[16px]">
+        <Link href="/contact" className="w-full sm:w-auto">
+          <button className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2">
+            <PlayCircle className="w-5 h-5 text-amber-500" />
             Gabung Komunitas
           </button>
         </Link>
@@ -205,108 +91,102 @@ function HeroTitles() {
 
 export default function WebGLHeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden">
-      {/* WebGL Shader Background */}
+    <section className="relative w-full flex flex-col justify-center overflow-hidden bg-black">
+      {/* Background Effects */}
       <div className="absolute inset-0 z-0">
-        <WebGLShader />
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay" />
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-amber-600/20 blur-[120px] rounded-full opacity-50 animate-pulse-slow" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-amber-800/20 blur-[120px] rounded-full opacity-50 animate-pulse-slow delay-1000" />
       </div>
-      
-      {/* Overlay for slight dimming effect */}
-      <div className="absolute inset-0 bg-black/40 z-10" />
-      
-      {/* Main Content - Centered */}
-      <div className="relative z-20 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8 sm:pt-24 sm:pb-12 lg:pt-28 lg:pb-16 max-w-7xl">
-          <div className="relative flex w-full flex-col items-center justify-center">
-            
-            {/* Main Section: Title + Content */}
-            <motion.div 
-              className="w-full mb-8 lg:mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              <div className="flex justify-center">
-                <div className="w-full max-w-4xl">
-                  <HeroTitles />
-                </div>
-              </div>
-            </motion.div>
 
-            {/* Video Section - Now below buttons */}
-            <motion.div 
-              className="w-full mb-8 lg:mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+      {/* Main Content */}
+      <div className="relative z-20 w-full pt-24 pb-12 lg:pt-32 lg:pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+            {/* Left Column: Text Content */}
+            <div className="w-full lg:w-1/2">
+              <HeroTitles />
+            </div>
+
+            {/* Right Column: Video/Visual */}
+            <motion.div
+              className="w-full lg:w-1/2"
+              initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{
-                delay: 0.8,
-                duration: 0.8,
+                delay: 0.4,
+                duration: 1,
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <div className="flex justify-center">
-                <div className="w-full max-w-lg lg:max-w-2xl">
-                  <div className="rounded-2xl aspect-[16/9] p-4 lg:p-6 overflow-hidden">
-                    <div className="relative w-full h-full rounded-xl overflow-hidden">
-                      <iframe
-                        className="absolute inset-0 w-full h-full rounded-xl"
-                        src="https://www.youtube.com/embed/DfVbBunX7PU?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1"
-                        title="YouTube video"
-                        frameBorder={0}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                      />
+              <div className="relative group">
+                {/* Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-amber-300 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200" />
+
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black/50 backdrop-blur-xl shadow-2xl">
+                  <div className="aspect-[16/9] relative">
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src="https://www.youtube.com/embed/DfVbBunX7PU?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1&controls=0&loop=1&playlist=DfVbBunX7PU"
+                      title="YouTube video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                    {/* Video Overlay Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  </div>
+
+                  {/* Video Caption/Stats */}
+                  <div className="p-4 sm:p-6 flex items-center justify-between bg-white/5 border-t border-white/5">
+                    <div className="flex items-center gap-3">
+                      <div className="flex -space-x-2">
+                        {[1, 2, 3].map((i) => (
+                          <div key={i} className="w-8 h-8 rounded-full border-2 border-black bg-gray-800 flex items-center justify-center text-[10px] text-white overflow-hidden">
+                            <div className="w-full h-full bg-gradient-to-br from-amber-500 to-amber-700" />
+                          </div>
+                        ))}
+                      </div>
+                      <div className="text-sm text-white/80">
+                        <span className="font-bold text-white">1,200+</span> Member Bergabung
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-amber-400 font-bold">4.9</span>
+                      <div className="flex text-amber-500">
+                        {[1, 2, 3, 4, 5].map(i => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Bottom Section: Additional Content Only */}
-            <div className="w-full flex flex-col items-center space-y-4 lg:space-y-6">
-              
-              {/* Star Rating Section - Above Limited Slots */}
-              <div className="w-full flex justify-center">
-                <div className="text-center">
-                  {/* Star Rating */}
-                  <div className="flex items-center gap-0.5 mb-1 justify-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg
-                        key={star}
-                        className="w-3 h-3 sm:w-4 sm:h-4 text-orange-400 fill-current"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                    <span className="ml-1 text-white font-semibold text-[14px] sm:text-[14px]">4.8/5</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Limited Offer Text */}
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <p className="text-white text-[18px] sm:text-[20px] lg:text-[22px] font-bold mb-1">
-                  Slot Terbatas
-                </p>
-                <p className="text-white text-[14px] sm:text-[16px] font-medium mb-4 lg:mb-6">
-                  FREE iPad Untuk 10 Orang Tercepat Capai Misi.
-                </p>
-              </motion.div>
-
-            </div>
-
           </div>
+
+          {/* Bottom Stats/Social Proof */}
+          <motion.div
+            className="mt-16 lg:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 border-t border-white/10 pt-8 sm:pt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8 }}
+          >
+            {[
+              { label: "Total Member", value: "1.2K+" },
+              { label: "Success Rate", value: "87%" },
+              { label: "Mentor Expert", value: "15+" },
+              { label: "Rating", value: "4.9/5" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+
         </div>
       </div>
     </section>

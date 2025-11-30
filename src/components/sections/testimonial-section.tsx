@@ -28,35 +28,35 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
       <div className="mb-4">
         <Quote className="w-5 h-5 text-amber-400" strokeWidth={2} />
       </div>
-      
+
       {/* Income Badge */}
       <div className="mb-4">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/20 border border-amber-400/30">
           <span className="text-xs font-semibold text-amber-400">💰 {testimonial.income}</span>
         </div>
       </div>
-      
+
       {/* Rating Stars */}
       <div className="flex mb-4">
         {[...Array(testimonial.rating)].map((_, i) => (
           <Star key={i} className="w-4 h-4 text-amber-400 fill-current" />
         ))}
       </div>
-      
+
       {/* Quote */}
       <div className="mb-4">
         <p className="text-sm font-medium text-white leading-tight">
           "{testimonial.quote}"
         </p>
       </div>
-      
+
       {/* Story */}
       <div className="text-white mb-6">
         <p className="text-xs text-white/80 leading-relaxed font-light">
           {testimonial.story.length > 120 ? testimonial.story.substring(0, 120) + '...' : testimonial.story}
         </p>
       </div>
-      
+
       {/* Profile Section */}
       <div className="flex items-center space-x-3">
         <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-amber-500/20">
@@ -72,7 +72,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
               if (fallback) fallback.style.display = 'flex';
             }}
           />
-          <div className="w-full h-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center" style={{display: 'none'}}>
+          <div className="w-full h-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center" style={{ display: 'none' }}>
             <span className="text-white font-semibold text-sm">
               {testimonial.name.charAt(0)}
             </span>
@@ -131,10 +131,10 @@ const TestimonialSection = () => {
   }
 
   return (
-    <section className="relative w-full text-white overflow-hidden py-8 lg:py-16">
+    <section className="relative w-full text-white overflow-hidden pb-8 pt-4 lg:pb-16 lg:pt-8">
       {/* Overlay for slight dimming effect */}
       <div className="absolute inset-0 bg-black/40 z-10" />
-      
+
       <div className="relative z-20 w-full">
         {/* Header Section */}
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl mb-12">

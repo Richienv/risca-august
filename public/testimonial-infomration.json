@@ -4,119 +4,107 @@
     "name": "JOHANES HENDRA BUHOKAN",
     "role": "Ex Stock Analyst & Branch Manager",
     "quote": "Consistency beats Talent & Privileges. I learnt it the hardway, so please add the consistency in your success.",
-    "story": "Bergabung dengan MANULIFE sejak 2018. Dari background sebagai Stock Analyst dan Branch Manager Steel Distributor, kini meraih income 45 juta per bulan.",
+    "story": "Bergabung dengan tim ini sejak 2018. Dari background sebagai Stock Analyst dan Branch Manager Steel Distributor, kini meraih income yang luar biasa setiap bulannya.",
     "image": "/images/johanes.png",
-    "rating": 5,
-    "income": "45 Juta/Bulan"
+    "rating": 5
   },
   {
     "id": 2,
     "name": "NORMAN KOSASIH",
     "role": "Billionaire 6",
     "quote": "Saya suka pekerjaan yang menantang dan juga ingin belajar lebih banyak sehingga saya berharap bisa sukses besar.",
-    "story": "Join 7 Maret, sudah 6 bulan dan kini meraih 1M per bulan. Membuktikan bahwa dengan tekad dan kerja keras, mimpi besar bisa tercapai.",
+    "story": "Join 7 Maret, sudah 6 bulan dan kini meraih hasil yang luar biasa. Membuktikan bahwa dengan tekad dan kerja keras, mimpi besar bisa tercapai.",
     "image": "/images/norman-kosasih.png",
-    "rating": 5,
-    "income": "1M/Bulan"
+    "rating": 5
   },
   {
     "id": 4,
     "name": "AMANDA",
     "role": "S1 Universitas Indonesia",
     "quote": "Buat aku, sukses itu bukan cuma soal angka, tapi tentang punya kendali atas hidup sendiri.",
-    "story": "Lulusan UI yang kini bisa nikmatin slow morning tanpa terburu-buru dengan income 32 juta. Sukses dengan cara yang bermakna.",
+    "story": "Lulusan UI yang kini bisa nikmatin slow morning tanpa terburu-buru dengan income yang memuaskan. Sukses dengan cara yang bermakna.",
     "image": "/images/amanda.png",
-    "rating": 5,
-    "income": "32 Juta"
+    "rating": 5
   },
   {
     "id": 5,
     "name": "SUCI LESTARI",
-    "role": "Insurance Professional",
+    "role": "Financial Professional",
     "quote": "Dari Karyawan Biasa Jadi Entrepreneur",
-    "story": "Perusahaan ini mengajarkan saya untuk sabar, mendengarkan, melayani, dan berkomitmen memimpin dengan kerendahan hati dan integritas. Income 100 juta per bulan.",
+    "story": "Bisnis ini mengajarkan saya untuk sabar, mendengarkan, melayani, dan berkomitmen memimpin dengan kerendahan hati dan integritas. Income fantastis per bulan.",
     "image": "/images/suci.png",
-    "rating": 5,
-    "income": "100 Juta"
+    "rating": 5
   },
   {
     "id": 6,
     "name": "MARSHEL YAP",
     "role": "Ex Manager",
     "quote": "Gak Pernah Nyangka Hari Ini Bisa Penghasilan Besar",
-    "story": "Dari background Manager kini meraih 80 juta per bulan. Perusahaan mengajarkan kesabaran dan kepemimpinan dengan kerendahan hati.",
+    "story": "Dari background Manager kini meraih penghasilan besar per bulan. Bisnis mengajarkan kesabaran dan kepemimpinan dengan kerendahan hati.",
     "image": "/images/marshel.png",
-    "rating": 5,
-    "income": "80 Juta/Bulan"
+    "rating": 5
   },
   {
     "id": 7,
     "name": "VICKY ADITYA",
     "role": "Entrepreneur",
     "quote": "Ora Et Labora, This is My Calling",
-    "story": "This insurance journey has not only helped me fulfill my personal dreams, but more importantly, it has given me the honor to educate and uplift my fellow Indonesians. I am deeply grateful for a community that keeps me growing, and I remain committed to leading with humility, integrity, and a grateful heart.",
+    "story": "This journey has not only helped me fulfill my personal dreams, but more importantly, it has given me the honor to educate and uplift my fellow Indonesians. I am deeply grateful for a community that keeps me growing, and I remain committed to leading with humility, integrity, and a grateful heart.",
     "image": "/images/vicky.png",
-    "rating": 5,
-    "income": "80 Juta/Bulan"
+    "rating": 5
   },
   {
     "id": 8,
     "name": "ELYA",
     "role": "Ex Owner Studio Eyebrows",
     "quote": "Grateful to Grow, Blessed to Protect.",
-    "story": "Dari owner studio eyebrows kini meraih 50 juta per bulan. Bersyukur bisa tumbuh dalam bisnis ini dan melayani orang lain melalui asuransi.",
+    "story": "Dari owner studio eyebrows kini meraih penghasilan stabil per bulan. Bersyukur bisa tumbuh dalam bisnis ini dan melayani orang lain.",
     "image": "/images/elya.png",
-    "rating": 5,
-    "income": "50 Juta/Bulan"
+    "rating": 5
   },
   {
     "id": 9,
     "name": "CALVIN ASIKIN",
     "role": "Business Professional",
     "quote": "Perusahaan dan Komunitas memegang peranan penting dalam keberhasilan bisnis kita",
-    "story": "Puji Tuhan dalam 1,5 bulan di Manulife berhasil mengumpulkan income 300jt.. bukan hanya membantu banyak nasabah, tapi sy jg bisa mambantu bnyk tim merasakan percepatan income yg luar biasa..",
+    "story": "Puji Tuhan dalam 1,5 bulan berhasil mengumpulkan income ratusan juta.. bukan hanya membantu banyak nasabah, tapi sy jg bisa mambantu bnyk tim merasakan percepatan income yg luar biasa..",
     "image": "/images/calvin-asikin.png",
-    "rating": 5,
-    "income": "300 Juta/Bulan"
+    "rating": 5
   },
   {
     "id": 10,
     "name": "FAMMY",
-    "role": "Insurance Agent",
+    "role": "Financial Consultant",
     "quote": "Kerja keras dan konsistensi selalu membuahkan hasil.",
-    "story": "Perjalanan di MANULIFE membuktikan bahwa dengan fokus dan dedikasi, target 45 juta bisa tercapai. Sebuah pencapaian yang membanggakan.",
+    "story": "Perjalanan di sini membuktikan bahwa dengan fokus dan dedikasi, target impian bisa tercapai. Sebuah pencapaian yang membanggakan.",
     "image": "/images/fammy.png",
-    "rating": 5,
-    "income": "45 Juta"
+    "rating": 5
   },
   {
     "id": 11,
     "name": "SAM",
     "role": "Entrepreneur",
     "quote": "Membangun Karier sendiri sejak lulus Kuliah",
-    "story": "Saya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu. Join akhir Agustus kemarin earn ~175jt.",
+    "story": "Saya memutuskan untuk membangun usaha sendiri setelah lulus kuliah, karena percaya bahwa jalur mandiri memberi ruang lebih besar untuk berkembang dan memaksimalkan potensi, dibanding menunggu waktu di tangga karier korporat. Dari seorang mahasiswa sekarang bisa running bisnis sendiri dimana aja dan punya kebebasan waktu. Join akhir Agustus kemarin earn significant amount.",
     "image": "/images/sam.png",
-    "rating": 5,
-    "income": "175 Juta"
+    "rating": 5
   },
   {
     "id": 12,
     "name": "EDDY",
-    "role": "Insurance Professional",
+    "role": "Financial Professional",
     "quote": "Grow Big, Live Free, Share More.",
-    "story": "Saya dulu hanya bermimpi memiliki penghasilan besar (yang saya maksud 3 digit). Sekarang saya bersyukur, namun penghargaan sejati bukan hanya angka — melainkan pertumbuhan, perjalanan, dan kesempatan membantu orang lain melindungi hal yang paling berarti. Rumah dan mobil sudah tercapai; perjalanan adalah bonus manis. Motivasi saya sekarang: mengangkat tim, melayani klien lebih baik, menginspirasi lebih banyak orang untuk mengubah hidup mereka.",
+    "story": "Saya dulu hanya bermimpi memiliki penghasilan besar. Sekarang saya bersyukur, namun penghargaan sejati bukan hanya angka — melainkan pertumbuhan, perjalanan, dan kesempatan membantu orang lain melindungi hal yang paling berarti. Rumah dan mobil sudah tercapai; perjalanan adalah bonus manis. Motivasi saya sekarang: mengangkat tim, melayani klien lebih baik, menginspirasi lebih banyak orang untuk mengubah hidup mereka.",
     "image": "/images/Eddy.png",
-    "rating": 5,
-    "income": "80 Juta/Bulan"
+    "rating": 5
   },
   {
     "id": 13,
     "name": "ELYA",
     "role": "Ex Owner Studio Eyebrows and Eyelashes",
     "quote": "Grateful to Grow, Blessed to Protect.",
-    "story": "Elya berterima kasih atas kesempatan tumbuh dalam bisnis ini — bukan hanya sebagai profesional, tetapi juga sebagai pribadi. Melalui asuransi, ia dapat melayani orang lain, melindungi hal yang paling berarti, dan berbagi berkah masa depan yang aman.",
+    "story": "Elya berterima kasih atas kesempatan tumbuh dalam bisnis ini — bukan hanya sebagai profesional, tetapi juga sebagai pribadi. Melalui bisnis ini, ia dapat melayani orang lain, melindungi hal yang paling berarti, dan berbagi berkah masa depan yang aman.",
     "image": "/images/elya.png",
-    "rating": 5,
-    "income": "50 Juta/Bulan"
+    "rating": 5
   }
 ]
