@@ -19,9 +19,9 @@ const AboutMeSection = () => {
       image: "/images/team_real_photo.png"
     },
     {
-      title: "Kerja yang Ada Manfaatnya",
-      description: "Kita membantu banyak keluarga memiliki perencanaan keuangan yang matang, dana pendidikan anak, dan dana pensiun. Ini kerja yang nggak cuma cuan, tapi benar-benar berdampak dan bermakna untuk orang lain.",
-      metrics: "Dampak nyata untuk banyak keluarga",
+      title: "Bisnis Mulia & Pengembangan Diri",
+      description: "Ini bukan bisnis biasa, tapi bisnis yang membangun self-development dan pengembangan diri. Kita membantu banyak keluarga memiliki perencanaan keuangan yang matang, dana pendidikan anak, dan dana pensiun. Kerja yang berdampak dan bermakna.",
+      metrics: "Bisnis mulia untuk pertumbuhan diri",
       image: "/images/team_real_photo.png"
     },
     {
@@ -73,8 +73,7 @@ const AboutMeSection = () => {
             Kenapa Harus Gabung Tim Aku?
           </motion.h1>
           <p className="text-sm lg:text-base font-light leading-relaxed text-white/70 max-w-3xl mx-auto">
-            Bergabung dengan tim yang sudah terbukti sukses, dengan sistem yang jelas, mentoring langsung, dan peluang penghasilan yang nyata.
-            Ini bukan hanya tentang kerja, tapi tentang membangun karier jangka panjang yang bermakna.
+            Ini bukan bisnis biasa — ini bisnis mulia untuk pengembangan diri. Bergabung dengan tim yang sudah terbukti sukses, dengan sistem yang jelas, mentoring langsung, dan peluang penghasilan yang nyata.
           </p>
         </div>
 

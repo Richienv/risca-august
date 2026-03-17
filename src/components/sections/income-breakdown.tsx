@@ -176,26 +176,52 @@ const IncomeBreakdownSection = () => {
                         </div>
                     </IncomeAccordionItem>
 
-                    {/* 2. Fixed Salary & Referral */}
+                    {/* 2. Komisi & Incentive Info */}
                     <IncomeAccordionItem
-                        title="Income Tambahan: Allowance & Referral"
+                        title="Komisi & Incentive"
                         icon={Gift}
                         isOpen={openSection === "additional"}
                         onClick={() => toggleSection("additional")}
                     >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {/* Gaji Tetap */}
+                        <div className="space-y-6">
+                            {/* Commission Timeline */}
                             <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="p-2 rounded-lg bg-green-500/20 text-green-400">
                                         <Wallet className="w-5 h-5" />
                                     </div>
-                                    <h4 className="text-lg font-bold text-white">Allowance</h4>
+                                    <h4 className="text-lg font-bold text-white">Komisi Closing</h4>
                                 </div>
-                                <div className="text-3xl font-bold text-white mb-2">Rp 5.000.000<span className="text-sm font-normal text-white/50">/bulan</span></div>
-                                <p className="text-white/70 text-sm">
-                                    Pasti dapat diluar bonus dan komisi. Ini adalah jaring pengaman finansialmu setiap bulan.
+                                <p className="text-white/70 text-sm mb-3">
+                                    Setiap ada yang closing, kamu akan menerima komisi dalam waktu 1–2 bulan. Transparan dan pasti.
                                 </p>
+                            </div>
+
+                            {/* Incentive Info */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="p-2 rounded-lg bg-amber-500/20 text-amber-400">
+                                            <Gift className="w-5 h-5" />
+                                        </div>
+                                        <h4 className="text-lg font-bold text-white">Undian per Case</h4>
+                                    </div>
+                                    <p className="text-white/70 text-sm">
+                                        Setiap jual 1 case, kamu berkesempatan mendapatkan undian senilai Rp 100.000 atau 100 USD.
+                                    </p>
+                                </div>
+
+                                <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="p-2 rounded-lg bg-blue-500/20 text-blue-400">
+                                            <TrendingUp className="w-5 h-5" />
+                                        </div>
+                                        <h4 className="text-lg font-bold text-white">Bonus Komisi Besar</h4>
+                                    </div>
+                                    <p className="text-white/70 text-sm">
+                                        Cukup jualan 5 juta ke 5 keluarga, kamu bisa mendapatkan komisi hingga 75 juta. Program ini bisa diulang setiap 3 bulan.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Referral Bonus */}

@@ -9,57 +9,24 @@ import { cn } from '@/lib/utils';
 const roadmapSteps = [
     {
         id: 1,
-        step: "STEP 1",
-        days: "Hari 1–10",
-        title: "Fondasi & Lisensi Profesional",
-        goal: "Goal: Kamu punya lisensi + dasar pengetahuan produk proteksi dan investasi.",
+        step: "ROADMAP",
+        days: "Perjalanan Karirmu",
+        title: "Dari Nol Hingga Produksi Pertama",
+        goal: "Goal: Kamu punya lisensi, skill presentasi, dan mencapai produksi pertama dengan bimbingan penuh.",
         content: [
             "Proses lisensi untuk bekerja secara profesional",
             "Belajar dasar proteksi, kebutuhan finansial, dan investasi",
-            "Pengenalan sistem kerja praktis yang bisa dilakukan via HP",
-            "Onboarding 1-on-1 dengan mentor"
-        ],
-        result: "Hasil akhir: Kamu siap secara legal dan memahami fondasi bisnisnya.",
-        icon: ShieldCheck,
-        image: "/images/first-step.png",
-        className: "md:col-span-2 md:row-span-2"
-    },
-    {
-        id: 2,
-        step: "STEP 2",
-        days: "Hari 11–30",
-        title: "Skill Dasar Presentasi & Edukasi",
-        goal: "Goal: Kamu bisa menjelaskan produk dasar health & investment sesuai kebutuhan klien.",
-        content: [
-            "Script presentasi singkat yang mudah dipahami",
-            "Cara membuka percakapan tanpa kesan jualan",
-            "Roleplay dengan mentor",
-            "Teknik closing yang halus dan elegan",
-            "Mulai dari circle terdekat untuk bangun kepercayaan"
-        ],
-        result: "Hasil akhir: Kamu bisa presentasi, edukasi, dan mulai mendapatkan klien pertamamu.",
-        icon: Target,
-        image: "/images/branding.png",
-        className: "md:col-span-1 md:row-span-1"
-    },
-    {
-        id: 3,
-        step: "STEP 3",
-        days: "Hari 31–60",
-        title: "Penguasaan Sistem & Produksi Pertama",
-        goal: "", // No explicit goal in script for step 3
-        content: [
+            "Onboarding 1-on-1 dengan mentor",
+            "Script presentasi & teknik closing yang halus dan elegan",
+            "Roleplay dengan mentor & mulai dari circle terdekat",
             "Pola kerja harian yang jelas dan terstruktur",
-            "Teknik follow-up yang sopan dan tidak mengganggu",
             "Praktik konsultasi dan closing didampingi mentor",
-            "Review dan evaluasi ritme kerjamu",
-            "Optimasi konten (untuk yang menjalankan strategi online)",
             "Penekanan pada konsistensi: lakukan pola kerja yang sama setiap hari"
         ],
-        result: "Hasil akhir: Kamu mencapai produksi pertama dan siap naik level. Kuncinya: konsisten, ulangi polanya setiap hari, dan kamu akan melihat hasilnya.",
-        icon: Trophy,
-        image: "/images/checklist.png",
-        className: "md:col-span-1 md:row-span-1"
+        result: "Hasil akhir: Kamu siap secara legal, mampu presentasi dan edukasi, serta mencapai produksi pertama. Kuncinya: konsisten dan ulangi polanya setiap hari.",
+        icon: ShieldCheck,
+        image: "/images/first-step.png",
+        className: "md:col-span-3"
     }
 ];
 
@@ -174,23 +141,16 @@ export default function SolutionSection() {
                             ease: 'linear'
                         }}
                     >
-                        Roadmap Karir 60 Hari
+                        Roadmap Karir
                     </motion.h1>
                     <p className="text-base sm:text-lg font-light leading-relaxed text-white/70 max-w-2xl mx-auto">
-                        3 Fase krusial untuk mengubah hidupmu. Sistem yang teruji, terukur, dan bisa diduplikasi oleh siapa saja.
+                        Sistem yang teruji, terukur, dan bisa diduplikasi oleh siapa saja. Dari nol hingga produksi pertama dengan bimbingan penuh.
                     </p>
                 </div>
 
-                {/* Bento Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16 max-w-6xl mx-auto">
-                    {/* Left Column - Large Card */}
+                {/* Roadmap Card */}
+                <div className="max-w-6xl mx-auto mb-16">
                     <BentoCard item={roadmapSteps[0]} index={0} />
-
-                    {/* Right Column - Stacked Cards */}
-                    <div className="md:col-span-1 flex flex-col gap-6 lg:gap-8">
-                        <BentoCard item={roadmapSteps[1]} index={1} />
-                        <BentoCard item={roadmapSteps[2]} index={2} />
-                    </div>
                 </div>
 
                 {/* Affirmation & Call to Action */}
@@ -207,7 +167,7 @@ export default function SolutionSection() {
                             className="text-white font-semibold px-10 py-5 text-lg bg-amber-600 hover:bg-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_40px_rgba(245,158,11,0.5)] transition-all duration-300"
                         >
                             <span className="flex items-center gap-3">
-                                <span>Mulai Roadmap 60 Harimu</span>
+                                <span>Mulai Roadmap Karirmu</span>
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                             </span>
                         </LiquidButton>

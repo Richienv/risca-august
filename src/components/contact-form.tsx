@@ -8,13 +8,12 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import axios from 'axios';
 
-emailjs.init("E20vj6TqXO0YXWICn");
+emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
 
-const IMGBB_API_KEY = 'e4d11d5c424059e8d3e239ad6c40f49b'; // Get this from imgbb.com
+const IMGBB_API_KEY = process.env.NEXT_PUBLIC_IMGBB_API_KEY || '';
 
-// Replace with your Cloudinary details
-const CLOUDINARY_UPLOAD_PRESET = 'martha-leads';
-const CLOUDINARY_CLOUD_NAME = 'dvlsjfbiw';
+const CLOUDINARY_UPLOAD_PRESET = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || '';
+const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || '';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -76,7 +75,6 @@ export function ContactForm() {
         throw new Error('Invalid response from Cloudinary');
       }
     } catch (error) {
-      console.error('Error uploading to Cloudinary:', error);
       if (axios.isAxiosError(error)) {
         if (error.response?.data?.error?.message) {
           throw new Error(`Upload failed: ${error.response.data.error.message}`);
@@ -118,10 +116,8 @@ export function ContactForm() {
         setIsSubmitting(true);
         
         const base64String = await convertToBase64(file);
-        console.log('Converting to base64 successful');
-        
+
         const imageUrl = await uploadImageToCloudinary(base64String);
-        console.log('Upload successful, URL:', imageUrl);
 
         setFormData(prevState => ({
           ...prevState,
@@ -130,7 +126,6 @@ export function ContactForm() {
 
         alert('Foto berhasil diupload!');
       } catch (error) {
-        console.error('Upload error:', error);
         alert(error instanceof Error ? error.message : 'Gagal mengupload gambar');
         e.target.value = '';
       } finally {
@@ -151,12 +146,11 @@ export function ContactForm() {
       };
 
       const result = await emailjs.send(
-        "service_hn4zj9i",
-        "template_suqdira",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
         emailData
       );
 
-      console.log('Email sent successfully:', result);
       setSubmitStatus('success');
       
       setFormData({
@@ -169,8 +163,7 @@ export function ContactForm() {
       if (fileInput) fileInput.value = '';
 
     } catch (error) {
-      console.error('Error sending email:', error);
-      let errorMessage = 'Gagal mengirim form. Silakan coba lagi.';
+      const errorMessage = 'Gagal mengirim form. Silakan coba lagi.';
       setSubmitStatus('error');
       alert(errorMessage);
     } finally {

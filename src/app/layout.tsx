@@ -6,13 +6,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = constructMetadata({
-  metadataBase: new URL('https://your-domain.com'), // Replace with your actual domain
+  metadataBase: new URL('https://www.risca-agustine.com'), // Replace with your actual domain
   title: "Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu",
   description: "Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant khusus untuk ibu rumah tangga yang ingin mengoptimalkan waktu dan meraih penghasilan tambahan. Program mentoring dan training eksklusif.",
   openGraph: {
     title: "Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu",
     description: "Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant untuk ibu rumah tangga di Jakarta yang ingin penghasilan tambahan.",
-    url: 'https://your-domain.com', // Replace with your actual domain
+    url: 'https://www.risca-agustine.com', // Replace with your actual domain
     siteName: 'Risca Agustine - Financial Consultant',
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata: Metadata = constructMetadata({
     type: 'website',
   },
   other: {
-    'og:image:secure_url': 'https://your-domain.com/og.png', // Replace with your actual domain
+    'og:image:secure_url': 'https://www.risca-agustine.com/og.png', // Replace with your actual domain
     'og:image:type': 'image/png',
     'og:image:width': '1200',
     'og:image:height': '630',
@@ -35,7 +35,7 @@ export const metadata: Metadata = constructMetadata({
     'og:site_name': 'Risca Agustine - Financial Consultant',
     'og:title': 'Risca Agustine - Financial Consultant & Career Opportunity | Peluang Bisnis untuk Ibu',
     'og:description': 'Bergabung dengan Tim Risca Agustine. Peluang karir sebagai Financial Consultant untuk ibu rumah tangga di Jakarta.',
-    'og:url': 'https://your-domain.com', // Replace with your actual domain
+    'og:url': 'https://www.risca-agustine.com', // Replace with your actual domain
   },
   twitter: {
     card: 'summary_large_image',
@@ -71,7 +71,7 @@ export const metadata: Metadata = constructMetadata({
     telephone: false,
   },
   verification: {
-    google: 'your-google-site-verification-code', // You'll get this from Google Search Console
+    google: '', // You'll get this from Google Search Console
   },
   robots: {
     index: true,
@@ -113,8 +113,8 @@ export default function RootLayout({
               "name": "Risca Agustine",
               "jobTitle": "Financial Consultant Leader & Mentor",
               "description": "Leader Tim Risca Agustine Jakarta yang berdedikasi membantu ibu rumah tangga meraih penghasilan tambahan melalui karir Financial Consultant.",
-              "url": "https://your-domain.com",
-              "image": "https://your-domain.com/images/risca-agustine.png",
+              "url": "https://www.risca-agustine.com",
+              "image": "https://www.risca-agustine.com/images/risca-agustine.png",
               "worksFor": {
                 "@type": "Organization",
                 "name": "Risca Agustine Team",
@@ -145,8 +145,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Risca Agustine Team",
               "description": "Tim Financial Consultant Jakarta yang dipimpin Risca Agustine. Fokus pada peluang bisnis untuk ibu rumah tangga yang ingin penghasilan tambahan.",
-              "url": "https://your-domain.com",
-              "logo": "https://your-domain.com/images/risca-logo.png",
+              "url": "https://www.risca-agustine.com",
+              "logo": "https://www.risca-agustine.com/images/risca-logo.png",
               "founder": {
                 "@type": "Person",
                 "name": "Risca Agustine"
@@ -185,11 +185,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Risca Agustine - Financial Consultant",
-              "url": "https://your-domain.com",
+              "url": "https://www.risca-agustine.com",
               "description": "Website resmi Risca Agustine. Peluang karir Financial Consultant untuk ibu rumah tangga.",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://your-domain.com/search?q={search_term_string}",
+                "target": "https://www.risca-agustine.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
               "mainEntity": {

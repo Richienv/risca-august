@@ -61,7 +61,7 @@ function HeroTitles() {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        Income real dari tim kami &gt; perjalanan karier nyata dari anak muda yang berani mulai. Bukan sekadar janji, tapi bukti nyata.
+        Ini bukan bisnis biasa — ini bisnis mulia untuk pengembangan diri. Spesial untuk background insurance, banking, atau karyawan. Dapat gaji pokok mulai dari 3jt. Bisa dikerjakan tanpa meninggalkan pekerjaan saat ini.
       </motion.p>
 
       {/* CTA Buttons */}

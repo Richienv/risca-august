@@ -13,8 +13,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="text-xl font-bold text-white hover:text-pink-400 transition-colors duration-200">
-              <span className="bg-gradient-to-r from-pink-500 to-rose-600 bg-clip-text text-transparent">
+            <div className="text-xl font-bold text-white hover:text-amber-400 transition-colors duration-200">
+              <span className="bg-gradient-to-r from-amber-200 via-amber-500 to-amber-200 bg-clip-text text-transparent">
                 Risca Agustine
               </span>
             </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="#contact"
-              className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-amber-600 to-amber-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-amber-500 hover:to-amber-400 transition-all duration-300 hover:scale-105"
             >
               Hubungi Kami
             </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-pink-400 transition-colors duration-200"
+              className="text-white hover:text-amber-400 transition-colors duration-200"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -77,7 +77,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="#contact"
-                className="block px-3 py-2 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 transition-all duration-300 text-center mt-4"
+                className="block px-3 py-2 bg-gradient-to-r from-amber-600 to-amber-500 text-white rounded-lg font-semibold hover:from-amber-500 hover:to-amber-400 transition-all duration-300 text-center mt-4"
                 onClick={() => setIsOpen(false)}
               >
                 Hubungi Kami

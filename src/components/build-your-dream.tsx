@@ -81,7 +81,7 @@ const BuildYourDream = () => {
     const wordElements = document.querySelectorAll('.word-animate');
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target) target.style.textShadow = '0 0 20px rgba(239, 68, 68, 0.5)';
+      if (target) target.style.textShadow = '0 0 20px rgba(245, 158, 11, 0.5)';
     };
     const handleMouseLeave = (e: Event) => {
       const target = e.target as HTMLElement;
@@ -128,7 +128,7 @@ const BuildYourDream = () => {
       position: fixed;
       pointer-events: none;
       border-radius: 9999px; /* rounded-full */
-      background-image: radial-gradient(circle, rgba(239, 68, 68, 0.08), rgba(220, 38, 38, 0.06), transparent 70%); /* red-500/8, red-600/6 */
+      background-image: radial-gradient(circle, rgba(245, 158, 11, 0.08), rgba(217, 119, 6, 0.06), transparent 70%); /* amber-500/8, amber-600/6 */
       transform: translate(-50%, -50%);
       will-change: left, top, opacity;
       transition: left 70ms linear, top 70ms linear, opacity 300ms ease-out;
@@ -137,16 +137,16 @@ const BuildYourDream = () => {
     @keyframes grid-draw { 0% { stroke-dashoffset: 1000; opacity: 0; } 50% { opacity: 0.3; } 100% { stroke-dashoffset: 0; opacity: 0.15; } }
     @keyframes pulse-glow { 0%, 100% { opacity: 0.1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.1); } }
     .word-animate { display: inline-block; opacity: 0; margin: 0 0.1em; transition: color 0.3s ease, transform 0.3s ease; }
-    .word-animate:hover { color: #fca5a5; /* red-300 */ transform: translateY(-2px); }
-    .grid-line { stroke: #dc2626; /* red-600 */ stroke-width: 0.5; opacity: 0; stroke-dasharray: 5 5; stroke-dashoffset: 1000; animation: grid-draw 2s ease-out forwards; }
-    .detail-dot { fill: #ef4444; /* red-500 */ opacity: 0; animation: pulse-glow 3s ease-in-out infinite; }
-    .corner-element-animate { position: absolute; width: 40px; height: 40px; border: 1px solid rgba(239, 68, 68, 0.2); opacity: 0; animation: word-appear 1s ease-out forwards; }
+    .word-animate:hover { color: #fcd34d; /* amber-300 */ transform: translateY(-2px); }
+    .grid-line { stroke: #d97706; /* amber-600 */ stroke-width: 0.5; opacity: 0; stroke-dasharray: 5 5; stroke-dashoffset: 1000; animation: grid-draw 2s ease-out forwards; }
+    .detail-dot { fill: #f59e0b; /* amber-500 */ opacity: 0; animation: pulse-glow 3s ease-in-out infinite; }
+    .corner-element-animate { position: absolute; width: 40px; height: 40px; border: 1px solid rgba(245, 158, 11, 0.2); opacity: 0; animation: word-appear 1s ease-out forwards; }
     .text-decoration-animate { position: relative; }
-    .text-decoration-animate::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: linear-gradient(90deg, transparent, #ef4444, transparent); animation: underline-grow 2s ease-out forwards; animation-delay: 2s; }
+    .text-decoration-animate::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: linear-gradient(90deg, transparent, #f59e0b, transparent); animation: underline-grow 2s ease-out forwards; animation-delay: 2s; }
     @keyframes underline-grow { to { width: 100%; } }
-    .floating-element-animate { position: absolute; width: 2px; height: 2px; background: #ef4444; border-radius: 50%; opacity: 0; animation: float 4s ease-in-out infinite; animation-play-state: paused; }
+    .floating-element-animate { position: absolute; width: 2px; height: 2px; background: #f59e0b; border-radius: 50%; opacity: 0; animation: float 4s ease-in-out infinite; animation-play-state: paused; }
     @keyframes float { 0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; } 25% { transform: translateY(-10px) translateX(5px); opacity: 0.6; } 50% { transform: translateY(-5px) translateX(-3px); opacity: 0.4; } 75% { transform: translateY(-15px) translateX(7px); opacity: 0.8; } }
-    .ripple-effect { position: fixed; width: 4px; height: 4px; background: rgba(239, 68, 68, 0.6); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; animation: pulse-glow 1s ease-out forwards; z-index: 9999; }
+    .ripple-effect { position: fixed; width: 4px; height: 4px; background: rgba(245, 158, 11, 0.6); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; animation: pulse-glow 1s ease-out forwards; z-index: 9999; }
   `;
 
   if (!mounted) {
@@ -161,7 +161,7 @@ const BuildYourDream = () => {
               <span>Udah</span>
               <span> siap</span>
             </h2>
-            <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
+            <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-30 mx-auto"></div>
           </div>
           <div className="text-center max-w-5xl mx-auto relative">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50">
@@ -176,7 +176,7 @@ const BuildYourDream = () => {
             </h1>
           </div>
           <div className="text-center">
-            <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
+            <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-30 mx-auto"></div>
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
               <span>2000+</span>
               <span> Gen-Z</span>
@@ -196,9 +196,9 @@ const BuildYourDream = () => {
 
         {/* Pink Spotlight Effects */}
         <Spotlight
-          gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(236, 72, 153, 0.12) 0%, rgba(219, 39, 119, 0.06) 50%, transparent 80%)`}
-          gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, rgba(219, 39, 119, 0.04) 80%, transparent 100%)`}
-          gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(219, 39, 119, 0.06) 0%, rgba(236, 72, 153, 0.03) 80%, transparent 100%)`}
+          gradientFirst={`radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.06) 50%, transparent 80%)`}
+          gradientSecond={`radial-gradient(50% 50% at 50% 50%, rgba(245, 158, 11, 0.08) 0%, rgba(217, 119, 6, 0.04) 80%, transparent 100%)`}
+          gradientThird={`radial-gradient(50% 50% at 50% 50%, rgba(217, 119, 6, 0.06) 0%, rgba(245, 158, 11, 0.03) 80%, transparent 100%)`}
           translateY={-160}
           width={380}
           height={760}
@@ -213,7 +213,7 @@ const BuildYourDream = () => {
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <pattern id="gridBuildDreamResponsive" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(220, 38, 38, 0.1)" strokeWidth="0.5" />
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(217, 119, 6, 0.1)" strokeWidth="0.5" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#gridBuildDreamResponsive)" />
@@ -232,16 +232,16 @@ const BuildYourDream = () => {
 
         {/* Responsive Corner Elements */}
         <div className="corner-element-animate top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8" style={{ animationDelay: '4s' }}>
-          <div className="absolute top-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+          <div className="absolute top-0 left-0 w-2 h-2 bg-amber-500 opacity-30 rounded-full"></div>
         </div>
         <div className="corner-element-animate top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8" style={{ animationDelay: '4.2s' }}>
-          <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+          <div className="absolute top-0 right-0 w-2 h-2 bg-amber-500 opacity-30 rounded-full"></div>
         </div>
         <div className="corner-element-animate bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8" style={{ animationDelay: '4.4s' }}>
-          <div className="absolute bottom-0 left-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+          <div className="absolute bottom-0 left-0 w-2 h-2 bg-amber-500 opacity-30 rounded-full"></div>
         </div>
         <div className="corner-element-animate bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8" style={{ animationDelay: '4.6s' }}>
-          <div className="absolute bottom-0 right-0 w-2 h-2 bg-red-500 opacity-30 rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-2 h-2 bg-amber-500 opacity-30 rounded-full"></div>
         </div>
 
         <div className="floating-element-animate" style={{ top: '25%', left: '15%', animationDelay: '0.5s' }}></div>
@@ -256,7 +256,7 @@ const BuildYourDream = () => {
               <span className="word-animate" data-delay="0">Udah</span>
               <span className="word-animate" data-delay="300">siap</span>
             </h2>
-            <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
+            <div className="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-30 mx-auto"></div>
           </div>
 
           <div className="text-center max-w-5xl mx-auto relative">
@@ -264,7 +264,7 @@ const BuildYourDream = () => {
             <motion.h1
               className="text-center text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl whitespace-normal px-4 sm:px-6 md:px-8 lg:px-10 max-w-full mx-auto text-white relative text-decoration-animate mb-8"
               style={{
-                background: 'linear-gradient(90deg, #ffffff 0%, #9d1152 50%, #ffffff 100%)',
+                background: 'linear-gradient(90deg, #ffffff 0%, #d97706 50%, #ffffff 100%)',
                 backgroundSize: '200% 100%',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -284,19 +284,19 @@ const BuildYourDream = () => {
 
             {/* CTA Button - moved below title */}
             <div className="opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '2.5s' }}>
-              <Link href="https://wa.me/6281234567890" target="_blank">
-                <button className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-400 hover:to-rose-500 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
+              <Link href="https://wa.me/6281260006303" target="_blank">
+                <button className="bg-gradient-to-r from-amber-600 to-amber-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-amber-500 hover:to-amber-400 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
                   HUBUNGI KAMI VIA WHATSAPP
                 </button>
               </Link>
             </div>
             {/* Responsive Detail Line Offsets */}
-            <div className="absolute -left-6 sm:-left-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-red-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}></div>
-            <div className="absolute -right-6 sm:-right-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-red-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.4s' }}></div>
+            <div className="absolute -left-6 sm:-left-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-amber-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.2s' }}></div>
+            <div className="absolute -right-6 sm:-right-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-amber-500 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '3.4s' }}></div>
           </div>
 
           <div className="text-center">
-            <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 mx-auto"></div>
+            <div className="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-30 mx-auto"></div>
             <h2 className="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
               <span className="word-animate" data-delay="1800">2000+</span>
               <span className="word-animate" data-delay="2000">Gen-Z</span>

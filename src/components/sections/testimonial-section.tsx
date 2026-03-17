@@ -89,26 +89,31 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
 
 const TestimonialSection = () => {
   const [testimonials, setTestimonials] = React.useState<Testimonial[]>([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
     const loadTestimonials = async () => {
       try {
-        console.log('Loading testimonials...');
         const response = await fetch('/testimonial-infomration.json');
-        console.log('Response status:', response.status);
         const data = await response.json();
-        console.log('Testimonials loaded:', data);
         setTestimonials(data);
-      } catch (error) {
-        console.error('Failed to load testimonials:', error);
+      } catch {
+        // fetch failed — testimonials stays empty
+      } finally {
+        setIsLoading(false);
       }
     };
 
     loadTestimonials();
   }, []);
 
-  // Show loading state
-  if (testimonials.length === 0) {
+  // If loading is done but no testimonials (error case), don't render
+  if (!isLoading && testimonials.length === 0) {
+    return null;
+  }
+
+  // Show loading skeleton while fetching
+  if (isLoading) {
     return (
       <section className="relative w-full text-white overflow-hidden py-8 lg:py-16">
         <div className="absolute inset-0 bg-black/40 z-10" />

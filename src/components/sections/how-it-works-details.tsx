@@ -7,14 +7,14 @@ import { cn } from '@/lib/utils';
 
 const stepsData = [
     {
-        title: "Hari ke 1–5 — Lisensi & Sistem Profesional",
-        description: "Dapatkan lisensi dari perusahaan untuk bekerja secara profesional. Pelajari materi dasar asuransi via HP (cara kerja polis & manfaat) untuk unlock tahap ini.",
+        title: "Hari ke 1–7 — Lisensi AAJI & Sistem Profesional",
+        description: "Daftar ujian AAJI (Rp 258.000, dibayar ke negara). Sebelum menjual produk keuangan, kamu harus berlisensi resmi. Pelajari materi dasar asuransi via HP (cara kerja polis & manfaat) untuk unlock tahap ini.",
         imageSrc: "/images/system-licence.png",
         colSpan: 1
     },
     {
-        title: "Hari ke 6–15 — Paket Pengetahuan Bisnis",
-        description: "Terima materi presentasi lengkap & script 'Super Boost' untuk closing. Lakukan roleplay dengan mentor & presentasi pertama ke kerabat untuk unlock.",
+        title: "Hari ke 8–15 — Paket Pengetahuan Bisnis",
+        description: "Mulai sharing produk keuangan ke keluarga terdekat. Terima materi presentasi lengkap & script 'Super Boost' untuk closing. Lakukan roleplay dengan mentor & presentasi pertama ke kerabat untuk unlock.",
         imageSrc: "/images/knowledge-pack.png",
         colSpan: 1
     },
@@ -31,8 +31,8 @@ const stepsData = [
         colSpan: 1
     },
     {
-        title: "Hari ke 46–60 — Allowance & Komisi",
-        description: "Allowance Rp 5 juta dan target Rp 5 juta. Simpel, jelas, dan transparan.",
+        title: "Hari ke 46–60 — Komisi & Incentive",
+        description: "Setiap ada yang closing, kamu menerima komisi dalam 1–2 bulan. Setiap jual 1 case ada undian Rp 100rb atau 100 USD. Simpel, jelas, dan transparan.",
         imageSrc: "/images/first-income.png",
         colSpan: 1
     },

@@ -9,49 +9,22 @@ import { WebGLShader } from '@/components/ui/web-gl-shader';
 
 const roadmapSteps = [
     {
-        step: "STEP 1",
-        period: "Hari 1–10",
-        title: "Fondasi & Lisensi Profesional",
-        goal: "Goal: Kamu punya lisensi + dasar pengetahuan produk proteksi dan investasi.",
+        step: "ROADMAP",
+        period: "Perjalanan Karirmu",
+        title: "Dari Nol Hingga Produksi Pertama",
+        goal: "Goal: Kamu punya lisensi, skill presentasi, dan mencapai produksi pertama dengan bimbingan penuh.",
         content: [
             "Proses lisensi untuk bekerja secara profesional",
             "Belajar dasar proteksi, kebutuhan finansial, dan investasi",
-            "Pengenalan sistem kerja praktis yang bisa dilakukan via HP",
-            "Onboarding 1-on-1 dengan mentor"
-        ],
-        result: "Hasil akhir: Kamu siap secara legal dan memahami fondasi bisnisnya.",
-        image: "/images/first-step.png"
-    },
-    {
-        step: "STEP 2",
-        period: "Hari 11–30",
-        title: "Skill Dasar Presentasi & Edukasi",
-        goal: "Goal: Kamu bisa menjelaskan produk dasar health & investment sesuai kebutuhan klien.",
-        content: [
-            "Script presentasi singkat yang mudah dipahami",
-            "Cara membuka percakapan tanpa kesan jualan",
-            "Roleplay dengan mentor",
-            "Teknik closing yang halus dan elegan",
-            "Mulai dari circle terdekat untuk bangun kepercayaan"
-        ],
-        result: "Hasil akhir: Kamu bisa presentasi, edukasi, dan mulai mendapatkan klien pertamamu.",
-        image: "/images/branding.png"
-    },
-    {
-        step: "STEP 3",
-        period: "Hari 31–60",
-        title: "Penguasaan Sistem & Produksi Pertama",
-        goal: "",
-        content: [
+            "Onboarding 1-on-1 dengan mentor",
+            "Script presentasi & teknik closing yang halus dan elegan",
+            "Roleplay dengan mentor & mulai dari circle terdekat",
             "Pola kerja harian yang jelas dan terstruktur",
-            "Teknik follow-up yang sopan dan tidak mengganggu",
             "Praktik konsultasi dan closing didampingi mentor",
-            "Review dan evaluasi ritme kerjamu",
-            "Optimasi konten (untuk yang menjalankan strategi online)",
             "Penekanan pada konsistensi: lakukan pola kerja yang sama setiap hari"
         ],
-        result: "Hasil akhir: Kamu mencapai produksi pertama dan siap naik level. Kuncinya: konsisten, ulangi polanya setiap hari, dan kamu akan melihat hasilnya.",
-        image: "/images/checklist.png"
+        result: "Hasil akhir: Kamu siap secara legal, mampu presentasi dan edukasi, serta mencapai produksi pertama. Kuncinya: konsisten dan ulangi polanya setiap hari.",
+        image: "/images/first-step.png"
     }
 ];
 
@@ -104,10 +77,10 @@ export default function SolutionDetailsPage() {
                                         ease: 'linear'
                                     }}
                                 >
-                                    Roadmap Karir 60 Hari
+                                    Roadmap Karir
                                 </motion.h1>
                                 <p className="text-sm lg:text-base font-light leading-relaxed text-slate-300 max-w-4xl mx-auto" style={{ textShadow: '0 0 10px rgba(217, 119, 6, 0.1)' }}>
-                                    Roadmap karir yang jelas dan terukur. Setiap fase dirancang untuk memastikan pertumbuhan income dan kapasitas diri Anda.
+                                    Roadmap karir yang jelas dan terukur. Sistem yang teruji untuk memastikan pertumbuhan income dan kapasitas diri Anda.
                                 </p>
                             </div>
 
@@ -217,7 +190,7 @@ export default function SolutionDetailsPage() {
                                     <div className="mt-12">
                                         <Link href="/checkout?package=paid">
                                             <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full hover:from-amber-500 hover:to-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 shadow-[0_0_20px_rgba(217,119,6,0.3)] hover:shadow-[0_0_30px_rgba(217,119,6,0.5)] hover:scale-105">
-                                                <span>Mulai Roadmap 60 Harimu</span>
+                                                <span>Mulai Roadmap Karirmu</span>
                                                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                                             </button>
                                         </Link>
